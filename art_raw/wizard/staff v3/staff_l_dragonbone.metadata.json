@@ -1,0 +1,117 @@
+{
+  "asset_name": "용뼈 지팡이",
+  "asset_type": "equipment_staff",
+  "asset_role": "wizard_front_layer_legendary_weapon",
+  "description": "용의 척추뼈를 세로 샤프트로 엮고 상단에 뿔·이빨·턱뼈가 불타는 단일 눈을 감싸는 전설 지팡이. 눈의 홍채와 작은 불씨가 살아 움직이는 인상을 준다.",
+  "usage": "세로 화면 모바일 게임에서 로브→몸→모자→지팡이 순으로 겹치는 최전면 장비 레이어. 캐릭터 몸 이미지와 1.00 배율 기준으로 사용.",
+  "file_name": "staff_l_dragonbone.png",
+  "file_format": "PNG",
+  "canvas_size": {
+    "width_px": 320,
+    "height_px": 660,
+    "aspect_ratio": 0.4848
+  },
+  "logical_resolution": {
+    "width_px": 320,
+    "height_px": 660,
+    "note": "최종 출력과 동일. 후처리 확대 전제 없음."
+  },
+  "background": "transparent",
+  "alpha_channel": {
+    "present": true,
+    "type": "8-bit alpha",
+    "semi_transparent_edges": true
+  },
+  "animation": false,
+  "frame_count": 1,
+  "direction": "upright_vertical_centered",
+  "measured_geometry": {
+    "staff_visible_bbox_px": {
+      "left": 91,
+      "top": 35,
+      "right": 228,
+      "bottom": 625
+    },
+    "staff_visible_height_px": 590,
+    "head_and_effect_width_px": 137,
+    "canvas_vertical_fill_ratio": 0.8939,
+    "horizontal_center_px": 159.0,
+    "reference_character_height_px": 599,
+    "height_vs_character_ratio": 0.985
+  },
+  "style_summary": "첨부 wizard_body.png의 모바일 픽셀아트 감각을 기준으로, 큰 명암 덩어리와 짙은 외곽선, 제한된 핵심 팔레트, 필요한 곳의 자연스러운 반투명 알파를 사용한 전설 등급 지팡이.",
+  "visual_identity": "상아색 용골 척추 + 짙은 자주색 외곽선 + 주황/적색 불타는 눈 + 대칭 뿔/이빨 프레임.",
+  "silhouette_profile": "가늘고 긴 척추 샤프트, 상단은 뿔이 좌우로 벌어지고 둥근 골격 프레임이 눈을 감싸는 두상 실루엣.",
+  "proportion_profile": "지팡이 전체는 캐릭터 신장과 거의 동일. 샤프트는 길고 가늘며, 전설 등급 정보는 상단 약 150px 이내 헤드 실루엣과 핵심 광원에 집중.",
+  "pixel_structure": "1~4px 폭의 윤곽/면 분할과 2~8px 단위의 읽기 쉬운 픽셀 클러스터를 중심으로 구성. 잔무늬 반복 대신 큰 구조선과 제한된 포인트 픽셀을 사용.",
+  "pixel_density": "wizard_body.png와 병치했을 때 지나치게 거칠거나 반실사적으로 미세하지 않도록 중간 밀도. 샤프트 내부 반복은 크게 유지하고 헤드에만 밀도를 집중.",
+  "palette_profile": {
+    "core_design_palette_approx": [
+      "#2B1F30",
+      "#694F49",
+      "#BA9B85",
+      "#E8D6BC",
+      "#FFF1D3",
+      "#65272B",
+      "#AD372F",
+      "#FF6F2C",
+      "#FFD06A",
+      "#CB9751"
+    ],
+    "policy": "핵심 디자인 색은 제한하되 최종 PNG의 실제 RGBA 고유색 개수는 안티앨리어싱·반투명 파생색 때문에 고정하지 않음.",
+    "actual_unique_rgba_count": 6668
+  },
+  "color_count_estimate": "핵심 디자인 팔레트는 약 24~32색 범위의 관계를 목표로 하며, 출력 파일의 실제 고유 RGBA 수는 파생색 포함으로 더 많음.",
+  "shading_profile": "뼈는 어두운 골격면→중간 상아→밝은 상아→작은 백색 하이라이트의 4단 큰 명암, 눈은 암적색→주황→황백 코어의 4단 구조.",
+  "lighting_profile": "상단 불타는 눈이 국소 발광원. 뼈의 핵심 하이라이트는 좌상단을 향하며, 발광 주변에 제한된 주황 반투명 파생색만 사용.",
+  "outline_profile": "2~3px 상당의 짙은 자주/갈흑 외곽선. 내부 구조선은 1px 수준.",
+  "texture_material_profile": "무광에 가까운 오래된 용뼈, 붉은 힘줄/결박, 작은 금속성 골드 결절, 마법 화염.",
+  "detail_density": "전설 등급답게 헤드의 실루엣·핵심 광원·움직임 암시는 유지하되, 나뭇결/스크래치/미세 입자처럼 축소 시 노이즈가 되는 반복 디테일은 억제.",
+  "readability_rules": [
+    "320×660 원본에서 헤드 전체 폭 150px 이하",
+    "작은 화면에서 먼저 헤드 실루엣과 핵심 코어가 읽혀야 함",
+    "샤프트 중심축은 수직을 유지",
+    "배경/그림자/손/팔/캐릭터 요소를 포함하지 않음"
+  ],
+  "mood_world_context": "세로형 모바일 마법 로그라이크/주사위 마법 세계의 최상위 전설 장비. 장식량보다 강한 정체성·자체 운동·명확한 핵심 광원으로 전설성을 표현.",
+  "consistency_must_keep": [
+    "590px 전후의 동일 길이",
+    "세로 중앙축",
+    "불타는 세로동공 눈",
+    "용뼈/이빨 실루엣",
+    "상아-자주-주황의 핵심 색 관계",
+    "투명 배경",
+    "그림자 없음"
+  ],
+  "consistency_should_keep": [
+    "짙은 자주계열 외곽선",
+    "좌상단 계열의 기본 하이라이트 방향",
+    "샤프트의 세로 정렬과 캐릭터 신장 대응",
+    "헤드 중심부의 높은 대비"
+  ],
+  "allowed_variations": [
+    "눈의 홍채 방향 변화",
+    "불씨 위치 소폭 변화",
+    "뿔 각도의 소폭 변화",
+    "뼈 균열/결박 위치의 경미한 변화"
+  ],
+  "prohibited_variations": [
+    "헤드 폭 150px 초과",
+    "용 전체 몸통/날개가 크게 추가되어 얼굴을 가리는 형태",
+    "사진풍 골질감",
+    "과도한 불꽃 입자",
+    "샤프트 기울기"
+  ],
+  "variant_generation_notes": "애니메이션 변형 시 눈 깜박임, 홍채 흔들림, 불씨 2~4개의 짧은 루프가 적합. 큰 실루엣은 고정.",
+  "relation_to_other_assets": "전설 3종은 동일한 320×660 캔버스, 590px 가시 높이, 수직 중심축을 공유한다. 헤드는 서로 다른 핵심 모티프로 구분하되 등급 밝기/폭/밀도는 유사하게 유지.",
+  "consistency_group": "wizard_staff_legendary_v2_style_match",
+  "reference_basis": [
+    "wizard_body.png — 픽셀 굵기, 외곽선, 명암 밀도, 반투명 가장자리 감각의 시각 기준",
+    "ASSET_LIST_EQUIP_REVISED.md — 규격, 전설 3종 디자인, 내보내기 체크리스트"
+  ],
+  "originality_note": "기존 상용 게임/IP의 고유 무기나 로고를 복제하지 않고, 요청된 일반 판타지 모티프를 독자적인 실루엣·구조·색 관계로 구성한 신규 에셋.",
+  "license_risk_check": {
+    "status": "low",
+    "notes": "사용자 제공 캐릭터는 화풍/규격 참고로만 사용. 외부 브랜드·상표·식별 가능한 고유 문양 없음."
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.1",
+  "metadata_purpose": "동일 캐릭터 장비 세트의 위치/크기/화풍을 유지하며 방향·애니메이션·강화 변형을 재생성하기 위한 상세 사양서",
+  "asset_type": "weapon_staff",
+  "asset_role": "equippable_staff_layer",
+  "usage": [
+    "세로형 모바일 게임의 플레이어 지팡이 전경 레이어",
+    "장비 교체 시 동일 손 위치에 겹쳐 사용",
+    "원본에서 지팡이 부분만 크롭하여 인벤토리 아이콘 제작 가능"
+  ],
+  "file_format": "PNG",
+  "background": "transparent",
+  "alpha_channel": {
+    "present": true,
+    "type": "RGBA",
+    "requirement": "흰색/검정/체커보드가 아닌 실제 투명 알파"
+  },
+  "animation": false,
+  "frame_count": 1,
+  "direction": "upright_equipment_anchor",
+  "style_summary": "기존 폭주마법사 캐릭터와 일반·고급·희귀 지팡이 세트에 맞춘 모바일용 장지팡이 픽셀아트. 큰 형태 클러스터, 재질색 기반 짙은 외곽선, 단계형 명암, 등급 상승에 따른 머리 장식 확대와 마법 광량 증가가 핵심이다.",
+  "pixel_structure": {
+    "look": "고해상도 픽셀아트 스타일 마스터",
+    "cluster_rule": "작은 노이즈보다 큰 실루엣/재질 클러스터를 우선",
+    "edge_rule": "세로 장지팡이 샤프트와 머리 장식의 계단형 외곽을 명확히 유지",
+    "anti_aliasing_note": "현재 PNG는 부분 알파와 중간색을 포함하는 스타일 마스터이며, 최종 게임 논리 해상도 확정 시 별도의 픽셀 그리드 정리가 가능"
+  },
+  "pixel_density": {
+    "profile": "중간~중상",
+    "relation_to_character": "선택된 3등신 젊은 마법사 캐릭터의 장비 디테일 밀도와 유사한 수준"
+  },
+  "proportion_profile": {
+    "overall_scale": "캐릭터 전신 길이에 가까운 장지팡이",
+    "normalized_visual_height_px": 610,
+    "canvas_height_px": 1672,
+    "visual_height_to_canvas_ratio": 0.3648,
+    "shaft_rule": "샤프트가 전체 길이의 주축이며 영웅/전설은 희귀보다 머리 장식의 폭과 특이성이 증가",
+    "hand_grip_rule": "동일 장비 슬롯 교체를 위해 손이 닿는 중앙 샤프트 구간의 위치를 공통화"
+  },
+  "shading_profile": {
+    "base_steps": "그림자-기본색-밝은면의 3단계를 중심으로 사용",
+    "highlights": "금속, 뼈, 마력핵에는 선택적 최고광 추가",
+    "rarity_rule": "영웅은 주변 기운, 전설은 더 강한 최고광과 자율 움직임을 시각화"
+  },
+  "lighting_profile": {
+    "direction": "상단-좌상단 기본광",
+    "magic_exception": "마법부는 자체 발광을 허용하며 전설 등급은 광량과 주변 왜곡이 가장 강함"
+  },
+  "outline_profile": {
+    "type": "재질색 기반 짙은 외곽선",
+    "rule": "완전 검정 단일 외곽선보다 목재/금속/뼈/마법색의 어두운 버전 사용"
+  },
+  "detail_density": {
+    "profile": "중간~높음",
+    "mobile_rule": "머리 장식은 축소 시에도 테마가 먼저 읽히고, 작은 장식은 그 다음에 읽히도록 우선순위를 둔다"
+  },
+  "readability_rules": [
+    "세로형 모바일에서 실루엣만으로 6종이 구분되어야 한다.",
+    "지팡이 전체가 캔버스 밖으로 잘리지 않는다.",
+    "모든 지팡이는 동일 캔버스와 동일 중심축, 유사한 시각 높이를 유지한다.",
+    "손·팔·몸 등 캐릭터 신체를 포함하지 않는다.",
+    "영웅은 주변 기운이 보이고 전설은 스스로 움직이는 핵심 요소가 보여야 한다.",
+    "등급이 높을수록 머리 장식이 더 크고 밝아야 한다."
+  ],
+  "layering": {
+    "draw_order": "staff_foreground",
+    "character_layer_order_reference": [
+      "robe",
+      "body",
+      "hat",
+      "staff"
+    ],
+    "hand_anchor": {
+      "x": 470,
+      "y": 910
+    },
+    "placement_rule": "기존 9종과 동일한 941×1672 캔버스, x=470 중심축, 약 610px 장지팡이 시각 높이를 기준으로 정규화"
+  },
+  "consistency_should_keep": [
+    "기존 캐릭터/지팡이 세트와 비슷한 픽셀 밀도",
+    "세워 든 장지팡이 자세",
+    "재질별 짙은 색상형 외곽선",
+    "상단-좌상단 기본광",
+    "모바일에서 읽히는 큰 머리 장식"
+  ],
+  "allowed_variations": [
+    "방향별 장착 시 샤프트 각도와 draw order 미세 조정",
+    "공격 애니메이션에서의 기울기/잔상",
+    "영웅/전설 고유 기운과 자율 요소의 애니메이션 프레임 확장",
+    "강화 단계에서 제한적인 하이라이트와 파티클 밀도 증가"
+  ],
+  "prohibited_variations": [
+    "불투명 배경",
+    "캐릭터 신체 포함",
+    "장지팡이를 짧은 완드 크기로 축소",
+    "눕히거나 휘두르는 자세를 기본 장비 원본으로 사용",
+    "특정 타 게임의 고유 지팡이/아이콘/문양을 식별 가능한 수준으로 복제",
+    "죽은 마른나무 인상",
+    "얼음/화염 속성",
+    "금속 중심 제작물",
+    "전설 등급 수준의 압도적 자율 움직임"
+  ],
+  "consistency_group": "EQUIP_STAFF_STYLE_01",
+  "project_style_status": "캐릭터와 지팡이 장비군 스타일은 작업을 통해 구체화 중이며 전체 PROJECT_STYLE은 아직 최종 확정 전",
+  "reference_basis": {
+    "asset_list_source": "ASSET_LIST_EQUIP.md",
+    "asset_list_scope": "영웅 3종 및 전설 3종",
+    "user_overrides": [
+      "wizard_body 신규 제작 단계 생략 — 기본 캐릭터는 이미 제작됨",
+      "지팡이는 캐릭터 전신 길이에 가까운 장지팡이",
+      "수정구는 무기에 통합하지 않고 추후 별도 액세서리로 제작"
+    ],
+    "reference_policy": "타 게임 캡처는 모바일 가독성·픽셀 밀도·등급 시각화 원리만 참고하며 고유 디자인은 복제하지 않음"
+  },
+  "originality_note": "일반적인 판타지 소재와 사용자 정의 테마를 조합해 폭주마법사 전용 지팡이 세트로 구성. 레퍼런스 게임의 특정 캐릭터·무기·주사위 UI·문양을 직접 복제하지 않음.",
+  "license_risk_check": {
+    "status": "low",
+    "note": "일반적인 자연/폭풍/그림자/용뼈/공허/주사위 마법 모티프를 독립적으로 재구성. 특정 IP의 식별 가능한 고유 자산을 피함."
+  },
+  "asset_name": "staff_e_living",
+  "display_name_ko": "살아 있는 가지",
+  "rarity": "영웅",
+  "rarity_code": "epic",
+  "description": "아직 살아 있는 나무 가지로 된 장지팡이. 줄기에서 잎이 돋아 있고 끝부분에서 새순이 계속 자라며, 주변에는 약한 생명 기운이 맴돈다.",
+  "file_name": "staff_e_living.png",
+  "canvas_size": {
+    "width": 941,
+    "height": 1672,
+    "unit": "px"
+  },
+  "logical_resolution": {
+    "status": "project_not_finalized",
+    "native_canvas": "941x1672",
+    "asset_bbox": [
+      300,
+      505,
+      640,
+      1115
+    ]
+  },
+  "visual_identity": {
+    "equipment_family": "long_staff",
+    "rarity_visual_tier": "영웅",
+    "key_identity": "비틀린 살아 있는 나무 줄기와 잎, 위쪽 새순이 비대칭으로 확장되는 유기적 실루엣.",
+    "moving_element": "잎과 새순이 미세하게 흔들리고 자라는 연출 가능"
+  },
+  "silhouette_profile": "비틀린 살아 있는 나무 줄기와 잎, 위쪽 새순이 비대칭으로 확장되는 유기적 실루엣.",
+  "palette_profile": {
+    "core_colors": [
+      "dark bark brown",
+      "warm wood brown",
+      "leaf green",
+      "yellow-green magic",
+      "near-white highlight"
+    ],
+    "rarity_rule": "영웅은 강한 속성색과 주변 기운, 전설은 더 높은 대비·최고광·자율 움직임을 허용"
+  },
+  "color_count_estimate": {
+    "intentional_core_palette_estimate": "영웅 약 22~34색 / 전설 약 26~42색",
+    "note": "현재 고해상도 스타일 마스터 PNG는 부분 알파와 중간색 때문에 실제 고유 RGB 수가 더 많다."
+  },
+  "texture/material_profile": {
+    "materials": [
+      "살아 있는 목재",
+      "생잎",
+      "새순",
+      "생명 마력"
+    ],
+    "rendering_rule": "재질이 작은 모바일 크기에서도 구분되도록 단계형 명암을 사용하고 마력부에만 강한 발광을 집중"
+  },
+  "mood/world_context": "젊은 마법사가 성장하며 획득하는 상위 장지팡이. 영웅은 형태가 특이하고 주변에 기운이 돌며, 전설은 스스로 움직이는 요소로 압도감을 만든다.",
+  "consistency_must_keep": [
+    "살아 있는 나무 가지",
+    "잎",
+    "끝의 새순",
+    "영웅 등급의 주변 생명 기운",
+    "비대칭 유기적 실루엣",
+    "캐릭터 전신 길이에 가까운 장지팡이 크기",
+    "세워 든 자세",
+    "동일 캔버스/중심축/손 기준 위치",
+    "지팡이 외의 캐릭터 신체 미포함",
+    "실제 투명 배경"
+  ],
+  "variant_generation_notes": [
+    "같은 캐릭터 장비 슬롯에서 교체되므로 샤프트 길이와 손잡이 위치 감각을 다른 14종과 통일한다.",
+    "고유 애니메이션 확장 시 핵심 움직임: 잎과 새순이 미세하게 흔들리고 자라는 연출 가능",
+    "정적 기본 PNG에서는 움직임의 대표 순간을 표현하고, 실제 게임용 애니메이션 프레임은 별도 생성 가능"
+  ],
+  "relation_to_other_assets": {
+    "character_style_anchor": "라벤더_머리_마법사_스프라이트_시트.png",
+    "equipment_family": "staff_15_set",
+    "previous_tiers": [
+      "staff_c_knotted",
+      "staff_c_cracked",
+      "staff_c_brass",
+      "staff_u_oak",
+      "staff_u_silver",
+      "staff_u_bone",
+      "staff_r_rune",
+      "staff_r_frost",
+      "staff_r_ember"
+    ],
+    "same_batch": [
+      "staff_e_living",
+      "staff_e_storm",
+      "staff_e_scythe",
+      "staff_l_dragonbone",
+      "staff_l_void",
+      "staff_l_dice"
+    ]
+  },
+  "generation_provenance": {
+    "source_generation_file": "wide_clean_sprite_sheet_style_image_on_a_transpar.png",
+    "source_generation_gen_id": "b80d3270-444c-469a-ae25-1d67c91a144c",
+    "postprocess": "최종 단일 에셋 경계 재분리(인접 에셋 파티클 혼입 제거), 투명 여백 정리, NEAREST 스케일링, 기존 지팡이 세트와 동일 캔버스/중심축/시각 높이로 정규화",
+    "sha256": "d027affa07bafd06373a1cf1a7880e964c4879179d256836ddc54045d70832e6"
+  }
+}

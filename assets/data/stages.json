@@ -1,0 +1,814 @@
+[
+  {
+    "id": "r1_s1",
+    "region_id": 1,
+    "index": 1,
+    "floors": 3,
+    "recommended_level": 1,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r1_s2",
+    "region_id": 1,
+    "index": 2,
+    "floors": 3,
+    "recommended_level": 2,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r1_s3",
+    "region_id": 1,
+    "index": 3,
+    "floors": 3,
+    "recommended_level": 3,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r1_s4",
+    "region_id": 1,
+    "index": 4,
+    "floors": 4,
+    "recommended_level": 4,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r1_s5",
+    "region_id": 1,
+    "index": 5,
+    "floors": 4,
+    "recommended_level": 5,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r1_s6",
+    "region_id": 1,
+    "index": 6,
+    "floors": 4,
+    "recommended_level": 6,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r1_s7",
+    "region_id": 1,
+    "index": 7,
+    "floors": 5,
+    "recommended_level": 7,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r1_s8",
+    "region_id": 1,
+    "index": 8,
+    "subtitle": "태고의 웅덩이",
+    "floors": 5,
+    "recommended_level": 8,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r2_s1",
+    "region_id": 2,
+    "index": 1,
+    "floors": 4,
+    "recommended_level": 8,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r2_s2",
+    "region_id": 2,
+    "index": 2,
+    "floors": 4,
+    "recommended_level": 9,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r2_s3",
+    "region_id": 2,
+    "index": 3,
+    "floors": 4,
+    "recommended_level": 10,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r2_s4",
+    "region_id": 2,
+    "index": 4,
+    "floors": 5,
+    "recommended_level": 11,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r2_s5",
+    "region_id": 2,
+    "index": 5,
+    "floors": 5,
+    "recommended_level": 13,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r2_s6",
+    "region_id": 2,
+    "index": 6,
+    "floors": 5,
+    "recommended_level": 14,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r2_s7",
+    "region_id": 2,
+    "index": 7,
+    "floors": 6,
+    "recommended_level": 15,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r2_s8",
+    "region_id": 2,
+    "index": 8,
+    "subtitle": "무너진 납골당",
+    "floors": 6,
+    "recommended_level": 16,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r3_s1",
+    "region_id": 3,
+    "index": 1,
+    "floors": 5,
+    "recommended_level": 16,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r3_s2",
+    "region_id": 3,
+    "index": 2,
+    "floors": 5,
+    "recommended_level": 17,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r3_s3",
+    "region_id": 3,
+    "index": 3,
+    "floors": 5,
+    "recommended_level": 19,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r3_s4",
+    "region_id": 3,
+    "index": 4,
+    "floors": 6,
+    "recommended_level": 20,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r3_s5",
+    "region_id": 3,
+    "index": 5,
+    "floors": 6,
+    "recommended_level": 21,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r3_s6",
+    "region_id": 3,
+    "index": 6,
+    "floors": 6,
+    "recommended_level": 22,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r3_s7",
+    "region_id": 3,
+    "index": 7,
+    "floors": 7,
+    "recommended_level": 24,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r3_s8",
+    "region_id": 3,
+    "index": 8,
+    "subtitle": "가라앉은 둥지",
+    "floors": 7,
+    "recommended_level": 25,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r4_s1",
+    "region_id": 4,
+    "index": 1,
+    "floors": 5,
+    "recommended_level": 25,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r4_s2",
+    "region_id": 4,
+    "index": 2,
+    "floors": 5,
+    "recommended_level": 26,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r4_s3",
+    "region_id": 4,
+    "index": 3,
+    "floors": 6,
+    "recommended_level": 27,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r4_s4",
+    "region_id": 4,
+    "index": 4,
+    "floors": 6,
+    "recommended_level": 28,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r4_s5",
+    "region_id": 4,
+    "index": 5,
+    "floors": 6,
+    "recommended_level": 29,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r4_s6",
+    "region_id": 4,
+    "index": 6,
+    "floors": 7,
+    "recommended_level": 31,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r4_s7",
+    "region_id": 4,
+    "index": 7,
+    "floors": 7,
+    "recommended_level": 32,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r4_s8",
+    "region_id": 4,
+    "index": 8,
+    "floors": 7,
+    "recommended_level": 33,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r4_s9",
+    "region_id": 4,
+    "index": 9,
+    "floors": 8,
+    "recommended_level": 34,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r4_s10",
+    "region_id": 4,
+    "index": 10,
+    "subtitle": "불꽃이 삼킨 고목",
+    "floors": 8,
+    "recommended_level": 35,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r5_s1",
+    "region_id": 5,
+    "index": 1,
+    "floors": 6,
+    "recommended_level": 35,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r5_s2",
+    "region_id": 5,
+    "index": 2,
+    "floors": 6,
+    "recommended_level": 36,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r5_s3",
+    "region_id": 5,
+    "index": 3,
+    "floors": 6,
+    "recommended_level": 37,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r5_s4",
+    "region_id": 5,
+    "index": 4,
+    "floors": 7,
+    "recommended_level": 38,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r5_s5",
+    "region_id": 5,
+    "index": 5,
+    "floors": 7,
+    "recommended_level": 39,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r5_s6",
+    "region_id": 5,
+    "index": 6,
+    "floors": 7,
+    "recommended_level": 41,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r5_s7",
+    "region_id": 5,
+    "index": 7,
+    "floors": 8,
+    "recommended_level": 42,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r5_s8",
+    "region_id": 5,
+    "index": 8,
+    "floors": 8,
+    "recommended_level": 43,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r5_s9",
+    "region_id": 5,
+    "index": 9,
+    "floors": 8,
+    "recommended_level": 44,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r5_s10",
+    "region_id": 5,
+    "index": 10,
+    "subtitle": "가장 깊은 갱도",
+    "floors": 9,
+    "recommended_level": 45,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r6_s1",
+    "region_id": 6,
+    "index": 1,
+    "floors": 6,
+    "recommended_level": 45,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r6_s2",
+    "region_id": 6,
+    "index": 2,
+    "floors": 6,
+    "recommended_level": 46,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r6_s3",
+    "region_id": 6,
+    "index": 3,
+    "floors": 7,
+    "recommended_level": 47,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r6_s4",
+    "region_id": 6,
+    "index": 4,
+    "floors": 7,
+    "recommended_level": 48,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r6_s5",
+    "region_id": 6,
+    "index": 5,
+    "floors": 7,
+    "recommended_level": 49,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r6_s6",
+    "region_id": 6,
+    "index": 6,
+    "floors": 8,
+    "recommended_level": 51,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r6_s7",
+    "region_id": 6,
+    "index": 7,
+    "floors": 8,
+    "recommended_level": 52,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r6_s8",
+    "region_id": 6,
+    "index": 8,
+    "floors": 8,
+    "recommended_level": 53,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r6_s9",
+    "region_id": 6,
+    "index": 9,
+    "floors": 9,
+    "recommended_level": 54,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r6_s10",
+    "region_id": 6,
+    "index": 10,
+    "subtitle": "모래에 묻힌 왕좌",
+    "floors": 9,
+    "recommended_level": 55,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r7_s1",
+    "region_id": 7,
+    "index": 1,
+    "floors": 7,
+    "recommended_level": 55,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r7_s2",
+    "region_id": 7,
+    "index": 2,
+    "floors": 7,
+    "recommended_level": 56,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r7_s3",
+    "region_id": 7,
+    "index": 3,
+    "floors": 7,
+    "recommended_level": 57,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r7_s4",
+    "region_id": 7,
+    "index": 4,
+    "floors": 8,
+    "recommended_level": 58,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r7_s5",
+    "region_id": 7,
+    "index": 5,
+    "floors": 8,
+    "recommended_level": 59,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r7_s6",
+    "region_id": 7,
+    "index": 6,
+    "floors": 8,
+    "recommended_level": 61,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r7_s7",
+    "region_id": 7,
+    "index": 7,
+    "floors": 9,
+    "recommended_level": 62,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r7_s8",
+    "region_id": 7,
+    "index": 8,
+    "floors": 9,
+    "recommended_level": 63,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r7_s9",
+    "region_id": 7,
+    "index": 9,
+    "floors": 9,
+    "recommended_level": 64,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r7_s10",
+    "region_id": 7,
+    "index": 10,
+    "subtitle": "눈보라의 끝",
+    "floors": 10,
+    "recommended_level": 65,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r8_s1",
+    "region_id": 8,
+    "index": 1,
+    "floors": 7,
+    "recommended_level": 65,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r8_s2",
+    "region_id": 8,
+    "index": 2,
+    "floors": 8,
+    "recommended_level": 66,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r8_s3",
+    "region_id": 8,
+    "index": 3,
+    "floors": 8,
+    "recommended_level": 67,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r8_s4",
+    "region_id": 8,
+    "index": 4,
+    "floors": 8,
+    "recommended_level": 68,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r8_s5",
+    "region_id": 8,
+    "index": 5,
+    "floors": 9,
+    "recommended_level": 69,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r8_s6",
+    "region_id": 8,
+    "index": 6,
+    "floors": 9,
+    "recommended_level": 70,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r8_s7",
+    "region_id": 8,
+    "index": 7,
+    "floors": 9,
+    "recommended_level": 71,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r8_s8",
+    "region_id": 8,
+    "index": 8,
+    "subtitle": "눈뜬 자의 방",
+    "floors": 10,
+    "recommended_level": 72,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r9_s1",
+    "region_id": 9,
+    "index": 1,
+    "floors": 8,
+    "recommended_level": 72,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r9_s2",
+    "region_id": 9,
+    "index": 2,
+    "floors": 8,
+    "recommended_level": 73,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r9_s3",
+    "region_id": 9,
+    "index": 3,
+    "floors": 8,
+    "recommended_level": 74,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r9_s4",
+    "region_id": 9,
+    "index": 4,
+    "floors": 9,
+    "recommended_level": 75,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r9_s5",
+    "region_id": 9,
+    "index": 5,
+    "floors": 9,
+    "recommended_level": 77,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r9_s6",
+    "region_id": 9,
+    "index": 6,
+    "floors": 9,
+    "recommended_level": 78,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r9_s7",
+    "region_id": 9,
+    "index": 7,
+    "floors": 10,
+    "recommended_level": 79,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r9_s8",
+    "region_id": 9,
+    "index": 8,
+    "subtitle": "봉인된 계단",
+    "floors": 10,
+    "recommended_level": 80,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r10_s1",
+    "region_id": 10,
+    "index": 1,
+    "floors": 8,
+    "recommended_level": 80,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r10_s2",
+    "region_id": 10,
+    "index": 2,
+    "floors": 8,
+    "recommended_level": 81,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r10_s3",
+    "region_id": 10,
+    "index": 3,
+    "floors": 9,
+    "recommended_level": 82,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r10_s4",
+    "region_id": 10,
+    "index": 4,
+    "floors": 9,
+    "recommended_level": 83,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r10_s5",
+    "region_id": 10,
+    "index": 5,
+    "floors": 9,
+    "recommended_level": 84,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r10_s6",
+    "region_id": 10,
+    "index": 6,
+    "floors": 10,
+    "recommended_level": 85,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r10_s7",
+    "region_id": 10,
+    "index": 7,
+    "floors": 10,
+    "recommended_level": 86,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r10_s8",
+    "region_id": 10,
+    "index": 8,
+    "subtitle": "첨탑의 서재",
+    "floors": 10,
+    "recommended_level": 87,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r11_s1",
+    "region_id": 11,
+    "index": 1,
+    "floors": 9,
+    "recommended_level": 87,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r11_s2",
+    "region_id": 11,
+    "index": 2,
+    "floors": 9,
+    "recommended_level": 88,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r11_s3",
+    "region_id": 11,
+    "index": 3,
+    "floors": 10,
+    "recommended_level": 90,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r11_s4",
+    "region_id": 11,
+    "index": 4,
+    "floors": 10,
+    "recommended_level": 91,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r11_s5",
+    "region_id": 11,
+    "index": 5,
+    "floors": 10,
+    "recommended_level": 93,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r11_s6",
+    "region_id": 11,
+    "index": 6,
+    "subtitle": "무(無)의 문턱",
+    "floors": 10,
+    "recommended_level": 94,
+    "is_boss_stage": true
+  },
+  {
+    "id": "r12_s1",
+    "region_id": 12,
+    "index": 1,
+    "floors": 7,
+    "recommended_level": 94,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r12_s2",
+    "region_id": 12,
+    "index": 2,
+    "floors": 8,
+    "recommended_level": 95,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r12_s3",
+    "region_id": 12,
+    "index": 3,
+    "floors": 8,
+    "recommended_level": 96,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r12_s4",
+    "region_id": 12,
+    "index": 4,
+    "floors": 8,
+    "recommended_level": 97,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r12_s5",
+    "region_id": 12,
+    "index": 5,
+    "floors": 8,
+    "recommended_level": 98,
+    "is_boss_stage": false
+  },
+  {
+    "id": "r12_s6",
+    "region_id": 12,
+    "index": 6,
+    "subtitle": "잿더미 왕좌",
+    "floors": 8,
+    "recommended_level": 99,
+    "is_boss_stage": true
+  }
+]

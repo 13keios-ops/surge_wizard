@@ -1,0 +1,120 @@
+{
+  "asset_name": "태초의 주사위 지팡이",
+  "asset_type": "equipment_staff",
+  "asset_role": "wizard_front_layer_legendary_weapon",
+  "description": "게임의 상징인 떠 있는 주사위가 상단에서 스스로 회전하고, 끊긴 원환과 눈금 모티프가 그 움직임을 따라 도는 전설 최종 지팡이.",
+  "usage": "세로 화면 모바일 게임에서 로브→몸→모자→지팡이 순으로 겹치는 최전면 장비 레이어. 캐릭터 몸 이미지와 1.00 배율 기준으로 사용.",
+  "file_name": "staff_l_dice.png",
+  "file_format": "PNG",
+  "canvas_size": {
+    "width_px": 320,
+    "height_px": 660,
+    "aspect_ratio": 0.4848
+  },
+  "logical_resolution": {
+    "width_px": 320,
+    "height_px": 660,
+    "note": "최종 출력과 동일. 후처리 확대 전제 없음."
+  },
+  "background": "transparent",
+  "alpha_channel": {
+    "present": true,
+    "type": "8-bit alpha",
+    "semi_transparent_edges": true
+  },
+  "animation": false,
+  "frame_count": 1,
+  "direction": "upright_vertical_centered",
+  "measured_geometry": {
+    "staff_visible_bbox_px": {
+      "left": 92,
+      "top": 35,
+      "right": 228,
+      "bottom": 625
+    },
+    "staff_visible_height_px": 590,
+    "head_and_effect_width_px": 136,
+    "canvas_vertical_fill_ratio": 0.8939,
+    "horizontal_center_px": 159.5,
+    "reference_character_height_px": 599,
+    "height_vs_character_ratio": 0.985
+  },
+  "style_summary": "첨부 wizard_body.png의 모바일 픽셀아트 감각을 기준으로, 큰 명암 덩어리와 짙은 외곽선, 제한된 핵심 팔레트, 필요한 곳의 자연스러운 반투명 알파를 사용한 전설 등급 지팡이.",
+  "visual_identity": "부유하는 3면 주사위 + 금색/상아색 고대 프레임 + 남색/보라 눈금 + 보라 회전 원환.",
+  "silhouette_profile": "곧은 상아 샤프트 위에 Y자 금색 포크가 열리고 그 사이에 주사위가 떠 있음. 바깥의 끊긴 원환이 헤드를 크게 읽히게 한다.",
+  "proportion_profile": "지팡이 전체는 캐릭터 신장과 거의 동일. 샤프트는 길고 가늘며, 전설 등급 정보는 상단 약 150px 이내 헤드 실루엣과 핵심 광원에 집중.",
+  "pixel_structure": "1~4px 폭의 윤곽/면 분할과 2~8px 단위의 읽기 쉬운 픽셀 클러스터를 중심으로 구성. 잔무늬 반복 대신 큰 구조선과 제한된 포인트 픽셀을 사용.",
+  "pixel_density": "wizard_body.png와 병치했을 때 지나치게 거칠거나 반실사적으로 미세하지 않도록 중간 밀도. 샤프트 내부 반복은 크게 유지하고 헤드에만 밀도를 집중.",
+  "palette_profile": {
+    "core_design_palette_approx": [
+      "#281E34",
+      "#2D2F53",
+      "#434370",
+      "#69509B",
+      "#B88EE5",
+      "#E7CEFF",
+      "#7B5234",
+      "#CB974E",
+      "#F8D58E",
+      "#EEE3CF",
+      "#BFAFA6"
+    ],
+    "policy": "핵심 디자인 색은 제한하되 최종 PNG의 실제 RGBA 고유색 개수는 안티앨리어싱·반투명 파생색 때문에 고정하지 않음.",
+    "actual_unique_rgba_count": 8016
+  },
+  "color_count_estimate": "핵심 디자인 팔레트는 약 24~32색 범위의 관계를 목표로 하며, 출력 파일의 실제 고유 RGBA 수는 파생색 포함으로 더 많음.",
+  "shading_profile": "주사위는 상면·좌면·우면을 서로 다른 3개 큰 명도로 분리하고, 각 면 안에서는 1~2단 보조 명암만 사용. 금속은 갈색→금→연금 하이라이트.",
+  "lighting_profile": "주사위와 원환이 약한 보라 자체광. 금속 하이라이트는 좌상단. 부유 효과는 원환과 작은 눈금 잔상으로 표현.",
+  "outline_profile": "짙은 자주 2~3px 외곽선, 주사위 면 분할과 눈금은 1px 수준.",
+  "texture_material_profile": "상아/석질 샤프트, 고대 금속 프레임, 반투명 보라 마법 원환, 단단한 주사위 코어.",
+  "detail_density": "전설 등급답게 헤드의 실루엣·핵심 광원·움직임 암시는 유지하되, 나뭇결/스크래치/미세 입자처럼 축소 시 노이즈가 되는 반복 디테일은 억제.",
+  "readability_rules": [
+    "320×660 원본에서 헤드 전체 폭 150px 이하",
+    "작은 화면에서 먼저 헤드 실루엣과 핵심 코어가 읽혀야 함",
+    "샤프트 중심축은 수직을 유지",
+    "배경/그림자/손/팔/캐릭터 요소를 포함하지 않음"
+  ],
+  "mood_world_context": "세로형 모바일 마법 로그라이크/주사위 마법 세계의 최상위 전설 장비. 장식량보다 강한 정체성·자체 운동·명확한 핵심 광원으로 전설성을 표현.",
+  "consistency_must_keep": [
+    "590px 전후의 동일 길이",
+    "부유하는 주사위",
+    "최소 3개 면이 읽히는 투시",
+    "면마다 다른 눈금",
+    "회전 원환",
+    "세로 중앙축",
+    "투명 배경",
+    "그림자 없음"
+  ],
+  "consistency_should_keep": [
+    "짙은 자주계열 외곽선",
+    "좌상단 계열의 기본 하이라이트 방향",
+    "샤프트의 세로 정렬과 캐릭터 신장 대응",
+    "헤드 중심부의 높은 대비"
+  ],
+  "allowed_variations": [
+    "주사위 회전각",
+    "보이는 눈금 조합",
+    "원환 절단 위치",
+    "잔상 눈금 위치"
+  ],
+  "prohibited_variations": [
+    "일반적인 카지노 장식",
+    "문자/숫자 표기",
+    "헤드 폭 150px 초과",
+    "주사위를 샤프트에 고정 접착",
+    "과도한 입자",
+    "샤프트 기울기"
+  ],
+  "variant_generation_notes": "애니메이션 변형 시 주사위는 6~12프레임으로 회전하고 각 프레임에서 눈금 조합이 바뀌도록 한다. 원환은 반대 방향으로 천천히 회전시켜 상징성을 강화.",
+  "relation_to_other_assets": "전설 3종은 동일한 320×660 캔버스, 590px 가시 높이, 수직 중심축을 공유한다. 헤드는 서로 다른 핵심 모티프로 구분하되 등급 밝기/폭/밀도는 유사하게 유지.",
+  "consistency_group": "wizard_staff_legendary_v2_style_match",
+  "reference_basis": [
+    "wizard_body.png — 픽셀 굵기, 외곽선, 명암 밀도, 반투명 가장자리 감각의 시각 기준",
+    "ASSET_LIST_EQUIP_REVISED.md — 규격, 전설 3종 디자인, 내보내기 체크리스트"
+  ],
+  "originality_note": "기존 상용 게임/IP의 고유 무기나 로고를 복제하지 않고, 요청된 일반 판타지 모티프를 독자적인 실루엣·구조·색 관계로 구성한 신규 에셋.",
+  "license_risk_check": {
+    "status": "low",
+    "notes": "사용자 제공 캐릭터는 화풍/규격 참고로만 사용. 외부 브랜드·상표·식별 가능한 고유 문양 없음."
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "asset_name": "staff_l_dragonbone",
+  "asset_type": "equipment_staff",
+  "asset_role": "wizard_front_equipment_layer",
+  "display_name_ko": "용뼈 지팡이",
+  "rarity": "legendary",
+  "description": "용의 뼈와 이빨을 굵은 덩어리로 엮은 전설 등급 지팡이. 머리에는 불타는 눈이 박힌 압축된 용두 골격이 있고, 몇 개의 큰 화염 혀가 눈 주변에서 움직이는 듯한 인상을 준다.",
+  "usage": "세로형 모바일 게임에서 wizard_body 위의 최전면 지팡이 레이어로 장착. 다른 지팡이와 동일 길이/자세를 유지하여 교체 장착 시 정렬이 어긋나지 않도록 사용.",
+  "file_name": "staff_l_dragonbone.png",
+  "file_format": "PNG",
+  "canvas_size": {
+    "width_px": 320,
+    "height_px": 640,
+    "aspect_ratio": "1:2"
+  },
+  "logical_resolution": {
+    "width_px": 160,
+    "height_px": 320,
+    "export_scale": "2x nearest-neighbor"
+  },
+  "background": "transparent",
+  "alpha_channel": {
+    "present": true,
+    "type": "real RGBA alpha",
+    "used_alpha_values": [
+      0,
+      255
+    ],
+    "note": "배경은 alpha 0, 에셋 픽셀은 alpha 255. 흰색/체커보드 대체 없음."
+  },
+  "animation": false,
+  "frame_count": 1,
+  "direction": "upright_vertical",
+  "pixel_bbox": {
+    "left": 86,
+    "top": 32,
+    "right_exclusive": 236,
+    "bottom_exclusive": 608
+  },
+  "measured_staff_height_px": 576,
+  "staff_height_vs_reference_body": 0.9616,
+  "canvas_vertical_fill": 0.9,
+  "measured_max_width_px": 150,
+  "legendary_head_envelope_max_px": 150,
+  "reference_face_width_px": 169,
+  "style_summary": "첨부 wizard_body의 큰 픽셀 클러스터, 두꺼운 어두운 외곽, 제한된 단계 명암에 맞춘 2x nearest-neighbor 픽셀아트. 넓은 그라디언트와 미세 텍스처를 사용하지 않음.",
+  "visual_identity": "아이보리 용골 + 짙은 갈색 축 + 적색/주황 화염눈. 상단은 좌우로 벌어진 뿔과 턱, 중앙의 큰 불꽃눈으로 즉시 식별.",
+  "silhouette_profile": "직선형 장축. 헤드는 가로 150px 이내의 넓은 용두 골격 실루엣이며 아래로 갈수록 가는 축으로 수렴. 축에는 큰 척추 마디가 일정 간격으로 배치.",
+  "proportion_profile": {
+    "reference_wizard_height_px": 599,
+    "target_staff_height_rule": "reference height의 95~100%",
+    "actual_staff_height_px": 576,
+    "actual_ratio_percent": 96.16,
+    "head_rule": "전설 등급 헤드/오라/파편 포함 최대 150px, 얼굴 169px보다 작게",
+    "actual_max_asset_width_px": 150,
+    "horizontal_center_px": 160,
+    "upright": true
+  },
+  "pixel_structure": {
+    "logical_pixel_scale": "2x2 export clusters",
+    "edge_policy": "hard pixel edges; no smoothing",
+    "gradient_policy": "broad gradients prohibited",
+    "shape_language": "큰 실루엣 덩어리, 3~5단계 재질 명암, 굵은 장식 단위"
+  },
+  "pixel_density": "wizard_body와 함께 배치할 때 과도하게 미세해 보이지 않도록 160x320 논리 해상도에서 제작 후 2배 nearest-neighbor 출력",
+  "palette_profile": "뼈는 어두운 회갈색→중간 베이지→아이보리→크림의 4단계. 축은 4단계 갈색. 핵심 포인트는 진홍→적색→주황→황색의 4단계 화염. 금속 결속부는 어두운 황동→금색→밝은 금색.",
+  "color_count_estimate": 24,
+  "actual_nontransparent_rgb_color_count": 24,
+  "shading_profile": "재질별 3~5단계 셀/클러스터 명암. 큰 면을 우선하고 미세한 긁힘·나뭇결·보석 세부 면 분할 없음.",
+  "lighting_profile": "좌상단 계열의 짧고 굵은 하이라이트를 기본으로 하되 마법 핵은 자체발광 포인트로 처리. 전역 부드러운 광원 그라디언트 없음.",
+  "outline_profile": "짙은 남흑/자흑 계열 2~4px 출력 두께 외곽을 주요 실루엣에 사용. 내부 경계는 외곽보다 얇게.",
+  "texture/material_profile": "뼈는 큰 면 분할과 단단한 하이라이트로 건조한 골질. 축은 미세 나뭇결 없이 굵은 명암 띠만 사용. 화염은 넓은 단색 덩어리로만 표현.",
+  "detail_density": "모바일 축소 가독성 우선. 미세 입자 대신 큰 빛 덩어리와 소수의 굵은 파편/궤적만 사용.",
+  "readability_rules": [
+    "헤드가 얼굴 폭 169px보다 작아야 함",
+    "전설 등급 최대 외곽 폭 150px를 넘지 않음",
+    "세로 길이 576px로 캐릭터 신장 599px의 약 96.16%",
+    "캔버스 세로의 정확히 90% 사용",
+    "가로 중앙 정렬",
+    "캐릭터/손/팔/그림자 미포함",
+    "미세 텍스처와 넓은 그라디언트 금지",
+    "24~32색 유지"
+  ],
+  "mood/world_context": "작은 모바일 화면에서도 즉시 전설 등급으로 읽히는 과장된 상징 헤드와 제한된 발광. 귀여운 치비 마법사와 함께 사용되지만 장비 자체는 강력하고 신비로운 인상.",
+  "consistency_must_keep": [
+    "320x640 투명 RGBA PNG",
+    "실제 지팡이 외곽 높이 576px",
+    "가로 중앙 수직 자세",
+    "헤드/오라/파편 포함 최대 150px 폭",
+    "24~32개 비투명 RGB 색",
+    "2x nearest-neighbor 픽셀 클러스터",
+    "짙은 외곽선과 3~5단계 재질 명암",
+    "아이보리 용골 + 짙은 갈색 축 + 적색/주황 화염눈. 상단은 좌우로 벌어진 뿔과 턱, 중앙의 큰 불꽃눈으로 즉시 식별."
+  ],
+  "consistency_should_keep": [
+    "좌상단 하이라이트 경향",
+    "축의 두께와 장식 간격",
+    "큰 실루엣 우선의 디테일 밀도",
+    "동일 등급 내 밝기/헤드 크기 수준"
+  ],
+  "allowed_variations": [
+    "불꽃의 방향과 눈의 밝기 변화는 허용하되 용두 헤드 폭, 척추 마디 리듬, 중앙 화염눈은 유지.",
+    "색상은 정체성을 잃지 않는 범위에서 인접 명도/채도 조정 가능",
+    "추후 애니메이션 프레임에서는 전설의 '스스로 움직임'을 표현하는 궤적/불꽃/파편 위치 변경 가능"
+  ],
+  "prohibited_variations": [
+    "헤드 외곽 150px 초과",
+    "지팡이 길이 570~600px 범위 이탈",
+    "눕힘/휘두름 자세",
+    "캐릭터 신체 또는 바닥 그림자 추가",
+    "미세 입자 다량 추가",
+    "부드러운 에어브러시/넓은 그라디언트",
+    "32색 초과의 과도한 색 세분화",
+    "기존 게임/IP의 식별 가능한 고유 지팡이 디자인 복제"
+  ],
+  "variant_generation_notes": "불꽃의 방향과 눈의 밝기 변화는 허용하되 용두 헤드 폭, 척추 마디 리듬, 중앙 화염눈은 유지.",
+  "relation_to_other_assets": "wizard_body의 전면 장비 레이어. 동일 세트의 다른 14개 지팡이와 길이·캔버스·중앙 정렬 체계를 공유해야 함.",
+  "consistency_group": "wizard_staff_equipment_v2",
+  "reference_basis": [
+    "사용자 첨부 wizard_body.png: 캐릭터 신장/얼굴 폭/픽셀 굵기/채색 밀도 기준",
+    "사용자 첨부 ASSET_LIST_EQUIP.md: 전설 지팡이 외형, 규격, 색 수, 디테일, 출력 조건 기준"
+  ],
+  "originality_note": "기존 게임/IP의 특정 지팡이, 로고, 문양을 직접 모사하지 않고 요청된 일반 개념(용뼈, 공허 구체, 부유 주사위)을 독자 실루엣과 장식 구조로 재구성.",
+  "license_risk_check": {
+    "status": "low",
+    "notes": "사용자 제공 캐릭터는 크기/화풍 참조로만 사용했고 결과물에는 캐릭터 자체를 복제하지 않음. 식별 가능한 외부 IP 표식/로고/고유 문양 없음."
+  },
+  "validation": {
+    "png_original": true,
+    "transparent_background": true,
+    "single_asset_only": true,
+    "shadow_absent": true,
+    "body_hand_arm_absent": true,
+    "upright": true,
+    "centered": true,
+    "staff_height_px": 576,
+    "staff_height_range_pass": true,
+    "staff_vs_body_95_100_pass": true,
+    "head_max_150_pass": true,
+    "head_smaller_than_face_169_pass": true,
+    "canvas_fill_90_percent_pass": true,
+    "color_count_24_32_pass": true,
+    "broad_gradient_absent": true
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "reference_character": "wizard_body.png",
+  "source_request": "ASSET_LIST_EQUIP.md",
+  "canvas": "320x660",
+  "logical_resolution": "160x330 @2x nearest",
+  "results": {
+    "staff_c_knotted": {
+      "alpha_bbox": [
+        116,
+        36,
+        194,
+        632
+      ],
+      "sprite_height_px": 596,
+      "sprite_width_px": 78,
+      "head_envelope_width_px": 78,
+      "opaque_rgb_color_count": 24,
+      "center_x_px": 154.5,
+      "target_head_width_px": 70,
+      "head_below_face_169px": true,
+      "head_near_grade_target": true,
+      "length_95_100pct_of_599": true,
+      "canvas_fill_about_90pct": true,
+      "color_count_24_32": true,
+      "rgba": true,
+      "transparent_background": true
+    },
+    "staff_c_cracked": {
+      "alpha_bbox": [
+        128,
+        36,
+        192,
+        632
+      ],
+      "sprite_height_px": 596,
+      "sprite_width_px": 64,
+      "head_envelope_width_px": 64,
+      "opaque_rgb_color_count": 24,
+      "center_x_px": 159.5,
+      "target_head_width_px": 70,
+      "head_below_face_169px": true,
+      "head_near_grade_target": true,
+      "length_95_100pct_of_599": true,
+      "canvas_fill_about_90pct": true,
+      "color_count_24_32": true,
+      "rgba": true,
+      "transparent_background": true
+    },
+    "staff_c_brass": {
+      "alpha_bbox": [
+        124,
+        36,
+        196,
+        632
+      ],
+      "sprite_height_px": 596,
+      "sprite_width_px": 72,
+      "head_envelope_width_px": 72,
+      "opaque_rgb_color_count": 24,
+      "center_x_px": 159.5,
+      "target_head_width_px": 70,
+      "head_below_face_169px": true,
+      "head_near_grade_target": true,
+      "length_95_100pct_of_599": true,
+      "canvas_fill_about_90pct": true,
+      "color_count_24_32": true,
+      "rgba": true,
+      "transparent_background": true
+    },
+    "staff_u_oak": {
+      "alpha_bbox": [
+        118,
+        36,
+        204,
+        632
+      ],
+      "sprite_height_px": 596,
+      "sprite_width_px": 86,
+      "head_envelope_width_px": 86,
+      "opaque_rgb_color_count": 24,
+      "center_x_px": 160.5,
+      "target_head_width_px": 90,
+      "head_below_face_169px": true,
+      "head_near_grade_target": true,
+      "length_95_100pct_of_599": true,
+      "canvas_fill_about_90pct": true,
+      "color_count_24_32": true,
+      "rgba": true,
+      "transparent_background": true
+    },
+    "staff_u_silver": {
+      "alpha_bbox": [
+        116,
+        36,
+        206,
+        632
+      ],
+      "sprite_height_px": 596,
+      "sprite_width_px": 90,
+      "head_envelope_width_px": 90,
+      "opaque_rgb_color_count": 24,
+      "center_x_px": 160.5,
+      "target_head_width_px": 90,
+      "head_below_face_169px": true,
+      "head_near_grade_target": true,
+      "length_95_100pct_of_599": true,
+      "canvas_fill_about_90pct": true,
+      "color_count_24_32": true,
+      "rgba": true,
+      "transparent_background": true
+    },
+    "staff_u_bone": {
+      "alpha_bbox": [
+        118,
+        36,
+        204,
+        632
+      ],
+      "sprite_height_px": 596,
+      "sprite_width_px": 86,
+      "head_envelope_width_px": 86,
+      "opaque_rgb_color_count": 24,
+      "center_x_px": 160.5,
+      "target_head_width_px": 90,
+      "head_below_face_169px": true,
+      "head_near_grade_target": true,
+      "length_95_100pct_of_599": true,
+      "canvas_fill_about_90pct": true,
+      "color_count_24_32": true,
+      "rgba": true,
+      "transparent_background": true
+    },
+    "staff_r_rune": {
+      "alpha_bbox": [
+        106,
+        36,
+        216,
+        632
+      ],
+      "sprite_height_px": 596,
+      "sprite_width_px": 110,
+      "head_envelope_width_px": 110,
+      "opaque_rgb_color_count": 24,
+      "center_x_px": 160.5,
+      "target_head_width_px": 110,
+      "head_below_face_169px": true,
+      "head_near_grade_target": true,
+      "length_95_100pct_of_599": true,
+      "canvas_fill_about_90pct": true,
+      "color_count_24_32": true,
+      "rgba": true,
+      "transparent_background": true
+    },
+    "staff_r_frost": {
+      "alpha_bbox": [
+        106,
+        36,
+        216,
+        632
+      ],
+      "sprite_height_px": 596,
+      "sprite_width_px": 110,
+      "head_envelope_width_px": 110,
+      "opaque_rgb_color_count": 24,
+      "center_x_px": 160.5,
+      "target_head_width_px": 110,
+      "head_below_face_169px": true,
+      "head_near_grade_target": true,
+      "length_95_100pct_of_599": true,
+      "canvas_fill_about_90pct": true,
+      "color_count_24_32": true,
+      "rgba": true,
+      "transparent_background": true
+    },
+    "staff_r_ember": {
+      "alpha_bbox": [
+        106,
+        36,
+        216,
+        632
+      ],
+      "sprite_height_px": 596,
+      "sprite_width_px": 110,
+      "head_envelope_width_px": 110,
+      "opaque_rgb_color_count": 24,
+      "center_x_px": 160.5,
+      "target_head_width_px": 110,
+      "head_below_face_169px": true,
+      "head_near_grade_target": true,
+      "length_95_100pct_of_599": true,
+      "canvas_fill_about_90pct": true,
+      "color_count_24_32": true,
+      "rgba": true,
+      "transparent_background": true
+    }
+  }
+}

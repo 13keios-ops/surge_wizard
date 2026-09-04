@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.1",
+  "asset_name": "staff_u_silver",
+  "asset_type": "weapon_staff",
+  "asset_role": "equippable_staff_layer",
+  "display_name_ko": "은테 지팡이",
+  "rarity": "고급",
+  "rarity_code": "uncommon",
+  "description": "목재 몸통을 은빛 테와 띠로 보강하고 끝에 작고 푸른 돌을 단 장지팡이. 푸른 돌은 보석광만 있고 마법 발광은 없다.",
+  "usage": [
+    "플레이어 지팡이 장비 레이어",
+    "세로형 모바일 캐릭터 표시",
+    "인벤토리 아이콘 원본으로 크롭하여 사용 가능"
+  ],
+  "file_name": "staff_u_silver.png",
+  "file_format": "PNG",
+  "canvas_size": {
+    "width": 941,
+    "height": 1672,
+    "unit": "px"
+  },
+  "logical_resolution": {
+    "status": "project_not_finalized",
+    "native_canvas": "941x1672",
+    "asset_bbox": [
+      387,
+      505,
+      554,
+      1115
+    ]
+  },
+  "background": "transparent",
+  "alpha_channel": {
+    "present": true,
+    "type": "RGBA",
+    "transparent_background_required": true
+  },
+  "animation": false,
+  "frame_count": 1,
+  "direction": "upright_equipment_anchor",
+  "layering": {
+    "draw_order": "staff_foreground",
+    "character_layer_order_reference": [
+      "robe",
+      "body",
+      "hat",
+      "staff"
+    ],
+    "hand_anchor": {
+      "x": 470,
+      "y": 910
+    },
+    "placement_rule": "이번 9종 모두 동일 캔버스/동일 중심축/동일 목표 높이로 정규화. 실제 방향별 손 결합은 향후 방향별 장비 레이어 제작 시 미세 조정한다."
+  },
+  "style_summary": "폭주마법사 기본 캐릭터와 함께 쓰는 모바일용 중간~중상 픽셀 밀도의 장지팡이. 큰 픽셀 클러스터, 색상 기반 짙은 외곽선, 3단계 중심의 명암과 재질별 선택적 최고광을 사용한다.",
+  "pixel_structure": {
+    "look": "고해상도에서 픽셀아트처럼 렌더링된 스타일 마스터",
+    "cluster_rule": "작은 노이즈보다 큰 형태 클러스터를 우선",
+    "edge_rule": "샤프트와 머리 장식의 실루엣이 축소 상태에서도 명확하도록 계단형 외곽을 정돈",
+    "anti_aliasing_note": "현재 스타일 마스터는 부분 알파와 중간색을 포함한다. 최종 논리 해상도 확정 시 픽셀 그리드 정리가 필요하다."
+  },
+  "pixel_density": {
+    "profile": "중간~중상",
+    "relation_to_character": "기본 캐릭터의 장비 디테일 밀도와 유사한 수준"
+  },
+  "shading_profile": {
+    "base_steps": "그림자-기본색-밝은면 3단계를 중심으로 사용",
+    "highlights": "금속/수정/마법부에만 선택적 최고광"
+  },
+  "lighting_profile": {
+    "direction": "상단-좌상단 기본광",
+    "magic_exception": "희귀 등급에서만 자체 발광 허용"
+  },
+  "outline_profile": {
+    "type": "재질색 기반의 짙은 외곽선",
+    "wood": "dark brown",
+    "metal": "dark desaturated metal tone",
+    "crystal": "deep saturated version of crystal color"
+  },
+  "detail_density": {
+    "profile": "중간",
+    "rule": "인벤토리 아이콘으로 잘라 써도 머리 장식과 재질이 구분되어야 함"
+  },
+  "readability_rules": [
+    "세로형 모바일 화면에서 지팡이 종류가 실루엣만으로 구분되어야 한다.",
+    "지팡이 전체가 캔버스 밖으로 잘리지 않는다.",
+    "캐릭터 전신 길이에 가까운 장지팡이 스케일을 유지한다.",
+    "일반/고급은 마법 발광을 사용하지 않고, 희귀부터 명확한 빛을 사용한다.",
+    "등급이 올라갈수록 머리 장식의 시각적 크기와 밝기가 증가한다."
+  ],
+  "visual_identity": {
+    "equipment_family": "long_staff",
+    "rarity_visual_tier": "고급",
+    "key_identity": "날렵한 세로 샤프트와 은빛 곡선 머리, 작은 청색 포인트가 있는 제작품 실루엣.",
+    "materials": [
+      "목재",
+      "은빛 금속",
+      "작은 푸른 돌"
+    ],
+    "magic_effect": "none"
+  },
+  "palette_profile": {
+    "core_colors": [
+      "dark wood",
+      "silver",
+      "deep blue",
+      "muted cyan"
+    ],
+    "rarity_rule": "희귀부터 마법 발광색과 near-white 최고광을 허용"
+  },
+  "color_count_estimate": {
+    "intentional_core_palette_estimate": "약 14~26색(재질/등급에 따라 변동)",
+    "note": "현재 스타일 마스터 PNG는 부분 알파와 중간색 때문에 실제 고유 RGB 수가 더 많다."
+  },
+  "texture_material_profile": {
+    "materials": [
+      "목재",
+      "은빛 금속",
+      "작은 푸른 돌"
+    ],
+    "rendering_rule": "나무는 넓은 갈색 면과 어두운 홈, 금속은 밝은 모서리, 수정은 짙은 외곽-고채도 중간색-작은 최고광"
+  },
+  "mood_world_context": "젊은 마법사가 장비를 주워 쓰며 성장하는 판타지 모바일 게임. 낮은 등급은 소박하고, 희귀부터 마법성이 시각적으로 드러난다.",
+  "consistency_must_keep": [
+    "은테/은띠",
+    "작은 푸른 돌",
+    "정돈된 제작품",
+    "무발광 또는 극히 제한된 물성 하이라이트",
+    "장지팡이 크기",
+    "세워 든 자세",
+    "동일한 캔버스와 중심축",
+    "지팡이 외의 손/팔/몸을 포함하지 않음",
+    "실제 투명 배경"
+  ],
+  "consistency_should_keep": [
+    "기본 캐릭터와 유사한 픽셀 밀도",
+    "재질색 기반 짙은 외곽선",
+    "상단-좌상단 기본광",
+    "인벤토리 아이콘으로 잘라 써도 읽히는 머리 장식"
+  ],
+  "allowed_variations": [
+    "향후 방향별 회전/원근 보정",
+    "공격 애니메이션에서의 기울기 변화",
+    "희귀도 강화 단계의 제한적 하이라이트 변화"
+  ],
+  "prohibited_variations": [
+    "큰 청색 오라",
+    "부유 파티클",
+    "거대한 보석",
+    "희귀 등급의 마법 효과",
+    "캐릭터 신체 포함",
+    "불투명 배경",
+    "캔버스 밖으로 지팡이 일부가 잘리는 구성",
+    "레퍼런스 게임의 고유 무기 디자인 직접 복제"
+  ],
+  "variant_generation_notes": [
+    "모든 지팡이는 동일한 캐릭터에 교체 장착되는 세트이므로 샤프트 길이와 화면 점유율을 통일한다.",
+    "머리 장식은 등급이 올라갈수록 커질 수 있으나 손이 잡는 기준 위치와 전체 길이 감각은 유지한다.",
+    "현재 파일은 단일 세워 든 기준 에셋이며 4방향 실제 레이어 변형은 별도 제작 대상으로 남겨 둔다."
+  ],
+  "relation_to_other_assets": {
+    "character_style_anchor": "라벤더_머리_마법사_스프라이트_시트.png",
+    "equipment_family": "staff_15_set",
+    "same_batch": [
+      "staff_c_knotted",
+      "staff_c_cracked",
+      "staff_c_brass",
+      "staff_u_oak",
+      "staff_u_silver",
+      "staff_u_bone",
+      "staff_r_rune",
+      "staff_r_frost",
+      "staff_r_ember"
+    ]
+  },
+  "consistency_group": "EQUIP_STAFF_STYLE_01",
+  "reference_basis": {
+    "asset_list_source": "ASSET_LIST_EQUIP.md",
+    "user_overrides": [
+      "wizard_body 신규 제작 단계는 생략",
+      "지팡이는 캐릭터 전신 길이에 가까운 장지팡이",
+      "수정구는 지팡이와 분리하여 추후 액세서리로 제작"
+    ],
+    "reference_policy": "타 게임 레퍼런스는 모바일 가독성/픽셀 밀도/장비 과장 원리만 참고하고 구체 디자인은 복제하지 않는다."
+  },
+  "originality_note": "일반적인 판타지 지팡이 소재를 기반으로 폭주마법사 장비 세트용으로 독립 구성. 레퍼런스 게임의 특정 장비, 문양, UI를 복제하지 않음.",
+  "license_risk_check": {
+    "status": "low",
+    "note": "일반 판타지 소재와 추상적 마법 효과 중심. 특정 IP 고유 디자인과의 식별 가능한 유사성을 피함."
+  },
+  "generation_provenance": {
+    "source_generation_file": "a_clean_sprite_sheet_style_product_image_on_a_tran.png",
+    "source_generation_gen_id": "a3a8a124-cbf9-4dfb-903a-17195b2a50d6",
+    "postprocess": "단일 에셋 분리, 투명 여백 정리, 동일 캔버스/동일 목표 높이로 NEAREST 정규화",
+    "sha256": "9fe182b38b01c4a6411188260145ea28bf8edc8364cf3408690fb81c169d08a5"
+  },
+  "silhouette_profile": "날렵한 세로 샤프트와 은빛 곡선 머리, 작은 청색 포인트가 있는 제작품 실루엣.",
+  "proportion_profile": {
+    "overall_scale": "캐릭터 전신 길이에 가까운 장지팡이",
+    "normalized_visual_height_px": 610,
+    "canvas_height_px": 1672,
+    "visual_height_to_canvas_ratio": 0.3648,
+    "shaft_rule": "전체 길이의 대부분은 세로 샤프트가 차지하고, 등급 상승에 따라 머리 장식의 폭/복잡도가 증가",
+    "hand_grip_rule": "동일 캐릭터 교체 장착을 전제로 손잡이 영역의 세로 위치를 가급적 공통화"
+  },
+  "texture/material_profile": {
+    "materials": [
+      "목재",
+      "은빛 금속",
+      "작은 푸른 돌"
+    ],
+    "rendering_rule": "나무는 넓은 갈색 면과 어두운 홈, 금속은 밝은 모서리, 수정은 짙은 외곽-고채도 중간색-작은 최고광"
+  }
+}

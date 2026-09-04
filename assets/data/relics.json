@@ -1,0 +1,322 @@
+[
+  {
+    "id": "worn_lucky_coin",
+    "name": "닳은 행운 동전",
+    "icon": "two-coins",
+    "rarity": "common",
+    "description": "모든 판정값 +1.",
+    "effect": { "type": "check_bonus", "value": 1 }
+  },
+  {
+    "id": "chalk_sigil",
+    "name": "분필 마법진",
+    "icon": "chalk-outline-murder",
+    "rarity": "common",
+    "description": "전력 시전 판정값 +1.",
+    "effect": { "type": "check_bonus_full", "value": 1 }
+  },
+  {
+    "id": "warm_pebble",
+    "name": "따뜻한 조약돌",
+    "icon": "stone-pile",
+    "rarity": "common",
+    "description": "전력 시전 판정값 +1.",
+    "effect": { "type": "check_bonus_full", "value": 1 }
+  },
+  {
+    "id": "rabbit_foot",
+    "name": "토끼발 부적",
+    "icon": "rabbit",
+    "rarity": "common",
+    "description": "판정당 리롤 가능 횟수 +1.",
+    "effect": { "type": "extra_reroll", "value": 1 }
+  },
+  {
+    "id": "felt_tray",
+    "name": "펠트 주사위 받침",
+    "icon": "rolling-dices",
+    "rarity": "common",
+    "description": "전투마다 마나 없이 리롤 1회.",
+    "effect": { "type": "free_rerolls", "value": 1 }
+  },
+  {
+    "id": "matching_gloves",
+    "name": "짝맞춤 장갑",
+    "icon": "gloves",
+    "rarity": "common",
+    "description": "페어 보너스 +1 (합계 +4).",
+    "effect": { "type": "pair_bonus_up", "value": 1 }
+  },
+  {
+    "id": "mistake_notebook",
+    "name": "견습생의 오답노트",
+    "icon": "notebook",
+    "rarity": "common",
+    "description": "실패할 때 마력 축적 +1 추가.",
+    "effect": { "type": "charge_gain_up", "value": 1 }
+  },
+  {
+    "id": "bent_horseshoe",
+    "name": "구부러진 편자",
+    "icon": "horseshoe",
+    "rarity": "common",
+    "description": "모든 판정값 +1.",
+    "effect": { "type": "check_bonus", "value": 1 }
+  },
+  {
+    "id": "four_leaf_clover",
+    "name": "네잎클로버 책갈피",
+    "icon": "clover",
+    "rarity": "common",
+    "description": "전투마다 마나 없이 리롤 1회.",
+    "effect": { "type": "free_rerolls", "value": 1 }
+  },
+  {
+    "id": "dice_polish",
+    "name": "주사위 광택제",
+    "icon": "perfume-bottle",
+    "rarity": "common",
+    "description": "판정당 리롤 가능 횟수 +1.",
+    "effect": { "type": "extra_reroll", "value": 1 }
+  },
+  {
+    "id": "fortune_incense",
+    "name": "길운의 향",
+    "icon": "incense",
+    "rarity": "common",
+    "description": "전력 시전 판정값 +1.",
+    "effect": { "type": "check_bonus_full", "value": 1 }
+  },
+  {
+    "id": "steady_wristband",
+    "name": "안정 손목 밴드",
+    "icon": "walking-boot",
+    "rarity": "common",
+    "description": "페어 보너스 +1 (합계 +4).",
+    "effect": { "type": "pair_bonus_up", "value": 1 }
+  },
+  {
+    "id": "tiny_hourglass",
+    "name": "꼬마 모래시계",
+    "icon": "sands-of-time",
+    "rarity": "common",
+    "description": "전투마다 마나 없이 리롤 1회.",
+    "effect": { "type": "free_rerolls", "value": 1 }
+  },
+  {
+    "id": "leather_belt",
+    "name": "낡은 가죽 허리띠",
+    "icon": "belt",
+    "rarity": "common",
+    "description": "최대 체력 +3.",
+    "effect": { "type": "max_hp_up", "value": 3 }
+  },
+  {
+    "id": "cozy_scarf",
+    "name": "포근한 목도리",
+    "icon": "winter-hat",
+    "rarity": "common",
+    "description": "전투 승리 후 체력 2 회복.",
+    "effect": { "type": "heal_after_battle", "value": 2 }
+  },
+  {
+    "id": "iron_kettle",
+    "name": "무쇠 주전자",
+    "icon": "teapot",
+    "rarity": "common",
+    "description": "전투 시작 시 방어막 3.",
+    "effect": { "type": "start_shield", "value": 3 }
+  },
+  {
+    "id": "whetstone",
+    "name": "마력 숫돌",
+    "icon": "anvil-impact",
+    "rarity": "common",
+    "description": "모든 주문 대미지 +1.",
+    "effect": { "type": "damage_up", "value": 1 }
+  },
+  {
+    "id": "hearty_stew_pot",
+    "name": "든든한 죽 냄비",
+    "icon": "cauldron",
+    "rarity": "common",
+    "description": "최대 체력 +3.",
+    "effect": { "type": "max_hp_up", "value": 3 }
+  },
+  {
+    "id": "loaded_die",
+    "name": "납 넣은 주사위",
+    "icon": "dice-six-faces-six",
+    "rarity": "rare",
+    "description": "주사위 눈 1이 나오면 2로 바뀐다.",
+    "effect": { "type": "reroll_ones", "value": 2 }
+  },
+  {
+    "id": "gamblers_ring",
+    "name": "도박사의 반지",
+    "icon": "ring",
+    "rarity": "rare",
+    "description": "모든 판정값 +2.",
+    "effect": { "type": "check_bonus", "value": 2 }
+  },
+  {
+    "id": "silver_compass",
+    "name": "은 나침반",
+    "icon": "compass",
+    "rarity": "rare",
+    "description": "판정당 리롤 가능 횟수 +2.",
+    "effect": { "type": "extra_reroll", "value": 2 }
+  },
+  {
+    "id": "twin_dice_charm",
+    "name": "쌍둥이 주사위 부적",
+    "icon": "dice-twenty-faces-one",
+    "rarity": "rare",
+    "description": "페어 보너스 +2 (합계 +5).",
+    "effect": { "type": "pair_bonus_up", "value": 2 }
+  },
+  {
+    "id": "oracle_lens",
+    "name": "예언자의 렌즈",
+    "icon": "crystal-ball",
+    "rarity": "rare",
+    "description": "전력 시전 판정값 +2.",
+    "effect": { "type": "check_bonus_full", "value": 2 }
+  },
+  {
+    "id": "velvet_gloves",
+    "name": "벨벳 장갑",
+    "icon": "hand",
+    "rarity": "rare",
+    "description": "전투마다 마나 없이 리롤 2회.",
+    "effect": { "type": "free_rerolls", "value": 2 }
+  },
+  {
+    "id": "storm_charge_rod",
+    "name": "축전 지팡이",
+    "icon": "lightning-storm",
+    "rarity": "rare",
+    "description": "실패할 때 마력 축적 +1 추가.",
+    "effect": { "type": "charge_gain_up", "value": 1 }
+  },
+  {
+    "id": "balance_bracelet",
+    "name": "균형의 팔찌",
+    "icon": "bracer",
+    "rarity": "rare",
+    "description": "전력 시전 판정값 +2.",
+    "effect": { "type": "check_bonus_full", "value": 2 }
+  },
+  {
+    "id": "lucky_cat_statue",
+    "name": "행운 고양이상",
+    "icon": "cat",
+    "rarity": "rare",
+    "description": "전투마다 마나 없이 리롤 2회.",
+    "effect": { "type": "free_rerolls", "value": 2 }
+  },
+  {
+    "id": "sage_bookmark",
+    "name": "현자의 책갈피",
+    "icon": "bookmarklet",
+    "rarity": "rare",
+    "description": "모든 판정값 +2.",
+    "effect": { "type": "check_bonus", "value": 2 }
+  },
+  {
+    "id": "dragon_scale",
+    "name": "용 비늘 조각",
+    "icon": "dragon-shield",
+    "rarity": "rare",
+    "description": "전투 시작 시 방어막 5.",
+    "effect": { "type": "start_shield", "value": 5 }
+  },
+  {
+    "id": "vampire_fang",
+    "name": "흡혈귀 송곳니",
+    "icon": "fangs",
+    "rarity": "rare",
+    "description": "대성공 시 체력 2 회복.",
+    "effect": { "type": "heal_on_crit", "value": 2 }
+  },
+  {
+    "id": "giant_belt",
+    "name": "거인의 허리띠",
+    "icon": "belt-buckles",
+    "rarity": "rare",
+    "description": "최대 체력 +5.",
+    "effect": { "type": "max_hp_up", "value": 5 }
+  },
+  {
+    "id": "surge_catalyst",
+    "name": "폭주 촉매",
+    "icon": "unstable-orb",
+    "rarity": "rare",
+    "description": "폭주 발생 시 마나 2 회복.",
+    "effect": { "type": "mana_on_surge", "value": 2 }
+  },
+  {
+    "id": "fate_dice",
+    "name": "운명의 주사위",
+    "icon": "dice-shield",
+    "rarity": "epic",
+    "description": "모든 판정값 +3.",
+    "effect": { "type": "check_bonus", "value": 3 }
+  },
+  {
+    "id": "golden_loaded_die",
+    "name": "황금 주사위",
+    "icon": "gold-nuggets",
+    "rarity": "epic",
+    "description": "주사위 눈 1이 나오면 3으로 바뀐다.",
+    "effect": { "type": "reroll_ones", "value": 3 }
+  },
+  {
+    "id": "probability_prism",
+    "name": "확률의 프리즘",
+    "icon": "prism",
+    "rarity": "epic",
+    "description": "페어 보너스 +3 (합계 +6).",
+    "effect": { "type": "pair_bonus_up", "value": 3 }
+  },
+  {
+    "id": "eternity_hourglass",
+    "name": "영원의 모래시계",
+    "icon": "hourglass",
+    "rarity": "epic",
+    "description": "전투마다 마나 없이 리롤 3회.",
+    "effect": { "type": "free_rerolls", "value": 3 }
+  },
+  {
+    "id": "star_chart",
+    "name": "별자리 천구의",
+    "icon": "star-swirl",
+    "rarity": "epic",
+    "description": "전력 시전 판정값 +3.",
+    "effect": { "type": "check_bonus_full", "value": 3 }
+  },
+  {
+    "id": "phoenix_heart",
+    "name": "불사조의 심장",
+    "icon": "heart-wings",
+    "rarity": "epic",
+    "description": "전투 승리 후 체력 5 회복.",
+    "effect": { "type": "heal_after_battle", "value": 5 }
+  },
+  {
+    "id": "archmage_mantle",
+    "name": "대마법사의 망토",
+    "icon": "cape",
+    "rarity": "epic",
+    "description": "모든 주문 대미지 +3.",
+    "effect": { "type": "damage_up", "value": 3 }
+  },
+  {
+    "id": "titan_gauntlet",
+    "name": "거상의 건틀릿",
+    "icon": "gauntlet",
+    "rarity": "epic",
+    "description": "최대 체력 +6.",
+    "effect": { "type": "max_hp_up", "value": 6 }
+  }
+]

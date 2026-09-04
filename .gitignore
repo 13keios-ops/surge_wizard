@@ -1,0 +1,59 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# ── surge_wizard 추가 (2026-09-05) ─────────────────────────
+
+# 참고 자료: 남의 상용 게임 스크린샷·플레이 영상.
+# 저작권상 올리지 않는다 (CLAUDE.md 절대 규칙 6).
+# 영상 하나가 2.6GB라 GitHub 파일 상한(100MB)도 넘는다.
+# 우리가 직접 쓴 분석 문서(.md)만 올린다.
+/refs/*
+!/refs/*.md
+
+# 데스크톱 빌드가 만드는 임시 파일 (flutter_windows.dll.pdb 가 100MB 넘는다)
+/windows/flutter/ephemeral/
+/linux/flutter/ephemeral/
+/macos/Flutter/ephemeral/

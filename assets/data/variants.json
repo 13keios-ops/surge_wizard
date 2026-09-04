@@ -1,0 +1,8 @@
+[
+  { "id": "normal", "name_prefix": "", "tint": null, "hp_mul": 1.0, "atk_mul": 1.0 },
+  { "id": "hungry", "name_prefix": "굶주린", "tint": "#C8503C", "hp_mul": 0.8, "atk_mul": 1.3 },
+  { "id": "rotten", "name_prefix": "부패한", "tint": "#6E9145", "hp_mul": 1.1, "atk_mul": 1.1 },
+  { "id": "frozen", "name_prefix": "얼어붙은", "tint": "#5C93C4", "hp_mul": 1.2, "atk_mul": 0.9 },
+  { "id": "shadow", "name_prefix": "그림자", "tint": "#5A4270", "hp_mul": 1.0, "atk_mul": 1.2 },
+  { "id": "ancient", "name_prefix": "고대의", "tint": "#C9A227", "hp_mul": 1.5, "atk_mul": 1.4 }
+]

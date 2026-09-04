@@ -1,0 +1,97 @@
+{
+  "asset_type": "equipment_staff",
+  "asset_role": "wizard_front_layer_equipment",
+  "usage": "세로형 모바일 게임에서 wizard_body 위 최전방 레이어로 겹쳐 사용하는 지팡이 장비",
+  "file_format": "PNG",
+  "canvas_size": {
+    "width": 320,
+    "height": 660,
+    "unit": "px"
+  },
+  "logical_resolution": {
+    "width": 160,
+    "height": 330,
+    "scale": 2,
+    "resampling": "nearest_neighbor"
+  },
+  "background": "transparent",
+  "alpha_channel": "true_rgba_alpha",
+  "animation": {
+    "animated": false,
+    "frame_count": 1
+  },
+  "frame_count": 1,
+  "direction": "upright_front_layer",
+  "style_summary": "첨부 wizard_body.png의 작은 모바일 픽셀아트 가독성을 기준으로 한 2px 논리 픽셀 블록, 굵은 실루엣, 제한 팔레트, 큰 명암 덩어리 중심 표현.",
+  "pixel_structure": "160x330 논리 해상도에서 직접 도형을 구성한 뒤 2배 nearest-neighbor 확대. 안티앨리어싱·부드러운 그라디언트 없음.",
+  "pixel_density": "2x2 physical pixels per logical pixel; 작은 눈 크기 이하의 미세 디테일을 피하고 장식은 큰 클러스터로 묶음.",
+  "palette_profile": "에셋당 24~32개의 불투명 RGB 색을 목표로 제한. 각 재질은 3~5개 중심 명암 단계와 소수의 보조색만 사용.",
+  "shading_profile": "넓은 그라디언트 대신 평면 명암 덩어리와 굵은 하이라이트/암부 클러스터.",
+  "lighting_profile": "좌상단/정면 위쪽의 약한 주광을 가정. 희귀 등급의 마법광만 국소적으로 더 밝음.",
+  "outline_profile": "1~2 logical px(2~4 physical px) 어두운 남보라/갈흑 외곽선. 헤드의 등급 실루엣을 우선.",
+  "detail_density": "모바일 축소 화면에서 즉시 읽히는 큰 결, 큰 보석 면, 굵은 금속띠, 큰 룬/불꽃만 허용.",
+  "readability_rules": [
+    "캐릭터 눈보다 작은 장식·입자 금지",
+    "지팡이는 캔버스 가로 중앙에 수직 배치",
+    "몸·손·팔·캐릭터 그림자 포함 금지",
+    "헤드와 광/입자 전체 폭은 등급 상한 이내 유지",
+    "600px 안팎의 캐릭터와 나란히 보았을 때 지팡이 길이와 픽셀 굵기가 튀지 않게 유지"
+  ],
+  "mood/world_context": "가벼운 판타지 모바일 RPG. 등급 상승 시 제작 완성도와 마법성만 단계적으로 증가.",
+  "consistency_must_keep": [
+    "320x660 RGBA PNG",
+    "590px 안팎의 전체 지팡이 길이",
+    "수직 정자세와 동일한 중심축",
+    "2px 물리 픽셀 그리드",
+    "제한 팔레트와 큰 덩어리 명암",
+    "투명 배경 및 그림자 없음"
+  ],
+  "consistency_should_keep": [
+    "어두운 외곽선",
+    "좌상단 계열 하이라이트",
+    "등급별 헤드 폭 단계",
+    "작은 화면에서 한눈에 재질과 등급 식별"
+  ],
+  "allowed_variations": [
+    "동일 등급 범위 내 목재/금속/보석의 색조 변화",
+    "큰 장식 형태 변화",
+    "희귀 등급의 제한된 국소 발광 형태"
+  ],
+  "prohibited_variations": [
+    "캔버스 대비 지나치게 짧은 지팡이",
+    "헤드가 지정 폭을 넘는 대형 오라",
+    "부드러운 사진풍 그라디언트",
+    "미세 스크래치/촘촘한 입자/정교한 면 분할",
+    "캐릭터 신체나 손을 함께 그림",
+    "바닥 그림자 추가",
+    "식별 가능한 타 게임/IP 장비 디자인 복제"
+  ],
+  "variant_generation_notes": "동일 장비 변형을 만들 때 중심축·총길이·등급 헤드 폭을 먼저 고정하고, 재질과 큰 실루엣 조합만 변경한다.",
+  "relation_to_other_assets": "wizard_body.png 위 최전방에 합성되는 장비 레이어. 동일 프로젝트의 로브/몸/모자 레이어와 독립된 알파 PNG로 운용.",
+  "consistency_group": "wizard_equipment_staff_v2_scale_1_00",
+  "reference_basis": "사용자가 첨부한 wizard_body.png의 픽셀 굵기와 모바일 가독성, 그리고 ASSET_LIST_EQUIP.md의 지팡이 제작 규격을 참고. 고유 디자인은 직접 복제하지 않음.",
+  "originality_note": "목록의 일반적 판타지 소재 설명을 바탕으로 새 실루엣과 색 배치를 구성한 독창적 게임용 에셋.",
+  "license_risk_check": "특정 기존 게임의 고유 캐릭터·무기·문양·로고를 식별 가능한 수준으로 복제하지 않았으며 상업용 원본 에셋을 목표로 제작.",
+  "asset_name": "staff_c_cracked",
+  "display_name_ko": "금 간 수정 지팡이",
+  "rarity": "일반",
+  "description": "끝에 금이 크게 간 흐린 수정 조각이 묶여 있으며 발광하지 않는다.",
+  "file_name": "staff_c_cracked.png",
+  "visual_identity": "끝에 금이 크게 간 흐린 수정 조각이 묶여 있으며 발광하지 않는다.",
+  "silhouette_profile": {
+    "pose": "upright",
+    "centered": true,
+    "target_total_length_px": 590,
+    "measured_sprite_height_px": 596,
+    "target_head_width_px": 70,
+    "measured_upper_head_envelope_px": 64
+  },
+  "proportion_profile": {
+    "reference_character_height_px": 599,
+    "staff_length_target_ratio": "95~100%",
+    "canvas_fill_target": "about 90%",
+    "canvas_fill_measured": 0.903
+  },
+  "color_count_estimate": 24,
+  "texture/material_profile": "거친 목재·무광 흐린 수정·굵은 균열·가죽 결속"
+}

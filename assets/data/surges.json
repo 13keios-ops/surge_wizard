@@ -1,0 +1,785 @@
+[
+  {
+    "id": "staff_backflow",
+    "name": "지팡이 역류",
+    "text": "마력이 거슬러 오른다",
+    "category": "backlash",
+    "weight": 35,
+    "tags": ["any"],
+    "effects": [{ "type": "self_damage_spell", "value": 100 }]
+  },
+  {
+    "id": "grip_burst",
+    "name": "손아귀 파열",
+    "text": "손 안에서 먼저 터졌다",
+    "category": "backlash",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 70 },
+      { "type": "mana_change", "value": -1 }
+    ]
+  },
+  {
+    "id": "returned_spell",
+    "name": "되돌아온 주문",
+    "text": "주문이 시전자를 골랐다",
+    "category": "backlash",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": [{ "type": "self_damage_spell", "value": 90 }]
+  },
+  {
+    "id": "mana_recoil",
+    "name": "마력 반동",
+    "text": "밀려난 마력이 나를 친다",
+    "category": "backlash",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 60 },
+      { "type": "self_damage", "value": 2 }
+    ]
+  },
+  {
+    "id": "catalyst_burst",
+    "name": "터진 촉매",
+    "text": "품 안의 촉매가 터졌다",
+    "category": "backlash",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [{ "type": "self_damage_spell", "value": 80 }]
+  },
+  {
+    "id": "reversed_circuit",
+    "name": "역방향 회로",
+    "text": "회로가 거꾸로 돌았다",
+    "category": "backlash",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 75 },
+      { "type": "mana_change", "value": -2 }
+    ]
+  },
+  {
+    "id": "inverted_glyph",
+    "name": "뒤집힌 각인",
+    "text": "각인이 나를 향해 있다",
+    "category": "backlash",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [{ "type": "self_damage_spell", "value": 110 }]
+  },
+  {
+    "id": "swallowed_spell",
+    "name": "삼켜진 주문",
+    "text": "주문이 목으로 돌아왔다",
+    "category": "backlash",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 85 },
+      { "type": "seal_spell", "value": 1 }
+    ]
+  },
+  {
+    "id": "cracked_staff",
+    "name": "균열난 지팡이",
+    "text": "지팡이가 갈라졌다",
+    "category": "backlash",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 65 },
+      { "type": "seal_spell", "value": 1 }
+    ]
+  },
+  {
+    "id": "self_ward",
+    "name": "자기 결계",
+    "text": "결계가 나를 조인다",
+    "category": "backlash",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [{ "type": "self_damage_spell", "value": 95 }]
+  },
+  {
+    "id": "misplaced_blessing",
+    "name": "빗나간 축복",
+    "text": "치유가 적에게 붙었다",
+    "category": "misfire",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": [{ "type": "enemy_heal", "value": 6 }]
+  },
+  {
+    "id": "hardened_mana",
+    "name": "굳은 마력",
+    "text": "터지지 못하고 굳었다",
+    "category": "misfire",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": [{ "type": "shield", "value": 6 }]
+  },
+  {
+    "id": "tangled_ward",
+    "name": "엉킨 결계",
+    "text": "적이 제 발에 걸렸다",
+    "category": "misfire",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [{ "type": "skip_enemy_turn", "value": 1 }]
+  },
+  {
+    "id": "leaked_mana",
+    "name": "새어 든 마나",
+    "text": "빗나간 마력이 돌아왔다",
+    "category": "misfire",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [{ "type": "mana_change", "value": 2 }]
+  },
+  {
+    "id": "misread_glyph",
+    "name": "오작동 각인",
+    "text": "각인이 다른 걸 읽었다",
+    "category": "misfire",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [{ "type": "extra_die", "value": 1 }]
+  },
+  {
+    "id": "drawn_vitality",
+    "name": "흘러든 생기",
+    "text": "적의 기운이 내게 왔다",
+    "category": "misfire",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [{ "type": "heal", "value": 5 }]
+  },
+  {
+    "id": "swapped_vessel",
+    "name": "뒤바뀐 그릇",
+    "text": "상처가 저쪽으로 갔다",
+    "category": "misfire",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [{ "type": "swap_hp", "value": 1 }]
+  },
+  {
+    "id": "wrong_spell",
+    "name": "잘못 읽은 주문",
+    "text": "다른 주문이 튀어나왔다",
+    "category": "misfire",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [{ "type": "force_reroll", "value": 1 }]
+  },
+  {
+    "id": "dead_ember",
+    "name": "꺼진 불씨",
+    "text": "마력이 붙지 않았다",
+    "category": "fizzle",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": []
+  },
+  {
+    "id": "empty_swing",
+    "name": "헛손질",
+    "text": "허공에서 흩어졌다",
+    "category": "fizzle",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": []
+  },
+  {
+    "id": "silent_staff",
+    "name": "먹통",
+    "text": "지팡이가 조용하다",
+    "category": "fizzle",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": []
+  },
+  {
+    "id": "cut_chant",
+    "name": "끊긴 주문",
+    "text": "마지막 음절을 놓쳤다",
+    "category": "fizzle",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": []
+  },
+  {
+    "id": "limp_mana",
+    "name": "늘어진 마력",
+    "text": "마력이 축 늘어졌다",
+    "category": "fizzle",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": []
+  },
+  {
+    "id": "empty_hand",
+    "name": "빈 손",
+    "text": "아무것도 나오지 않았다",
+    "category": "fizzle",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": []
+  },
+  {
+    "id": "runaway_power",
+    "name": "폭주한 위력",
+    "text": "커진 마력이 나도 밀었다",
+    "category": "amplify",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 2 },
+      { "type": "self_damage", "value": 4 }
+    ]
+  },
+  {
+    "id": "mana_gluttony",
+    "name": "마력 폭식",
+    "text": "남은 마나를 전부 삼켰다",
+    "category": "amplify",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 2 },
+      { "type": "mana_change", "value": -3 }
+    ]
+  },
+  {
+    "id": "one_time_flash",
+    "name": "한 번뿐인 섬광",
+    "text": "이 주문은 다 타버렸다",
+    "category": "amplify",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 3 },
+      { "type": "seal_spell", "value": 1 }
+    ]
+  },
+  {
+    "id": "overheated_staff",
+    "name": "과열된 지팡이",
+    "text": "지팡이가 벌겋게 달았다",
+    "category": "amplify",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 2 },
+      { "type": "self_damage", "value": 3 }
+    ]
+  },
+  {
+    "id": "loss_of_control",
+    "name": "통제 이탈",
+    "text": "손을 떠나 제멋대로 갔다",
+    "category": "amplify",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 3 },
+      { "type": "self_damage", "value": 6 }
+    ]
+  },
+  {
+    "id": "blast_aftermath",
+    "name": "터진 여파",
+    "text": "여파가 나까지 삼켰다",
+    "category": "amplify",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 3 },
+      { "type": "self_damage_spell", "value": 40 }
+    ]
+  },
+  {
+    "id": "wrong_name",
+    "name": "잘못 부른 이름",
+    "text": "부르지 않은 것이 왔다",
+    "category": "summon",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": [{ "type": "summon_ally", "value": 4 }]
+  },
+  {
+    "id": "hand_from_rift",
+    "name": "틈새의 손",
+    "text": "균열에서 팔이 나왔다",
+    "category": "summon",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": [{ "type": "summon_ally", "value": -3 }]
+  },
+  {
+    "id": "lingering_echo",
+    "name": "남은 잔향",
+    "text": "죽은 주문이 일어섰다",
+    "category": "summon",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [{ "type": "summon_ally", "value": 3 }]
+  },
+  {
+    "id": "drifting_remnant",
+    "name": "떠도는 잔재",
+    "text": "누군가의 잔재가 붙었다",
+    "category": "summon",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [{ "type": "summon_ally", "value": -4 }]
+  },
+  {
+    "id": "watcher",
+    "name": "감시자",
+    "text": "무언가가 나를 지켜본다",
+    "category": "summon",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [{ "type": "summon_ally", "value": 5 }]
+  },
+  {
+    "id": "open_door",
+    "name": "열린 문",
+    "text": "닫히지 않은 문이 있다",
+    "category": "summon",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [{ "type": "summon_ally", "value": -5 }]
+  },
+  {
+    "id": "spreading_fire",
+    "name": "번진 불",
+    "text": "옆의 주문에 옮겨붙었다",
+    "category": "chain",
+    "weight": 30,
+    "tags": ["any"],
+    "effects": [{ "type": "chain_cast", "value": 1 }]
+  },
+  {
+    "id": "blast_in_pocket",
+    "name": "품 안의 폭발",
+    "text": "손패가 통째로 터졌다",
+    "category": "chain",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [{ "type": "chain_cast", "value": -1 }]
+  },
+  {
+    "id": "chain_collapse",
+    "name": "연쇄 붕괴",
+    "text": "터지자 전부 따라 터졌다",
+    "category": "chain",
+    "weight": 25,
+    "tags": ["any"],
+    "effects": [{ "type": "chain_cast", "value": 2 }]
+  },
+  {
+    "id": "locked_glyphs",
+    "name": "맞물린 각인",
+    "text": "각인끼리 서로를 끌었다",
+    "category": "chain",
+    "weight": 20,
+    "tags": ["any"],
+    "effects": [{ "type": "chain_cast", "value": -2 }]
+  },
+  {
+    "id": "fire_backfire",
+    "name": "역화",
+    "text": "불길이 나를 먼저 안다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["fire"],
+    "effects": [{ "type": "self_damage_spell", "value": 120 }]
+  },
+  {
+    "id": "returning_flame",
+    "name": "되돌아온 화염",
+    "text": "불이 손목을 타고 왔다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["fire"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 90 },
+      { "type": "self_damage", "value": 2 }
+    ]
+  },
+  {
+    "id": "misguided_flame",
+    "name": "엉뚱한 불길",
+    "text": "불이 적을 감싸 지켰다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["fire"],
+    "effects": [{ "type": "enemy_heal", "value": 7 }]
+  },
+  {
+    "id": "ash_shell",
+    "name": "재의 껍질",
+    "text": "재가 나를 덮었다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["fire"],
+    "effects": [{ "type": "shield", "value": 7 }]
+  },
+  {
+    "id": "wet_ember",
+    "name": "젖은 불씨",
+    "text": "불이 끝내 안 붙었다",
+    "category": "fizzle",
+    "weight": 18,
+    "tags": ["fire"],
+    "effects": []
+  },
+  {
+    "id": "flame_burst",
+    "name": "화염 폭발",
+    "text": "불길이 제멋대로 커졌다",
+    "category": "amplify",
+    "weight": 18,
+    "tags": ["fire"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 3 },
+      { "type": "self_damage", "value": 5 }
+    ]
+  },
+  {
+    "id": "flame_spirit",
+    "name": "불꽃 정령",
+    "text": "불덩이가 형태를 얻었다",
+    "category": "summon",
+    "weight": 18,
+    "tags": ["fire"],
+    "effects": [{ "type": "summon_ally", "value": 5 }]
+  },
+  {
+    "id": "catching_fire",
+    "name": "옮겨붙은 불",
+    "text": "손패까지 불이 번졌다",
+    "category": "chain",
+    "weight": 12,
+    "tags": ["fire"],
+    "effects": [{ "type": "chain_cast", "value": 1 }]
+  },
+  {
+    "id": "frozen_hands",
+    "name": "얼어붙은 손",
+    "text": "손가락이 얼어붙었다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["frost"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 70 },
+      { "type": "seal_spell", "value": 1 }
+    ]
+  },
+  {
+    "id": "reflected_frost",
+    "name": "되친 서리",
+    "text": "서리가 나를 먼저 덮었다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["frost"],
+    "effects": [{ "type": "self_damage_spell", "value": 100 }]
+  },
+  {
+    "id": "hardened_frost",
+    "name": "굳은 냉기",
+    "text": "냉기가 껍질로 굳었다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["frost"],
+    "effects": [{ "type": "shield", "value": 8 }]
+  },
+  {
+    "id": "frozen_moment",
+    "name": "얼어붙은 순간",
+    "text": "적이 그대로 멈췄다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["frost"],
+    "effects": [{ "type": "skip_enemy_turn", "value": 1 }]
+  },
+  {
+    "id": "cooled_mana",
+    "name": "식은 마력",
+    "text": "마력이 그대로 식었다",
+    "category": "fizzle",
+    "weight": 18,
+    "tags": ["frost"],
+    "effects": []
+  },
+  {
+    "id": "cold_snap",
+    "name": "한파",
+    "text": "냉기가 전장을 삼켰다",
+    "category": "amplify",
+    "weight": 18,
+    "tags": ["frost"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 3 },
+      { "type": "mana_change", "value": -3 }
+    ]
+  },
+  {
+    "id": "ice_statue",
+    "name": "얼음 조각상",
+    "text": "얼음이 일어나 움직인다",
+    "category": "summon",
+    "weight": 18,
+    "tags": ["frost"],
+    "effects": [{ "type": "summon_ally", "value": 4 }]
+  },
+  {
+    "id": "spreading_frost",
+    "name": "번진 서리",
+    "text": "손패까지 얼어붙었다",
+    "category": "chain",
+    "weight": 12,
+    "tags": ["frost"],
+    "effects": [{ "type": "chain_cast", "value": -1 }]
+  },
+  {
+    "id": "spinning_sigil",
+    "name": "폭주한 문양",
+    "text": "문양이 나를 향해 돈다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["arcane"],
+    "effects": [{ "type": "self_damage_spell", "value": 95 }]
+  },
+  {
+    "id": "leaking_arcana",
+    "name": "새어 나온 비전",
+    "text": "비전이 살을 파고든다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["arcane"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 80 },
+      { "type": "mana_change", "value": -2 }
+    ]
+  },
+  {
+    "id": "shifted_coords",
+    "name": "뒤바뀐 좌표",
+    "text": "주문이 엉뚱한 데 꽂혔다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["arcane"],
+    "effects": [{ "type": "force_reroll", "value": 1 }]
+  },
+  {
+    "id": "overflowing_mana",
+    "name": "넘친 마나",
+    "text": "넘친 마나가 돌아왔다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["arcane"],
+    "effects": [{ "type": "mana_change", "value": 3 }]
+  },
+  {
+    "id": "broken_circuit",
+    "name": "끊긴 회로",
+    "text": "회로가 중간에 끊겼다",
+    "category": "fizzle",
+    "weight": 18,
+    "tags": ["arcane"],
+    "effects": []
+  },
+  {
+    "id": "overload",
+    "name": "과부하",
+    "text": "회로가 한계를 넘었다",
+    "category": "amplify",
+    "weight": 18,
+    "tags": ["arcane"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 3 },
+      { "type": "self_damage_spell", "value": 40 }
+    ]
+  },
+  {
+    "id": "arcane_afterimage",
+    "name": "비전 잔상",
+    "text": "내 잔상이 걸어 나왔다",
+    "category": "summon",
+    "weight": 18,
+    "tags": ["arcane"],
+    "effects": [{ "type": "summon_ally", "value": 5 }]
+  },
+  {
+    "id": "resonance",
+    "name": "공명",
+    "text": "손패가 함께 울렸다",
+    "category": "chain",
+    "weight": 12,
+    "tags": ["arcane"],
+    "effects": [{ "type": "chain_cast", "value": 2 }]
+  },
+  {
+    "id": "shadow_recoil",
+    "name": "그림자 반동",
+    "text": "그림자가 주문을 씹었다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["shadow"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 85 },
+      { "type": "seal_spell", "value": 1 }
+    ]
+  },
+  {
+    "id": "returning_curse",
+    "name": "되돌아온 저주",
+    "text": "저주가 주인을 찾았다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["shadow"],
+    "effects": [{ "type": "self_damage_spell", "value": 110 }]
+  },
+  {
+    "id": "absorbed_dark",
+    "name": "빨아들인 어둠",
+    "text": "어둠이 적을 감쌌다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["shadow"],
+    "effects": [{ "type": "enemy_heal", "value": 7 }]
+  },
+  {
+    "id": "swallowing_dark",
+    "name": "삼킨 어둠",
+    "text": "어둠이 상처를 삼켰다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["shadow"],
+    "effects": [{ "type": "heal", "value": 6 }]
+  },
+  {
+    "id": "faded_dark",
+    "name": "꺼진 어둠",
+    "text": "어둠이 그냥 흩어졌다",
+    "category": "fizzle",
+    "weight": 18,
+    "tags": ["shadow"],
+    "effects": []
+  },
+  {
+    "id": "deepening_dark",
+    "name": "짙어진 어둠",
+    "text": "어둠이 통제를 벗어났다",
+    "category": "amplify",
+    "weight": 18,
+    "tags": ["shadow"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 3 },
+      { "type": "self_damage", "value": 5 }
+    ]
+  },
+  {
+    "id": "shadow_double",
+    "name": "그림자 분신",
+    "text": "내 그림자가 일어섰다",
+    "category": "summon",
+    "weight": 18,
+    "tags": ["shadow"],
+    "effects": [{ "type": "summon_ally", "value": -5 }]
+  },
+  {
+    "id": "spreading_dark",
+    "name": "번진 어둠",
+    "text": "손패가 어둠에 잠겼다",
+    "category": "chain",
+    "weight": 12,
+    "tags": ["shadow"],
+    "effects": [{ "type": "chain_cast", "value": -2 }]
+  },
+  {
+    "id": "tangling_vines",
+    "name": "얽힌 덩굴",
+    "text": "덩굴이 나를 조인다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["nature"],
+    "effects": [
+      { "type": "self_damage_spell", "value": 75 },
+      { "type": "seal_spell", "value": 1 }
+    ]
+  },
+  {
+    "id": "drained_life",
+    "name": "되돌아온 생명",
+    "text": "생기가 나를 빨아 갔다",
+    "category": "backlash",
+    "weight": 15,
+    "tags": ["nature"],
+    "effects": [{ "type": "self_damage_spell", "value": 95 }]
+  },
+  {
+    "id": "misgiven_vitality",
+    "name": "잘못 준 생기",
+    "text": "생기가 적에게 갔다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["nature"],
+    "effects": [{ "type": "enemy_heal", "value": 8 }]
+  },
+  {
+    "id": "bark_growth",
+    "name": "돋아난 껍질",
+    "text": "나무껍질이 돋았다",
+    "category": "misfire",
+    "weight": 12,
+    "tags": ["nature"],
+    "effects": [{ "type": "shield", "value": 7 }]
+  },
+  {
+    "id": "withered_spell",
+    "name": "시든 주문",
+    "text": "주문이 그대로 시들었다",
+    "category": "fizzle",
+    "weight": 18,
+    "tags": ["nature"],
+    "effects": []
+  },
+  {
+    "id": "runaway_growth",
+    "name": "폭주한 성장",
+    "text": "덩굴이 전장을 삼켰다",
+    "category": "amplify",
+    "weight": 18,
+    "tags": ["nature"],
+    "effects": [
+      { "type": "damage_multiplier", "value": 3 },
+      { "type": "mana_change", "value": -3 }
+    ]
+  },
+  {
+    "id": "awakened_tree",
+    "name": "깨어난 나무",
+    "text": "나무가 몸을 일으켰다",
+    "category": "summon",
+    "weight": 18,
+    "tags": ["nature"],
+    "effects": [{ "type": "summon_ally", "value": 4 }]
+  },
+  {
+    "id": "reaching_roots",
+    "name": "뻗어나간 뿌리",
+    "text": "뿌리가 손패를 끌었다",
+    "category": "chain",
+    "weight": 12,
+    "tags": ["nature"],
+    "effects": [{ "type": "chain_cast", "value": 1 }]
+  }
+]

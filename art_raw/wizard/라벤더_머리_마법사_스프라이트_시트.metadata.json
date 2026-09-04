@@ -1,0 +1,31 @@
+{
+  "file_name": "라벤더_머리_마법사_스프라이트_시트.png",
+  "display_name": "라벤더_머리_마법사_스프라이트_시트",
+  "image_path": "/mnt/data/라벤더_머리_마법사_스프라이트_시트.png",
+  "source_generated_path": "/mnt/data/ghostwriter_images/generated/a_transparent_background_pixel_art_sprite_sheet_2_batch_2.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "width": 941,
+  "height": 1672,
+  "aspect_ratio_exact": "941:1672",
+  "aspect_ratio_approx": "9:16",
+  "transparent_background": true,
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "transparent_pixels": 1067451,
+  "partial_alpha_pixels": 505503,
+  "opaque_pixels": 398,
+  "dalle_metadata": {
+    "gen_id": "fb934984-9ff4-4db9-98b0-05af693c0f1b",
+    "parent_gen_id": null,
+    "edit_op": null,
+    "seed": null,
+    "prompt": ""
+  },
+  "notes": {
+    "style_basis": "사용자가 선택한 세 번째 버전(흰색에 가까운 머리색)의 스타일을 기준으로 제작됨",
+    "model_caption_summary": "세 번째 스타일 기반의 4방향(뒷모습/정면/사선 앞모습/옆모습) 기초차림 마법사 스프라이트 시트, 투명 배경 PNG."
+  }
+}
