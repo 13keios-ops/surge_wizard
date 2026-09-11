@@ -1,17 +1,40 @@
-# surge_wizard
+# 폭주 마법사 (Surge Wizard)
 
-A new Flutter project.
+주사위 3개(3d6)로 **주문의 시전 성공 여부를 판정**하는 세로 화면 캐주얼 로그라이트.
+Flutter로 만들며 안드로이드를 목표로 한다. 서버 통신이 없고 비행기 모드에서 완전히 동작한다.
 
-## Getting Started
+> **주사위 눈금은 대미지가 아니다.** 판정에만 쓴다. 실패하면 마법이 **폭주**한다.
 
-This project is a starting point for a Flutter application.
+## 지금 어디를 봐야 하나
 
-A few resources to get you started if this is your first Flutter project:
+| 알고 싶은 것 | 문서 |
+|---|---|
+| **지금 어디까지 왔나 · 다음에 뭘 하나** | `HANDOFF.md` |
+| 게임 설계 전체 (**v3가 기준**) | `GAME_DESIGN.md` — 맨 위 색인표에서 골라 읽는다 |
+| 그래픽 진행 상태 | `docs/HANDOFF_ART.md` |
+| 그래픽 작업 순서 | `GAME_ART_ROADMAP.md` |
+| 화면 규격 · 배치 | `UI_DESIGN.md` |
+| 원화를 뽑을 때 쓰는 GPT 지침 | `docs/GPT_PROJECT_INSTRUCTIONS.md` |
+| 끝난 작업의 목록과 판정 | `reports/INDEX.md` |
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## ⛔ 옛 문서를 집지 않으려면
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+루트에 **끝났거나 폐기된 지시서·요청서가 30개 넘게** 남아 있다. `reports/` 가 이름으로
+가리키고 있어 지우지 않았다. **전부 머리말 두 번째 줄에 ⛔ 또는 📄 배너가 붙어 있다.**
+배너가 붙은 문서는 현재 기준이 아니다. 목록은 `docs/ARCHIVE.md`.
+
+지금 살아 있는 문서만 모은 표는 **`HANDOFF.md` 0절**에 있다.
+
+## 빌드
+
+```
+flutter test          # 판정 엔진 단위 테스트
+flutter run            # 실행
+```
+
+Flutter 3.44.2. iOS 빌드는 맥이 필요해 이 저장소에서는 다루지 않는다.
+
+## 에셋 라이선스
+
+외부 에셋은 자유 라이선스(CC0 / CC BY / OFL)만 쓰고 출처를 `ATTRIBUTION.md`에 남긴다.
+`refs/` 의 참고 자료는 **설계를 배우는 용도**이며 게임에 넣지 않는다.

@@ -1,5 +1,7 @@
 # Claude Code 실행 프롬프트 모음
 
+> 📄 **초기 구축용 프롬프트 모음이다. 지금 쓰지 않는다** — `docs/START_PROMPTS.md`.
+
 각 블록을 **순서대로** Claude Code에 그대로 붙여넣으세요.
 `GAME_DESIGN.md`와 `CLAUDE.md`는 프로젝트 루트에 미리 넣어두셔야 합니다.
 

@@ -1,5 +1,7 @@
 # 작업 지시서 — 그래픽 Phase 1 (Runtime Proof)
 
+> ⛔ **끝났다 — 코드는 승인, 화면은 반려** (검토 27). `WORK_ORDER_ART_PHASE1_5.md`가 이어받았고 그것도 끝났다.
+
 발행: 2026-09-05, 기획 창. 근거: **`GAME_ART_ROADMAP.md` 13절(Phase 1)** ·
 `docs/art/RUNTIME_ASSET_SPEC.md` · `docs/art/ART_STYLE_GUIDE.md` · `UI_DESIGN.md` 1-3·3-2절
 
