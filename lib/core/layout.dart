@@ -116,3 +116,9 @@ const double kCastButtonFont = 24.0;
 /// (진짜 해상도를 올리려면 원화 아이콘이 필요하다 — `art_raw/icon/`)
 const double kSpellIconBox = 34.0;
 const double kSpellIconSize = 32.0;
+
+// ── 걸어가는 연출 (WORK_ORDER_BG_SCROLL) ───────────────
+
+/// 층이 오를 때 배경이 **이전 층 자리 → 지금 층 자리**로 흐르는 시간.
+/// 전투 화면이 열릴 때 한 번만 재생한다 (전투 중에는 안 움직인다).
+const Duration kBackdropSlide = Duration(milliseconds: 900);

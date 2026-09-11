@@ -198,15 +198,15 @@ class _BattleStageState extends State<BattleStage>
 
         return Stack(
           children: [
-            // 배경 — 화면 끝까지 채운다
+            // 배경 — 화면 끝까지 채운다. 층이 오르면 아래로 흘러 걸어간 것처럼 보인다
             Positioned.fill(
               child: bgArt == null
                   ? StageBackdrop(palette: palette, time: _ambient.value)
-                  : ArtBackdropView(
-                      bgArt,
-                      fallback:
-                          StageBackdrop(palette: palette, time: _ambient.value),
-                    ),
+                  : ArtBackdropView(bgArt,
+                      floor: widget.floor ?? 1,
+                      floors: widget.floors ?? 1,
+                      fallback: StageBackdrop(
+                          palette: palette, time: _ambient.value)),
             ),
             // 적 — 길 위쪽에 선다
             Positioned(
@@ -252,10 +252,9 @@ class _BattleStageState extends State<BattleStage>
               left: 0,
               right: 0,
               child: Center(
-                child: ArtSpriteView(
-                  kArtWizardBack,
+                child: WalkingWizardView(
+                  floor: widget.floor ?? 1,
                   size: kWizardSize,
-                  shadow: true,
                   flashAmount: playerFlash,
                   fallback: PixelSpriteView(
                     kSpriteWizardBack,

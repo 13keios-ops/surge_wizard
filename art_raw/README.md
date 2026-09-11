@@ -9,7 +9,8 @@
 art_raw/
   wizard/    ← 마법사 몸·모자·로브·지팡이   (wizard_body.png, staff_c_knotted.png …)
   enemy/     ← 일반 적 26종                (enemy_green_slime.png …)
-  boss/      ← 보스 13종                  (boss_elder_slime.png …)
+  boss/      ← 보스 12종                  (boss_elder_slime.png …)
+             ※ 데이터에는 13종이지만 `boss_dice_devourer`는 지역 미배정 보류 — 그리지 않는다
   bg/        ← 배경 8종                   (bg_forest.png …)  ※ ASSET_LIST_BG.md
   icon/      ← 주문·아이템 아이콘 (나중)
   fx/        ← 이펙트 (나중)
