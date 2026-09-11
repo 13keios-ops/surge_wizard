@@ -195,6 +195,9 @@
 
 ### 묶음 1 — 배경 8종 (`ASSET_LIST_BG.md`)
 
+🔴 **숲 1장을 먼저 만들어 보여 준다.** 세로 스크롤 규격이 아직 한 장도 검증되지
+않았다. 그 한 장을 사용자가 승인한 뒤에 나머지 7종으로 간다.
+
 `bg_forest`(다시) · `bg_ruin` · `bg_burnt_forest` · `bg_mine` · `bg_desert` ·
 `bg_snow_canyon` · `bg_tower` · `bg_dragon_lair`
 
