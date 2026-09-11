@@ -43,6 +43,14 @@ dependencies:
 
   # 효과음 재생 (GAME_DESIGN 8절 기술 스택)
   audioplayers: ^6.1.0
+  # 보상형 광고 4종 — 부활 / 한 번 더 굴리기 / 소탕 추가 / 보상 2배
+  # (GAME_DESIGN 9절). 전면광고는 쓰지 않는다.
+  # ⚠ 7단계는 아직 보류 중이다. 미리 깔아만 두었고 코드는 아직 없다.
+  google_mobile_ads: ^9.1.0
+
+  # 결제 — 보석 묶음 / 덱 칸 확장 / 주문 슬롯 확장(현금 전용) / 보석함
+  # (GAME_DESIGN 9절). 절대 규칙 1의 「서버 통신 금지」 예외 둘 중 하나.
+  in_app_purchase: ^3.3.0
 
 dev_dependencies:
   flutter_test:
@@ -66,11 +74,16 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # 게임 데이터·효과음 (전부 오프라인 내장)
-  # 그림은 lib/art/ 의 픽셀아트 스프라이트로 코드에서 직접 그린다
+  # 게임 데이터·효과음·원화 (전부 오프라인 내장)
+  # 캐릭터·적·배경은 assets/art/ 의 원화 WebP를 쓴다 (마법사·적 1024, 보스 848, 배경 1024×2276).
+  # lib/art/ 의 픽셀아트 스프라이트는 원화를 못 읽을 때의 대체용으로 남는다
   assets:
     - assets/data/
     - assets/sfx/
+    - assets/art/wizard/
+    - assets/art/enemy/
+    - assets/art/boss/
+    - assets/art/bg/
 
   # 한글 픽셀 폰트 Galmuri (갈무리) — SIL OFL 1.1, 출처는 ATTRIBUTION.md
   # 픽셀 폰트는 기준 픽셀 크기의 **정수 배율**에서만 또렷하다:

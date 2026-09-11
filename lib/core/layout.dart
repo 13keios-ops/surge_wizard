@@ -36,3 +36,83 @@ const double kStageTileMaxAspect = 1.0;
 
 /// 스테이지 격자의 칸 사이 간격
 const double kStageGridSpacing = 8.0;
+
+// ── 전투 화면 구도 v3 (보고서 31 · 4-8 / 4-9절) ─────────
+//
+// 🔴 **전부 「화면 아래에서 몇 dp」로 잰다.** 기기 비율이 16:9 ~ 20:9 로 제각각이라
+// 위에서 재면 기기마다 구도가 달라진다. 아래에서 재면 화면이 길어져도
+// **위쪽 배경만 더 보이고** 조작부·마법사·적의 관계는 그대로다.
+// 값은 참고 게임(딸깍 다이스) 화면을 행마다 실측해 옮긴 것이다.
+
+/// 주사위·버튼 줄의 아래끝
+const double kCtrlBottom = 8.0;
+
+/// 마나·마력 축적 줄의 아래끝. **마법사 체력바와 같은 높이**다 —
+/// 체력바는 가운데, 마나·마력은 좌우 끝이라 겹치지 않는다
+/// (`battle_stage.dart` 가 체력바를 `kHeroFoot - kUnitPlateHeight - 2` 에 둔다)
+const double kResBottom = 208.0;
+
+/// 주문 슬롯 띠의 아래끝과 높이.
+/// 🔴 **144 가 하한이다** — 그 아래는 족보 줄(116~140)이라 더 내리면 겹친다
+const double kSlotsBottom = 144.0;
+const double kSlotsHeight = 64.0;
+
+/// 마법사 발이 놓이는 높이 — 주문 슬롯 바로 위
+const double kHeroFoot = 230.0;
+
+/// 보스 발
+const double kBossFoot = 390.0;
+
+/// 앞줄 적 발 · 뒷줄 적 발 (다중 적은 다음 지시서. 지금은 자리만 잡아 둔다)
+const double kFoeFrontFoot = 403.0;
+const double kFoeBackFoot = 449.0;
+
+/// 배경에서 길이 화면 폭을 다 채우기 시작하는 높이. **이 아래로는 나무가 없다**
+const double kRoadOpen = 377.0;
+
+/// 길이 안개에 잠기는 높이
+const double kRoadMist = 585.0;
+
+// ── 캐릭터 크기 ────────────────────────────────────────
+//
+// 「화면 한 칸 = 2.0dp」 규칙(UI_DESIGN 1-2-b)이라 크기는 곧 칸 수다.
+// 마법사 56칸 · 일반 적 38칸 · 보스 90칸으로 원화를 다시 뽑아야 한다.
+
+const double kWizardSize = 112.0;
+const double kEnemySize = 76.0;
+const double kBossSize = 180.0;
+
+/// 캐릭터 밑에 붙는 체력바 + 레벨 줄의 높이 (막대 6 + 여백 1 + 글자 12×1.2)
+const double kUnitPlateHeight = 22.0;
+
+// ── 배경 위에 얹히는 UI ────────────────────────────────
+
+/// 상단 띠(던전 이름 · 층 · 일시정지). 터치 최소 44dp
+const double kTopBarHeight = 44.0;
+
+/// 보스 체력바 — 화면 맨 위 가로 전체 (일반 적은 발밑에 붙는다)
+const double kBossBarTop = 48.0;
+const double kBossBarHeight = 20.0;
+
+/// 주문 슬롯 칸 수. 기본 3칸이 열리고 나머지는 잠금 (GAME_DESIGN 4.2절)
+const int kSpellSlotCount = 5;
+
+// ── 주사위 트레이 ──────────────────────────────────────
+
+/// 주사위 한 개의 크기와 그 줄의 높이
+const double kDiceSize = 64.0;
+const double kDiceRowHeight = 104.0;
+
+/// 족보·판정 결과 줄의 높이
+const double kComboLineHeight = 24.0;
+
+/// 메인 버튼 높이·글자 크기
+const double kCastButtonHeight = 46.0;
+const double kCastButtonFont = 24.0;
+
+/// 주문 슬롯 안의 아이콘 상자와 아이콘.
+/// 🔴 **아이콘은 16칸 도트라 배율이 정수여야 한다** — 26dp 는 1.625배라
+/// 한 도트가 화면에서 들쭉날쭉했다. **32 = 16 × 2.0.**
+/// (진짜 해상도를 올리려면 원화 아이콘이 필요하다 — `art_raw/icon/`)
+const double kSpellIconBox = 34.0;
+const double kSpellIconSize = 32.0;

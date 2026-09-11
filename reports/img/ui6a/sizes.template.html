@@ -1,0 +1,251 @@
+<title>A안 캐릭터 크기 3종</title>
+<style>
+  :root{
+    --sheet:#100E1A; --sheet2:#1A1730; --line:#332D55;
+    --ink:#EDE9F7; --dim:#A79FC8;
+    --gold:#F2C14E; --red:#E8546B; --green:#6BD45C; --mana:#5FC8F0; --charge:#4FD1C5;
+    --bgWell:#15122B; --bgTray:#1B1838; --bgDeep:#232042;
+    --panel:#3A3560; --border:#6E68A8; --purple:#A97BEA;
+  }
+  @font-face{font-family:'Galmuri11';src:url({{FONT11}}) format('truetype');font-weight:400;font-display:block}
+  @font-face{font-family:'Galmuri11';src:url({{FONT11B}}) format('truetype');font-weight:700;font-display:block}
+  @font-face{font-family:'Galmuri9';src:url({{FONT9}}) format('truetype');font-display:block}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--sheet);color:var(--ink);
+       font-family:system-ui,'Segoe UI',sans-serif;line-height:1.65}
+  .wrap{max-width:1180px;margin:0 auto;padding:40px 20px 72px}
+  h1{font-family:'Galmuri11',monospace;font-size:36px;font-weight:700;margin:0 0 6px}
+  h2{font-family:'Galmuri11',monospace;font-size:24px;font-weight:700;margin:0}
+  .sub{color:var(--dim);margin:0 0 30px;max-width:64ch}
+
+  .why{background:var(--sheet2);border:1px solid var(--line);border-left:4px solid var(--gold);
+       padding:18px 22px;margin:0 0 36px;border-radius:2px}
+  .why h3{font-family:'Galmuri11',monospace;font-size:12px;margin:0 0 10px;color:var(--gold)}
+  .why p{margin:8px 0;max-width:72ch}
+  .why b{color:var(--gold)}
+  .why table{border-collapse:collapse;margin-top:14px;font-size:14px;
+             font-variant-numeric:tabular-nums}
+  .why th,.why td{text-align:left;padding:6px 14px 6px 0;border-bottom:1px solid var(--line)}
+  .why th{color:var(--dim);font-weight:500}
+
+  .boards{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start;margin-bottom:12px}
+  figure{margin:0}
+  figcaption{font-family:'Galmuri11',monospace;font-size:12px;margin:0 0 8px}
+  .verdict{font-size:13px;color:var(--dim);margin:8px 0 0;width:360px;line-height:1.55}
+  .ok{color:var(--green)} .no{color:var(--red)} .mid{color:var(--gold)}
+
+  .phone{position:relative;width:360px;height:640px;overflow:hidden;
+         border:1px solid var(--line);border-radius:5px;background:var(--bgDeep);
+         font-family:'Galmuri9',monospace;color:var(--ink);flex:0 0 auto}
+  .phone img{image-rendering:pixelated}
+  .stage{position:absolute;left:0;right:0;top:0;height:500px;overflow:hidden}
+  .stage .bg{position:absolute;inset:0;width:100%;height:100%;
+             object-fit:cover;object-position:bottom center}
+
+  /* 지면 띠 — 캐릭터가 설 수 있는 곳을 눈에 보이게 표시한다 */
+  .ground{position:absolute;left:0;right:0;pointer-events:none}
+  .ground .edge{position:absolute;left:0;right:0;height:0;
+                border-top:1px dashed rgba(242,193,78,.85)}
+  .ground .lab{position:absolute;right:4px;font-size:10px;color:var(--gold);
+               line-height:1.2;background:rgba(16,14,26,.78);padding:1px 4px;border-radius:2px}
+
+  .top{position:absolute;left:0;right:0;top:0;height:44px;display:flex;
+       align-items:center;justify-content:space-between;padding:0 8px;
+       background:linear-gradient(180deg,rgba(16,14,26,.82),rgba(16,14,26,0))}
+  .dungeon{font-family:'Galmuri11',monospace;font-size:12px;line-height:1}
+  .floor{font-size:10px;color:var(--dim);margin-top:3px;line-height:1}
+  .sys{display:flex;gap:4px}
+  .sys span{width:44px;height:44px;display:grid;place-items:center;font-size:20px;opacity:.85}
+
+  .unit{position:absolute}
+  .unit img{display:block}
+  .bar{height:6px;margin:1px auto 0;background:var(--bgWell);border:1px solid rgba(0,0,0,.6)}
+  .bar i{display:block;height:100%}
+  .lv{font-size:10px;text-align:center;line-height:1.3;text-shadow:0 1px 0 #000,0 0 4px #000}
+  .dmg{position:absolute;top:-4px;right:0;font-family:'Galmuri11',monospace;font-size:24px;
+       font-weight:700;color:var(--gold);text-shadow:0 2px 0 #000,0 0 8px rgba(0,0,0,.9)}
+
+  .slots{position:absolute;left:0;right:0;bottom:6px;height:64px;display:flex;gap:6px;
+         padding:0 8px}
+  .slot{width:64px;flex:0 0 64px;border:2px solid var(--border);border-radius:3px;
+        background:var(--panel);display:flex;flex-direction:column;align-items:center;
+        justify-content:center;gap:2px}
+  .slot.open{border-color:var(--gold)}
+  .slot.lock{background:var(--bgWell);border-style:dashed;opacity:.72}
+  .icon{width:26px;height:26px}
+  .icon.fire{border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFB25E,#D8542A)}
+  .icon.frost{background:var(--mana);transform:rotate(45deg);width:22px;height:22px;border-radius:2px}
+  .icon.arcane{background:var(--purple);
+               clip-path:polygon(50% 0,100% 22%,100% 62%,50% 100%,0 62%,0 22%)}
+  .nm{font-size:10px;line-height:1} .cir{font-size:10px;color:var(--dim);line-height:1}
+  .key{font-size:20px;color:var(--dim);line-height:1}
+  .paid{font-size:10px;color:var(--gold);line-height:1}
+
+  .tray{position:absolute;left:0;right:0;bottom:0;height:140px;background:var(--bgTray);
+        border-top:2px solid var(--line);padding:8px 0;display:flex;flex-direction:column}
+  .row{display:flex;gap:10px;padding:0 8px;align-items:center}
+  .dice{position:relative;width:148px;height:104px;flex:0 0 148px}
+  .die{position:absolute;width:64px;height:64px;background:#F4F1E4;border-radius:5px;
+       border:2px solid #4A4462;box-shadow:0 3px 0 rgba(0,0,0,.45);
+       display:grid;grid-template:repeat(3,1fr)/repeat(3,1fr);padding:8px}
+  .die b{width:9px;height:9px;background:#2A2540;border-radius:50%;align-self:center;
+         justify-self:center}
+  .d1{left:0;top:0;transform:rotate(-7deg)}
+  .d2{left:84px;top:4px;transform:rotate(6deg)}
+  .d3{left:42px;top:40px;transform:rotate(-3deg)}
+  .stack{display:flex;flex-direction:column;gap:8px;flex:1}
+  .btn{height:46px;border-radius:3px;display:grid;place-items:center;
+       font-family:'Galmuri11',monospace;font-size:24px;font-weight:700;
+       background:var(--gold);color:#2A2033;border:2px solid #B8912F}
+  .btn.ghost{background:var(--panel);color:var(--ink);border-color:var(--border);
+             font-size:12px;font-weight:400}
+  .sum{font-family:'Galmuri11',monospace;font-size:12px;color:var(--dim);padding-left:52px}
+
+  .spec{background:var(--sheet2);border:1px solid var(--line);padding:20px 24px;
+        border-radius:2px;margin-top:36px}
+  .spec table{border-collapse:collapse;width:100%;font-size:14px;
+              font-variant-numeric:tabular-nums;margin-top:10px}
+  .spec th,.spec td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+  .spec th{color:var(--dim);font-weight:500}
+  .spec tr:last-child td{border-bottom:0}
+  .spec p{margin:12px 0 0;color:var(--dim);font-size:13px;max-width:74ch}
+  .spec p b{color:var(--ink)}
+</style>
+
+<div class="wrap">
+  <h1>A안 캐릭터 크기 3종</h1>
+  <p class="sub">A안 배치는 그대로 두고 <b>캐릭터 크기만</b> 바꿔 셋을 나란히 놓았습니다.
+  적 4마리를 세운 어려운 경우로 그렸고, 폰 화면은 <b>1픽셀 = 1dp</b>입니다.</p>
+
+  <div class="why">
+    <h3>왜 하늘에 떠 보였나 — 제 시안의 실수였습니다</h3>
+    <p>앞 시안에서 적을 <b>지면선이 아니라 마법사 머리 위로 쌓아</b> 올렸습니다.
+    그래서 나무 밑동보다 위, 즉 허공에 섰습니다. 이번에는 셋 다
+    <b>지면 위에 발을 붙여</b> 놓았고, 지면이 어디까지인지 노란 점선으로 그려 뒀습니다.</p>
+    <p>다만 지적하신 두 가지가 실은 <b>한 문제</b>였습니다. 숲 배경에서 캐릭터가 설 수 있는
+    땅은 원본 y 1030~1470뿐이라 화면에서 <b>깊이 102dp</b>밖에 안 됩니다.
+    그 안에 뒷줄 적 · 앞줄 적 · 마법사 <b>세 줄</b>을 세워야 합니다.</p>
+    <table>
+      <tr><th>크기</th><th>세 줄에 필요한 깊이</th><th>지금 배경(102dp)에</th></tr>
+      <tr><td>지금 (마법사 160 / 적 118)</td><td>114dp</td>
+          <td class="no">✗ 12dp 모자라 뒷줄이 뜬다</td></tr>
+      <tr><td>중간 (136 / 100)</td><td>97dp</td><td class="mid">△ 여유 5dp — 아슬아슬하다</td></tr>
+      <tr><td>작게 (120 / 88)</td><td>85dp</td><td class="ok">✓ 여유 17dp</td></tr>
+    </table>
+    <p><b>즉 크기를 줄이면 배경 문제도 같이 풀립니다.</b>
+    배경을 새로 뽑는 것은 그대로 하는 게 좋지만(땅이 깊어야 원근이 더 살아납니다),
+    크기를 줄이면 <b>새 배경을 기다리지 않고 지금 배경으로도 됩니다.</b></p>
+  </div>
+
+  <div id="boards"></div>
+
+  <div class="spec">
+    <h2>고르시면 필요한 것</h2>
+    <table>
+      <tr><th></th><th>지금 (160/118)</th><th>중간 (136/100)</th><th>작게 (120/88)</th></tr>
+      <tr><th>원화를 다시 뽑아야 하나</th>
+          <td class="ok">아니오</td>
+          <td class="no">예 — 마법사 68칸 · 적 50칸</td>
+          <td class="no">예 — 마법사 60칸 · 적 44칸</td></tr>
+      <tr><th>지금 배경으로 되나</th>
+          <td class="no">아니오</td><td class="mid">간신히</td><td class="ok">예</td></tr>
+      <tr><th>화면 여유</th><td>거의 없다</td><td>조금</td><td class="ok">넉넉하다</td></tr>
+      <tr><th>적 사이 거리</th><td>47dp</td><td>40dp</td><td>35dp</td></tr>
+    </table>
+    <p><b>「칸」이 무엇인가</b> — 그림을 이루는 네모 한 개의 크기입니다.
+    지금 규칙은 <b>화면에서 한 칸이 2.0dp로 보이게</b> 그리는 것이고
+    (<code>UI_DESIGN.md</code> 1-2-b절), 적 원화는 59칸으로 그려져 있어
+    59 × 2.0 = 118dp가 됩니다.</p>
+    <p>🔴 <b>그래서 코드에서 그냥 줄이면 안 됩니다.</b> 59칸짜리 그림을 88dp로 줄이면
+    한 칸이 1.49dp가 되어 배경·글자와 어긋나 뭉갭니다.
+    <b>그래픽 Phase 1이 반려된 바로 그 현상입니다.</b>
+    작게 가려면 <b>칸 수를 줄여 다시 뽑아야</b> 합니다 — 그림 자체는 더 굵은 네모로,
+    화면에서는 더 작게. 이 시트의 중간·작게 두 장은 그 재발주 결과를 미리 흉내 낸 것이라
+    실제로는 지금 보이는 것보다 <b>더 또렷하게</b> 나옵니다.</p>
+  </div>
+</div>
+
+<script>
+const G_FAR = 322, G_NEAR = 424;   // 지면 띠 (배경 실측 → A안 무대 500dp 기준)
+const FOOT = 477/512;              // 원화 캔버스 안 발바닥 위치
+
+const OPTS = [
+  {tag:'지금 그대로', wiz:160, foe:118, redraw:false,
+   note:'재발주 없이 갈 수 있는 유일한 선택. 대신 <b class="no">뒷줄 적이 지면선 위로 12dp 떠오릅니다</b> — 지금 지적하신 그 현상이 남습니다. 화면도 꽉 찹니다.'},
+  {tag:'중간', wiz:136, foe:100, redraw:true,
+   note:'세 줄이 <b class="mid">간신히</b> 지면에 들어갑니다(여유 5dp). 여유는 생기지만 배경을 새로 뽑기 전까지는 아슬아슬합니다.'},
+  {tag:'작게', wiz:120, foe:88, redraw:true,
+   note:'<b class="ok">지금 배경으로 문제없이</b> 들어갑니다(여유 17dp). 위쪽 숲이 시원하게 보이고 적과 마법사 사이도 벌어집니다. <b>제 추천입니다.</b>'}
+];
+
+const DIE={5:[1,0,1,0,1,0,1,0,1],3:[1,0,0,0,1,0,0,0,1],4:[1,0,1,0,0,0,1,0,1]};
+const pip=n=>DIE[n].map(v=>v?'<b></b>':'<span></span>').join('');
+
+function unit(src, size, x, footY, barColor, label, dmg){
+  const top = footY - size*FOOT;
+  return `<div class="unit" style="left:${x}px;top:${Math.round(top)}px;width:${size}px">
+    ${dmg?'<span class="dmg">−14</span>':''}
+    <img src="${src}" style="width:${size}px;height:${size}px" alt="">
+    <div class="bar" style="width:${Math.round(size*.72)}px">
+      <i style="width:${dmg?68:100}%;background:${barColor}"></i></div>
+    <div class="lv">${label}</div></div>`;
+}
+
+function board(o){
+  // 세 줄의 발 높이 — 아래에서부터 지면 위에 얹는다
+  const wizFoot   = G_NEAR;
+  const frontFoot = Math.round(wizFoot   - o.wiz*0.42);
+  const backFoot  = Math.round(frontFoot - o.foe*0.40);
+  const floatBy   = G_FAR - backFoot;         // 0보다 크면 뒷줄이 지면 위로 뜬다
+  const wx = Math.round(180 - o.wiz/2);
+  const fx = [ 8, 360-8-o.foe ];              // 앞줄 — 바깥쪽, 넓게
+  const bx = [ 62, 360-62-o.foe ];            // 뒷줄 — 안쪽, 좁게
+  return `<figure>
+    <figcaption>${o.tag} — 마법사 ${o.wiz} / 적 ${o.foe}dp</figcaption>
+    <div class="phone">
+      <div class="stage">
+        <img class="bg" src="{{BG}}" alt="">
+        <div class="ground">
+          <div class="edge" style="top:${G_FAR}px"></div>
+          <div class="lab" style="top:${G_FAR+3}px">지면 시작</div>
+          <div class="edge" style="top:${G_NEAR}px"></div>
+          <div class="lab" style="top:${G_NEAR-15}px">지면 끝</div>
+        </div>
+        ${unit('{{FOE}}',o.foe,bx[0],backFoot,'var(--red)','Lv 4',0)}
+        ${unit('{{FOE}}',o.foe,bx[1],backFoot,'var(--red)','Lv 4',0)}
+        ${unit('{{FOE}}',o.foe,fx[0],frontFoot,'var(--red)','Lv 3',1)}
+        ${unit('{{FOE}}',o.foe,fx[1],frontFoot,'var(--red)','Lv 3',0)}
+        ${unit('{{WIZ}}',o.wiz,wx,wizFoot,'var(--green)','Lv 5 · 20/20',0)}
+        <div class="slots">
+          <div class="slot open"><i class="icon fire"></i><span class="nm">화염구</span><span class="cir">1서클</span></div>
+          <div class="slot open"><i class="icon frost"></i><span class="nm">서리화살</span><span class="cir">1서클</span></div>
+          <div class="slot open"><i class="icon arcane"></i><span class="nm">마력방패</span><span class="cir">1서클</span></div>
+          <div class="slot lock"><span class="key">🔒</span><span class="paid">유료</span></div>
+          <div class="slot lock"><span class="key">🔒</span><span class="paid">유료</span></div>
+        </div>
+      </div>
+      <div class="top">
+        <div><div class="dungeon">속삭이는 숲</div><div class="floor">3층 / 7</div></div>
+        <div class="sys"><span>⏸</span><span>⚙</span></div>
+      </div>
+      <div class="tray">
+        <div class="row">
+          <div class="dice"><div class="die d1">${pip(5)}</div>
+            <div class="die d2">${pip(3)}</div><div class="die d3">${pip(4)}</div></div>
+          <div class="stack"><div class="btn ghost">리롤 2/2</div><div class="btn">시전</div></div>
+        </div>
+        <div class="sum">눈 합계 12</div>
+      </div>
+    </div>
+    <p class="verdict">${o.note}<br>
+      뒷줄 발 <b>${backFoot}</b> · 앞줄 발 <b>${frontFoot}</b> · 마법사 발 <b>${wizFoot}</b> —
+      ${floatBy>0
+        ? `<span class="no">지면 시작(${G_FAR})보다 ${floatBy}dp 위 → 뜬다</span>`
+        : `<span class="ok">지면 안 · 여유 ${-floatBy}dp</span>`}</p>
+  </figure>`;
+}
+
+document.getElementById('boards').innerHTML =
+  `<div class="boards">${OPTS.map(board).join('')}</div>`;
+</script>

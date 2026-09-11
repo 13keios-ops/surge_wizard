@@ -86,7 +86,11 @@ class _MapView extends StatelessWidget {
     final won = await Navigator.of(context).push<bool>(
       MaterialPageRoute(
         builder: (_) => BattleScreen(
-            controller: bc, floor: run.state.floor, floors: run.floors),
+            controller: bc,
+            title: run.stageTitle,
+            regionId: run.state.regionId,
+            floor: run.state.floor,
+            floors: run.floors),
       ),
     );
     if (!context.mounted) return;

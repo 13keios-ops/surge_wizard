@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../art/art_sprite.dart';
 import '../art/pixel_sprite.dart';
 import '../art/spell_fx.dart';
 import '../art/sprite_map.dart';
@@ -9,8 +10,10 @@ import '../art/sprites_characters.dart';
 import '../art/stage_backdrop.dart';
 import '../core/battle.dart';
 import '../core/check.dart';
+import '../core/constants.dart';
 import '../screens/battle_controller.dart';
 import 'battle_popup.dart';
+import 'battle_overlay.dart';
 import 'battle_stage_hud.dart';
 import 'pixel_ui.dart';
 
@@ -18,9 +21,16 @@ import 'pixel_ui.dart';
 /// 적은 위쪽에 작게(멀리), 마법사는 아래쪽에 크게(가까이) 뒷모습으로 선다.
 class BattleStage extends StatefulWidget {
   const BattleStage(
-      {super.key, required this.controller, this.floor, this.floors});
+      {super.key,
+      required this.controller,
+      this.regionId,
+      this.floor,
+      this.floors});
 
   final BattleController controller;
+
+  /// 현재 지역 — 배경 원화가 있는 지역이면 그것을 깐다
+  final int? regionId;
 
   /// 현재 층 — 배경 테마와 좌측 노드 트랙에 쓴다
   final int? floor;
@@ -31,7 +41,6 @@ class BattleStage extends StatefulWidget {
   @override
   State<BattleStage> createState() => _BattleStageState();
 }
-
 
 class _BattleStageState extends State<BattleStage>
     with TickerProviderStateMixin {
@@ -93,8 +102,8 @@ class _BattleStageState extends State<BattleStage>
         setState(() {
           _fxSpec = SpellFxSpec(
             // 마법사 손끝 → 적 몸통
-            from: const Offset(0.5, 0.74),
-            to: failed ? const Offset(0.5, 0.70) : const Offset(0.5, 0.34),
+            from: const Offset(0.5, 0.55),
+            to: failed ? const Offset(0.5, 0.52) : const Offset(0.5, 0.33),
             shape: failed ? SpellFxShape.skull : style.shape,
             core: failed ? const Color(0xFFE8D6FF) : style.core,
             glow: failed ? const Color(0xFF9A4FD0) : style.glow,
@@ -131,129 +140,160 @@ class _BattleStageState extends State<BattleStage>
   }
 
   @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) => _buildStage(constraints.maxHeight),
+  Widget build(BuildContext context) => _buildStage();
+
+  /// 원화가 있는 적은 원화로, 없으면 기존 픽셀 스프라이트로 그린다.
+  Widget _enemyView(String? art, SpriteLook look, double size, double flash) {
+    final dots = PixelSpriteView(
+      look.sprite,
+      size: size,
+      tint: look.tint,
+      halo: kSpriteHalo,
+      shadow: true,
+      flashAmount: flash,
     );
+    if (art == null) return dots;
+    // 색조를 입히지 않는다 — 원화가 제 색을 갖고 있다
+    return ArtSpriteView(art,
+        size: size, shadow: true, flashAmount: flash, fallback: dots);
   }
 
-  Widget _buildStage(double h) {
+  /// 발 높이(화면 아래에서 dp)를 **상자 아래끝 높이**로 바꾼다. 원화는 캔버스 안
+  /// 발바닥선(y = 477/512)이 발이라 상자 아래에 여백이 남고, 픽셀 스프라이트는
+  /// 상자 아랫변에서 4dp 위가 발이다. 안 맞추면 원화만 땅에 파묻힌다.
+  double _boxBottom(double foot, double size, bool isArt) =>
+      foot - (isArt ? size * (1 - kArtFootLine) : 4.0);
+
+  /// 무대 = **화면 전체**. v3에서 어두운 트레이 상자를 없앴으므로 배경이 아래까지
+  /// 흐르고 조작부가 그 위에 뜬다. 캐릭터 자리는 전부 `layout.dart` 의
+  /// 「화면 아래에서 몇 dp」 상수로 잡는다 — 기기 비율이 달라져도 관계가 안 변한다.
+  Widget _buildStage() {
     final battle = _battle;
     final look = enemyLook(battle.enemy.id);
     final palette = BackdropPalette.forFloor(widget.floor ?? 1);
-    final enemyLine = h * 0.52;
-    final enemySize =
-        (h * (battle.enemy.isBoss ? 0.44 : 0.37)).clamp(50.0, 118.0);
-    final wizardSize = (h * 0.50).clamp(64.0, 142.0);
+    final bgArt = kArtRegionBackdrops[widget.regionId];
+    final enemyArt = kArtEnemies[battle.enemy.id];
+    final isBoss = battle.enemy.isBoss;
+    final foeSize = isBoss ? kBossSize : kEnemySize;
+    final foeFoot = isBoss ? kBossFoot : kFoeFrontFoot;
 
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(3),
-      child: SizedBox(
-        height: h,
-        child: AnimatedBuilder(
-          animation: Listenable.merge(
-              [_ambient, _fx, _enemyHit, _playerHit]),
-          builder: (context, _) {
-            // 시전 중이면 마법사가 살짝 뒤로 젖혔다 앞으로 나간다
-            final castLean = _fx.isAnimating
-                ? (_fx.value < 0.25
-                    ? -_fx.value * 12
-                    : (_fx.value < 0.4 ? (_fx.value - 0.25) * 60 - 3 : 0.0))
-                : 0.0;
-            // 숨쉬기 — 위아래로 아주 천천히 흔들린다 (살아 있는 느낌)
-            final breathe = sin(_ambient.value * 2 * pi) * 2.0;
-            final enemyBreathe = sin(_ambient.value * 2 * pi + 1.4) * 2.6;
-            // 적은 맞으면 뒤로 밀린다
-            final knock = _enemyHit.isAnimating
-                ? -(1 - _enemyHit.value) * 7
-                : 0.0;
-            return Stack(
-              children: [
-                Positioned.fill(
-                  child: StageBackdrop(
-                      palette: palette, time: _ambient.value),
-                ),
-                // 적 — 위쪽, 단 위에
-                Positioned(
-                  top: enemyLine - enemySize + 4 + knock + enemyBreathe,
-                  left: 0,
-                  right: 0,
-                  child: Center(
-                    child: Transform.scale(
-                      // 맞는 순간 살짝 찌그러진다
-                      scaleY: _enemyHit.isAnimating
-                          ? 1 - (1 - _enemyHit.value) * 0.14
-                          : 1,
-                      child: PixelSpriteView(
-                        look.sprite,
-                        size: enemySize,
-                        tint: look.tint,
-                        halo: kSpriteHalo,
-                        shadow: true,
-                        flashAmount: _enemyHit.isAnimating
-                            ? (1 - _enemyHit.value) * 0.85
-                            : 0,
-                      ),
+    return AnimatedBuilder(
+      animation: Listenable.merge([_ambient, _fx, _enemyHit, _playerHit]),
+      builder: (context, _) {
+        // 시전 중이면 마법사가 살짝 뒤로 젖혔다 앞으로 나간다
+        final castLean = _fx.isAnimating
+            ? (_fx.value < 0.25
+                ? -_fx.value * 12
+                : (_fx.value < 0.4 ? (_fx.value - 0.25) * 60 - 3 : 0.0))
+            : 0.0;
+        // 숨쉬기 — 위아래로 아주 천천히 흔들린다 (살아 있는 느낌)
+        final breathe = sin(_ambient.value * 2 * pi) * 2.0;
+        final enemyBreathe = sin(_ambient.value * 2 * pi + 1.4) * 2.6;
+        // 적은 맞으면 뒤로 밀린다
+        final knock = _enemyHit.isAnimating ? (1 - _enemyHit.value) * 7 : 0.0;
+        final enemyFlash =
+            _enemyHit.isAnimating ? (1 - _enemyHit.value) * 0.85 : 0.0;
+        final playerFlash =
+            _playerHit.isAnimating ? (1 - _playerHit.value) * 0.7 : 0.0;
+
+        return Stack(
+          children: [
+            // 배경 — 화면 끝까지 채운다
+            Positioned.fill(
+              child: bgArt == null
+                  ? StageBackdrop(palette: palette, time: _ambient.value)
+                  : ArtBackdropView(
+                      bgArt,
+                      fallback:
+                          StageBackdrop(palette: palette, time: _ambient.value),
                     ),
-                  ),
+            ),
+            // 적 — 길 위쪽에 선다
+            Positioned(
+              bottom: _boxBottom(foeFoot, foeSize, enemyArt != null) +
+                  knock -
+                  enemyBreathe,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: Transform.scale(
+                  // 맞는 순간 살짝 찌그러진다
+                  scaleY: _enemyHit.isAnimating
+                      ? 1 - (1 - _enemyHit.value) * 0.14
+                      : 1,
+                  child: _enemyView(enemyArt, look, foeSize, enemyFlash),
                 ),
-                // 마법사 — 아래쪽 뒷모습
-                Positioned(
-                  bottom: 2,
-                  left: 0,
-                  right: 0,
-                  child: Center(
-                    child: Transform.translate(
-                      offset: Offset(0, castLean + breathe),
-                      child: PixelSpriteView(
-                        kSpriteWizardBack,
-                        size: wizardSize,
-                        tint: kWizardTint,
-                        halo: kSpriteHalo,
-                        shadow: true,
-                        flashAmount: _playerHit.isAnimating
-                            ? (1 - _playerHit.value) * 0.7
-                            : 0,
-                      ),
+              ),
+            ),
+            // 적 상태 — 보스는 발밑에 체력바를 두지 않는다 (화면 맨 위에 있다)
+            Positioned(
+              bottom: foeFoot - (isBoss ? 20 : kUnitPlateHeight + 20) - 2,
+              left: 0,
+              right: 0,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (!isBoss)
+                    UnitPlate(
+                      width: foeSize * 0.8,
+                      ratio: battle.enemyHp / battle.enemy.hp,
+                      color: kHpRed,
+                      label: '${battle.enemyHp} / ${battle.enemy.hp}',
                     ),
+                  TelegraphChip(battle: battle),
+                ],
+              ),
+            ),
+            // 마법사 — 주문 슬롯 바로 위에 뒷모습으로 선다
+            Positioned(
+              bottom: _boxBottom(kHeroFoot, kWizardSize, true) -
+                  castLean -
+                  breathe,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: ArtSpriteView(
+                  kArtWizardBack,
+                  size: kWizardSize,
+                  shadow: true,
+                  flashAmount: playerFlash,
+                  fallback: PixelSpriteView(
+                    kSpriteWizardBack,
+                    size: kWizardSize,
+                    tint: kWizardTint,
+                    halo: kSpriteHalo,
+                    flashAmount: playerFlash,
                   ),
                 ),
-                // 마법 이펙트 (캐릭터 위에 그린다)
-                if (_fx.isAnimating && _fxSpec != null)
-                  Positioned.fill(
-                    child: IgnorePointer(
-                      child: CustomPaint(
-                        painter: SpellFxPainter(_fxSpec!, _fx.value),
-                      ),
-                    ),
-                  ),
-                // 적 정보
-                Positioned(
-                  left: 8,
-                  right: 8,
-                  top: 6,
-                  child: EnemyHeader(battle: battle),
+              ),
+            ),
+            Positioned(
+              bottom: kHeroFoot - kUnitPlateHeight - 2,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: UnitPlate(
+                  width: kWizardSize * 0.9,
+                  ratio: battle.playerHp / battle.playerMaxHp,
+                  color: kHpGreen,
+                  label: '${battle.playerHp} / ${battle.playerMaxHp}'
+                      '${battle.shield > 0 ? '  ◈${battle.shield}' : ''}',
                 ),
-                if (widget.floor != null)
-                  Positioned(
-                    left: 6,
-                    top: h * 0.30,
-                    child: NodeTrack(
-                        floor: widget.floor!,
-                        floors: widget.floors ?? widget.floor!),
+              ),
+            ),
+            // 마법 이펙트 (캐릭터 위에 그린다)
+            if (_fx.isAnimating && _fxSpec != null)
+              Positioned.fill(
+                child: IgnorePointer(
+                  child: CustomPaint(
+                    painter: SpellFxPainter(_fxSpec!, _fx.value),
                   ),
-                Positioned(
-                  right: 8,
-                  bottom: 8,
-                  child: PlayerStatus(battle: battle),
                 ),
-                for (final p in _popups)
-                  PopupText(key: ValueKey(p.id), popup: p),
-              ],
-            );
-          },
-        ),
-      ),
+              ),
+            for (final p in _popups) PopupText(key: ValueKey(p.id), popup: p),
+          ],
+        );
+      },
     );
   }
 }

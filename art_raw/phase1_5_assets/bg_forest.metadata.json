@@ -1,0 +1,147 @@
+{
+  "asset_name": "bg_forest",
+  "asset_type": "background",
+  "asset_role": "region_1_mana_forest_opening_scene",
+  "description": "Vertical eye-level forest background for Region 1 'Mana Forest'. Thick trunks frame the left and right edges, foliage forms a canopy, warm light shafts descend from the upper-left, distant trees recede into cool mist, and the lower third is a flat moss-and-leaf ground plane with the central staging area kept open.",
+  "usage": "Opening battle/exploration background behind wizard and enemy sprites; may later support a swamp variant with fog/water overlays.",
+  "file_name": "bg_forest.png",
+  "file_format": "PNG",
+  "canvas_size": [
+    1024,
+    1536
+  ],
+  "logical_resolution": {
+    "logical_canvas": [
+      512,
+      768
+    ],
+    "cell_size_px": 2
+  },
+  "background": "opaque_full_scene",
+  "alpha_channel": {
+    "present": true,
+    "type": "fully_opaque_background",
+    "note": "Background assets are intentionally opaque."
+  },
+  "animation": false,
+  "frame_count": 1,
+  "direction": "eye_level_forward",
+  "style_summary": "Chunky but detailed vertical pixel-art forest with 2px dominant physical pixel blocks, lower saturation/contrast than character sprites, strong edge framing, misty depth, and warm upper-left light shafts.",
+  "visual_identity": {
+    "region": "Mana Forest",
+    "frame": "massive trunks on both outer edges with leafy canopy overhead",
+    "center": "open luminous misty forest corridor",
+    "ground": "flat moss-and-leaf plane across lower third",
+    "light": "warm yellow shafts from upper-left",
+    "distance": "cool green/teal mist with softened tree silhouettes"
+  },
+  "silhouette_profile": "Dark framing masses on left/right and canopy top; bright open center; low flat floor with edge rocks and roots.",
+  "proportion_profile": {
+    "camera": "eye-level",
+    "vertical_layout": "canopy upper zone, misty mid-depth forest, flat playable floor in lower third",
+    "center_clearance": "reserved for character placement"
+  },
+  "pixel_structure": {
+    "grid_aligned": true,
+    "dominant_physical_block_px": 2,
+    "logical_canvas": [
+      512,
+      768
+    ],
+    "method_note": "Final scene is represented at 512x768 logical pixels and expanded 2x with nearest-neighbor; no fixed-palette quantization."
+  },
+  "pixel_density": "finer than characters: approximately 2x2 physical pixels per logical cell at 1024x1536",
+  "palette_profile": {
+    "dominant": [
+      "forest green",
+      "moss green",
+      "cool teal-green",
+      "blue-green mist"
+    ],
+    "light_accent": [
+      "warm yellow"
+    ],
+    "contrast_policy": "background contrast and saturation one step below character sprites"
+  },
+  "color_count_estimate": 171343,
+  "shading_profile": "Layered atmospheric depth with broad value grouping; local texture remains pixel-structured but lower contrast toward center distance.",
+  "lighting_profile": {
+    "direction": "upper-left",
+    "type": "single warm filtered forest light",
+    "light_shafts": "diagonal warm beams descending into the center-left clearing",
+    "ambient": "cool diffuse teal-green forest fill"
+  },
+  "outline_profile": "Environment edges use dark local hues rather than uniform black outlines.",
+  "texture/material_profile": {
+    "tree_bark": "dark brown-green rough trunks with moss",
+    "foliage": "clustered leafy masses",
+    "ground": "soft moss, scattered leaves and small exposed roots",
+    "rocks": "dark desaturated stone restricted mainly to edges",
+    "mist": "soft cool atmospheric layering in distance"
+  },
+  "detail_density": "high at outer edges and canopy, low-to-medium in central playable area.",
+  "readability_rules": [
+    "Keep center-lower area free of large objects.",
+    "Ground across lower third must read as level and horizontally continuous.",
+    "No cliffs, stairs or strong slopes.",
+    "Keep center lower in contrast than sprite silhouettes.",
+    "Place fine decorative detail toward side edges, not behind characters.",
+    "No people, monsters, text or UI frames.",
+    "Floor should remain compatible with later fog/water swamp overlay."
+  ],
+  "mood/world_context": "mysterious but welcoming first-region forest; magical rather than threatening",
+  "consistency_must_keep": [
+    "1024x1536 vertical canvas",
+    "2px dominant pixel block",
+    "eye-level view",
+    "upper-left light",
+    "thick trunks on both edges",
+    "leaf canopy at top",
+    "misty distant trees",
+    "flat lower-third ground",
+    "open center-lower staging area",
+    "green/teal palette with warm yellow light only",
+    "lower character-relative contrast and saturation",
+    "no characters, text or UI"
+  ],
+  "consistency_should_keep": [
+    "moss and leaf litter",
+    "few exposed roots",
+    "edge-biased rocks/plants",
+    "soft atmospheric depth"
+  ],
+  "allowed_variations": [
+    "mist density",
+    "minor edge foliage arrangements",
+    "ground wetness for swamp adaptation",
+    "small root and leaf-litter pattern changes"
+  ],
+  "prohibited_variations": [
+    "large center rocks or trees",
+    "steep or stepped terrain",
+    "top-down or low-angle camera",
+    "harsh high-contrast center detail",
+    "characters or monsters",
+    "UI frames or text",
+    "realistic photographic rendering"
+  ],
+  "variant_generation_notes": "For swamp reuse, add fog/wetness/water overlays while preserving the same horizontal floor plane and central staging clearance. Keep edge trees as framing anchors.",
+  "relation_to_other_assets": "Shared upper-left light and colored-edge treatment with wizard_back and enemy_goblin_scout; intentionally lower visual dominance so both sprites remain readable.",
+  "consistency_group": "phase1_5_core",
+  "reference_basis": "ART_REQUEST_PHASE1_5.md for scene, palette, staging, camera and pixel-density requirements; supplied wizard image for overall project rendering quality only.",
+  "originality_note": "Original generic fantasy forest composition for this project; no specific commercial-game environment was intentionally copied.",
+  "license_risk_check": "Low; no external logos, trademarks, text, or identifiable proprietary environment motifs intentionally reproduced.",
+  "validation": {
+    "png": true,
+    "canvas": [
+      1024,
+      1536
+    ],
+    "fully_opaque": true,
+    "dominant_same_color_run_px": 2,
+    "unique_rgba_count": 171343,
+    "center_lower_large_object_check": "pass",
+    "flat_ground_check": "pass",
+    "single_asset_only": true
+  }
+}

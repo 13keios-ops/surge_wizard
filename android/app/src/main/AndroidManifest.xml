@@ -30,6 +30,14 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!-- AdMob 앱 ID. google_mobile_ads 를 넣으면 이 줄이 없을 때
+             앱이 실행 즉시 죽는다 (SDK 가 시작할 때 반드시 읽는다).
+             지금 값은 구글이 공개한 **테스트 전용 ID** 다.
+             🔴 출시 전에 AdMob 콘솔에서 발급받은 실제 ID 로 바꿀 것. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and

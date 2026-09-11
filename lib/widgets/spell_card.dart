@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../art/pixel_sprite.dart';
 import '../art/sprite_map.dart';
+import '../core/constants.dart';
 import '../models/spell.dart';
 import 'pixel_ui.dart';
 
@@ -75,13 +76,13 @@ class SpellCard extends StatelessWidget {
                     children: [
                       // 아이콘 — 뒤에 속성색 원광을 옅게 깐다
                       SizedBox(
-                        height: 42,
+                        height: kSpellIconBox,
                         child: Stack(
                           alignment: Alignment.center,
                           children: [
                             Container(
-                              width: 38,
-                              height: 38,
+                              width: kSpellIconSize,
+                              height: kSpellIconSize,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 gradient: RadialGradient(colors: [

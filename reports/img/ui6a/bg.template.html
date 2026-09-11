@@ -1,0 +1,446 @@
+<title>전투 배경 구도 시안</title>
+<style>
+  :root{
+    --sheet:#100E1A; --sheet2:#1A1730; --line:#332D55;
+    --ink:#EDE9F7; --dim:#A79FC8;
+    --gold:#F2C14E; --red:#E8546B; --green:#6BD45C; --mana:#5FC8F0;
+    --panel:#3A3560; --border:#6E68A8; --purple:#A97BEA;
+  }
+  @font-face{font-family:'Galmuri11';src:url({{FONT11}}) format('truetype');font-weight:400;font-display:block}
+  @font-face{font-family:'Galmuri11';src:url({{FONT11B}}) format('truetype');font-weight:700;font-display:block}
+  @font-face{font-family:'Galmuri9';src:url({{FONT9}}) format('truetype');font-display:block}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--sheet);color:var(--ink);
+       font-family:system-ui,'Segoe UI',sans-serif;line-height:1.65}
+  .wrap{max-width:1200px;margin:0 auto;padding:40px 20px 72px}
+  h1{font-family:'Galmuri11',monospace;font-size:36px;font-weight:700;margin:0 0 6px}
+  h2{font-family:'Galmuri11',monospace;font-size:24px;font-weight:700;margin:46px 0 12px}
+  h2:first-of-type{margin-top:0}
+  .sub{color:var(--dim);margin:0 0 30px;max-width:66ch}
+
+  .card{background:var(--sheet2);border:1px solid var(--line);padding:20px 24px;
+        border-radius:2px;margin:0 0 26px}
+  .card.hi{border-left:4px solid var(--gold)}
+  table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+  th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+  th{color:var(--dim);font-weight:500}
+  tr:last-child td{border-bottom:0}
+  .num{color:var(--gold);font-weight:600}
+  .was{color:var(--dim);text-decoration:line-through}
+  p{max-width:76ch} .card p:first-child{margin-top:0} .card p:last-child{margin-bottom:0}
+  .dimtext{color:var(--dim);font-size:13px}
+
+  .boards{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-end}
+  figure{margin:0}
+  figcaption{font-family:'Galmuri11',monospace;font-size:12px;margin:0 0 8px}
+  .cap2{font-size:13px;color:var(--dim);max-width:360px;margin:8px 0 0;line-height:1.55}
+
+  .phone{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:5px;
+         background:#93B98D;font-family:'Galmuri9',monospace;color:var(--ink);flex:0 0 auto}
+  .phone img{image-rendering:pixelated}
+  .phone svg.bg{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .veil{position:absolute;left:0;right:0;bottom:0;height:230px;pointer-events:none;
+        background:linear-gradient(180deg,rgba(18,15,30,0),rgba(18,15,30,.26) 42%,rgba(18,15,30,.48))}
+
+  .top{position:absolute;left:0;right:0;top:0;height:44px;display:flex;
+       align-items:center;justify-content:space-between;padding:0 8px;
+       background:linear-gradient(180deg,rgba(16,14,26,.55),rgba(16,14,26,0))}
+  .dungeon{font-family:'Galmuri11',monospace;font-size:12px;line-height:1;text-shadow:0 1px 2px #000}
+  .floor{font-size:10px;color:#E6E0F5;margin-top:3px;line-height:1;text-shadow:0 1px 2px #000}
+  .sys{display:flex;gap:4px}
+  .sys span{width:44px;height:44px;display:grid;place-items:center;font-size:20px;
+            text-shadow:0 1px 3px #000}
+
+  .bossbar{position:absolute;left:30px;right:30px;top:48px;height:20px;
+           background:rgba(12,10,20,.86);border:2px solid #0B0912;border-radius:3px;overflow:hidden}
+  .bossbar i{position:absolute;inset:0;width:74%;background:linear-gradient(180deg,#F2657C,#C9273F)}
+  .bossbar em{position:absolute;left:6px;top:0;bottom:0;display:flex;align-items:center;
+              font-style:normal;font-size:10px;color:#FFD9A0;text-shadow:0 1px 2px #000}
+  .bossbar span{position:absolute;inset:0;display:grid;place-items:center;
+                font-family:'Galmuri11',monospace;font-size:12px;color:#fff;text-shadow:0 1px 2px #000}
+
+  .unit{position:absolute}
+  .unit img{display:block}
+  .bar{height:6px;margin:1px auto 0;background:rgba(14,11,26,.9);border:1px solid rgba(0,0,0,.7)}
+  .bar i{display:block;height:100%}
+  .lv{font-size:10px;text-align:center;line-height:1.3;text-shadow:0 1px 0 #000,0 0 4px #000}
+
+  .slots{position:absolute;left:0;right:0;height:64px;display:flex;gap:6px;padding:0 8px}
+  .slot{flex:1 1 0;border:2px solid var(--border);border-radius:3px;
+        background:rgba(38,33,70,.60);display:flex;flex-direction:column;align-items:center;
+        justify-content:center;gap:2px;box-shadow:0 2px 6px rgba(0,0,0,.35)}
+  .slot.open{border-color:var(--gold);background:rgba(58,53,96,.70)}
+  .slot.lock{border-style:dashed;background:rgba(16,13,32,.52)}
+  .icon{width:26px;height:26px}
+  .icon.fire{border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFB25E,#D8542A)}
+  .icon.frost{background:var(--mana);transform:rotate(45deg);width:22px;height:22px;border-radius:2px}
+  .icon.arcane{background:var(--purple);clip-path:polygon(50% 0,100% 22%,100% 62%,50% 100%,0 62%,0 22%)}
+  .nm{font-size:10px;line-height:1;text-shadow:0 1px 2px #000}
+  .cir{font-size:10px;color:#D6CEF0;line-height:1}
+  .key{font-size:20px;line-height:1} .paid{font-size:10px;color:var(--gold);line-height:1}
+
+  .ctrl{position:absolute;left:0;right:0;display:flex;gap:10px;padding:0 8px;align-items:center}
+  .dice{position:relative;width:148px;height:104px;flex:0 0 148px}
+  .die{position:absolute;width:64px;height:64px;background:#F7F4E8;border-radius:5px;
+       border:2px solid #3A3550;box-shadow:0 4px 10px rgba(0,0,0,.55);
+       display:grid;grid-template:repeat(3,1fr)/repeat(3,1fr);padding:8px}
+  .die b{width:9px;height:9px;background:#2A2540;border-radius:50%;align-self:center;justify-self:center}
+  .d1{left:0;top:0;transform:rotate(-7deg)}
+  .d2{left:84px;top:4px;transform:rotate(6deg)}
+  .d3{left:42px;top:40px;transform:rotate(-3deg)}
+  .stack{display:flex;flex-direction:column;gap:8px;flex:1}
+  .btn{height:46px;border-radius:3px;display:grid;place-items:center;
+       font-family:'Galmuri11',monospace;font-size:24px;font-weight:700;
+       background:var(--gold);color:#2A2033;border:2px solid #B8912F;
+       box-shadow:0 3px 8px rgba(0,0,0,.45)}
+  .btn.ghost{background:rgba(58,53,96,.78);color:var(--ink);border-color:var(--border);
+             font-size:12px;font-weight:400}
+  .sum{position:absolute;font-family:'Galmuri11',monospace;font-size:12px;color:#E4DEF5;
+       text-shadow:0 1px 3px #000}
+
+  pre{background:#0B0913;border:1px solid var(--line);border-left:3px solid var(--gold);
+      padding:16px 18px;border-radius:2px;overflow-x:auto;font-size:12.5px;line-height:1.7;
+      font-family:ui-monospace,'Cascadia Mono',Consolas,monospace;color:#DCD6EE;
+      white-space:pre-wrap;word-break:break-word}
+  pre b{color:var(--gold);font-weight:600}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;color:var(--gold)}
+</style>
+
+<div class="wrap">
+  <h1>전투 배경 구도 시안</h1>
+  <p class="sub">딸깍 다이스의 길 폭을 <b>행마다 실측</b>해 다시 짰습니다.
+  화면 46% 아래로는 길이 화면 폭 전체이고, 나무·기둥은 위쪽에만 있습니다.
+  화면 비율 질문도 4절에서 답했습니다.</p>
+
+  <h2>1. 참고 화면 길 폭 실측</h2>
+  <div class="card">
+    <p><code>refs/dicero/16_전투화면_전체구도_최종참고.png</code> (1080 × 2400).
+    가운데에서 좌우로 훑어 색이 바뀌는 지점을 길 가장자리로 잡았습니다.</p>
+    <table>
+      <tr><th>화면 높이</th><th>길 폭 (화면 폭 대비)</th><th>무엇이 보이나</th></tr>
+      <tr><td>14%</td><td class="num">13.5%</td><td>길이 산·안개로 사라진다</td></tr>
+      <tr><td>18 ~ 22%</td><td class="num">18 ~ 19%</td><td>기둥이 양옆에 늘어선다</td></tr>
+      <tr><td>26 ~ 30%</td><td class="num">31%</td><td>적이 서는 자리</td></tr>
+      <tr><td>34%</td><td class="num">36%</td><td>마지막 기둥</td></tr>
+      <tr><td><b>38%</b></td><td class="num"><b>79%</b></td><td>🔴 <b>기둥이 끝나며 길이 확 열린다</b></td></tr>
+      <tr><td>42%</td><td class="num">90%</td><td>열린 길</td></tr>
+      <tr><td><b>46% 아래로</b></td><td class="num"><b>100%</b></td><td>🔴 <b>길이 화면 폭 전체.</b> 길 바깥이 없다</td></tr>
+    </table>
+    <p style="margin-top:14px">말씀하신 그대로였습니다. <b>나무·기둥은 위쪽에만 있고,
+    화면 중간보다 조금 위에서 길이 확 열려 그 아래는 통째로 길바닥</b>입니다.
+    앞 시안은 나무를 화면 아래까지 세워 길을 좁히고 있었습니다.</p>
+  </div>
+
+  <h2>2. 그래서 바꾼 것</h2>
+  <div class="card hi">
+    <table>
+      <tr><th>무엇</th><th>앞 시안</th><th>이번</th></tr>
+      <tr><td>나무(길 바깥)</td><td class="was">화면 아래까지</td>
+          <td class="num">아래에서 377dp 위쪽에만 — 그 아래는 전부 길</td></tr>
+      <tr><td>길 폭 (적이 서는 곳)</td><td class="was">158 ~ 180dp</td>
+          <td class="num">266 ~ 326dp</td></tr>
+      <tr><td>마법사</td><td class="was">96dp</td><td class="num">112dp · 56칸</td></tr>
+      <tr><td>마법사 위치</td><td class="was">슬롯에서 66dp 위</td>
+          <td class="num">슬롯 바로 위 — 체력바까지 14dp</td></tr>
+      <tr><td><b>보스</b></td><td class="was">208dp</td><td class="num">180dp · 90칸</td></tr>
+      <tr><td>보스 위치</td><td class="was">아래에서 370dp</td><td class="num">390dp — 20dp 위로</td></tr>
+      <tr><td>보스 발밑 체력바</td><td class="was">있었다</td><td class="num">🔴 없앴다 — 위에 있으므로</td></tr>
+    </table>
+  </div>
+
+  <h2>3. 구도 시안</h2>
+  <p class="dimtext" style="margin:-4px 0 18px">그림체가 아니라 <b>구도</b>를 보는 그림입니다.</p>
+  <div class="boards" id="boards"></div>
+
+  <h2>4. 화면 비율 — 질문하신 것</h2>
+  <div class="card hi">
+    <p><b>지금까지 시안은 360 × 640 = 16 : 9 였습니다.</b> 이건 요즘 폰이 아니라
+    <b>가장 짧은 기기</b>입니다. 최신폰은 훨씬 깁니다.</p>
+    <table>
+      <tr><th>기기</th><th>dp</th><th>비율</th></tr>
+      <tr><td>iPhone SE 3 — 가장 짧다</td><td>375 × 667</td><td>16 : 9 (1.78)</td></tr>
+      <tr><td>iPhone 15 / 16</td><td>393 × 852</td><td>19.5 : 9 (2.17)</td></tr>
+      <tr><td>iPhone 16 Pro Max</td><td>430 × 932</td><td>19.5 : 9 (2.17)</td></tr>
+      <tr><td>Galaxy S24</td><td>360 × 780</td><td>19.5 : 9 (2.17)</td></tr>
+      <tr><td>Pixel 9 · 다수 안드로이드</td><td>412 × 915</td><td>20 : 9 (2.22)</td></tr>
+      <tr><td>참고 게임 스크린샷</td><td>1080 × 2400</td><td>20 : 9 (2.22)</td></tr>
+    </table>
+    <p style="margin-top:14px"><b>비율마다 화면을 따로 만들지 않습니다.</b>
+    UI와 캐릭터를 전부 <b>화면 아래에서부터</b> 재서 붙입니다. 화면이 길어지면
+    <b>위쪽 숲만 더 보이고</b> 조작부·마법사·적의 관계는 그대로입니다.
+    아래 세 장이 그 결과입니다 — 똑같은 값으로 그렸습니다.</p>
+    <div class="boards" id="ratios" style="margin-top:18px"></div>
+  </div>
+
+  <div class="card">
+    <p style="font-family:'Galmuri11',monospace;font-size:12px;color:var(--gold);margin:0 0 10px">
+      폴더블 · 태블릿은?</p>
+    <p>펼친 폴더블은 약 <b>1.2 : 1</b>, 태블릿 세로는 <b>1.44 : 1</b> 로 <b>가로가 넓어집니다.</b>
+    배경을 그대로 늘리면 길이 우스꽝스럽게 넓어지고 캐릭터가 콩알만 해집니다.</p>
+    <p><b>제안 — 전투 화면의 최대 폭을 480dp로 제한합니다.</b> 그 폭으로 세로 한 열을
+    가운데 두고, 좌우에 남는 자리는 같은 배경을 흐리게 확대해 채웁니다.
+    코드로는 감싸는 위젯 하나면 되고 <b>태블릿용 화면을 따로 만들 필요가 없습니다.</b></p>
+    <p class="dimtext">가로 모드(눕히기)는 지원하지 않는 쪽을 권합니다 — 세로 구도가
+    이 게임의 전제입니다. 🔴 <b>이 두 가지는 기획 창 확인이 필요합니다</b>
+    (최대 폭 480dp · 세로 전용).</p>
+  </div>
+
+  <h2>5. 새 배경이 지켜야 할 것</h2>
+  <div class="card hi">
+    <p>🔴 <b>캔버스 1024 × 2276 (9 : 20).</b> 가장 긴 폰에 맞춰 뽑고
+    <b>아래를 기준으로 붙입니다.</b> 그러면 16:9부터 20:9까지
+    <b>어떤 폰에서도 좌우가 잘리지 않고</b>, 짧은 폰에서는 위쪽 숲만 잘립니다.</p>
+    <table>
+      <tr><th>화면 아래에서</th><th>캔버스 아래에서</th><th>무엇이 와야 하나</th></tr>
+      <tr><td class="num">0 ~ 216dp</td><td>0 ~ 614px</td>
+          <td>넓고 단순한 길바닥. <b>그 위로 UI가 뜨므로 복잡하면 안 된다</b></td></tr>
+      <tr><td class="num">250dp</td><td>711px</td><td>마법사가 선다</td></tr>
+      <tr><td class="num">377dp</td><td>1072px</td>
+          <td>🔴 <b>여기서 길이 확 열린다. 아래로는 나무를 두지 마라</b></td></tr>
+      <tr><td class="num">390 ~ 403dp</td><td>1109 ~ 1146px</td><td>보스 · 앞줄 적. 길 폭 ≥ 326dp</td></tr>
+      <tr><td class="num">449dp</td><td>1277px</td><td>뒷줄 적. 길 폭 ≥ 266dp</td></tr>
+      <tr><td class="num">585dp</td><td>1663px</td><td>길이 안개에 잠긴다. 길 폭 ≈ 90dp</td></tr>
+      <tr><td class="num">585 ~ 800dp</td><td>1663 ~ 2276px</td>
+          <td>숲 위쪽·잎 지붕·빛줄기. <b>짧은 폰에서는 잘리는 구간</b></td></tr>
+    </table>
+    <p style="margin-top:14px" class="dimtext"><b>좌우 4%는 안전 여백</b> —
+    폭이 넓은 폰에서 좌우가 조금 잘립니다.</p>
+  </div>
+
+  <h2>6. 생성기에 넣을 요청문</h2>
+  <div class="card"><p>그대로 복사해 넣으시면 됩니다. <b>캐릭터는 넣지 않습니다</b> — 배경만입니다.</p></div>
+  <pre id="prompt"></pre>
+  <div class="card">
+    <p>🔴 <b>뽑기 전에 라이선스를 확인해 주세요.</b> 얹는 체크포인트 · LoRA마다
+    상업 이용 가부가 다릅니다 (<code>CLAUDE.md</code> 절대 규칙 6).
+    확인한 내용은 <code>ATTRIBUTION.md</code>에 적어야 합니다.</p>
+    <p class="dimtext"><b>돌아온 그림은 제가 검수합니다</b> — 캔버스가 1024 × 2276인지,
+    아래 1072px 구간에 나무가 없는지, 각 높이의 길 폭이 충분한지를 재서 알려 드립니다.</p>
+  </div>
+</div>
+
+<script>
+/* ── 전부 「화면 아래에서 몇 dp」로 잡는다. 비율이 달라도 관계가 안 변한다 ── */
+const B = {
+  ctrl:   8,     // 주사위·버튼 줄 아래끝
+  slots:  152,   // 주문 슬롯 아래끝 (높이 64 → 위끝 216)
+  hero:   250,   // 마법사 발
+  boss:   390,   // 보스 발
+  front:  403,   // 앞줄 적 발
+  back:   449,   // 뒷줄 적 발
+  open:   377,   // 🔴 여기 아래로는 나무가 없다 — 길이 화면 폭 전체
+  mist:   585,   // 길이 안개에 잠긴다
+};
+const FOOT = 477/512;
+const SIZE = {wiz:112, foe:76, boss:180};
+
+/* 길 반폭 — open 아래는 화면 폭 전체, 위로 갈수록 좁아진다 (참고 실측 곡선) */
+function halfAt(h, W){
+  if(h <= B.open) return W;                       // 화면을 넘어선다 = 꽉 찬다
+  const t = (h - B.open) / (B.mist - B.open);
+  return (180 - 135*t) * (W/360);
+}
+function roadPoly(W,H){
+  const left = [], right = [];
+  for(let h = B.mist; h >= 0; h -= 6){
+    const half = Math.min(halfAt(h,W), W*0.62);
+    left.push([W/2-half, H-h]);
+    right.unshift([W/2+half, H-h]);
+  }
+  return 'M ' + left.concat(right).map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ') + ' Z';
+}
+/* 나무 — open 위쪽에만. 아래로 갈수록 커지며 길 가장자리에 선다 */
+/* 길 바깥 — 어두운 숲 벽. 나무는 이 위에 밝게 얹어야 읽힌다 */
+function verge(W,H){
+  const L=[], R=[];
+  for(let h = B.mist + 90; h >= B.open; h -= 6){
+    const half = Math.min(halfAt(h,W), W*0.62);
+    L.push([W/2-half, H-h]); R.unshift([W/2+half, H-h]);
+  }
+  const yTop = H - (B.mist + 90), yBot = H - B.open;
+  const poly = (pts, side) => 'M ' + pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ') +
+    ' L ' + side + ',' + yBot + ' L ' + side + ',' + yTop + ' Z';
+  return '<path d="'+poly(L,-20)+'" fill="#3B6647"/><path d="'+poly(R,W+20)+'" fill="#3B6647"/>';
+}
+function trees(W,H){
+  let out='';
+  for(const [h,s] of [[622,.15],[600,.20],[578,.27],[552,.35],[520,.45],[484,.57],[444,.72],[402,.90]]){
+    if(h < B.open) continue;
+    const half = halfAt(h,W), y = H-h, ht = 210*s, w = 62*s;
+    const leaf  = 'hsl(' + (136 - s*8) + ' ' + (30 + s*10) + '% ' + (64 - s*22) + '%)';
+    const trunk = 'hsl(24 ' + (20 + s*10) + '% ' + (40 - s*14) + '%)';
+    for(const dir of [-1,1]){
+      const cx = W/2 + dir*(half + w*0.34);
+      out += '<rect x="'+(cx-w*.09).toFixed(1)+'" y="'+(y-ht*.38).toFixed(1)+
+             '" width="'+(w*.18).toFixed(1)+'" height="'+(ht*.40).toFixed(1)+'" fill="'+trunk+'"/>'+
+             '<ellipse cx="'+cx.toFixed(1)+'" cy="'+(y-ht*.58).toFixed(1)+
+             '" rx="'+(w*.78).toFixed(1)+'" ry="'+(ht*.32).toFixed(1)+'" fill="'+leaf+'"/>'+
+             '<ellipse cx="'+(cx-w*.34*dir).toFixed(1)+'" cy="'+(y-ht*.40).toFixed(1)+
+             '" rx="'+(w*.54).toFixed(1)+'" ry="'+(ht*.20).toFixed(1)+'" fill="'+leaf+'" opacity=".88"/>';
+    }
+  }
+  return out;
+}
+/* 길바닥 얼룩·잔돌 — 참고 화면도 길이 민민하지 않다 */
+function litter(W,H){
+  let out='';
+  for(const [fx,h,r] of [[.30,300,26],[.68,262,20],[.46,205,15],[.78,150,30],[.22,120,24],
+                         [.58,88,18],[.38,52,28],[.86,330,14],[.14,352,12],[.62,368,10]]){
+    out += '<ellipse cx="'+(W*fx).toFixed(1)+'" cy="'+(H-h)+'" rx="'+r+
+           '" ry="'+(r*.32).toFixed(1)+'" fill="#A8926A" opacity=".26"/>';
+  }
+  return out;
+}
+function scene(W,H,marks){
+  const id = W+'x'+H;
+  const yOf = h => H - h;
+  const wAt = h => Math.round(Math.min(halfAt(h,W), W/2)*2);
+  const mark = (h,c,t) => {
+    const y = yOf(h), half = Math.min(halfAt(h,W), W/2);
+    return '<line x1="'+(W/2-half).toFixed(1)+'" y1="'+y+'" x2="'+(W/2+half).toFixed(1)+
+      '" y2="'+y+'" stroke="'+c+'" stroke-width="2"/><text x="6" y="'+(y-4)+'" fill="'+c+
+      '" font-size="9" font-family="monospace">'+t+'</text>';
+  };
+  return `<svg class="bg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="c${id}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#43704E"/><stop offset=".42" stop-color="#7BA87E"/>
+        <stop offset="1" stop-color="#CFE3C6"/></linearGradient>
+      <linearGradient id="g${id}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#C2D9B4"/><stop offset="1" stop-color="#9BC088"/></linearGradient>
+      <linearGradient id="r${id}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#DCD4B4"/><stop offset=".5" stop-color="#CDBE96"/>
+        <stop offset="1" stop-color="#BCA77E"/></linearGradient>
+      <linearGradient id="m${id}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F4F8EE" stop-opacity=".95"/>
+        <stop offset="1" stop-color="#F4F8EE" stop-opacity="0"/></linearGradient>
+      <linearGradient id="y${id}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FFFBDF" stop-opacity=".46"/>
+        <stop offset="1" stop-color="#FFFBDF" stop-opacity="0"/></linearGradient>
+    </defs>
+    <rect width="${W}" height="${H}" fill="url(#c${id})"/>
+    <rect y="${yOf(B.mist)-24}" width="${W}" height="${B.mist+24}" fill="url(#g${id})"/>
+    ${verge(W,H)}
+    <path d="${roadPoly(W,H)}" fill="url(#r${id})"/>
+    <path d="${roadPoly(W,H)}" fill="none" stroke="#EEE5C6" stroke-opacity=".45" stroke-width="2"/>
+    ${litter(W,H)}
+    ${trees(W,H)}
+    <rect y="${yOf(B.mist)-34}" width="${W}" height="72" fill="url(#m${id})"/>
+    <polygon points="${W*.30},0 ${W*.42},0 ${W*.56},${yOf(B.mist)+70} ${W*.44},${yOf(B.mist)+70}"
+      fill="url(#y${id})"/>
+    <polygon points="${W*.56},0 ${W*.66},0 ${W*.76},${yOf(B.mist)+108} ${W*.66},${yOf(B.mist)+108}"
+      fill="url(#y${id})" opacity=".7"/>
+    <ellipse cx="${W/2}" cy="${yOf(B.mist)}" rx="${W*.16}" ry="14" fill="#F7FAF2" opacity=".6"/>
+    ${marks ? '<g>' +
+      mark(B.mist,'#C0392B','안개에 잠긴다 · 585dp · 길 폭 '+wAt(B.mist)+'dp') +
+      mark(B.back,'#1B4F72','뒷줄 적 · 449dp · 길 폭 '+wAt(B.back)+'dp') +
+      mark(B.front,'#1B4F72','앞줄 적 · 403dp · 길 폭 '+wAt(B.front)+'dp') +
+      '<line x1="0" y1="'+yOf(B.open)+'" x2="'+W+'" y2="'+yOf(B.open)+
+        '" stroke="#7B241C" stroke-dasharray="5 3"/>' +
+      '<text x="6" y="'+(yOf(B.open)-4)+'" fill="#7B241C" font-size="9" font-family="monospace">'+
+        '377dp — 아래로 나무 금지 · 길이 화면 폭 전체</text>' +
+      mark(B.hero,'#4A235A','마법사 · 250dp') +
+      '<line x1="0" y1="'+yOf(216)+'" x2="'+W+'" y2="'+yOf(216)+'" stroke="#333" stroke-dasharray="3 3"/>'+
+      '<text x="6" y="'+(yOf(216)+12)+'" fill="#333" font-size="9" font-family="monospace">'+
+        '216dp — 여기부터 UI (길은 계속 보인다)</text>' +
+    '</g>' : ''}
+  </svg>`;
+}
+
+function unit(src,size,cx,foot,H,color,label,hp){
+  const top = Math.round(H - foot - size*FOOT);
+  const tail = label === null ? '' :
+    '<div class="bar" style="width:'+Math.round(size*.72)+'px"><i style="width:'+hp+
+    '%;background:'+color+'"></i></div><div class="lv">'+label+'</div>';
+  return '<div class="unit" style="left:'+Math.round(cx-size/2)+'px;top:'+top+'px;width:'+size+'px">'+
+    '<img src="'+src+'" style="width:'+size+'px;height:'+size+'px" alt="">'+tail+'</div>';
+}
+const DIE={5:[1,0,1,0,1,0,1,0,1],3:[1,0,0,0,1,0,0,0,1],4:[1,0,1,0,0,0,1,0,1]};
+const pip=n=>DIE[n].map(v=>v?'<b></b>':'<span></span>').join('');
+const SLOTS = `<div class="slot open"><i class="icon fire"></i><span class="nm">화염구</span><span class="cir">1서클</span></div>
+  <div class="slot open"><i class="icon frost"></i><span class="nm">서리화살</span><span class="cir">1서클</span></div>
+  <div class="slot open"><i class="icon arcane"></i><span class="nm">마력방패</span><span class="cir">1서클</span></div>
+  <div class="slot lock"><span class="key">🔒</span><span class="paid">유료</span></div>
+  <div class="slot lock"><span class="key">🔒</span><span class="paid">유료</span></div>`;
+
+function phone(kind, W, H){
+  if(kind === 'spec')
+    return '<div class="phone" style="width:'+W+'px;height:'+H+'px">'+scene(W,H,true)+'</div>';
+  let cast = '', boss = '';
+  if(kind === 'boss'){
+    cast = unit('{{FOE}}',SIZE.boss,W/2,B.boss,H,'',null,0);
+    boss = '<div class="bossbar"><i></i><em>숲의 파수꾼 Lv12</em><span>1016 / 1400</span></div>';
+  } else {
+    const hb = Math.min(halfAt(B.back,W), W/2), hf = Math.min(halfAt(B.front,W), W/2);
+    cast = unit('{{FOE}}',SIZE.foe,W/2-hb*.52,B.back ,H,'var(--red)','Lv 4',100)
+         + unit('{{FOE}}',SIZE.foe,W/2+hb*.52,B.back ,H,'var(--red)','Lv 4',86)
+         + unit('{{FOE}}',SIZE.foe,W/2-hf*.60,B.front,H,'var(--red)','Lv 3',68)
+         + unit('{{FOE}}',SIZE.foe,W/2+hf*.60,B.front,H,'var(--red)','Lv 3',100);
+  }
+  cast += unit('{{WIZ}}',SIZE.wiz,W/2,B.hero,H,'var(--green)','Lv 5 · 20/20',100);
+  return `<div class="phone" style="width:${W}px;height:${H}px">
+    ${scene(W,H,false)}<div class="veil"></div>${cast}
+    <div class="top"><div><div class="dungeon">속삭이는 숲</div><div class="floor">3층 / 7</div></div>
+      <div class="sys"><span>⏸</span><span>⚙</span></div></div>
+    ${boss}
+    <div class="slots" style="bottom:${B.slots}px">${SLOTS}</div>
+    <div class="ctrl" style="bottom:${B.ctrl}px">
+      <div class="dice"><div class="die d1">${pip(5)}</div><div class="die d2">${pip(3)}</div>
+        <div class="die d3">${pip(4)}</div></div>
+      <div class="stack"><div class="btn ghost">리롤 2/2</div><div class="btn">시전</div></div>
+    </div>
+    <div class="sum" style="left:60px;bottom:${B.ctrl-2}px">눈 합계 12</div></div>`;
+}
+
+document.getElementById('boards').innerHTML = [
+  ['구도 규격','spec',360,640,'빨간 점선(아래에서 377dp) 아래로는 <b>나무를 두지 않습니다.</b> 그래서 길이 화면 폭을 꽉 채우고, 적을 좌우로 여유 있게 벌릴 수 있습니다.'],
+  ['일반 전투 — 적 4마리','four',360,640,'적 넷이 넓어진 길 위에 흩어집니다. 뒷줄 길 폭 <b>266dp</b>, 앞줄 <b>326dp</b>. 마법사 112dp는 체력바까지 슬롯 바로 위(14dp)에 붙습니다.'],
+  ['보스 전투 — 보스 180dp','boss',360,640,'보스 발을 20dp 올렸고 <b>발밑 체력바를 없앴습니다</b> — 체력은 화면 맨 위 한 곳에만 있습니다.']
+].map(a=>'<figure><figcaption>'+a[0]+'</figcaption>'+phone(a[1],a[2],a[3])+
+        '<p class="cap2">'+a[4]+'</p></figure>').join('');
+
+document.getElementById('ratios').innerHTML = [
+  ['16 : 9 — iPhone SE (가장 짧다)',360,640],
+  ['19.5 : 9 — iPhone 15/16',393,852],
+  ['20 : 9 — Pixel · 갤럭시',360,800]
+].map(a=>'<figure><figcaption>'+a[0]+' · '+a[1]+'×'+a[2]+'</figcaption>'+phone('four',a[1],a[2])+
+   '<p class="cap2" style="width:'+a[1]+'px">조작부·마법사·적의 간격이 <b>세 폭에서 똑같습니다.</b> '+
+   '길어진 만큼 위쪽 숲만 더 보입니다.</p></figure>').join('');
+
+document.getElementById('prompt').innerHTML =
+`<b># 폭주 마법사 — 전투 배경 「속삭이는 숲」 (1/8)</b>
+
+<b>[요청문 / prompt]</b>
+2D game battle background, pixel art, bright pastel palette, sunlit deciduous
+forest, a very wide dirt road filling the entire lower half of the frame with
+no trees beside it, the road narrowing only in the upper third where tall trees
+close in on both sides, the road dissolving into pale mist deep between the
+trees near the top, soft god rays through the canopy, subtle scattered pebbles
+and dry patches on the road surface, clean readable shapes, no text,
+no characters, no creatures, no UI, very tall vertical composition
+
+<b>[제외 / negative prompt]</b>
+characters, people, monsters, animals, text, letters, watermark, logo, UI,
+health bars, trees in the lower half, narrow trail, dark gloomy tones,
+heavy shadows, blurry, photorealistic, depth of field, vignette,
+horizontal composition, close-up, busy foreground clutter
+
+<b>[규격 — 이건 반드시]</b>
+· 캔버스 <b>1024 × 2276</b> 세로 (9:20). 🔴 옛 규격 1024 × 1820 이 아니다
+· 한 칸(픽셀 덩어리) <b>2 px</b>
+· <b>아래에서 1072 px 아래로는 나무를 두지 마라.</b>
+  그 아래는 길이 캔버스 폭을 가득 채운다
+· <b>아래에서 1277 px 지점의 길 폭 ≥ 756 px</b> (뒷줄 적이 선다)
+· <b>아래에서 1146 px 지점의 길 폭 ≥ 927 px</b> (앞줄 적 · 보스가 선다)
+· <b>아래에서 1663 px 지점에서 길이 안개에 잠긴다.</b> 폭 약 256 px
+· <b>맨 아래 614 px(= 화면 아래 216dp)는 넓고 단순한 길바닥.</b> 그 위로 UI가 뜬다
+· <b>좌우 4%는 안전 여백</b>
+· 캐릭터·글자·UI를 그리지 말 것. 배경만
+· 배경은 밝게, 캐릭터는 진하게
+
+<b>[왜 이 수치인가]</b>
+길 위에 세 줄이 선다 — 뒷줄 적 76dp 둘 · 앞줄 적 76dp 둘 · 마법사 112dp 하나.
+보스는 180dp 하나. <b>길 아래쪽을 넓게 비워야 적을 좌우로 벌릴 수 있다.</b>
+아래 216dp는 주문 슬롯·주사위·버튼이 덮으므로 복잡하면 UI가 안 읽힌다.`;
+</script>

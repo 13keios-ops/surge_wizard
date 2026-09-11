@@ -1,0 +1,373 @@
+<title>전투 화면 4안</title>
+<style>
+  /* 게임의 팔레트를 그대로 쓴다 (lib/widgets/pixel_palette.dart).
+     시트는 게임보다 한 단계 더 어두워 폰 화면이 떠 보이게 한다. */
+  :root{
+    --sheet:#100E1A; --sheet2:#1A1730; --line:#332D55;
+    --ink:#EDE9F7; --dim:#A79FC8;
+    --gold:#F2C14E; --red:#E8546B; --green:#6BD45C; --mana:#5FC8F0; --charge:#4FD1C5;
+    --bgWell:#15122B; --bgTray:#1B1838; --bgDeep:#232042;
+    --panel:#3A3560; --panelLit:#524B84; --border:#6E68A8;
+    --purple:#A97BEA;
+  }
+  @font-face{font-family:'Galmuri11';src:url({{FONT11}}) format('truetype');font-weight:400;font-display:block}
+  @font-face{font-family:'Galmuri11';src:url({{FONT11B}}) format('truetype');font-weight:700;font-display:block}
+  @font-face{font-family:'Galmuri9';src:url({{FONT9}}) format('truetype');font-display:block}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--sheet);color:var(--ink);
+       font-family:system-ui,'Segoe UI',sans-serif;line-height:1.65;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:40px 20px 72px}
+
+  h1{font-family:'Galmuri11',monospace;font-size:36px;font-weight:700;
+     margin:0 0 6px;letter-spacing:-.5px;text-wrap:balance}
+  .sub{color:var(--dim);margin:0 0 32px;max-width:62ch}
+  h2{font-family:'Galmuri11',monospace;font-size:24px;font-weight:700;margin:0}
+
+  /* ── 판단 안내 ── */
+  .ask{background:var(--sheet2);border:1px solid var(--line);border-left:4px solid var(--gold);
+       padding:18px 22px;margin:0 0 40px;border-radius:2px}
+  .ask h3{font-family:'Galmuri11',monospace;font-size:12px;margin:0 0 10px;color:var(--gold)}
+  .ask ol{margin:0;padding-left:22px}
+  .ask li{margin:3px 0}
+  .ask p{margin:12px 0 0;color:var(--dim);font-size:14px}
+
+  /* ── 안 한 덩어리 ── */
+  .plan{margin:0 0 56px;padding:0 0 40px;border-bottom:1px solid var(--line)}
+  .plan:last-of-type{border-bottom:0}
+  .phead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+  .tag{font-family:'Galmuri11',monospace;font-size:24px;font-weight:700;
+       color:var(--sheet);background:var(--gold);padding:2px 10px;border-radius:2px}
+  .axis{color:var(--dim);font-size:14px}
+  .why{margin:8px 0 20px;max-width:66ch;color:var(--dim)}
+  .why b{color:var(--ink);font-weight:600}
+
+  .boards{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start}
+  .board figcaption{font-family:'Galmuri11',monospace;font-size:12px;color:var(--dim);
+                    margin:0 0 8px}
+  figure{margin:0}
+
+  .facts{flex:1 1 260px;min-width:250px;font-size:13px}
+  .facts table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+  .facts th,.facts td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line);
+                      vertical-align:top}
+  .facts th{color:var(--dim);font-weight:500;white-space:nowrap}
+  .facts td{color:var(--ink)}
+  .good{color:var(--green)} .bad{color:var(--red)} .warn{color:var(--gold)}
+  .pros{margin:14px 0 0;padding-left:18px}
+  .pros li{margin:4px 0}
+  .pros li::marker{color:var(--gold)}
+  .cons li::marker{color:var(--red)}
+
+  /* ══ 폰 화면 — 1px = 1dp. 여기 보이는 크기가 곧 실측치다 ══ */
+  .phone{position:relative;width:360px;height:640px;overflow:hidden;
+         border:1px solid var(--line);border-radius:5px;background:var(--bgDeep);
+         font-family:'Galmuri9',monospace;color:var(--ink);flex:0 0 auto}
+  .phone img{image-rendering:pixelated}
+  .stage{position:absolute;left:0;right:0;top:0;overflow:hidden}
+  .stage .bg{position:absolute;inset:0;width:100%;height:100%;
+             object-fit:cover;object-position:bottom center}
+
+  /* 상단 띠 — 배경 위에 뜬다 (6.7절: 배경 화면 전체, UI가 얹힌다) */
+  .top{position:absolute;left:0;right:0;top:0;height:44px;display:flex;
+       align-items:center;justify-content:space-between;padding:0 8px;
+       background:linear-gradient(180deg,rgba(16,14,26,.82),rgba(16,14,26,0))}
+  .dungeon{font-family:'Galmuri11',monospace;font-size:12px;line-height:1}
+  .floor{font-size:10px;color:var(--dim);margin-top:3px;line-height:1}
+  .sys{display:flex;gap:4px}
+  .sys span{width:44px;height:44px;display:grid;place-items:center;font-size:20px;
+            color:var(--ink);opacity:.85}
+
+  /* 적 */
+  .foe{position:absolute;width:118px}
+  .foe img{width:118px;height:118px;display:block}
+  .foebar{width:84px;height:6px;margin:2px auto 0;background:var(--bgWell);
+          border:1px solid rgba(0,0,0,.55)}
+  .foebar i{display:block;height:100%;background:var(--red)}
+  .foelv{font-size:10px;color:var(--ink);text-align:center;line-height:1.3;
+         text-shadow:0 1px 0 #000,0 0 4px #000}
+  .dmg{position:absolute;top:-6px;right:2px;font-family:'Galmuri11',monospace;
+       font-size:24px;font-weight:700;color:var(--gold);
+       text-shadow:0 2px 0 #000,0 0 8px rgba(0,0,0,.9)}
+
+  /* 마법사 */
+  .wiz{position:absolute;left:50%;transform:translateX(-50%);width:160px}
+  .wiz img{width:160px;height:160px;display:block}
+  .mybar{width:120px;height:8px;margin:0 auto;background:var(--bgWell);
+         border:1px solid rgba(0,0,0,.55)}
+  .mybar i{display:block;height:100%;background:var(--green)}
+  .mylv{font-size:10px;color:var(--ink);text-align:center;line-height:1.4;
+        text-shadow:0 1px 0 #000,0 0 4px #000}
+
+  /* 주문 슬롯 5칸 */
+  .slots{display:flex;gap:6px;padding:0 8px}
+  .slot{width:64px;flex:0 0 64px;border:2px solid var(--border);border-radius:3px;
+        background:var(--panel);display:flex;flex-direction:column;align-items:center;
+        justify-content:center;gap:2px;position:relative}
+  .slot.open{border-color:var(--gold)}
+  .slot.lock{background:var(--bgWell);border-style:dashed;border-color:var(--border);
+             opacity:.72}
+  .slot .icon{width:26px;height:26px}
+  .icon.fire{border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFB25E,#D8542A)}
+  .icon.frost{background:var(--mana);transform:rotate(45deg);width:22px;height:22px;
+              border-radius:2px}
+  .icon.arcane{background:var(--purple);
+               clip-path:polygon(50% 0,100% 22%,100% 62%,50% 100%,0 62%,0 22%)}
+  .slot .nm{font-size:10px;line-height:1}
+  .slot .cir{font-size:10px;color:var(--dim);line-height:1}
+  .slot .key{font-size:20px;color:var(--dim);line-height:1}
+  .slot .paid{font-size:10px;color:var(--gold);line-height:1}
+
+  /* 주사위 삼각편대 */
+  .dice{position:relative;width:148px;height:104px;flex:0 0 148px}
+  .die{position:absolute;width:64px;height:64px;background:#F4F1E4;border-radius:5px;
+       border:2px solid #4A4462;box-shadow:0 3px 0 rgba(0,0,0,.45);
+       display:grid;grid-template:repeat(3,1fr)/repeat(3,1fr);padding:8px}
+  .die b{width:9px;height:9px;background:#2A2540;border-radius:50%;align-self:center;
+         justify-self:center}
+  .d1{left:0;top:0;transform:rotate(-7deg)}
+  .d2{left:84px;top:4px;transform:rotate(6deg)}
+  .d3{left:42px;top:40px;transform:rotate(-3deg)}
+  .sum{font-family:'Galmuri11',monospace;font-size:12px;color:var(--dim);text-align:center}
+
+  /* 버튼 */
+  .btn{height:46px;border-radius:3px;display:grid;place-items:center;
+       font-family:'Galmuri11',monospace;font-size:24px;font-weight:700;
+       background:var(--gold);color:#2A2033;border:2px solid #B8912F}
+  .btn.ghost{background:var(--panel);color:var(--ink);border-color:var(--border);
+             font-size:12px;font-weight:400}
+  .btn.tall{height:56px}
+
+  /* 자원 줄 */
+  .res{display:flex;justify-content:space-between;align-items:center;padding:0 10px;
+       font-size:10px;color:var(--dim)}
+  .pips{display:inline-flex;gap:3px;margin-left:5px;vertical-align:middle}
+  .pips i{width:9px;height:9px;background:var(--bgWell);border:1px solid var(--border)}
+  .pips i.on{background:var(--mana);border-color:var(--mana)}
+  .pips.ch i.on{background:var(--charge);border-color:var(--charge)}
+
+  .tray{position:absolute;left:0;right:0;bottom:0;background:var(--bgTray);
+        border-top:2px solid var(--line);display:flex;flex-direction:column}
+  .tray.bare{background:transparent;border-top:0}
+  .tray.bare::before{content:'';position:absolute;inset:0;
+        background:linear-gradient(180deg,rgba(16,14,26,0),rgba(16,14,26,.72) 42%,rgba(16,14,26,.9));
+        pointer-events:none}
+  .tray > *{position:relative;z-index:1}
+
+  .row{display:flex;gap:10px;padding:0 8px;align-items:center}
+  .stack{display:flex;flex-direction:column;gap:8px;flex:1}
+
+  .flag{position:absolute;left:8px;bottom:8px;z-index:5;background:var(--red);
+        color:#fff;font-family:'Galmuri9',monospace;font-size:10px;padding:3px 7px;
+        border-radius:2px;max-width:250px;line-height:1.5}
+
+  /* ── 마무리 표 ── */
+  .checks{background:var(--sheet2);border:1px solid var(--line);padding:20px 24px;
+          border-radius:2px;margin-top:8px}
+  .checks h2{margin-bottom:12px}
+  .checks table{border-collapse:collapse;width:100%;font-size:14px;
+                font-variant-numeric:tabular-nums}
+  .checks th,.checks td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+  .checks th{color:var(--dim);font-weight:500}
+  .checks tr:last-child td{border-bottom:0}
+  .note{color:var(--dim);font-size:13px;margin-top:14px;max-width:70ch}
+  @media (max-width:760px){ .boards{gap:16px} }
+</style>
+
+<div class="wrap">
+  <h1>전투 화면 4안</h1>
+  <p class="sub">v3 요소로 처음부터 다시 짠 전투 화면입니다. 폰 화면은 <b>1픽셀 = 1dp</b>로
+  그렸으니, 여기 보이는 크기가 실제 작은 기기(360×640)에서 나오는 크기입니다.</p>
+
+  <div class="ask">
+    <h3>봐 주실 것은 네 가지입니다</h3>
+    <ol>
+      <li>지금 게임과 <b>같은 게임처럼</b> 보이나</li>
+      <li>배경 위에 UI가 <b>자연스럽게</b> 붙나</li>
+      <li>UI가 캐릭터나 배경을 <b>가리지</b> 않나</li>
+      <li><b>마음에 드나</b></li>
+    </ol>
+    <p>규격(글자 크기 배율 · 손가락 닿는 크기 44dp · 적 그림 밀도 2.0dp)은 제가 이미 재서
+    맞췄습니다. 맨 아래에 그 결과를 적어 뒀습니다. 그건 봐주지 않으셔도 됩니다.</p>
+  </div>
+
+  <div id="plans"></div>
+
+  <div class="checks">
+    <h2>제가 잰 것</h2>
+    <table>
+      <tr><th>항목</th><th>기준</th><th>4안 전부</th></tr>
+      <tr><td>적 그림 밀도</td><td>한 칸 = 2.0dp (59칸 × 2.0 = 118dp)</td>
+          <td class="good">118dp 고정 — 4마리에서도 안 줄임</td></tr>
+      <tr><td>손가락 닿는 크기</td><td>최소 44dp</td>
+          <td class="good">슬롯 64 · 버튼 46~56 · 일시정지 44</td></tr>
+      <tr><td>Galmuri11 배율</td><td>12 · 24 · 36 · 48</td>
+          <td class="good">12(던전·합계·리롤) · 24(시전·피해)</td></tr>
+      <tr><td>Galmuri9 배율</td><td>10 · 20 · 30</td>
+          <td class="good">10(층·레벨·주문명·마나) · 20(자물쇠)</td></tr>
+      <tr><td>배경 밝게 / 캐릭터 진하게</td><td>2026-09-07 지시</td>
+          <td class="good">숲 원화 그대로, 캐릭터 진한 톤 유지</td></tr>
+      <tr><td>시전 강도 버튼</td><td>v3에서 삭제</td><td class="good">4안 모두 없음</td></tr>
+      <tr><td>적 4마리를 세울 무대</td><td><b>최소 402dp</b> (아래 계산)</td>
+          <td>A 500 <span class="good">✓</span> · C 412 <span class="good">✓</span> ·
+              D 404 <span class="good">✓</span> · B 352 <span class="bad">✗</span></td></tr>
+    </table>
+    <p class="note">적을 가로로 4마리 세우면 118 × 4 = 472dp라 360dp 화면을 넘습니다.
+    크기를 90dp로 줄이면 밀도가 1.5dp로 떨어져 Phase 1이 반려된 그 문제가 그대로
+    돌아옵니다. <b>그래서 4안 모두 크기를 그대로 두고 앞뒤 두 줄로 세웠습니다.</b>
+    앞줄이 뒷줄을 조금 가리는 것이 깊이가 됩니다.</p>
+    <p class="note"><b>무대 402dp가 어디서 나왔나</b> — 아래에서부터 쌓으면
+    마법사 그림 160 + 체력바·레벨 16 + 바닥 여백 4 = 180,
+    그 위에 앞줄 적 118 + 여백 6 = 124, 뒷줄은 앞줄보다 54 위 = 54,
+    맨 위 상단 띠 44. 합이 402dp입니다.
+    <b>이보다 무대가 작으면 뒷줄 적이 던전 이름 띠에 파묻힙니다.</b>
+    360×640 기기에서 무대 402를 확보하면 <b>조작부는 238dp(37%)가 상한</b>이고,
+    조작부가 실제로 필요로 하는 최소는 <b>약 232dp</b>입니다.
+    즉 작은 기기에서는 <b>선택의 폭이 6dp밖에 없습니다</b> — B안이 안 되는 이유입니다.</p>
+  </div>
+</div>
+
+<script>
+const PLANS = [
+  {
+    tag:'A', name:'장면을 최대로', axis:'조작부를 접고 배경·캐릭터를 크게',
+    stage:500, ctrl:140, slotsOnStage:true,
+    why:'주문 슬롯 5칸을 <b>배경 위에 얹어</b> 조작부에서 뺐습니다. 조작부에는 주사위와 버튼만 남아 화면의 <b>78%가 장면</b>이 됩니다. 대신 슬롯이 배경 아래쪽을 덮습니다.',
+    pros:['장면이 가장 크다 — 배경 원화와 캐릭터가 제일 잘 보인다','적 4마리를 세워도 상단 띠까지 26dp 남는다'],
+    cons:['슬롯이 배경 하단을 덮는다 — 지면 연출이 가려진다','주사위와 버튼이 화면 맨 아래 140dp에 몰려 빽빽하다']
+  },
+  {
+    tag:'B', name:'조작을 손에 가깝게', axis:'엄지 닿는 곳에 무게를 싣는다',
+    stage:352, ctrl:288, bigButtons:true,
+    why:'시전·리롤을 화면 <b>맨 아래 좌우로</b> 크게(56dp) 깔아 한 손으로 잡고 엄지만으로 칩니다. 대신 장면이 352dp까지 줄어, <b>적 4마리를 세우면 뒷줄이 상단 UI에 파묻힙니다.</b>',
+    pros:['한 손 조작이 가장 편하다 — 버튼이 엄지 호 안에 들어온다','주사위가 화면 가운데 가까워 굴릴 때 눈이 덜 움직인다'],
+    cons:['적 4마리에서 뒷줄이 던전 이름 띠와 겹친다 (아래 빨간 표시)','장면 55% — 지금 화면과 크게 다르지 않다']
+  },
+  {
+    tag:'C', name:'정보 위계 재구성', axis:'던전·상태·슬롯·주사위를 새 순서로',
+    stage:412, ctrl:228, resRow:true,
+    why:'기획서 6.7절을 그대로 따릅니다. 마나·마력 축적을 <b>자기 줄로 독립</b>시키고, 그 아래 슬롯 한 줄, 그 아래 <b>좌측 주사위 · 우측 버튼</b>. 위에서 아래로 「무엇이 있나 → 무엇을 걸까 → 어떻게 나왔나 → 지른다」 순서로 읽힙니다.',
+    pros:['기획서 6.7절 요구 배치와 정확히 일치한다','장면 64% · 조작부 36%로 양쪽 다 여유가 있다','읽는 순서가 손 움직이는 순서와 같다'],
+    cons:['줄이 네 개라 조작부가 층져 보인다','A안보다 장면이 88dp 작다']
+  },
+  {
+    tag:'D', name:'주사위가 주인공', axis:'frontend-design — 어두운 상자를 걷어낸다',
+    stage:404, ctrl:236, bare:true, wideBtn:true,
+    why:'지금 화면의 문제는 비율만이 아니라 <b>화면 아래 40%를 차지한 어두운 상자</b>입니다. 그 상자를 없애고 <b>배경이 화면 끝까지 흐르게</b> 한 뒤, 주사위를 그림자로 띄워 배경 위에 놓았습니다. 판정이 이 게임의 심장이니 대담함을 거기 한 곳에만 씁니다. 상단의 큰 적 체력바도 지우고 적 발밑으로 내렸습니다.',
+    pros:['배경 원화가 화면 전체에 살아난다 — 잘리는 곳이 없다','상자가 없어 주사위가 저절로 주인공이 된다','적 체력이 적 발밑에 있어 다중 적에서 누가 누군지 헷갈리지 않는다','시전 버튼이 폭 전체라 가장 크게 잡힌다'],
+    cons:['상자가 없어 주사위·버튼이 배경과 대비를 스스로 벌어야 한다','지금 게임 화면과 가장 많이 달라 보인다']
+  }
+];
+
+const DIE = {5:[1,0,1,0,1,0,1,0,1],3:[1,0,0,0,1,0,0,0,1],4:[1,0,1,0,0,0,1,0,1]};
+const pip = n => DIE[n].map(v=>v?'<b></b>':'<span></span>').join('');
+
+function slots(){
+  const open = [['fire','화염구'],['frost','서리화살'],['arcane','마력방패']];
+  return `<div class="slots">${
+    open.map(([k,n])=>`<div class="slot open"><i class="icon ${k}"></i>
+      <span class="nm">${n}</span><span class="cir">1서클</span></div>`).join('')
+  }${'<div class="slot lock"><span class="key">🔒</span><span class="paid">유료</span></div>'.repeat(2)}</div>`;
+}
+
+function foes(n, stageH, wizTop){
+  // 앞줄 아랫변이 마법사 윗변에 닿지 않게 둔다. 뒷줄은 앞줄보다 54dp 위.
+  const frontTop = wizTop - 118 - 6;
+  const backTop  = frontTop - 54;
+  const box = (x,y,hp,lv,dmg)=>`<div class="foe" style="left:${x}px;top:${y}px">
+      ${dmg?`<span class="dmg">−14</span>`:''}
+      <img src="{{FOE}}" alt="">
+      <div class="foebar"><i style="width:${hp}%"></i></div>
+      <div class="foelv">Lv ${lv}</div></div>`;
+  if(n===2) return box(62,frontTop,72,3,1)+box(180,frontTop,100,3,0);
+  return box(62,backTop,100,4,0)+box(180,backTop,86,4,0)
+       + box(4,frontTop,72,3,1)+box(238,frontTop,100,3,0);
+}
+
+function dice(size){
+  const s = size===72 ? ' style="width:164px;height:116px"' : '';
+  const d = size===72 ? ' style="width:72px;height:72px"' : '';
+  const p = size===72 ? ' style="left:94px;top:4px"' : '';
+  const q = size===72 ? ' style="left:47px;top:44px"' : '';
+  return `<div class="dice"${s}>
+    <div class="die d1"${d}>${pip(5)}</div>
+    <div class="die d2"${d+p}>${pip(3)}</div>
+    <div class="die d3"${d+q}>${pip(4)}</div></div>`;
+}
+
+function tray(p){
+  const cls = 'tray' + (p.bare?' bare':'');
+  const style = `height:${p.ctrl}px;padding:8px 0`;
+  let inner = '';
+  if(p.resRow) inner += `<div class="res">마나<span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+      <span>마력 축적<span class="pips ch"><i class="on"></i><i></i><i></i></span></span></div>`;
+  if(!p.slotsOnStage) inner += slots();
+  if(p.bigButtons){
+    inner += `<div class="row" style="justify-content:center">${dice(64)}</div>
+      <div class="sum">눈 합계 12</div>
+      <div class="row"><div class="btn ghost tall" style="flex:1">리롤 2/2</div>
+        <div class="btn tall" style="flex:1">시전</div></div>`;
+  } else if(p.wideBtn){
+    inner += `<div class="row" style="justify-content:center">${dice(64)}</div>
+      <div class="sum">눈 합계 12</div>
+      <div class="row"><div class="btn ghost" style="width:96px">리롤 2/2</div>
+        <div class="btn" style="flex:1">시전</div></div>`;
+  } else {
+    inner += `<div class="row">${dice(64)}
+      <div class="stack"><div class="btn ghost">리롤 2/2</div><div class="btn">시전</div></div>
+      </div><div class="sum" style="text-align:left;padding-left:52px">눈 합계 12</div>`;
+  }
+  return `<div class="${cls}" style="${style}">${inner}</div>`;
+}
+
+function phone(p, n){
+  // 마법사는 무대 아래에 붙는다. A안은 무대 위에 얹은 슬롯만큼 위로 밀린다.
+  const slotStrip = p.slotsOnStage ? 72 : 0;
+  const wizBottom = p.stage - slotStrip - 4;
+  const wizTop = wizBottom - 160 - 16;      // 그림 160 + 체력바·레벨 16
+  const backTop = wizTop - 118 - 6 - 54;
+  const clash = n===4 && backTop < 44;      // 뒷줄이 상단 띠에 파묻히나
+  return `<figure class="board">
+    <figcaption>적 ${n}마리 · 장면 ${p.stage} / 조작부 ${p.ctrl}dp
+      (${Math.round(p.stage/6.4)}% / ${Math.round(p.ctrl/6.4)}%)</figcaption>
+    <div class="phone">
+      <div class="stage" style="height:${p.bare?640:p.stage}px">
+        <img class="bg" src="{{BG}}" alt="">
+        ${foes(n, p.stage, wizTop)}
+        <div class="wiz" style="top:${wizTop}px">
+          <img src="{{WIZ}}" alt="">
+          <div class="mybar"><i style="width:100%"></i></div>
+          <div class="mylv">Lv 5 · 20/20</div>
+        </div>
+        ${p.slotsOnStage ? `<div style="position:absolute;left:0;right:0;bottom:4px">${slots()}</div>`:''}
+      </div>
+      <div class="top">
+        <div><div class="dungeon">속삭이는 숲</div><div class="floor">3층 / 7</div></div>
+        <div class="sys"><span>⏸</span><span>⚙</span></div>
+      </div>
+      ${tray(p)}
+      ${clash?`<div class="flag">뒷줄 적이 상단 띠에 ${44-backTop}dp 파묻힌다</div>`:''}
+    </div></figure>`;
+}
+
+document.getElementById('plans').innerHTML = PLANS.map(p=>`
+  <section class="plan">
+    <div class="phead"><span class="tag">${p.tag}</span><h2>${p.name}</h2>
+      <span class="axis">${p.axis}</span></div>
+    <p class="why">${p.why}</p>
+    <div class="boards">
+      ${phone(p,2)}${phone(p,4)}
+      <div class="facts">
+        <table>
+          <tr><th>장면</th><td>${p.stage}dp (${Math.round(p.stage/6.4)}%)</td></tr>
+          <tr><th>조작부</th><td>${p.ctrl}dp (${Math.round(p.ctrl/6.4)}%)</td></tr>
+          <tr><th>적 크기</th><td class="good">118dp — 밀도 2.0 지킴</td></tr>
+          <tr><th>가장 작은 터치</th><td class="good">${p.bigButtons?'56dp':'46dp'}</td></tr>
+        </table>
+        <ul class="pros">${p.pros.map(t=>`<li>${t}</li>`).join('')}</ul>
+        <ul class="pros cons">${p.cons.map(t=>`<li>${t}</li>`).join('')}</ul>
+      </div>
+    </div>
+  </section>`).join('');
+</script>

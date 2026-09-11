@@ -49,6 +49,7 @@ const Map<String, PixelSprite> kItems = {
   'horseshoe': kIconHorseshoe,
   'hourglass': kIconHourglass,
   'sword': kIconSword,
+  'lock': kIconLock,
 };
 
 void main() {

@@ -1,0 +1,150 @@
+{
+  "asset_name": "enemy_goblin_scout",
+  "asset_type": "enemy_sprite",
+  "asset_role": "region_1_weak_enemy",
+  "description": "Front-facing goblin scout with ears larger than its face, green skin, mustard headscarf, compact leather gear, and a small dagger. Cute but slightly mean expression; designed as the weakest enemy of the opening region.",
+  "usage": "Basic enemy sprite facing the player wizard in early combat encounters.",
+  "file_name": "enemy_goblin_scout.png",
+  "file_format": "PNG",
+  "canvas_size": [
+    512,
+    512
+  ],
+  "logical_resolution": {
+    "character_height_cells": 59,
+    "cell_size_px": 7,
+    "rendered_character_height_px": 413,
+    "rendered_character_width_px": 441
+  },
+  "background": "transparent",
+  "alpha_channel": {
+    "present": true,
+    "type": "graded",
+    "binary_alpha_forbidden": true
+  },
+  "animation": false,
+  "frame_count": 1,
+  "direction": "front_near_front",
+  "style_summary": "Same coarse, polished pixel-art language as the wizard: 59-cell-tall character scale, broad readable shapes, colored outline, soft multi-step shading, and upper-left key light.",
+  "visual_identity": {
+    "primary_read": "very wide oversized ears extending beyond the head",
+    "skin": "muted green",
+    "headwear": "mustard-yellow scout headscarf",
+    "weapon": "small single dagger",
+    "expression": "cute but mildly scowling",
+    "accent_restriction": "no turquoise wizard accent"
+  },
+  "silhouette_profile": "Wide ear span, compact head and torso, short bent limbs, dagger on viewer-left side.",
+  "proportion_profile": {
+    "overall": "chibi monster",
+    "ear_to_face_relation": "ears are intentionally larger/wider than the face",
+    "stance": "ready neutral combat stance",
+    "body": "short, compact, low-threat silhouette"
+  },
+  "pixel_structure": {
+    "grid_aligned": true,
+    "dominant_physical_block_px": 7,
+    "logical_character_height_cells": 59,
+    "method_note": "Final output is rebuilt onto a logical 59-cell height and enlarged by nearest-neighbor blocks; no palette quantization was applied."
+  },
+  "pixel_density": "same character pixel density as wizard_back; approximately 7x7 physical pixels per logical cell",
+  "palette_profile": {
+    "dominant": [
+      "olive green",
+      "mustard yellow",
+      "dark brown",
+      "muted steel gray"
+    ],
+    "accent": [
+      "warm ear pink"
+    ],
+    "forbidden": [
+      "turquoise/cyan identity accent reserved for the wizard"
+    ]
+  },
+  "color_count_estimate": 2347,
+  "shading_profile": "Several tonal steps per material with soft transitions retained inside coarse blocks; no fixed-palette reduction.",
+  "lighting_profile": {
+    "direction": "upper-left",
+    "type": "single soft key light",
+    "highlight_behavior": "headscarf, left ear edge, forehead and dagger receive the clearest highlights"
+  },
+  "outline_profile": "Dark colored outlines derived from local green, brown and yellow material colors; avoid pure black.",
+  "texture/material_profile": {
+    "skin": "matte green skin",
+    "headscarf": "worn woven cloth",
+    "leather": "simple dark brown scout gear",
+    "dagger": "small dull steel blade"
+  },
+  "detail_density": "medium around face, ears and dagger; low on limbs and torso to preserve weak-enemy readability.",
+  "readability_rules": [
+    "Ear span must remain the first-read silhouette cue.",
+    "Mustard headscarf must stay visually distinct from green skin.",
+    "Dagger must remain small so the enemy reads as low threat.",
+    "Do not use turquoise accents.",
+    "Keep expression mildly mischievous rather than frightening."
+  ],
+  "mood/world_context": "weak opening-area forest enemy; playful threat rather than horror",
+  "consistency_must_keep": [
+    "ears larger than face",
+    "green skin",
+    "mustard headscarf",
+    "small dagger",
+    "front-facing orientation toward player",
+    "slightly mean cute expression",
+    "59-cell character height",
+    "7px dominant block size",
+    "colored outline",
+    "upper-left lighting",
+    "transparent graded alpha",
+    "no turquoise accent"
+  ],
+  "consistency_should_keep": [
+    "compact low-threat body",
+    "broad mobile-readable features",
+    "simple leather gear",
+    "shared rendering language with wizard_back"
+  ],
+  "allowed_variations": [
+    "small leather strap changes",
+    "minor dagger shape changes",
+    "slight ear tilt changes",
+    "attack/hit animation poses with same proportions"
+  ],
+  "prohibited_variations": [
+    "small human-like ears",
+    "large intimidating weapon",
+    "turquoise/cyan accent",
+    "pure black outline",
+    "realistic gore or horror treatment",
+    "fixed small-palette quantization",
+    "binary alpha only"
+  ],
+  "variant_generation_notes": "Keep ear width and headscarf as the two strongest landmarks. Build future frames directly at the same 59-cell logical height.",
+  "relation_to_other_assets": "Matches wizard_back in logical height and block size; uses a distinct non-turquoise enemy palette. Designed to stand clearly over bg_forest.",
+  "consistency_group": "phase1_5_core",
+  "reference_basis": "ART_REQUEST_PHASE1_5.md for enemy design and the supplied wizard image only for shared rendering language and scale.",
+  "originality_note": "Original goblin scout design for this project; based on generic fantasy goblin concepts without copying a specific commercial-game asset.",
+  "license_risk_check": "Low; no identifiable third-party insignia, logo, or distinctive protected character design intentionally reproduced.",
+  "validation": {
+    "png": true,
+    "canvas": [
+      512,
+      512
+    ],
+    "alpha_present": true,
+    "mid_alpha_present": true,
+    "alpha_bbox_px": [
+      35,
+      65,
+      476,
+      478
+    ],
+    "character_height_px": 413,
+    "character_height_cells": 59,
+    "dominant_same_color_run_px": 7,
+    "unique_rgba_count": 2347,
+    "single_asset_only": true,
+    "turquoise_identity_accent": false
+  }
+}

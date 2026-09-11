@@ -1,8 +1,9 @@
 # ATTRIBUTION — 외부 에셋 출처
 
-> **현재 상태 (2026-09-01):** 게임 화면의 모든 **그림**은 `lib/art/` 의
-> **자체 제작 픽셀아트**다. 외부에서 가져온 것은 **한글 픽셀 폰트 하나뿐**이며
-> 아래에 기록한다.
+> **현재 상태 (2026-09-05):** 게임 화면의 그림은 대부분 `lib/art/` 의
+> **자체 제작 픽셀아트**이고, 2026-09-05부터 **원화 1장(마법사 뒷모습)**이
+> `assets/art/` 에 함께 들어간다. 외부에서 온 것은 **한글 픽셀 폰트**와
+> **그 원화**이며 아래에 기록한다.
 
 ---
 
@@ -27,6 +28,84 @@
 기준 픽셀 크기: Galmuri11 = 12px, Galmuri9 = 10px.
 **정수 배율에서만 또렷하므로** 화면에서 쓰는 글자 크기를 12·24·36·48·84 와
 10·20·30 으로 제한했다 (`lib/widgets/pixel_ui.dart` 의 `kFont11` / `kFont9`).
+
+---
+
+# (대체됨) 원화 — 마법사 뒷모습 v1 (Phase 1)
+
+> ⛔ **2026-09-07, Phase 1.5 가 같은 경로를 덮어썼다.** 아래 「원화 — Phase 1.5 3장」이
+> 지금 게임에 들어 있는 것이다. 이 절은 기록으로만 남긴다.
+
+| 항목 | 내용 |
+|---|---|
+| 게임용 파일 | `assets/art/wizard/body_back.webp` (512×512) |
+| 원본 | `art_raw/wizard/_turn_back.png` (316×618) — 4방향 시트에서 잘라 낸 뒷모습 |
+| 만든 방법 | **사용자가 ChatGPT 이미지 생성(DALL·E)으로 직접 뽑았다.** 시트 메타데이터 `art_raw/wizard/라벤더_머리_마법사_스프라이트_시트.metadata.json` 의 `dalle_metadata.gen_id` = `fb934984-9ff4-4db9-98b0-05af693c0f1b` |
+| 권리 | 사용자 본인이 생성한 이미지. **상업 이용 가능 여부는 사용자가 2026-09-01에 확인했다** (`HANDOFF.md` 7-6절 · `UI_DESIGN.md` 3-3절) |
+| 후처리 | `tool/bake_art.py` — 알파 경계 크롭 · 512×512 정규화 · 알파 250↑ 스냅 · 무손실 WebP. **색을 줄이거나 외곽선을 더하지 않는다** |
+| 들인 날짜 | 2026-09-05 (그래픽 Phase 1) |
+
+> ⚠ **아직 안 정해진 것** — 앞으로 **ComfyUI**로 뽑을 에셋은 얹는
+> 체크포인트·LoRA·IPAdapter마다 라이선스가 따로다. 위 확인은 **여기에 적용되지
+> 않는다.** 뽑기 전에 정해서 이 문서에 적어야 한다 (`HANDOFF.md` 7-6절).
+
+---
+
+# 원화 — Phase 1.5 3장 (마법사 · 고블린 정찰병 · 숲 배경)
+
+전투 화면 한 장을 통째로 원화로 세운 세 장이다 (`WORK_ORDER_ART_PHASE1_5.md`).
+
+| 항목 | 내용 |
+|---|---|
+| 게임용 파일 | `assets/art/wizard/body_back.webp` (512×512)<br>`assets/art/enemy/goblin_scout.webp` (512×512)<br>`assets/art/bg/forest.webp` (1024×1536) |
+| 원본 | `art_raw/phase1_5_assets/wizard_back.png`<br>`art_raw/phase1_5_assets/enemy_goblin_scout.png`<br>`art_raw/phase1_5_assets/bg_forest.png` (전부 원본 크기 그대로) |
+| 만든 방법 | **사용자가 ChatGPT 이미지 생성으로 직접 뽑았다** (2026-09-07 사용자 확인). 요청서는 `ART_REQUEST_PHASE1_5.md`, 생성기가 남긴 규격 메타데이터는 각 파일 옆 `*.metadata.json` |
+| 권리 | 사용자 본인이 생성한 이미지. **상업 이용 가능 여부는 사용자가 2026-09-01에 확인했다** — 위 「마법사 뒷모습 v1」 절과 **같은 권리 근거**다 (`HANDOFF.md` 7-6절 · `UI_DESIGN.md` 3-3절) |
+| 후처리 | `tool/bake_art.py` — **알파 250↑ 스냅 + 무손실 WebP, 그 둘뿐이다.** 🔴 **크기를 건드리지 않는다** (원화가 7px·2px 정사각 블록으로 그려져 있어 정수배 아닌 리샘플은 격자를 깬다). 색 줄이기·외곽선 추가·알파 이진화도 하지 않는다 |
+| 들인 날짜 | 2026-09-07 (그래픽 Phase 1.5) |
+
+> ⚠ 위 ComfyUI 경고문은 **여전히 유효하다.** Phase 2(지팡이)부터 ComfyUI를 쓴다면
+> 뽑기 전에 체크포인트·LoRA 라이선스를 정해 이 문서에 적어야 한다.
+
+---
+
+# 생성 파이프라인 — ComfyUI + 모델 가중치 (2026-09-07 확인)
+
+`GAME_DESIGN.md` 14절 18번 · 절대 규칙 6이 요구하는 확인이다.
+**ComfyUI는 껍데기일 뿐이고, 상업 이용 가부는 얹는 가중치마다 따로 정해진다.**
+아래는 **에셋을 뽑기 전에** 원문을 직접 열어 확인한 결과다.
+
+## 도구
+
+| 이름 | 라이선스 | 확인 | 비고 |
+|---|---|---|---|
+| **ComfyUI** | **GPL-3.0** | 2026-09-07, GitHub 저장소 원문 | 무료 오픈소스. **도구라 산출물에 라이선스가 옮겨붙지 않는다.**<br>유료는 선택 사항(Comfy Cloud · 외부 API 노드)이며 **`--disable-api-nodes`로 오프라인 강제 가능** |
+| ComfyUI-Manager | GPL-3.0 | 2026-09-07 | 플러그인 관리 |
+| ComfyUI_IPAdapter_plus | GPL-3.0 | 2026-09-07 | 스타일 유지 (로드맵 8절) |
+| comfyui_controlnet_aux | Apache-2.0 | 2026-09-07 | 전처리기. 로드맵상 **필요할 때만** |
+
+## 🔴 모델 가중치 — 여기가 진짜 판단 지점
+
+| 가중치 | 출처 | 라이선스 | 상업 이용 |
+|---|---|---|---|
+| **SDXL Base 1.0** | `stabilityai/stable-diffusion-xl-base-1.0` | **CreativeML Open RAIL++-M** | ✅ **가능** |
+| **IP-Adapter SDXL** (`ip-adapter_sdxl` · `ip-adapter-plus_sdxl_vit-h`) | `h94/IP-Adapter` | **Apache-2.0** | ✅ 가능 |
+| **CLIP-ViT-H-14 / bigG-14 image encoder** | `h94/IP-Adapter` | **Apache-2.0** | ✅ 가능 |
+| **ControlNet Canny SDXL** | `xinsir/controlnet-canny-sdxl-1.0` | **Apache-2.0** | ✅ 가능 |
+
+### CreativeML Open RAIL++-M 의 핵심 두 줄 (원문 확인)
+
+- **산출물 소유권**: *"Except as set forth herein, Licensor claims no rights in the
+  Output You generate using the Model."* → **우리가 뽑은 그림에 대해 권리를 주장하지 않는다**
+- **상업 이용**: 로열티 없는 영구·전세계·비독점 라이선스를 부여하며 SaaS 형태의
+  호스팅까지 허용한다. **금지 목록(Attachment A)은 전부 「해로운 용도」**(허위정보로
+  타인을 해치기, 미성년자 착취, 차별적 활용 등)이며 **게임 원화 제작과 무관하다**
+
+### 🔴 이 표에 없는 것을 얹지 마라
+
+**체크포인트·LoRA·머지 모델을 새로 추가하면 그때 라이선스를 다시 확인하고
+이 표에 줄을 추가한다.** 커뮤니티 머지 모델과 LoRA 중에 **비상업 한정**이 섞여 있다.
+다 뽑고 나서 알면 **전부 다시 뽑아야 한다.**
 
 ---
 

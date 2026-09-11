@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "id": "staff_c_knotted",
+  "type": "staff",
+  "view": "back",
+  "pose": "staff_idle",
+  "source": "art_raw/wizard/staff_c_knotted.png",
+  "runtime_asset": "assets/art/wizard/staff_c_knotted.webp",
+  "workflow": "staff_v1",
+  "model": null,
+  "lora": null,
+  "ipadapter": null,
+  "controlnet": null,
+  "seed": null,
+  "dx": 0,
+  "dy": 0,
+  "scale": 1.0,
+  "approved": false,
+  "sha256": null
+}

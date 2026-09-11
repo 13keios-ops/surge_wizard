@@ -1,0 +1,148 @@
+{
+  "asset_name": "wizard_back",
+  "asset_type": "character_sprite",
+  "asset_role": "player_character_back_view",
+  "description": "Back-facing chibi wizard redrawn for coarse mobile-readable pixel structure. Lavender tousled hair, off-white tunic, navy scarf, brown belt and pouch, navy trousers, brown boots, and a small turquoise accent. Neutral standing pose with arms relaxed at the sides; no staff.",
+  "usage": "Primary player-character back-view battle/exploration sprite for a vertical mobile RPG.",
+  "file_name": "wizard_back.png",
+  "file_format": "PNG",
+  "canvas_size": [
+    512,
+    512
+  ],
+  "logical_resolution": {
+    "character_height_cells": 59,
+    "cell_size_px": 7,
+    "rendered_character_height_px": 413,
+    "rendered_character_width_px": 217
+  },
+  "background": "transparent",
+  "alpha_channel": {
+    "present": true,
+    "type": "graded",
+    "binary_alpha_forbidden": true
+  },
+  "animation": false,
+  "frame_count": 1,
+  "direction": "back",
+  "style_summary": "Chunky high-quality pixel art derived from the supplied wizard identity, with a 59-cell-tall silhouette, colored outlines, soft multi-step internal shading, and small-scale mobile readability.",
+  "visual_identity": {
+    "primary_read": "large fluffy lavender hair mass over a compact adventurer body",
+    "hair": "pale lavender, layered and spiky, large central rear fringe mass with curled top tuft",
+    "clothing": "off-white tunic with navy scarf and navy trousers",
+    "leather": "medium/dark brown belt, wrist guards, side pouch, boots",
+    "accent": "small turquoise detail reserved for the wizard",
+    "weapon": "none in hand"
+  },
+  "silhouette_profile": "Top-heavy rounded hair silhouette; narrow neck/scarf; compact torso; straight relaxed arms; short separated legs and boots.",
+  "proportion_profile": {
+    "overall": "chibi",
+    "head_to_body_impression": "oversized head/hair, compact body",
+    "stance": "upright neutral back-facing stance",
+    "symmetry": "mostly symmetrical with slight pouch asymmetry"
+  },
+  "pixel_structure": {
+    "grid_aligned": true,
+    "dominant_physical_block_px": 7,
+    "logical_character_height_cells": 59,
+    "method_note": "Final output is rebuilt onto a logical 59-cell height and enlarged by nearest-neighbor blocks; no palette quantization was applied."
+  },
+  "pixel_density": "coarse character pixels for mobile readability; each logical cell is approximately 7x7 physical pixels on the 512 canvas",
+  "palette_profile": {
+    "dominant": [
+      "pale lavender",
+      "navy",
+      "warm off-white",
+      "brown leather"
+    ],
+    "accent": [
+      "turquoise"
+    ],
+    "temperature_balance": "cool character identity with warm leather support tones",
+    "restriction": "do not move turquoise identity accent to enemy designs"
+  },
+  "color_count_estimate": 1308,
+  "shading_profile": "Several tonal steps per material with soft local transitions preserved inside coarse blocks; no forced 24/32-color quantization.",
+  "lighting_profile": {
+    "direction": "upper-left",
+    "type": "single soft key light",
+    "highlight_behavior": "strongest on upper-left hair lobes and upper garment planes"
+  },
+  "outline_profile": "Colored dark outlines based on the local material hue rather than pure black.",
+  "texture/material_profile": {
+    "hair": "soft matte fluffy strands simplified into broad clustered locks",
+    "cloth": "matte cloth with broad folds",
+    "leather": "warm dark leather with compact highlights",
+    "boots": "sturdy brown leather"
+  },
+  "detail_density": "medium within the head and scarf, low-to-medium on torso and legs; small details are kept to one or two logical cells.",
+  "readability_rules": [
+    "Hair mass must remain the dominant silhouette cue.",
+    "Scarf must remain clearly navy and separate from the pale tunic.",
+    "Pouch must remain readable on one hip.",
+    "No hand-held staff in this asset.",
+    "Avoid sub-cell micro-detail that disappears at mobile scale."
+  ],
+  "mood/world_context": "friendly young fantasy wizard suitable for the opening region of a mobile RPG",
+  "consistency_must_keep": [
+    "lavender fluffy hair and curled top tuft",
+    "off-white tunic",
+    "navy scarf and trousers",
+    "brown belt, pouch and boots",
+    "small turquoise wizard-only accent",
+    "back-facing neutral stance",
+    "59-cell character height",
+    "7px dominant block size",
+    "colored outline",
+    "upper-left lighting",
+    "transparent graded alpha",
+    "no staff in hand"
+  ],
+  "consistency_should_keep": [
+    "compact chibi proportions",
+    "broad readable shapes",
+    "soft multi-step shading",
+    "single-asset centered composition"
+  ],
+  "allowed_variations": [
+    "minor cloth fold changes",
+    "small pouch placement adjustment",
+    "subtle hue shifts within lavender/navy/brown families",
+    "animation poses that preserve silhouette and proportions"
+  ],
+  "prohibited_variations": [
+    "front-facing pose for this back-view asset",
+    "pure black outline",
+    "palette quantization to a fixed small color count",
+    "binary alpha only",
+    "adding a staff or weapon into the hand",
+    "removing the turquoise wizard-only accent",
+    "changing to realistic, 3D-rendered or painterly non-pixel style"
+  ],
+  "variant_generation_notes": "For future poses, construct directly on the same 59-cell logical height rather than shrinking a high-resolution sprite. Keep the head/hair proportion and material color families stable.",
+  "relation_to_other_assets": "Visual scale anchor for enemy_goblin_scout; lighting and outline behavior are shared with bg_forest.",
+  "consistency_group": "phase1_5_core",
+  "reference_basis": "User-supplied wizard back-view image for character identity and style direction, plus ART_REQUEST_PHASE1_5.md for production constraints.",
+  "originality_note": "Redrawn as an original project asset using the supplied project character as the only character reference; no external commercial-game design was copied.",
+  "license_risk_check": "Low based on provided materials; no external logo, trademark, or identifiable third-party character design intentionally reproduced.",
+  "validation": {
+    "png": true,
+    "canvas": [
+      512,
+      512
+    ],
+    "alpha_present": true,
+    "mid_alpha_present": true,
+    "alpha_bbox_px": [
+      147,
+      65,
+      364,
+      478
+    ],
+    "character_height_px": 413,
+    "character_height_cells": 59,
+    "dominant_same_color_run_px": 7,
+    "unique_rgba_count": 1308,
+    "single_asset_only": true
+  }
+}
