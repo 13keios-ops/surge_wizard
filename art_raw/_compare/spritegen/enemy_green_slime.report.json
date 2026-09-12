@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "codex",
+  "prompt": "Single game monster sprite for a vertical mobile RPG. Match the art style of the attached reference character exactly: clean flat cel shading, bold readable silhouette, chunky simple forms, limited palette, soft dark outline, light from the upper left. SUBJECT: a small green slime monster - a translucent lime-green jelly blob with ONE oversized round eye that dominates its whole body, squat and wide, cute but simple. Exaggerate the single huge eye so the silhouette alone reads as this monster. Use one strong color only. Full body, centered, nothing cropped. DO NOT draw a ground shadow. No text, no labels, no border, no extra objects. Background must be a completely flat solid pure magenta #FF00FF filling the entire canvas. Square 1:1 composition.",
+  "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_green_slime.png",
+  "raw": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_green_slime.png.raw.png",
+  "raw_bytes": 1122216,
+  "elapsed_seconds": 55.203,
+  "model": null,
+  "session_id": "01a09686-801a-7b33-87f6-cde8a0c0cef7",
+  "refs": [
+    "D:\\Projects\\surge_wizard\\art_raw\\wizard\\v4\\wizard_back.png"
+  ],
+  "transparent": true,
+  "alpha": {
+    "strategy": "chroma",
+    "strategy_source": "explicit",
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_green_slime.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1193696,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 1716,
+    "alpha_zero_pct": 75.91,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": {
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_green_slime.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1193696,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 1716,
+    "alpha_zero_pct": 75.91,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "extra": {
+    "inline_results": 1,
+    "rollout_cleaned": true,
+    "transparent_background_reported": false
+  },
+  "provider_resolved_from": "explicit"
+}

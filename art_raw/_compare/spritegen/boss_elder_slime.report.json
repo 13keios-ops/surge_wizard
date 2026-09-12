@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "codex",
+  "prompt": "Single game monster sprite for a vertical mobile RPG. Match the art style of the attached reference character exactly: clean flat cel shading, bold readable silhouette, chunky simple forms, limited palette, soft dark outline, light from the upper left. SUBJECT: a huge ancient slime BOSS - a massive dark teal translucent jelly mass with THREE eyes, with swallowed bones and a broken sword suspended and visible inside its see-through body. Wide, heavy and imposing, clearly larger and more threatening than an ordinary slime. Make the three eyes crisp and a different color from the body so the shape still reads when the whole body is filled black as a silhouette. Use one strong color only. Full body, centered, nothing cropped. DO NOT draw a ground shadow. No text, no labels, no border, no extra objects. Background must be a completely flat solid pure magenta #FF00FF filling the entire canvas. Square 1:1 composition.",
+  "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\boss_elder_slime.png",
+  "raw": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\boss_elder_slime.png.raw.png",
+  "raw_bytes": 1533932,
+  "elapsed_seconds": 53.141,
+  "model": null,
+  "session_id": "01a09688-8d9d-7980-a83c-ad7237a7dd3b",
+  "refs": [
+    "D:\\Projects\\surge_wizard\\art_raw\\wizard\\v4\\wizard_back.png"
+  ],
+  "transparent": true,
+  "alpha": {
+    "strategy": "chroma",
+    "strategy_source": "explicit",
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\boss_elder_slime.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 580354,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 3002,
+    "alpha_zero_pct": 36.91,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": {
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\boss_elder_slime.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 580354,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 3002,
+    "alpha_zero_pct": 36.91,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "extra": {
+    "inline_results": 1,
+    "rollout_cleaned": true,
+    "transparent_background_reported": false
+  },
+  "provider_resolved_from": "explicit"
+}

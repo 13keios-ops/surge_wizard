@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "codex",
+  "prompt": "Single game monster sprite for a vertical mobile RPG. Match the art style of the attached reference character exactly: clean flat cel shading, bold readable silhouette, chunky simple forms, limited palette, soft dark outline, light from the upper left. SUBJECT: a small skeleton apprentice mage - a skinny skeleton straining to hold up a bone staff TALLER than its own body, blue flame flickering inside its empty eye sockets. Exaggerate how oversized the staff is compared to the frail skeleton so the silhouette alone reads as this monster. Use one strong color only. Full body, centered, nothing cropped. DO NOT draw a ground shadow. No text, no labels, no border, no extra objects. Background must be a completely flat solid pure magenta #FF00FF filling the entire canvas. Square 1:1 composition.",
+  "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_skeleton_apprentice.png",
+  "raw": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_skeleton_apprentice.png.raw.png",
+  "raw_bytes": 1331147,
+  "elapsed_seconds": 53.141,
+  "model": null,
+  "session_id": "01a09687-9e54-77d3-bab2-1e1908e45cdd",
+  "refs": [
+    "D:\\Projects\\surge_wizard\\art_raw\\wizard\\v4\\wizard_back.png"
+  ],
+  "transparent": true,
+  "alpha": {
+    "strategy": "chroma",
+    "strategy_source": "explicit",
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_skeleton_apprentice.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1339837,
+    "fringe_pixels": 176,
+    "cleaned_transparent_rgb_pixels": 5296,
+    "alpha_zero_pct": 85.2,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": {
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_skeleton_apprentice.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1339837,
+    "fringe_pixels": 176,
+    "cleaned_transparent_rgb_pixels": 5296,
+    "alpha_zero_pct": 85.2,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "extra": {
+    "inline_results": 1,
+    "rollout_cleaned": true,
+    "transparent_background_reported": false
+  },
+  "provider_resolved_from": "explicit"
+}
