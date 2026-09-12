@@ -1,5 +1,9 @@
 # 작업 지시서 — 걸어가는 연출 (배경 세로 스크롤)
 
+> ⛔ **기제가 틀렸다 (2026-09-12). `WORK_ORDER_ROADSIDE.md` 가 걷어낸다.**
+> 「그림 전체를 위아래로 민다」는 원근과 양립할 수 없다 (`GAME_DESIGN.md` 6.7절 ①).
+> **구현은 끝나 테스트도 통과하지만 멀쩡한 것이 아니다.**
+
 발행: 2026-09-11, 기획 창.
 근거: `GAME_DESIGN.md` **6.7절 ①** (사용자 요청 원문) · `ART_REQUEST_BG_V4.md` ·
 `docs/GPT_PROJECT_INSTRUCTIONS.md` 5절.
