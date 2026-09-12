@@ -118,9 +118,9 @@ void main() {
     }
   });
 
-  test('7. ★ 주문 70종 각각의 후보 풀에서 갈래 비율이 목표와 정확히 일치한다', () {
+  test('7. ★ 주문 90종 각각의 후보 풀에서 갈래 비율이 목표와 정확히 일치한다', () {
     final spells = GameDataParser.parseSpells(readData('spells.json'));
-    expect(spells.length, 70);
+    expect(spells.length, 90);
 
     for (final spell in spells) {
       final pool =

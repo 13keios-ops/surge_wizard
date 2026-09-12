@@ -23,7 +23,7 @@ void main() {
     final spells = GameDataParser.parseSpells(readData('spells.json'));
 
     test('70종 전부 파싱된다', () {
-      expect(spells.length, 70);
+      expect(spells.length, 90);
       expectUniqueIds(spells.map((s) => s.id), 'spells');
     });
 
@@ -37,9 +37,10 @@ void main() {
       }
     });
 
-    test('등급별 수량이 목표와 일치 (30/25/15)', () {
-      expect(spells.where((s) => s.rarity == 'common').length, 30);
-      expect(spells.where((s) => s.rarity == 'rare').length, 25);
+    test('등급별 수량이 목표와 일치 (45/30/15 — 90종)', () {
+      // 2026-09-13 70종 → 90종. 1~3서클 45 · 4~6서클 30 · 7~9서클 15
+      expect(spells.where((s) => s.rarity == 'common').length, 45);
+      expect(spells.where((s) => s.rarity == 'rare').length, 30);
       expect(spells.where((s) => s.rarity == 'epic').length, 15);
     });
 

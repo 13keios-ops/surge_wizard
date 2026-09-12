@@ -1,4 +1,4 @@
-/// spells.json 검산 — 주문 70종의 `circle`(서클 1~9)이 SPELL_CIRCLES.md 와 맞는지 본다.
+/// spells.json 검산 — 주문 90종의 `circle`(서클 1~9)이 SPELL_CIRCLES.md 와 맞는지 본다.
 /// `circle`은 아직 Spell 모델에 없는 필드이므로 JSON을 직접 읽는다.
 library;
 
@@ -7,17 +7,32 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 
-/// 서클별 목표 종수 (1~5서클 10종, 6~9서클 5종 — 합 70)
+/// 서클별 목표 종수 (2026-09-13 개정 — 70종 → 90종).
+/// **속성마다** 1~3서클 3종 · 4~6서클 2종 · 7~9서클 1종 = 18종, × 5속성 = 90종.
+/// 칸마다 최소 2종이 있어야 슬롯머신이 돈다 (GAME_DESIGN 5.4절).
 const kCountByCircle = <int, int>{
-  1: 10,
-  2: 10,
-  3: 10,
+  1: 15,
+  2: 15,
+  3: 15,
   4: 10,
   5: 10,
-  6: 5,
+  6: 10,
   7: 5,
   8: 5,
   9: 5,
+};
+
+/// 속성 하나가 그 서클에 가져야 할 종수
+const kPerElementByCircle = <int, int>{
+  1: 3,
+  2: 3,
+  3: 3,
+  4: 2,
+  5: 2,
+  6: 2,
+  7: 1,
+  8: 1,
+  9: 1,
 };
 
 const kElements = <String>['fire', 'frost', 'arcane', 'shadow', 'nature'];
@@ -33,8 +48,8 @@ void main() {
   final raw = File('assets/data/spells.json').readAsStringSync();
   final spells = (jsonDecode(raw) as List).cast<Map<String, dynamic>>();
 
-  test('1. 70종 전부 circle이 있고 1~9 범위다', () {
-    expect(spells.length, 70);
+  test('1. 90종 전부 circle이 있고 1~9 범위다', () {
+    expect(spells.length, 90);
     for (final s in spells) {
       final c = s['circle'];
       expect(c, isNotNull, reason: '${s['id']}: circle 없음');
@@ -65,9 +80,9 @@ void main() {
       expect(s['rarity'], rarityForCircle(s['circle'] as int),
           reason: '${s['id']} (${s['circle']}서클)');
     }
-    // 등급별 총량도 함께 확인 (30 / 25 / 15)
-    expect(spells.where((s) => s['rarity'] == 'common').length, 30);
-    expect(spells.where((s) => s['rarity'] == 'rare').length, 25);
+    // 등급별 총량도 함께 확인 (45 / 30 / 15 — 2026-09-13 90종)
+    expect(spells.where((s) => s['rarity'] == 'common').length, 45);
+    expect(spells.where((s) => s['rarity'] == 'rare').length, 30);
     expect(spells.where((s) => s['rarity'] == 'epic').length, 15);
   });
 
@@ -127,6 +142,29 @@ void main() {
     for (final s in spells) {
       expect(const ['용암 침', '눈덩이 사출', '수액 분출'].contains(s['name']), isFalse,
           reason: '${s['id']} 에 옛 이름이 남았다');
+    }
+  });
+
+  test('9. (속성 × 서클) 칸마다 목표 종수가 정확히 들어 있다', () {
+    for (final e in kElements) {
+      for (var c = 1; c <= 9; c++) {
+        final n = spells
+            .where((s) => s['element'] == e && s['circle'] == c)
+            .length;
+        expect(n, kPerElementByCircle[c],
+            reason: '$e $c서클: $n종 (목표 ${kPerElementByCircle[c]})');
+      }
+    }
+  });
+
+  test('10. 효과 타입은 코드가 아는 6종뿐이다', () {
+    const known = {
+      'shield', 'heal', 'delay_enemy', 'mana_restore', 'check_bonus', 'extra_die'
+    };
+    for (final s in spells) {
+      final e = s['effect'];
+      if (e == null) continue;
+      expect(known, contains(e['type']), reason: '${s['id']}: 모르는 효과');
     }
   });
 }

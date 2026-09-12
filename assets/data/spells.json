@@ -10,7 +10,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "기본 공격 주문. 안정적이다.",
-    "surge_tags": ["fire", "explosion"]
+    "surge_tags": [
+      "fire",
+      "explosion"
+    ]
   },
   {
     "id": "ember_dart",
@@ -23,7 +26,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "작은 불씨를 튕겨 보낸다.",
-    "surge_tags": ["fire"]
+    "surge_tags": [
+      "fire"
+    ]
   },
   {
     "id": "flame_lash",
@@ -36,7 +41,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "불줄기로 후려친다.",
-    "surge_tags": ["fire"]
+    "surge_tags": [
+      "fire"
+    ]
   },
   {
     "id": "spark_shower",
@@ -49,7 +56,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "불꽃이 비처럼 쏟아진다.",
-    "surge_tags": ["fire", "explosion"]
+    "surge_tags": [
+      "fire",
+      "explosion"
+    ]
   },
   {
     "id": "heat_wave",
@@ -62,7 +72,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "뜨거운 공기를 밀어낸다.",
-    "surge_tags": ["fire"]
+    "surge_tags": [
+      "fire"
+    ]
   },
   {
     "id": "cinder_shield",
@@ -73,9 +85,15 @@
     "rarity": "common",
     "base_damage": 5,
     "dc_modifier": 0,
-    "effect": { "type": "shield", "value": 4 },
+    "effect": {
+      "type": "shield",
+      "value": 4
+    },
     "description": "타오르는 재로 몸을 감싼다.",
-    "surge_tags": ["fire", "shield"]
+    "surge_tags": [
+      "fire",
+      "shield"
+    ]
   },
   {
     "id": "flame_pillar",
@@ -88,7 +106,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "발밑에서 불기둥이 솟는다.",
-    "surge_tags": ["fire", "explosion"]
+    "surge_tags": [
+      "fire",
+      "explosion"
+    ]
   },
   {
     "id": "magma_spit",
@@ -101,7 +122,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "끈적한 용암 덩이를 던진다.",
-    "surge_tags": ["fire"]
+    "surge_tags": [
+      "fire"
+    ]
   },
   {
     "id": "phoenix_feather",
@@ -112,9 +135,15 @@
     "rarity": "rare",
     "base_damage": 8,
     "dc_modifier": 0,
-    "effect": { "type": "heal", "value": 4 },
+    "effect": {
+      "type": "heal",
+      "value": 4
+    },
     "description": "태우며 스스로를 치유한다.",
-    "surge_tags": ["fire", "life"]
+    "surge_tags": [
+      "fire",
+      "life"
+    ]
   },
   {
     "id": "twin_flare",
@@ -127,7 +156,10 @@
     "dc_modifier": 1,
     "effect": null,
     "description": "불덩이 두 개를 동시에.",
-    "surge_tags": ["fire", "explosion"]
+    "surge_tags": [
+      "fire",
+      "explosion"
+    ]
   },
   {
     "id": "blazing_ring",
@@ -140,7 +172,9 @@
     "dc_modifier": 1,
     "effect": null,
     "description": "불의 고리가 조여든다.",
-    "surge_tags": ["fire"]
+    "surge_tags": [
+      "fire"
+    ]
   },
   {
     "id": "inferno",
@@ -153,7 +187,10 @@
     "dc_modifier": 2,
     "effect": null,
     "description": "전장을 통째로 태운다.",
-    "surge_tags": ["fire", "explosion"]
+    "surge_tags": [
+      "fire",
+      "explosion"
+    ]
   },
   {
     "id": "meteor_call",
@@ -166,7 +203,11 @@
     "dc_modifier": 3,
     "effect": null,
     "description": "하늘에서 돌덩이가 떨어진다.",
-    "surge_tags": ["fire", "explosion", "sky"]
+    "surge_tags": [
+      "fire",
+      "explosion",
+      "sky"
+    ]
   },
   {
     "id": "sun_lance",
@@ -177,9 +218,15 @@
     "rarity": "epic",
     "base_damage": 13,
     "dc_modifier": 1,
-    "effect": { "type": "delay_enemy", "value": 1 },
+    "effect": {
+      "type": "delay_enemy",
+      "value": 1
+    },
     "description": "눈부신 빛이 적을 멈춘다.",
-    "surge_tags": ["fire", "light"]
+    "surge_tags": [
+      "fire",
+      "light"
+    ]
   },
   {
     "id": "frost_arrow",
@@ -192,7 +239,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "기본 냉기 공격 주문.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "ice_shard",
@@ -205,7 +254,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "날카로운 얼음 조각.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "chill_touch",
@@ -216,9 +267,14 @@
     "rarity": "common",
     "base_damage": 5,
     "dc_modifier": 0,
-    "effect": { "type": "delay_enemy", "value": 1 },
+    "effect": {
+      "type": "delay_enemy",
+      "value": 1
+    },
     "description": "차갑게 굳혀 늦춘다.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "snow_bolt",
@@ -231,7 +287,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "단단히 뭉쳐 던진다.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "frost_nip",
@@ -244,7 +302,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "냉기가 살을 파고든다.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "rime_blade",
@@ -257,7 +317,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "얼어붙은 칼날로 벤다.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "glacier_spike",
@@ -270,7 +332,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "거대한 얼음이 솟구친다.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "hail_storm",
@@ -283,7 +347,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "우박이 사정없이 때린다.",
-    "surge_tags": ["frost", "sky"]
+    "surge_tags": [
+      "frost",
+      "sky"
+    ]
   },
   {
     "id": "frozen_mirror",
@@ -294,9 +361,15 @@
     "rarity": "rare",
     "base_damage": 8,
     "dc_modifier": 0,
-    "effect": { "type": "shield", "value": 5 },
+    "effect": {
+      "type": "shield",
+      "value": 5
+    },
     "description": "얼음 벽이 나를 지킨다.",
-    "surge_tags": ["frost", "shield"]
+    "surge_tags": [
+      "frost",
+      "shield"
+    ]
   },
   {
     "id": "deep_freeze",
@@ -307,9 +380,14 @@
     "rarity": "rare",
     "base_damage": 13,
     "dc_modifier": 1,
-    "effect": { "type": "delay_enemy", "value": 1 },
+    "effect": {
+      "type": "delay_enemy",
+      "value": 1
+    },
     "description": "뼛속까지 얼린다.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "winter_breath",
@@ -322,7 +400,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "한겨울 바람을 내뿜는다.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "absolute_zero",
@@ -333,9 +413,14 @@
     "rarity": "epic",
     "base_damage": 18,
     "dc_modifier": 2,
-    "effect": { "type": "delay_enemy", "value": 1 },
+    "effect": {
+      "type": "delay_enemy",
+      "value": 1
+    },
     "description": "모든 것이 멈추는 추위.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "comet_shard",
@@ -348,7 +433,11 @@
     "dc_modifier": 3,
     "effect": null,
     "description": "얼어붙은 별이 낙하한다.",
-    "surge_tags": ["frost", "sky", "explosion"]
+    "surge_tags": [
+      "frost",
+      "sky",
+      "explosion"
+    ]
   },
   {
     "id": "permafrost_lance",
@@ -361,7 +450,9 @@
     "dc_modifier": 1,
     "effect": null,
     "description": "녹지 않는 창을 던진다.",
-    "surge_tags": ["frost"]
+    "surge_tags": [
+      "frost"
+    ]
   },
   {
     "id": "mana_shield",
@@ -372,9 +463,15 @@
     "rarity": "common",
     "base_damage": 0,
     "dc_modifier": 0,
-    "effect": { "type": "shield", "value": 6 },
+    "effect": {
+      "type": "shield",
+      "value": 6
+    },
     "description": "기본 방어 주문.",
-    "surge_tags": ["arcane", "shield"]
+    "surge_tags": [
+      "arcane",
+      "shield"
+    ]
   },
   {
     "id": "arcane_bolt",
@@ -387,7 +484,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "순수 마력의 화살.",
-    "surge_tags": ["arcane"]
+    "surge_tags": [
+      "arcane"
+    ]
   },
   {
     "id": "magic_missile",
@@ -400,7 +499,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "빗나가지 않는 작은 화살.",
-    "surge_tags": ["arcane"]
+    "surge_tags": [
+      "arcane"
+    ]
   },
   {
     "id": "rune_flick",
@@ -413,7 +514,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "새긴 룬을 손끝으로 쏜다.",
-    "surge_tags": ["arcane", "rune"]
+    "surge_tags": [
+      "arcane",
+      "rune"
+    ]
   },
   {
     "id": "glyph_burst",
@@ -426,7 +530,11 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "허공의 인장이 터진다.",
-    "surge_tags": ["arcane", "explosion", "rune"]
+    "surge_tags": [
+      "arcane",
+      "explosion",
+      "rune"
+    ]
   },
   {
     "id": "focus_sigil",
@@ -437,9 +545,15 @@
     "rarity": "common",
     "base_damage": 5,
     "dc_modifier": 0,
-    "effect": { "type": "check_bonus", "value": 1 },
+    "effect": {
+      "type": "check_bonus",
+      "value": 1
+    },
     "description": "다음 판정이 쉬워진다.",
-    "surge_tags": ["arcane", "rune"]
+    "surge_tags": [
+      "arcane",
+      "rune"
+    ]
   },
   {
     "id": "arcane_surge",
@@ -452,7 +566,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "억눌렀던 마력을 터뜨린다.",
-    "surge_tags": ["arcane", "explosion"]
+    "surge_tags": [
+      "arcane",
+      "explosion"
+    ]
   },
   {
     "id": "mirror_image",
@@ -463,9 +580,15 @@
     "rarity": "rare",
     "base_damage": 8,
     "dc_modifier": 0,
-    "effect": { "type": "shield", "value": 6 },
+    "effect": {
+      "type": "shield",
+      "value": 6
+    },
     "description": "분신이 대신 맞아준다.",
-    "surge_tags": ["arcane", "shield"]
+    "surge_tags": [
+      "arcane",
+      "shield"
+    ]
   },
   {
     "id": "mana_siphon",
@@ -476,9 +599,14 @@
     "rarity": "rare",
     "base_damage": 9,
     "dc_modifier": 0,
-    "effect": { "type": "mana_restore", "value": 1 },
+    "effect": {
+      "type": "mana_restore",
+      "value": 1
+    },
     "description": "적의 마력을 빨아들인다.",
-    "surge_tags": ["arcane"]
+    "surge_tags": [
+      "arcane"
+    ]
   },
   {
     "id": "rune_prison",
@@ -489,9 +617,15 @@
     "rarity": "rare",
     "base_damage": 10,
     "dc_modifier": 0,
-    "effect": { "type": "delay_enemy", "value": 1 },
+    "effect": {
+      "type": "delay_enemy",
+      "value": 1
+    },
     "description": "빛의 창살에 가둔다.",
-    "surge_tags": ["arcane", "rune"]
+    "surge_tags": [
+      "arcane",
+      "rune"
+    ]
   },
   {
     "id": "starlight_ray",
@@ -504,7 +638,11 @@
     "dc_modifier": 1,
     "effect": null,
     "description": "별의 빛을 끌어와 쏜다.",
-    "surge_tags": ["arcane", "light", "sky"]
+    "surge_tags": [
+      "arcane",
+      "light",
+      "sky"
+    ]
   },
   {
     "id": "arcane_annihilation",
@@ -517,7 +655,10 @@
     "dc_modifier": 3,
     "effect": null,
     "description": "존재 자체를 지운다.",
-    "surge_tags": ["arcane", "explosion"]
+    "surge_tags": [
+      "arcane",
+      "explosion"
+    ]
   },
   {
     "id": "time_skip",
@@ -528,9 +669,15 @@
     "rarity": "epic",
     "base_damage": 12,
     "dc_modifier": 1,
-    "effect": { "type": "delay_enemy", "value": 2 },
+    "effect": {
+      "type": "delay_enemy",
+      "value": 2
+    },
     "description": "적의 시간을 잠시 훔친다.",
-    "surge_tags": ["arcane", "time"]
+    "surge_tags": [
+      "arcane",
+      "time"
+    ]
   },
   {
     "id": "prismatic_blast",
@@ -543,7 +690,11 @@
     "dc_modifier": 2,
     "effect": null,
     "description": "일곱 빛깔이 작렬한다.",
-    "surge_tags": ["arcane", "light", "explosion"]
+    "surge_tags": [
+      "arcane",
+      "light",
+      "explosion"
+    ]
   },
   {
     "id": "shadow_bolt",
@@ -556,7 +707,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "어둠을 뭉쳐 쏜다.",
-    "surge_tags": ["shadow"]
+    "surge_tags": [
+      "shadow"
+    ]
   },
   {
     "id": "dark_pinch",
@@ -569,7 +722,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "그림자가 살을 꼬집는다.",
-    "surge_tags": ["shadow"]
+    "surge_tags": [
+      "shadow"
+    ]
   },
   {
     "id": "umbral_cut",
@@ -582,7 +737,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "그늘째로 베어낸다.",
-    "surge_tags": ["shadow"]
+    "surge_tags": [
+      "shadow"
+    ]
   },
   {
     "id": "nightmare_whisper",
@@ -595,7 +752,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "귓가에 공포를 심는다.",
-    "surge_tags": ["shadow", "mind"]
+    "surge_tags": [
+      "shadow",
+      "mind"
+    ]
   },
   {
     "id": "gloom_spike",
@@ -608,7 +768,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "어둠이 가시로 굳는다.",
-    "surge_tags": ["shadow"]
+    "surge_tags": [
+      "shadow"
+    ]
   },
   {
     "id": "soul_nip",
@@ -619,9 +781,15 @@
     "rarity": "common",
     "base_damage": 5,
     "dc_modifier": 0,
-    "effect": { "type": "heal", "value": 2 },
+    "effect": {
+      "type": "heal",
+      "value": 2
+    },
     "description": "갉아낸 만큼 회복한다.",
-    "surge_tags": ["shadow", "life"]
+    "surge_tags": [
+      "shadow",
+      "life"
+    ]
   },
   {
     "id": "life_drain",
@@ -632,9 +800,15 @@
     "rarity": "rare",
     "base_damage": 9,
     "dc_modifier": 0,
-    "effect": { "type": "heal", "value": 4 },
+    "effect": {
+      "type": "heal",
+      "value": 4
+    },
     "description": "적의 생기를 들이켠다.",
-    "surge_tags": ["shadow", "life"]
+    "surge_tags": [
+      "shadow",
+      "life"
+    ]
   },
   {
     "id": "void_lash",
@@ -647,7 +821,10 @@
     "dc_modifier": 1,
     "effect": null,
     "description": "허무가 채찍이 된다.",
-    "surge_tags": ["shadow", "void"]
+    "surge_tags": [
+      "shadow",
+      "void"
+    ]
   },
   {
     "id": "curse_mark",
@@ -660,7 +837,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "지워지지 않는 낙인.",
-    "surge_tags": ["shadow", "curse"]
+    "surge_tags": [
+      "shadow",
+      "curse"
+    ]
   },
   {
     "id": "shadow_swarm",
@@ -673,7 +853,9 @@
     "dc_modifier": 1,
     "effect": null,
     "description": "어둠이 떼지어 문다.",
-    "surge_tags": ["shadow"]
+    "surge_tags": [
+      "shadow"
+    ]
   },
   {
     "id": "phantom_blade",
@@ -686,7 +868,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "실체 없는 검이 스친다.",
-    "surge_tags": ["shadow"]
+    "surge_tags": [
+      "shadow"
+    ]
   },
   {
     "id": "abyss_maw",
@@ -699,7 +883,10 @@
     "dc_modifier": 2,
     "effect": null,
     "description": "바닥이 입을 벌린다.",
-    "surge_tags": ["shadow", "void"]
+    "surge_tags": [
+      "shadow",
+      "void"
+    ]
   },
   {
     "id": "soul_reaper",
@@ -710,9 +897,15 @@
     "rarity": "epic",
     "base_damage": 13,
     "dc_modifier": 1,
-    "effect": { "type": "heal", "value": 5 },
+    "effect": {
+      "type": "heal",
+      "value": 5
+    },
     "description": "거둔 영혼으로 채운다.",
-    "surge_tags": ["shadow", "life"]
+    "surge_tags": [
+      "shadow",
+      "life"
+    ]
   },
   {
     "id": "eclipse",
@@ -725,7 +918,11 @@
     "dc_modifier": 3,
     "effect": null,
     "description": "태양마저 삼키는 어둠.",
-    "surge_tags": ["shadow", "sky", "void"]
+    "surge_tags": [
+      "shadow",
+      "sky",
+      "void"
+    ]
   },
   {
     "id": "thorn_whip",
@@ -738,7 +935,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "가시덩굴로 후려친다.",
-    "surge_tags": ["nature"]
+    "surge_tags": [
+      "nature"
+    ]
   },
   {
     "id": "stone_throw",
@@ -751,7 +950,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "마력으로 돌을 던진다.",
-    "surge_tags": ["nature", "earth"]
+    "surge_tags": [
+      "nature",
+      "earth"
+    ]
   },
   {
     "id": "vine_snap",
@@ -764,7 +966,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "덩굴이 채찍처럼 튄다.",
-    "surge_tags": ["nature"]
+    "surge_tags": [
+      "nature"
+    ]
   },
   {
     "id": "leaf_blade",
@@ -777,7 +981,9 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "잎사귀가 칼날이 된다.",
-    "surge_tags": ["nature"]
+    "surge_tags": [
+      "nature"
+    ]
   },
   {
     "id": "sting_swarm",
@@ -790,7 +996,10 @@
     "dc_modifier": 0,
     "effect": null,
     "description": "성난 벌떼가 달려든다.",
-    "surge_tags": ["nature", "swarm"]
+    "surge_tags": [
+      "nature",
+      "swarm"
+    ]
   },
   {
     "id": "healing_herb",
@@ -801,9 +1010,15 @@
     "rarity": "common",
     "base_damage": 0,
     "dc_modifier": 0,
-    "effect": { "type": "heal", "value": 5 },
+    "effect": {
+      "type": "heal",
+      "value": 5
+    },
     "description": "즉석에서 약초를 피운다.",
-    "surge_tags": ["nature", "life"]
+    "surge_tags": [
+      "nature",
+      "life"
+    ]
   },
   {
     "id": "root_bind",
@@ -814,9 +1029,15 @@
     "rarity": "rare",
     "base_damage": 9,
     "dc_modifier": 0,
-    "effect": { "type": "delay_enemy", "value": 1 },
+    "effect": {
+      "type": "delay_enemy",
+      "value": 1
+    },
     "description": "뿌리가 발목을 잡는다.",
-    "surge_tags": ["nature", "earth"]
+    "surge_tags": [
+      "nature",
+      "earth"
+    ]
   },
   {
     "id": "boulder_crush",
@@ -829,7 +1050,10 @@
     "dc_modifier": 1,
     "effect": null,
     "description": "바위를 들어 내리찍는다.",
-    "surge_tags": ["nature", "earth"]
+    "surge_tags": [
+      "nature",
+      "earth"
+    ]
   },
   {
     "id": "sap_surge",
@@ -840,9 +1064,15 @@
     "rarity": "rare",
     "base_damage": 8,
     "dc_modifier": 0,
-    "effect": { "type": "mana_restore", "value": 1 },
+    "effect": {
+      "type": "mana_restore",
+      "value": 1
+    },
     "description": "달콤한 수액을 거둬 힘으로 바꾼다.",
-    "surge_tags": ["nature", "life"]
+    "surge_tags": [
+      "nature",
+      "life"
+    ]
   },
   {
     "id": "wild_growth",
@@ -853,9 +1083,14 @@
     "rarity": "rare",
     "base_damage": 10,
     "dc_modifier": 0,
-    "effect": { "type": "extra_die", "value": 1 },
+    "effect": {
+      "type": "extra_die",
+      "value": 1
+    },
     "description": "다음 굴림에 주사위 +1.",
-    "surge_tags": ["nature"]
+    "surge_tags": [
+      "nature"
+    ]
   },
   {
     "id": "quake_stomp",
@@ -868,7 +1103,10 @@
     "dc_modifier": 1,
     "effect": null,
     "description": "대지가 크게 요동친다.",
-    "surge_tags": ["nature", "earth"]
+    "surge_tags": [
+      "nature",
+      "earth"
+    ]
   },
   {
     "id": "gaia_wrath",
@@ -881,7 +1119,10 @@
     "dc_modifier": 3,
     "effect": null,
     "description": "대지 전체가 일어선다.",
-    "surge_tags": ["nature", "earth"]
+    "surge_tags": [
+      "nature",
+      "earth"
+    ]
   },
   {
     "id": "world_tree_branch",
@@ -892,9 +1133,15 @@
     "rarity": "epic",
     "base_damage": 12,
     "dc_modifier": 1,
-    "effect": { "type": "heal", "value": 6 },
+    "effect": {
+      "type": "heal",
+      "value": 6
+    },
     "description": "생명의 가지가 감싼다.",
-    "surge_tags": ["nature", "life"]
+    "surge_tags": [
+      "nature",
+      "life"
+    ]
   },
   {
     "id": "hurricane",
@@ -907,6 +1154,369 @@
     "dc_modifier": 2,
     "effect": null,
     "description": "하늘이 전부 휘몰아친다.",
-    "surge_tags": ["nature", "sky"]
+    "surge_tags": [
+      "nature",
+      "sky"
+    ]
+  },
+  {
+    "id": "kindle",
+    "name": "불붙이기",
+    "icon": "burning-dot",
+    "element": "fire",
+    "circle": 1,
+    "rarity": "common",
+    "base_damage": 4,
+    "dc_modifier": -1,
+    "effect": null,
+    "description": "작게 붙이고 확실하게 태운다. 가장 쉬운 주문이다.",
+    "surge_tags": [
+      "fire"
+    ]
+  },
+  {
+    "id": "flame_burst",
+    "name": "불꽃 폭발",
+    "icon": "sparky-bomb",
+    "element": "fire",
+    "circle": 2,
+    "rarity": "common",
+    "base_damage": 9,
+    "dc_modifier": 1,
+    "effect": null,
+    "description": "크게 터지지만 다루기 어렵다.",
+    "surge_tags": [
+      "fire",
+      "explosion"
+    ]
+  },
+  {
+    "id": "ember_plate",
+    "name": "잉걸 갑주",
+    "icon": "fire-shield",
+    "element": "fire",
+    "circle": 3,
+    "rarity": "common",
+    "base_damage": 6,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "shield",
+      "value": 6
+    },
+    "description": "잉걸을 몸에 둘러 막는다.",
+    "surge_tags": [
+      "fire",
+      "shield"
+    ]
+  },
+  {
+    "id": "firestorm",
+    "name": "화염 폭풍",
+    "icon": "fire-ring",
+    "element": "fire",
+    "circle": 6,
+    "rarity": "rare",
+    "base_damage": 15,
+    "dc_modifier": 1,
+    "effect": null,
+    "description": "모든 것을 태운다. 손에서 놓치기 쉽다.",
+    "surge_tags": [
+      "fire",
+      "explosion"
+    ]
+  },
+  {
+    "id": "thin_ice",
+    "name": "살얼음",
+    "icon": "frozen-block",
+    "element": "frost",
+    "circle": 1,
+    "rarity": "common",
+    "base_damage": 3,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "shield",
+      "value": 5
+    },
+    "description": "얇은 얼음이 한 번은 막아 준다.",
+    "surge_tags": [
+      "frost",
+      "shield"
+    ]
+  },
+  {
+    "id": "frost_shackle",
+    "name": "서리 족쇄",
+    "icon": "icicles-fence",
+    "element": "frost",
+    "circle": 2,
+    "rarity": "common",
+    "base_damage": 5,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "delay_enemy",
+      "value": 1
+    },
+    "description": "발을 얼려 한 박자 늦춘다.",
+    "surge_tags": [
+      "frost"
+    ]
+  },
+  {
+    "id": "ice_wall",
+    "name": "얼음 벽",
+    "icon": "frozen-body",
+    "element": "frost",
+    "circle": 3,
+    "rarity": "common",
+    "base_damage": 4,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "shield",
+      "value": 10
+    },
+    "description": "벽을 세운다. 공격은 포기한다.",
+    "surge_tags": [
+      "frost",
+      "shield"
+    ]
+  },
+  {
+    "id": "avalanche",
+    "name": "눈사태",
+    "icon": "snowing",
+    "element": "frost",
+    "circle": 6,
+    "rarity": "rare",
+    "base_damage": 14,
+    "dc_modifier": 1,
+    "effect": null,
+    "description": "산을 통째로 무너뜨린다.",
+    "surge_tags": [
+      "frost"
+    ]
+  },
+  {
+    "id": "mana_spark",
+    "name": "마나 불꽃",
+    "icon": "beams-aura",
+    "element": "arcane",
+    "circle": 1,
+    "rarity": "common",
+    "base_damage": 3,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "mana_restore",
+      "value": 1
+    },
+    "description": "작은 불꽃이 마력을 되돌린다.",
+    "surge_tags": [
+      "arcane"
+    ]
+  },
+  {
+    "id": "foresight",
+    "name": "예지의 눈",
+    "icon": "third-eye",
+    "element": "arcane",
+    "circle": 2,
+    "rarity": "common",
+    "base_damage": 4,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "extra_die",
+      "value": 1
+    },
+    "description": "한 수 앞을 본다. 주사위가 하나 는다.",
+    "surge_tags": [
+      "arcane",
+      "mind"
+    ]
+  },
+  {
+    "id": "arcane_focus",
+    "name": "비전 증폭",
+    "icon": "prism",
+    "element": "arcane",
+    "circle": 3,
+    "rarity": "common",
+    "base_damage": 6,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "check_bonus",
+      "value": 2
+    },
+    "description": "다음 시전이 크게 쉬워진다.",
+    "surge_tags": [
+      "arcane",
+      "rune"
+    ]
+  },
+  {
+    "id": "time_rift",
+    "name": "시간 균열",
+    "icon": "time-trap",
+    "element": "arcane",
+    "circle": 6,
+    "rarity": "rare",
+    "base_damage": 13,
+    "dc_modifier": 1,
+    "effect": {
+      "type": "extra_die",
+      "value": 1
+    },
+    "description": "시간을 갈라 한 번 더 본다.",
+    "surge_tags": [
+      "arcane",
+      "time"
+    ]
+  },
+  {
+    "id": "shadow_grip",
+    "name": "그림자 손",
+    "icon": "grab",
+    "element": "shadow",
+    "circle": 1,
+    "rarity": "common",
+    "base_damage": 6,
+    "dc_modifier": 1,
+    "effect": null,
+    "description": "그림자가 붙잡는다. 다루기 까다롭다.",
+    "surge_tags": [
+      "shadow"
+    ]
+  },
+  {
+    "id": "life_siphon",
+    "name": "생명 흡수",
+    "icon": "life-tap",
+    "element": "shadow",
+    "circle": 2,
+    "rarity": "common",
+    "base_damage": 5,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "heal",
+      "value": 4
+    },
+    "description": "빼앗은 만큼 내가 찬다.",
+    "surge_tags": [
+      "shadow",
+      "life"
+    ]
+  },
+  {
+    "id": "creeping_dread",
+    "name": "공포 잠식",
+    "icon": "night-sleep",
+    "element": "shadow",
+    "circle": 3,
+    "rarity": "common",
+    "base_damage": 7,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "delay_enemy",
+      "value": 1
+    },
+    "description": "두려움에 발이 묶인다.",
+    "surge_tags": [
+      "shadow",
+      "mind"
+    ]
+  },
+  {
+    "id": "soul_devour",
+    "name": "영혼 포식",
+    "icon": "gluttonous-smile",
+    "element": "shadow",
+    "circle": 6,
+    "rarity": "rare",
+    "base_damage": 14,
+    "dc_modifier": 1,
+    "effect": {
+      "type": "heal",
+      "value": 4
+    },
+    "description": "삼키고 내 것으로 만든다.",
+    "surge_tags": [
+      "shadow",
+      "life"
+    ]
+  },
+  {
+    "id": "bark_skin",
+    "name": "가시 껍질",
+    "icon": "oak",
+    "element": "nature",
+    "circle": 1,
+    "rarity": "common",
+    "base_damage": 4,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "shield",
+      "value": 5
+    },
+    "description": "껍질이 대신 맞는다.",
+    "surge_tags": [
+      "nature",
+      "shield"
+    ]
+  },
+  {
+    "id": "root_snare",
+    "name": "뿌리 얽기",
+    "icon": "root-tip",
+    "element": "nature",
+    "circle": 2,
+    "rarity": "common",
+    "base_damage": 5,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "delay_enemy",
+      "value": 1
+    },
+    "description": "뿌리가 발목을 감는다.",
+    "surge_tags": [
+      "nature",
+      "earth"
+    ]
+  },
+  {
+    "id": "life_spring",
+    "name": "생명의 샘",
+    "icon": "herbs-bundle",
+    "element": "nature",
+    "circle": 3,
+    "rarity": "common",
+    "base_damage": 5,
+    "dc_modifier": 0,
+    "effect": {
+      "type": "heal",
+      "value": 6
+    },
+    "description": "샘이 솟아 상처를 덮는다.",
+    "surge_tags": [
+      "nature",
+      "life"
+    ]
+  },
+  {
+    "id": "elder_wrath",
+    "name": "고목의 분노",
+    "icon": "beanstalk",
+    "element": "nature",
+    "circle": 6,
+    "rarity": "rare",
+    "base_damage": 13,
+    "dc_modifier": 1,
+    "effect": {
+      "type": "shield",
+      "value": 8
+    },
+    "description": "고목이 때리며 막아 준다.",
+    "surge_tags": [
+      "nature",
+      "earth"
+    ]
   }
 ]
