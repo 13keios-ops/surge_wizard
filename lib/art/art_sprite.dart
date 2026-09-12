@@ -25,10 +25,16 @@ const Map<int, String> kArtRegionBackdrops = {
 /// **비율이라 캔버스 크기가 달라도 그대로 쓴다.** 캐릭터를 땅에 세울 때 쓴다.
 const double kArtFootLine = 477 / 512;
 
-/// 원화는 정사각 블록으로 그려져 있다 — 화면 한 칸 약 **1.7dp**
-/// (마법사 16px/1024 · 적 23px/1024 · 보스 8px/848 · 배경 2px/1024).
-/// 보간해서 줄이면 그 격자가 흐려진다 — Phase 1이 반려된 바로 그 현상이다.
-const FilterQuality kArtFilter = FilterQuality.none;
+/// 캐릭터 원화를 줄일 때의 보간.
+///
+/// 🔴 **2026-09-13에 `none` 에서 바뀌었다** (검토 41 승인). 예전에는 원화를
+/// 정사각 블록으로 격자화해 두고 최근접으로 줄였는데, 그 격자가 **세부를 6.2배
+/// 깎고 있었다** — 참고 게임은 블록을 강제하지 않는다(같은 색이 1px씩 53%).
+/// 격자를 없앴으므로 **부드럽게 줄여야** 한다. 최근접으로 줄이면 깨진다.
+const FilterQuality kArtFilter = FilterQuality.medium;
+
+/// 배경 원화의 보간. **배경은 예전 그대로 2px 블록**이라 최근접을 유지한다.
+const FilterQuality kArtBgFilter = FilterQuality.none;
 
 /// 원화 한 장을 캐릭터 자리에 세운다.
 ///
@@ -115,9 +121,10 @@ const List<String> kArtWizardWalk = [
 ];
 
 /// 걷기 프레임이 `assets/art/wizard/`에 구워져 있으면 `true`로.
+/// ✅ **2026-09-13에 구웠다** (검토 42) — 격자화를 빼면서 함께 넣었다.
 /// `false`면 미는 동안에도 정지 그림을 그대로 쓴다 (없는 파일을 매 프레임
 /// 찾아 로그를 더럽히지 않기 위해 런타임 탐색 대신 이 한 줄로 가른다).
-const bool kArtWizardWalkReady = false;
+const bool kArtWizardWalkReady = true;
 
 /// 0~1 진행도 → 걷기 프레임 경로. 미는 동안 두 걸음 걷는다.
 String wizardWalkFrame(double t) =>
@@ -142,7 +149,7 @@ class ArtBackdropView extends StatelessWidget {
         asset,
         fit: BoxFit.cover,
         alignment: Alignment.bottomCenter,
-        filterQuality: kArtFilter,
+        filterQuality: kArtBgFilter,
         errorBuilder: (_, _, _) => fallback,
       );
 }
