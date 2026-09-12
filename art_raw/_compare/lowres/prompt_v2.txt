@@ -1,0 +1,13 @@
+Game monster sprite for a vertical mobile RPG, drawn as TRUE CHUNKY PIXEL ART.
+
+CRITICAL - this sprite will be shown very small, about 40 pixels tall. Design it for that size from the start:
+- NO feature may be smaller than 1/20 of the sprite height. If a detail would be thinner than that, LEAVE IT OUT instead of shrinking it.
+- Use at most 8 flat colors total. No gradients, no texture, no noise, no rivets, no small trim, no patterns.
+- The body must be ONE SOLID OPAQUE SHAPE with a thick black outline all the way around it. Do not break the body into floating pieces. Do not make any part of the body see-through.
+- The whole sprite must still read when shrunk to a thumbnail. Shape first.
+
+SUBJECT: a cursed suit of armor, standing upright and animated by itself with nobody inside. It is a complete solid suit - helmet, wide pauldrons, breastplate, legs - drawn as big simple blocks. Only ONE small area is dark: the narrow slit of the visor, which is pure black. Exaggerate the wide shoulders and the heavy helmet so the silhouette alone reads as this monster.
+
+COLOR: one strong colour dominates - a pale glowing TEAL armour. Do not make it grey, silver or brown. The teal must be obvious from across the room.
+
+Full body, centered, nothing cropped. DO NOT draw a ground shadow. No text, no labels, no border, no extra objects. Background must be a completely flat solid pure magenta #FF00FF filling the entire canvas. Square 1:1 composition.
