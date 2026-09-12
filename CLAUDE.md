@@ -81,7 +81,8 @@
 | **`GAME_ART_ROADMAP.md`** | **그래픽 작업 순서 Phase 0~8.** 무엇을 언제 만드나 | 그다음 |
 | `docs/art/` | 로드맵 세부 6종 — `ART_STYLE_GUIDE` `RUNTIME_ASSET_SPEC` `EQUIPMENT_LAYER_SPEC` `ASSET_QA_PIPELINE` `ASSET_RECIPE_SCHEMA.json` `PHASE_CHECKLIST` | 해당하는 것만 |
 | `UI_DESIGN.md` | **화면 구도 + 원화 규격 + 톤 통일 규칙 (v2)**<br>⚠ 로드맵이 **3곳을 뒤집었다** (머리말 표 참조) | 그림·UI 작업 시 |
-| **`ART_REQUEST_WIZARD.md`** | ★ **1순위** — 마법사 정지+걷기 4. 밀도 상한을 푼다 | 원화 발주 시 |
+| **`ART_REQUEST_MONSTERS.md`** | ★ **지금 쓰는 요청서** — 몬스터 38종 (적 26 · 보스 12) | 원화 발주 시 |
+| ~~`ART_REQUEST_WIZARD.md`~~ | ✅ 끝났다 (2026-09-12 합격) | — |
 | `ART_REQUEST_LAYERS.md` | 3순위 — 레이어 배경(숲 5장). 캐릭터 확정 뒤에 | 원화 발주 시 |
 | ~~`ART_REQUEST_BG_V4.md`~~ | ⛔ 대체됐다 — 세로로 긴 한 장을 미는 방식은 원근과 안 맞는다 | — |
 | **`docs/GPT_PROJECT_INSTRUCTIONS.md`** | ★ **ChatGPT 프로젝트 「지침」 칸에 넣는 전문.** 「━━━」 사이를 사용자가 복사 | GPT 프로젝트 설정 시 |
