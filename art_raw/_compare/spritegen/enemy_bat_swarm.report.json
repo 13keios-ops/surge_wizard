@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "codex",
+  "prompt": "Single game monster sprite for a vertical mobile RPG. Match the art style of the attached reference character exactly: clean flat cel shading, bold readable silhouette, chunky simple forms, limited palette, soft dark outline, light from the upper left. SUBJECT: a swarm of bats treated as ONE single creature - exactly three small bats clumped tightly together into one compact mass, so close they read as a single silhouette, their bodies lost in darkness with only their eyes glowing. Exaggerate how they fuse into one shape so the silhouette alone reads as this monster. Use one strong color only. Full body, centered, nothing cropped. DO NOT draw a ground shadow. No text, no labels, no border, no extra objects. Background must be a completely flat solid pure magenta #FF00FF filling the entire canvas. Square 1:1 composition.",
+  "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_bat_swarm.png",
+  "raw": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_bat_swarm.png.raw.png",
+  "raw_bytes": 1245682,
+  "elapsed_seconds": 51.954,
+  "model": null,
+  "session_id": "01a09690-a682-7e43-8a3e-0045d6e36696",
+  "refs": [
+    "D:\\Projects\\surge_wizard\\art_raw\\wizard\\v4\\wizard_back.png"
+  ],
+  "transparent": true,
+  "alpha": {
+    "strategy": "chroma",
+    "strategy_source": "explicit",
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_bat_swarm.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1111553,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 2590,
+    "alpha_zero_pct": 70.69,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": {
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_bat_swarm.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1111553,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 2590,
+    "alpha_zero_pct": 70.69,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "extra": {
+    "inline_results": 1,
+    "rollout_cleaned": true,
+    "transparent_background_reported": false
+  },
+  "provider_resolved_from": "explicit"
+}

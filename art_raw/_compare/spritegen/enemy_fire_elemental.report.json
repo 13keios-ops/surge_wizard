@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "codex",
+  "prompt": "Single game monster sprite for a vertical mobile RPG. Match the art style of the attached reference character exactly: clean flat cel shading, bold readable silhouette, chunky simple forms, limited palette, soft dark outline, light from the upper left. SUBJECT: a fire elemental whose FORM IS THE FLAME ITSELF - no solid body, no limbs, just a rising twisting flame shape, with only a small bright core glowing at its center. Orange. Exaggerate that it has no body at all so the silhouette alone reads as living fire. Use one strong color only. Full body, centered, nothing cropped. DO NOT draw a ground shadow. No text, no labels, no border, no extra objects. Background must be a completely flat solid pure magenta #FF00FF filling the entire canvas. Square 1:1 composition.",
+  "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_fire_elemental.png",
+  "raw": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_fire_elemental.png.raw.png",
+  "raw_bytes": 1133208,
+  "elapsed_seconds": 49.0,
+  "model": null,
+  "session_id": "01a09691-8f3a-7d63-8161-2b7684a474c8",
+  "refs": [
+    "D:\\Projects\\surge_wizard\\art_raw\\wizard\\v4\\wizard_back.png"
+  ],
+  "transparent": true,
+  "alpha": {
+    "strategy": "chroma",
+    "strategy_source": "explicit",
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_fire_elemental.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1261136,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 3397,
+    "alpha_zero_pct": 80.2,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": {
+    "out": "D:\\Projects\\surge_wizard\\art_raw\\_compare\\spritegen\\enemy_fire_elemental.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1261136,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 3397,
+    "alpha_zero_pct": 80.2,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "extra": {
+    "inline_results": 1,
+    "rollout_cleaned": true,
+    "transparent_background_reported": false
+  },
+  "provider_resolved_from": "explicit"
+}
