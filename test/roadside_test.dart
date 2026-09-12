@@ -73,6 +73,39 @@ void main() {
     });
   });
 
+  group('가운데를 가리나 — 2026-09-13 화면 확인에서 잡힌 것', () {
+    // 물체를 **중심점** 기준으로 놓았더니 커질 때 가운데 길을 덮었다.
+    // 안쪽 가장자리 기준으로 고쳤고, 그것이 유지되는지 여기서 지킨다.
+    const w = 360.0, h = 720.0;
+
+    /// 물체의 안쪽 가장자리가 화면 가운데에서 떨어진 거리
+    double innerGap(RoadsideObject o) {
+      final size = roadsideHeight(o.t) * h;
+      final off = roadsideSpread(o.t) * w;
+      final left = o.onLeft ? w / 2 - off - size : w / 2 + off;
+      return o.onLeft ? w / 2 - (left + size) : left - w / 2;
+    }
+
+    test('13. 🔴 캐릭터가 서는 높이의 물체는 가운데를 침범하지 않는다', () {
+      for (var floor = 1.0; floor <= 30; floor += 0.25) {
+        for (final o in roadsideLayout(1, floor)) {
+          if (o.t < 0.5) continue; // 먼 것은 원근상 가운데로 모인다 (적 뒤에 그려진다)
+          expect(innerGap(o), greaterThan(w * 0.12),
+              reason: 'floor $floor · t=${o.t.toStringAsFixed(2)} 가 길을 덮는다');
+        }
+      }
+    });
+
+    test('14. 안쪽 가장자리는 어느 경우에도 가운데를 넘지 않는다', () {
+      for (var floor = 1.0; floor <= 30; floor += 0.25) {
+        for (final o in roadsideLayout(1, floor)) {
+          expect(innerGap(o), greaterThanOrEqualTo(0),
+              reason: 'floor $floor 에서 반대편으로 넘어갔다');
+        }
+      }
+    });
+  });
+
   group('결정성', () {
     test('10. 같은 (지역, 층)은 항상 같은 배치다', () {
       final a = roadsideLayout(2, 5);

@@ -129,12 +129,16 @@ const Duration kWalkTransition = Duration(milliseconds: 900);
 /// 길이 사라지는 소실점의 세로 위치 (무대 상자 높이의 비율, 위가 0).
 const double kRoadHorizonY = 0.30;
 
-/// 가장 가까울 때 물체가 가운데에서 벌어진 거리 (상자 **가로**의 비율).
-/// 이만큼 벌어져야 가운데 길과 캐릭터를 안 가린다.
-const double kRoadNearSpread = 0.42;
+/// 가장 가까울 때 물체의 **안쪽 가장자리**가 가운데에서 벌어진 거리
+/// (상자 **가로**의 비율).
+///
+/// 🔴 **중심이 아니라 안쪽 가장자리 기준이다.** 중심으로 잡았더니 물체가 커질 때
+/// 가운데 길을 덮었다 (2026-09-13 화면 확인에서 잡혔다).
+const double kRoadNearSpread = 0.30;
 
 /// 가장 가까울 때 물체의 높이 (상자 높이의 비율).
-const double kRoadNearHeight = 0.45;
+/// 참고 게임의 근경 기둥이 화면 높이의 30% 안팎이다.
+const double kRoadNearHeight = 0.30;
 
 /// 가장 가까운 거리. 이 거리에서 진행도가 1이 된다.
 const double kRoadsideNear = 1.0;

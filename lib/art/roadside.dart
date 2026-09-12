@@ -64,8 +64,8 @@ double roadsideT(double distance) =>
 double roadsideBottomY(double t) =>
     kRoadHorizonY + (1.0 - kRoadHorizonY) * t.clamp(0.0, 1.0);
 
-/// 진행도 → 가운데에서 좌우로 벌어진 거리 (무대 상자 **가로**의 비율).
-/// 소실점에서는 0이고 가까울수록 벌어진다.
+/// 진행도 → 물체의 **안쪽 가장자리**가 가운데에서 벌어진 거리
+/// (무대 상자 **가로**의 비율). 소실점에서는 0이고 가까울수록 벌어진다.
 double roadsideSpread(double t) => kRoadNearSpread * t.clamp(0.0, 1.0);
 
 /// 진행도 → 물체 높이 (무대 상자 높이의 비율).
@@ -200,10 +200,12 @@ class RoadsideView extends StatelessWidget {
     final t = o.t;
     final height = roadsideHeight(t) * h;
     final offset = roadsideSpread(t) * w;
+    // 🔴 **안쪽 가장자리**를 기준으로 놓는다. 중심으로 놓으면 물체가 커질 때
+    // 가운데 길을 덮는다 — 화면에서 잡혔다 (2026-09-13)
     return Positioned(
       // 밑동이 길 위에 닿게 놓는다
       top: roadsideBottomY(t) * h - height,
-      left: o.onLeft ? w / 2 - offset - height / 2 : w / 2 + offset - height / 2,
+      left: o.onLeft ? w / 2 - offset - height : w / 2 + offset,
       width: height,
       height: height,
       child: _art(o, height),
