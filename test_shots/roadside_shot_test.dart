@@ -21,6 +21,7 @@ import 'package:surge_wizard/models/meta_state.dart';
 import 'package:surge_wizard/screens/battle_controller.dart';
 import 'package:surge_wizard/screens/battle_screen.dart';
 import 'package:surge_wizard/screens/meta_controller.dart';
+import 'package:surge_wizard/core/surge.dart';
 import 'package:surge_wizard/screens/run_controller.dart';
 import 'package:surge_wizard/widgets/pixel_ui.dart';
 
@@ -100,4 +101,37 @@ void main() {
       await shoot(tester, _outDir, 'floor_$floor');
     });
   }
+
+  testWidgets('소환수 — 아군 1 · 적대 1(호위)', (tester) async {
+    prepareShot(tester, _size);
+    final bc = BattleController(data: _data, random: Random(5))
+      ..startBattle(
+        enemy: _data.enemies.firstWhere((e) => e.id == 'goblin_scout'),
+        hand: _run.hand,
+        hp: 40,
+        maxHp: 50,
+      );
+    bc.battle.surge.summons
+      ..add(SummonUnit(power: 5, turnsLeft: 2))
+      ..add(SummonUnit(power: -4, turnsLeft: 999));
+    await tester.pumpWidget(_host(BattleScreen(
+      controller: bc,
+      title: _run.stageTitle,
+      regionId: 1,
+      floor: 3,
+      floors: 10,
+    )));
+    await tester.runAsync(() async {
+      final ctx = tester.element(find.byType(MaterialApp));
+      for (final a in [
+        kArtWizardBack,
+        ...kArtEnemies.values,
+        ...kArtRegionBackdrops.values,
+      ]) {
+        await precacheImage(AssetImage(a), ctx);
+      }
+    });
+    await tester.pump(const Duration(milliseconds: 1200));
+    await shoot(tester, _outDir, 'summons');
+  });
 }

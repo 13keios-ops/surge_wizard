@@ -199,14 +199,14 @@ class _BattleStageState extends State<BattleStage>
 
         return Stack(
           children: [
-            // 배경 겹 — 판은 고정, 길 옆 물체만 흐른다 (`stage_layers.dart`)
             Positioned.fill(
               child: StageLayers(
                   art: bgArt,
                   palette: palette,
                   time: _ambient.value,
                   regionId: widget.regionId ?? 1,
-                  floor: widget.floor ?? 1),
+                  floor: widget.floor ?? 1,
+                  summons: battle.surge.summons),
             ),
             // 적 — 길 위쪽에 선다
             Positioned(
