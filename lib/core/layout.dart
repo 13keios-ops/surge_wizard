@@ -117,8 +117,35 @@ const double kCastButtonFont = 24.0;
 const double kSpellIconBox = 34.0;
 const double kSpellIconSize = 32.0;
 
-// ── 걸어가는 연출 (WORK_ORDER_BG_SCROLL) ───────────────
+// ── 걸어가는 연출 (WORK_ORDER_ROADSIDE) ───────────────
+//
+// 🔴 **배경 판은 안 움직인다.** 좌우의 나무·바위만 원근 길을 따라 내려오며
+// 커진다 (`GAME_DESIGN.md` 6.7절 ①). 옛 「그림 전체를 미는」 방식은 폐기됐다.
 
-/// 층이 오를 때 배경이 **이전 층 자리 → 지금 층 자리**로 흐르는 시간.
+/// 층이 오를 때 캐릭터가 걷고 길 옆 물체가 흐르는 시간.
 /// 전투 화면이 열릴 때 한 번만 재생한다 (전투 중에는 안 움직인다).
-const Duration kBackdropSlide = Duration(milliseconds: 900);
+const Duration kWalkTransition = Duration(milliseconds: 900);
+
+/// 길이 사라지는 소실점의 세로 위치 (무대 상자 높이의 비율, 위가 0).
+const double kRoadHorizonY = 0.30;
+
+/// 가장 가까울 때 물체가 가운데에서 벌어진 거리 (상자 **가로**의 비율).
+/// 이만큼 벌어져야 가운데 길과 캐릭터를 안 가린다.
+const double kRoadNearSpread = 0.42;
+
+/// 가장 가까울 때 물체의 높이 (상자 높이의 비율).
+const double kRoadNearHeight = 0.45;
+
+/// 가장 가까운 거리. 이 거리에서 진행도가 1이 된다.
+const double kRoadsideNear = 1.0;
+
+/// 가장 먼 거리. 물체는 여기서 나타나 [kRoadsideNear]까지 다가온다.
+const double kRoadsideFar = 6.0;
+
+/// 한 층을 넘길 때 줄어드는 거리.
+/// 한 지역(8~10층)을 걷는 동안 물체가 **두세 번 지나가는** 정도다.
+const double kRoadsideStep = 1.5;
+
+/// 길 한쪽에 세우는 물체 수. 더 넣지 마라 — 가운데가 좁아 보인다.
+const int kRoadsidePerSide = 3;
+

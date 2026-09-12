@@ -13,6 +13,7 @@ import '../core/check.dart';
 import '../core/constants.dart';
 import '../screens/battle_controller.dart';
 import 'battle_popup.dart';
+import 'stage_layers.dart';
 import 'battle_overlay.dart';
 import 'battle_stage_hud.dart';
 import 'pixel_ui.dart';
@@ -198,15 +199,14 @@ class _BattleStageState extends State<BattleStage>
 
         return Stack(
           children: [
-            // 배경 — 화면 끝까지 채운다. 층이 오르면 아래로 흘러 걸어간 것처럼 보인다
+            // 배경 겹 — 판은 고정, 길 옆 물체만 흐른다 (`stage_layers.dart`)
             Positioned.fill(
-              child: bgArt == null
-                  ? StageBackdrop(palette: palette, time: _ambient.value)
-                  : ArtBackdropView(bgArt,
-                      floor: widget.floor ?? 1,
-                      floors: widget.floors ?? 1,
-                      fallback: StageBackdrop(
-                          palette: palette, time: _ambient.value)),
+              child: StageLayers(
+                  art: bgArt,
+                  palette: palette,
+                  time: _ambient.value,
+                  regionId: widget.regionId ?? 1,
+                  floor: widget.floor ?? 1),
             ),
             // 적 — 길 위쪽에 선다
             Positioned(

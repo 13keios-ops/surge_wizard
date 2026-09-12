@@ -105,16 +105,6 @@ class ArtSpriteView extends StatelessWidget {
   }
 }
 
-/// 층 → 배경 그림에서의 세로 위치. **0 = 그림 아래(지역 출발점)**,
-/// **1 = 그림 위(길 끝 목표 건물)**. 층이 오를수록 위로 간다.
-///
-/// 🔴 층이 **1인 스테이지가 실제로 있다** — 0으로 나누지 않는다.
-double backdropProgress(int floor, int floors) =>
-    floors <= 1 ? 0.0 : ((floor - 1) / (floors - 1)).clamp(0.0, 1.0);
-
-/// 세로 위치 → `Image` 정렬. 0 → 아래끝(y=1), 1 → 위끝(y=-1).
-Alignment backdropAlignment(double progress) => Alignment(0, 1 - 2 * progress);
-
 /// 마법사 걷기 프레임. **아직 없다** — 에셋이 들어오면
 /// [kArtWizardWalkReady]를 `true`로 바꾸는 **한 줄**이 연출을 켠다.
 const List<String> kArtWizardWalk = [
@@ -134,84 +124,30 @@ String wizardWalkFrame(double t) =>
     kArtWizardWalk[(t * kArtWizardWalk.length * 2).floor() %
         kArtWizardWalk.length];
 
-/// 배경 원화를 무대 상자에 깐다.
+/// 배경 원화를 무대 상자에 깐다. **움직이지 않는다.**
 ///
-/// 배경은 9:20 세로(1024×2276)인데 화면은 그보다 납작하다. 그래서 어느 높이를
-/// 보여 줄지 골라야 하는데, **그 높이를 층으로 정한다** — 1층은 그림 아래(출발점),
-/// 마지막 층은 그림 위(길 끝 목표 건물). 층이 오를 때마다 배경이 아래로 흘러
-/// **캐릭터가 앞으로 걸어간 것처럼** 보인다 (`GAME_DESIGN.md` 6.7절 ①).
-///
-/// 전투 화면은 층마다 새로 열리므로 **뜰 때 한 번** 이전 층 자리에서 지금 층
-/// 자리로 민다. 1층은 이전 자리가 없어 안 민다.
+/// 배경 판은 고정이고 **좌우의 나무·바위만 흐른다** (`lib/art/roadside.dart`).
+/// 그림이 화면보다 세로로 기니 **아래 정렬**로 자른다 — 가운데 정렬하면
+/// 캐릭터가 설 앞쪽 땅이 날아간다 (`reports/28_에셋검수_Phase1_5.md` 3-1절).
 ///
 /// 에셋을 못 읽으면 [fallback](코드로 그리는 `StageBackdrop`)으로 떨어진다.
-class ArtBackdropView extends StatefulWidget {
-  const ArtBackdropView(this.asset,
-      {super.key, required this.fallback, this.floor = 1, this.floors = 1});
+class ArtBackdropView extends StatelessWidget {
+  const ArtBackdropView(this.asset, {super.key, required this.fallback});
 
   final String asset;
   final Widget fallback;
 
-  /// 지금 층 (1부터)
-  final int floor;
-
-  /// 이 스테이지의 총 층수
-  final int floors;
-
   @override
-  State<ArtBackdropView> createState() => _ArtBackdropViewState();
-}
-
-class _ArtBackdropViewState extends State<ArtBackdropView>
-    with SingleTickerProviderStateMixin {
-  late final _slide =
-      AnimationController(vsync: this, duration: kBackdropSlide);
-  late final Animation<double> _eased =
-      CurvedAnimation(parent: _slide, curve: Curves.easeInOut);
-
-  /// 이전 층 자리 → 지금 층 자리. 1층은 둘이 같아 아무 데도 안 간다
-  late double _to = backdropProgress(widget.floor, widget.floors);
-  late double _from = backdropProgress(widget.floor - 1, widget.floors);
-
-  double get _now => _from + (_to - _from) * _eased.value;
-
-  @override
-  void initState() {
-    super.initState();
-    _slide.forward();
-  }
-
-  /// 전투 화면은 층마다 새로 열리지만, 같은 위젯이 자리에 남은 채 층만 바뀌는
-  /// 경우에도 **지금 보이는 자리에서** 새 층 자리로 이어 민다.
-  @override
-  void didUpdateWidget(ArtBackdropView old) {
-    super.didUpdateWidget(old);
-    if (widget.floor == old.floor && widget.floors == old.floors) return;
-    _from = _now;
-    _to = backdropProgress(widget.floor, widget.floors);
-    _slide.forward(from: 0);
-  }
-
-  @override
-  void dispose() {
-    _slide.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) => AnimatedBuilder(
-        animation: _eased,
-        builder: (_, _) => Image.asset(
-          widget.asset,
-          fit: BoxFit.cover,
-          alignment: backdropAlignment(_now),
-          filterQuality: kArtFilter,
-          errorBuilder: (_, _, _) => widget.fallback,
-        ),
+  Widget build(BuildContext context) => Image.asset(
+        asset,
+        fit: BoxFit.cover,
+        alignment: Alignment.bottomCenter,
+        filterQuality: kArtFilter,
+        errorBuilder: (_, _, _) => fallback,
       );
 }
 
-/// 마법사 뒷모습. 층이 오른 직후 [kBackdropSlide] 동안 걷기 프레임을 돌리고,
+/// 마법사 뒷모습. 층이 오른 직후 [kWalkTransition] 동안 걷기 프레임을 돌리고,
 /// 프레임이 없으면([kArtWizardWalkReady]가 `false`) 정지 그림을 그대로 쓴다.
 class WalkingWizardView extends StatefulWidget {
   const WalkingWizardView(
@@ -242,7 +178,7 @@ class _WalkingWizardViewState extends State<WalkingWizardView>
   void initState() {
     super.initState();
     if (kArtWizardWalkReady && widget.floor > 1) {
-      _walk = AnimationController(vsync: this, duration: kBackdropSlide)
+      _walk = AnimationController(vsync: this, duration: kWalkTransition)
         ..forward();
     }
   }
