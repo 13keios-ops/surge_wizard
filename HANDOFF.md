@@ -186,6 +186,11 @@
 
 ## 4. 🔴 아직 안 만든 것 — **새 창은 이 목록을 코드로 검증하고 시작하라**
 
+> **2026-09-13 6차 검증 완료 (그래픽 기획 창).** 3건을 코드로 다시 확인했고 **전부 그대로 유효하다** —
+> `battle_controller.dart` 에 `deck` 이 **0회**, `stage_runner.dart:30` 호위·연전 미구현 주석 그대로,
+> `run_controller.dart:96` 이 아직 `!= kNormalVariantId`. **표를 고칠 것이 없었다.**
+> ⚠ 이 창은 그래픽만 했으므로 엔진 쪽이 안 바뀐 것이 당연하다. **다음 구현 창이 손댈 자리다.**
+>
 > **2026-09-08 5차 검증 완료 (검토 31 기획 창).** 5건을 다시 `grep`으로 확인했고 **전부 그대로 유효하다** —
 > `battle_controller.dart` 에 `deck` 이 **0회**, `stage_runner.dart:30` 미구현 주석 그대로,
 > `run_controller.dart:96` 이 아직 `!= kNormalVariantId`, 문구 3건도
