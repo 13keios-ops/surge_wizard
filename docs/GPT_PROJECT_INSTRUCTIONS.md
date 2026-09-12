@@ -68,7 +68,7 @@
 | 지금 어디까지 왔나 · 승인된 에셋 | `docs/HANDOFF_ART.md` |
 | 일반 적·보스가 어떻게 생겼나 | `ASSET_LIST.md` — 🔴 **머리말의 정정이 우선이고, 배경·마법사에 관한 옛 본문은 기준이 아니다.** 이 문서에서 쓰는 것은 **적·보스 부분뿐** |
 | 캐릭터 배치 규격 (발바닥·중심·여백) | `UI_DESIGN.md` **1-3절** |
-| 배경 | `ART_REQUEST_BG_V4.md` (배경 8종 전부의 기준) |
+| 배경 · 레이어 | `ART_REQUEST_LAYERS.md` (2026-09-12 신설. `ART_REQUEST_BG_V4.md`는 폐기) |
 | 출력 형식 · 투명 처리 | `UI_DESIGN.md` 3-0절 |
 | 무엇을 몇 개 그리나 | `ASSET_LIST.md` · `ASSET_LIST_BG.md` · `ASSET_LIST_EQUIP.md` |
 

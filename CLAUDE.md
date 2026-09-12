@@ -81,7 +81,8 @@
 | **`GAME_ART_ROADMAP.md`** | **그래픽 작업 순서 Phase 0~8.** 무엇을 언제 만드나 | 그다음 |
 | `docs/art/` | 로드맵 세부 6종 — `ART_STYLE_GUIDE` `RUNTIME_ASSET_SPEC` `EQUIPMENT_LAYER_SPEC` `ASSET_QA_PIPELINE` `ASSET_RECIPE_SCHEMA.json` `PHASE_CHECKLIST` | 해당하는 것만 |
 | `UI_DESIGN.md` | **화면 구도 + 원화 규격 + 톤 통일 규칙 (v2)**<br>⚠ 로드맵이 **3곳을 뒤집었다** (머리말 표 참조) | 그림·UI 작업 시 |
-| **`ART_REQUEST_BG_V4.md`** | ★ **지금 쓰는 요청서** — 배경 8종. 길 끝 목표 건물 · 세로:가로 3.3 이상 | 원화 발주 시 |
+| **`ART_REQUEST_LAYERS.md`** | ★ **지금 쓰는 요청서** — 레이어 방식 첫 세트(숲 5장). 배경 판 · 성 · 길 옆 물체 3종 | 원화 발주 시 |
+| ~~`ART_REQUEST_BG_V4.md`~~ | ⛔ 대체됐다 — 세로로 긴 한 장을 미는 방식은 원근과 안 맞는다 | — |
 | **`docs/GPT_PROJECT_INSTRUCTIONS.md`** | ★ **ChatGPT 프로젝트 「지침」 칸에 넣는 전문.** 「━━━」 사이를 사용자가 복사 | GPT 프로젝트 설정 시 |
 | ~~`WORK_ORDER_ART_PHASE1_5.md`~~ · ~~`WORK_ORDER_ART_V3.md`~~ | ⛔ **끝났다** (검토 29 · 34) | — |
 | ~~`ART_REQUEST_V3.md`~~ · ~~`ART_REQUEST_PHASE1_5.md`~~ | ⛔ **다 썼다.** 본문의 「N칸」 규칙은 폐기 — 칸은 후처리가 맞춘다 | — |
