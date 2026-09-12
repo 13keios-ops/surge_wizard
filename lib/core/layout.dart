@@ -5,6 +5,8 @@
 /// `constants.dart` 가 300줄을 넘어서다 (CLAUDE.md 코딩 규칙).
 library;
 
+import 'package:flutter/material.dart';
+
 // ── 화면 칸 크기 (WORK_ORDER_SCREENS2 작업 2) ───────────
 //
 // 스테이지 층수가 3~10으로 가변이라 **칸 수가 적으면 화면이 텅 빈다.**
@@ -152,4 +154,31 @@ const double kRoadsideStep = 1.5;
 
 /// 길 한쪽에 세우는 물체 수. 더 넣지 마라 — 가운데가 좁아 보인다.
 const int kRoadsidePerSide = 3;
+
+// ── 길 끝의 성과 보스 음영 (GAME_DESIGN 6.7절 ②) ───────────────
+//
+// 🔴 **둘 다 고정이다.** 층이 올라도 크기도 자리도 안 변한다.
+// 음영은 예고일 뿐 진행도를 나타내지 않는다.
+
+/// 성 밑동이 놓이는 세로 위치 (무대 상자 높이의 비율).
+/// 소실점([kRoadHorizonY])보다 살짝 위 — 길이 안개에 잠기는 자리다.
+const double kLandmarkBottomY = 0.28;
+
+/// 성의 높이 (상자 높이의 비율). 멀리 있으니 작다.
+const double kLandmarkHeight = 0.11;
+
+/// 보스 음영의 밑동 (상자 높이의 비율). **성 앞**이라 성보다 아래다.
+const double kBossShadowBottomY = 0.33;
+
+/// 보스 음영의 크기 (상자 높이의 비율)
+const double kBossShadowHeight = 0.09;
+
+/// 빛나는 눈 한 점의 지름 (dp)
+const double kBossEyeSize = 5.0;
+
+/// 눈 색. 몸(검정)과 확실히 달라야 실루엣에서 읽힌다
+const Color kBossEyeColor = Color(0xFFFFD34D);
+
+/// 눈이 깜빡이는 주기. 살아 있는 것이 저기 있다는 신호다
+const Duration kBossEyeBlink = Duration(milliseconds: 1400);
 

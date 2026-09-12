@@ -41,6 +41,7 @@ class Enemy {
     this.region,
     this.phase2HpThreshold,
     this.phase2Pattern,
+    this.eyes,
   });
 
   final String id;
@@ -73,6 +74,13 @@ class Enemy {
   /// 보스 전용: 2페이즈 패턴
   final List<EnemyAction>? phase2Pattern;
 
+  /// 보스 실루엣의 **빛나는 눈 두 점**. 캔버스 비율 `[x1, y1, x2, y2]` (0~1).
+  ///
+  /// 몸을 검게 칠하면 실루엣은 되지만 **눈 위치는 그림에서 자동으로 못 찾는다**
+  /// (`GAME_DESIGN.md` 6.7절 ②). 원화가 있는 보스만 적는다 — **추측하지 마라.**
+  /// 비율이라 캔버스 크기가 바뀌어도 안 흔들린다.
+  final List<double>? eyes;
+
   factory Enemy.fromJson(Map<String, dynamic> json) => Enemy(
         id: json['id'] as String,
         name: json['name'] as String,
@@ -85,6 +93,7 @@ class Enemy {
             .toList(),
         region: (json['region'] as num?)?.toInt(),
         phase2HpThreshold: (json['phase2_hp_threshold'] as num?)?.toInt(),
+        eyes: (json['eyes'] as List?)?.map((v) => (v as num).toDouble()).toList(),
         phase2Pattern: json['phase2_pattern'] == null
             ? null
             : (json['phase2_pattern'] as List)
@@ -103,6 +112,7 @@ class Enemy {
         if (region != null) 'region': region,
         if (phase2HpThreshold != null)
           'phase2_hp_threshold': phase2HpThreshold,
+        if (eyes != null) 'eyes': eyes,
         if (phase2Pattern != null)
           'phase2_pattern': phase2Pattern!.map((e) => e.toJson()).toList(),
       };

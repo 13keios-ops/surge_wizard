@@ -7,7 +7,6 @@ import '../art/pixel_sprite.dart';
 import '../art/spell_fx.dart';
 import '../art/sprite_map.dart';
 import '../art/sprites_characters.dart';
-import '../art/stage_backdrop.dart';
 import '../core/battle.dart';
 import '../core/check.dart';
 import '../core/constants.dart';
@@ -159,9 +158,9 @@ class _BattleStageState extends State<BattleStage>
         size: size, shadow: true, flashAmount: flash, fallback: dots);
   }
 
-  /// 발 높이(화면 아래에서 dp)를 **상자 아래끝 높이**로 바꾼다. 원화는 캔버스 안
-  /// 발바닥선(y = 477/512)이 발이라 상자 아래에 여백이 남고, 픽셀 스프라이트는
-  /// 상자 아랫변에서 4dp 위가 발이다. 안 맞추면 원화만 땅에 파묻힌다.
+  /// 발 높이(화면 아래 dp)를 **상자 아래끝 높이**로 바꾼다. 원화는 캔버스 안
+  /// 발바닥선(477/512)이 발이라 상자 아래에 여백이 남고, 픽셀 스프라이트는 상자
+  /// 아랫변에서 4dp 위가 발이다. 안 맞추면 원화만 땅에 파묻힌다.
   double _boxBottom(double foot, double size, bool isArt) =>
       foot - (isArt ? size * (1 - kArtFootLine) : 4.0);
 
@@ -171,7 +170,6 @@ class _BattleStageState extends State<BattleStage>
   Widget _buildStage() {
     final battle = _battle;
     final look = enemyLook(battle.enemy.id);
-    final palette = BackdropPalette.forFloor(widget.floor ?? 1);
     final bgArt = kArtRegionBackdrops[widget.regionId];
     final enemyArt = kArtEnemies[battle.enemy.id];
     final isBoss = battle.enemy.isBoss;
@@ -202,11 +200,12 @@ class _BattleStageState extends State<BattleStage>
             Positioned.fill(
               child: StageLayers(
                   art: bgArt,
-                  palette: palette,
                   time: _ambient.value,
                   regionId: widget.regionId ?? 1,
                   floor: widget.floor ?? 1,
-                  summons: battle.surge.summons),
+                  summons: battle.surge.summons,
+                  data: widget.controller.data,
+                  onBossFloor: isBoss),
             ),
             // 적 — 길 위쪽에 선다
             Positioned(

@@ -7,9 +7,21 @@
     "tier": 1,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 3, "label": "몸통 박치기" },
-      { "action": "attack", "value": 3, "label": "몸통 박치기" },
-      { "action": "defend", "value": 3, "label": "말랑하게 뭉친다" }
+      {
+        "action": "attack",
+        "value": 3,
+        "label": "몸통 박치기"
+      },
+      {
+        "action": "attack",
+        "value": 3,
+        "label": "몸통 박치기"
+      },
+      {
+        "action": "defend",
+        "value": 3,
+        "label": "말랑하게 뭉친다"
+      }
     ]
   },
   {
@@ -20,9 +32,21 @@
     "tier": 1,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 3, "label": "갉아댄다" },
-      { "action": "attack", "value": 3, "label": "갉아댄다" },
-      { "action": "attack", "value": 4, "label": "덮쳐 문다" }
+      {
+        "action": "attack",
+        "value": 3,
+        "label": "갉아댄다"
+      },
+      {
+        "action": "attack",
+        "value": 3,
+        "label": "갉아댄다"
+      },
+      {
+        "action": "attack",
+        "value": 4,
+        "label": "덮쳐 문다"
+      }
     ]
   },
   {
@@ -33,9 +57,21 @@
     "tier": 1,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 4, "label": "단검 찌르기" },
-      { "action": "attack", "value": 3, "label": "돌 던지기" },
-      { "action": "charge", "value": 6, "label": "기습 준비" }
+      {
+        "action": "attack",
+        "value": 4,
+        "label": "단검 찌르기"
+      },
+      {
+        "action": "attack",
+        "value": 3,
+        "label": "돌 던지기"
+      },
+      {
+        "action": "charge",
+        "value": 6,
+        "label": "기습 준비"
+      }
     ]
   },
   {
@@ -46,9 +82,21 @@
     "tier": 1,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 2, "label": "스치듯 할퀸다" },
-      { "action": "attack", "value": 4, "label": "떼로 달려든다" },
-      { "action": "attack", "value": 3, "label": "귓가를 문다" }
+      {
+        "action": "attack",
+        "value": 2,
+        "label": "스치듯 할퀸다"
+      },
+      {
+        "action": "attack",
+        "value": 4,
+        "label": "떼로 달려든다"
+      },
+      {
+        "action": "attack",
+        "value": 3,
+        "label": "귓가를 문다"
+      }
     ]
   },
   {
@@ -59,9 +107,21 @@
     "tier": 1,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 3, "label": "포자 뿌리기" },
-      { "action": "heal", "value": 3, "label": "포자 재생" },
-      { "action": "attack", "value": 4, "label": "갓 내려찍기" }
+      {
+        "action": "attack",
+        "value": 3,
+        "label": "포자 뿌리기"
+      },
+      {
+        "action": "heal",
+        "value": 3,
+        "label": "포자 재생"
+      },
+      {
+        "action": "attack",
+        "value": 4,
+        "label": "갓 내려찍기"
+      }
     ]
   },
   {
@@ -72,9 +132,21 @@
     "tier": 1,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 4, "label": "뼈 지팡이 휘두르기" },
-      { "action": "defend", "value": 2, "label": "갈비뼈 방어" },
-      { "action": "attack", "value": 4, "label": "뼈 지팡이 휘두르기" }
+      {
+        "action": "attack",
+        "value": 4,
+        "label": "뼈 지팡이 휘두르기"
+      },
+      {
+        "action": "defend",
+        "value": 2,
+        "label": "갈비뼈 방어"
+      },
+      {
+        "action": "attack",
+        "value": 4,
+        "label": "뼈 지팡이 휘두르기"
+      }
     ]
   },
   {
@@ -85,9 +157,21 @@
     "tier": 2,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 5, "label": "내려친다" },
-      { "action": "attack", "value": 5, "label": "내려친다" },
-      { "action": "charge", "value": 12, "label": "강타 준비" }
+      {
+        "action": "attack",
+        "value": 5,
+        "label": "내려친다"
+      },
+      {
+        "action": "attack",
+        "value": 5,
+        "label": "내려친다"
+      },
+      {
+        "action": "charge",
+        "value": 12,
+        "label": "강타 준비"
+      }
     ]
   },
   {
@@ -98,9 +182,21 @@
     "tier": 2,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 4, "label": "앞발 할퀴기" },
-      { "action": "attack", "value": 5, "label": "목덜미 물기" },
-      { "action": "attack", "value": 4, "label": "앞발 할퀴기" }
+      {
+        "action": "attack",
+        "value": 4,
+        "label": "앞발 할퀴기"
+      },
+      {
+        "action": "attack",
+        "value": 5,
+        "label": "목덜미 물기"
+      },
+      {
+        "action": "attack",
+        "value": 4,
+        "label": "앞발 할퀴기"
+      }
     ]
   },
   {
@@ -111,9 +207,21 @@
     "tier": 2,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 5, "label": "곤봉 휘두르기" },
-      { "action": "defend", "value": 4, "label": "방패 들기" },
-      { "action": "charge", "value": 8, "label": "돌진 준비" }
+      {
+        "action": "attack",
+        "value": 5,
+        "label": "곤봉 휘두르기"
+      },
+      {
+        "action": "defend",
+        "value": 4,
+        "label": "방패 들기"
+      },
+      {
+        "action": "charge",
+        "value": 8,
+        "label": "돌진 준비"
+      }
     ]
   },
   {
@@ -124,9 +232,21 @@
     "tier": 2,
     "is_boss": false,
     "pattern": [
-      { "action": "defend", "value": 5, "label": "철판 세우기" },
-      { "action": "attack", "value": 5, "label": "건틀릿 후리기" },
-      { "action": "attack", "value": 6, "label": "장검 내리긋기" }
+      {
+        "action": "defend",
+        "value": 5,
+        "label": "철판 세우기"
+      },
+      {
+        "action": "attack",
+        "value": 5,
+        "label": "건틀릿 후리기"
+      },
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "장검 내리긋기"
+      }
     ]
   },
   {
@@ -137,9 +257,21 @@
     "tier": 2,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 4, "label": "혀 채찍" },
-      { "action": "heal", "value": 4, "label": "점액 재생" },
-      { "action": "attack", "value": 5, "label": "깔아뭉개기" }
+      {
+        "action": "attack",
+        "value": 4,
+        "label": "혀 채찍"
+      },
+      {
+        "action": "heal",
+        "value": 4,
+        "label": "점액 재생"
+      },
+      {
+        "action": "attack",
+        "value": 5,
+        "label": "깔아뭉개기"
+      }
     ]
   },
   {
@@ -150,9 +282,21 @@
     "tier": 3,
     "is_boss": false,
     "pattern": [
-      { "action": "defend", "value": 6, "label": "돌로 굳는다" },
-      { "action": "attack", "value": 6, "label": "돌날개 후리기" },
-      { "action": "charge", "value": 10, "label": "급강하 준비" }
+      {
+        "action": "defend",
+        "value": 6,
+        "label": "돌로 굳는다"
+      },
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "돌날개 후리기"
+      },
+      {
+        "action": "charge",
+        "value": 10,
+        "label": "급강하 준비"
+      }
     ]
   },
   {
@@ -163,9 +307,21 @@
     "tier": 3,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 6, "label": "불똥 튀기기" },
-      { "action": "attack", "value": 6, "label": "불똥 튀기기" },
-      { "action": "charge", "value": 11, "label": "화염 응축" }
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "불똥 튀기기"
+      },
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "불똥 튀기기"
+      },
+      {
+        "action": "charge",
+        "value": 11,
+        "label": "화염 응축"
+      }
     ]
   },
   {
@@ -176,9 +332,21 @@
     "tier": 3,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 5, "label": "암흑 화살" },
-      { "action": "heal", "value": 6, "label": "금지된 기도" },
-      { "action": "attack", "value": 7, "label": "제물의 단검" }
+      {
+        "action": "attack",
+        "value": 5,
+        "label": "암흑 화살"
+      },
+      {
+        "action": "heal",
+        "value": 6,
+        "label": "금지된 기도"
+      },
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "제물의 단검"
+      }
     ]
   },
   {
@@ -189,9 +357,21 @@
     "tier": 3,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 6, "label": "주먹 내리찍기" },
-      { "action": "attack", "value": 5, "label": "팔꿈치 찍기" },
-      { "action": "charge", "value": 10, "label": "양손 번쩍" }
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "주먹 내리찍기"
+      },
+      {
+        "action": "attack",
+        "value": 5,
+        "label": "팔꿈치 찍기"
+      },
+      {
+        "action": "charge",
+        "value": 10,
+        "label": "양손 번쩍"
+      }
     ]
   },
   {
@@ -202,9 +382,21 @@
     "tier": 3,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 6, "label": "고드름 투척" },
-      { "action": "defend", "value": 5, "label": "얼음 장막" },
-      { "action": "charge", "value": 11, "label": "눈보라 소환" }
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "고드름 투척"
+      },
+      {
+        "action": "defend",
+        "value": 5,
+        "label": "얼음 장막"
+      },
+      {
+        "action": "charge",
+        "value": 11,
+        "label": "눈보라 소환"
+      }
     ]
   },
   {
@@ -215,9 +407,21 @@
     "tier": 4,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 8, "label": "쇠몽둥이 휘두르기" },
-      { "action": "attack", "value": 7, "label": "발로 짓밟기" },
-      { "action": "charge", "value": 14, "label": "전력 강타 준비" }
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "쇠몽둥이 휘두르기"
+      },
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "발로 짓밟기"
+      },
+      {
+        "action": "charge",
+        "value": 14,
+        "label": "전력 강타 준비"
+      }
     ]
   },
   {
@@ -228,10 +432,26 @@
     "tier": 4,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 7, "label": "차가운 손길" },
-      { "action": "attack", "value": 7, "label": "차가운 손길" },
-      { "action": "heal", "value": 6, "label": "원한 흡수" },
-      { "action": "attack", "value": 8, "label": "절규" }
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "차가운 손길"
+      },
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "차가운 손길"
+      },
+      {
+        "action": "heal",
+        "value": 6,
+        "label": "원한 흡수"
+      },
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "절규"
+      }
     ]
   },
   {
@@ -242,9 +462,21 @@
     "tier": 4,
     "is_boss": false,
     "pattern": [
-      { "action": "defend", "value": 8, "label": "표면 경화" },
-      { "action": "attack", "value": 8, "label": "용암 주먹" },
-      { "action": "charge", "value": 13, "label": "분출 준비" }
+      {
+        "action": "defend",
+        "value": 8,
+        "label": "표면 경화"
+      },
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "용암 주먹"
+      },
+      {
+        "action": "charge",
+        "value": 13,
+        "label": "분출 준비"
+      }
     ]
   },
   {
@@ -255,9 +487,21 @@
     "tier": 4,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 7, "label": "핏빛 검격" },
-      { "action": "heal", "value": 5, "label": "피의 만찬" },
-      { "action": "attack", "value": 8, "label": "돌진 찌르기" }
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "핏빛 검격"
+      },
+      {
+        "action": "heal",
+        "value": 5,
+        "label": "피의 만찬"
+      },
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "돌진 찌르기"
+      }
     ]
   },
   {
@@ -268,9 +512,21 @@
     "tier": 4,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 6, "label": "발톱 급습" },
-      { "action": "attack", "value": 8, "label": "돌풍 날리기" },
-      { "action": "attack", "value": 7, "label": "날개 후리기" }
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "발톱 급습"
+      },
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "돌풍 날리기"
+      },
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "날개 후리기"
+      }
     ]
   },
   {
@@ -281,10 +537,26 @@
     "tier": 5,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 8, "label": "뼈 이빨 물기" },
-      { "action": "charge", "value": 14, "label": "숨 모으기" },
-      { "action": "attack", "value": 7, "label": "꼬리치기" },
-      { "action": "defend", "value": 6, "label": "날개 웅크리기" }
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "뼈 이빨 물기"
+      },
+      {
+        "action": "charge",
+        "value": 14,
+        "label": "숨 모으기"
+      },
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "꼬리치기"
+      },
+      {
+        "action": "defend",
+        "value": 6,
+        "label": "날개 웅크리기"
+      }
     ]
   },
   {
@@ -295,9 +567,21 @@
     "tier": 5,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 9, "label": "삼지창 찌르기" },
-      { "action": "defend", "value": 7, "label": "문을 등진다" },
-      { "action": "charge", "value": 15, "label": "지옥불 점화" }
+      {
+        "action": "attack",
+        "value": 9,
+        "label": "삼지창 찌르기"
+      },
+      {
+        "action": "defend",
+        "value": 7,
+        "label": "문을 등진다"
+      },
+      {
+        "action": "charge",
+        "value": 15,
+        "label": "지옥불 점화"
+      }
     ]
   },
   {
@@ -308,9 +592,21 @@
     "tier": 5,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 8, "label": "그림자 베기" },
-      { "action": "attack", "value": 9, "label": "등 뒤 급습" },
-      { "action": "attack", "value": 7, "label": "독침 투척" }
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "그림자 베기"
+      },
+      {
+        "action": "attack",
+        "value": 9,
+        "label": "등 뒤 급습"
+      },
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "독침 투척"
+      }
     ]
   },
   {
@@ -321,9 +617,21 @@
     "tier": 5,
     "is_boss": false,
     "pattern": [
-      { "action": "attack", "value": 7, "label": "역병 안개" },
-      { "action": "heal", "value": 8, "label": "부패의 축복" },
-      { "action": "attack", "value": 9, "label": "저주 폭발" }
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "역병 안개"
+      },
+      {
+        "action": "heal",
+        "value": 8,
+        "label": "부패의 축복"
+      },
+      {
+        "action": "attack",
+        "value": 9,
+        "label": "저주 폭발"
+      }
     ]
   },
   {
@@ -334,9 +642,21 @@
     "tier": 5,
     "is_boss": false,
     "pattern": [
-      { "action": "defend", "value": 8, "label": "수정 결정화" },
-      { "action": "attack", "value": 9, "label": "수정 파편 폭사" },
-      { "action": "charge", "value": 16, "label": "공명 축적" }
+      {
+        "action": "defend",
+        "value": 8,
+        "label": "수정 결정화"
+      },
+      {
+        "action": "attack",
+        "value": 9,
+        "label": "수정 파편 폭사"
+      },
+      {
+        "action": "charge",
+        "value": 16,
+        "label": "공명 축적"
+      }
     ]
   },
   {
@@ -348,15 +668,45 @@
     "is_boss": true,
     "region": 1,
     "pattern": [
-      { "action": "attack", "value": 5, "label": "몸통 짓누르기" },
-      { "action": "defend", "value": 5, "label": "표면을 굳힌다" },
-      { "action": "charge", "value": 9, "label": "통째로 삼킬 준비" }
+      {
+        "action": "attack",
+        "value": 5,
+        "label": "몸통 짓누르기"
+      },
+      {
+        "action": "defend",
+        "value": 5,
+        "label": "표면을 굳힌다"
+      },
+      {
+        "action": "charge",
+        "value": 9,
+        "label": "통째로 삼킬 준비"
+      }
     ],
     "phase2_hp_threshold": 20,
     "phase2_pattern": [
-      { "action": "attack", "value": 6, "label": "온몸으로 짓뭉개기" },
-      { "action": "defend", "value": 6, "label": "표면을 완전히 굳힌다" },
-      { "action": "charge", "value": 11, "label": "전부 삼킬 준비" }
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "온몸으로 짓뭉개기"
+      },
+      {
+        "action": "defend",
+        "value": 6,
+        "label": "표면을 완전히 굳힌다"
+      },
+      {
+        "action": "charge",
+        "value": 11,
+        "label": "전부 삼킬 준비"
+      }
+    ],
+    "eyes": [
+      0.37,
+      0.62,
+      0.62,
+      0.62
     ]
   },
   {
@@ -368,17 +718,49 @@
     "is_boss": true,
     "region": 2,
     "pattern": [
-      { "action": "attack", "value": 6, "label": "뼈창 찌르기" },
-      { "action": "charge", "value": 11, "label": "무덤을 연다" },
-      { "action": "defend", "value": 5, "label": "뼈를 그러모은다" },
-      { "action": "attack", "value": 6, "label": "갈퀴 후리기" }
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "뼈창 찌르기"
+      },
+      {
+        "action": "charge",
+        "value": 11,
+        "label": "무덤을 연다"
+      },
+      {
+        "action": "defend",
+        "value": 5,
+        "label": "뼈를 그러모은다"
+      },
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "갈퀴 후리기"
+      }
     ],
     "phase2_hp_threshold": 27,
     "phase2_pattern": [
-      { "action": "attack", "value": 7, "label": "뼈창 꿰뚫기" },
-      { "action": "charge", "value": 13, "label": "무덤을 통째로 연다" },
-      { "action": "defend", "value": 6, "label": "뼈를 겹겹이 두른다" },
-      { "action": "attack", "value": 6, "label": "갈퀴 난도질" }
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "뼈창 꿰뚫기"
+      },
+      {
+        "action": "charge",
+        "value": 13,
+        "label": "무덤을 통째로 연다"
+      },
+      {
+        "action": "defend",
+        "value": 6,
+        "label": "뼈를 겹겹이 두른다"
+      },
+      {
+        "action": "attack",
+        "value": 6,
+        "label": "갈퀴 난도질"
+      }
     ]
   },
   {
@@ -390,17 +772,49 @@
     "is_boss": true,
     "region": 3,
     "pattern": [
-      { "action": "attack", "value": 7, "label": "혀 낚아채기" },
-      { "action": "heal", "value": 7, "label": "늪물 들이켜기" },
-      { "action": "charge", "value": 13, "label": "독안개 분출 준비" },
-      { "action": "attack", "value": 7, "label": "짓밟기" }
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "혀 낚아채기"
+      },
+      {
+        "action": "heal",
+        "value": 7,
+        "label": "늪물 들이켜기"
+      },
+      {
+        "action": "charge",
+        "value": 13,
+        "label": "독안개 분출 준비"
+      },
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "짓밟기"
+      }
     ],
     "phase2_hp_threshold": 35,
     "phase2_pattern": [
-      { "action": "attack", "value": 8, "label": "혀로 휘감아 내치기" },
-      { "action": "heal", "value": 8, "label": "늪을 통째로 들이켠다" },
-      { "action": "charge", "value": 16, "label": "짙은 독안개 분출 준비" },
-      { "action": "attack", "value": 7, "label": "온몸으로 짓밟기" }
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "혀로 휘감아 내치기"
+      },
+      {
+        "action": "heal",
+        "value": 8,
+        "label": "늪을 통째로 들이켠다"
+      },
+      {
+        "action": "charge",
+        "value": 16,
+        "label": "짙은 독안개 분출 준비"
+      },
+      {
+        "action": "attack",
+        "value": 7,
+        "label": "온몸으로 짓밟기"
+      }
     ]
   },
   {
@@ -412,15 +826,39 @@
     "is_boss": true,
     "region": 4,
     "pattern": [
-      { "action": "attack", "value": 8, "label": "불붙은 가지 후리기" },
-      { "action": "charge", "value": 15, "label": "몸통에 불을 지핀다" },
-      { "action": "defend", "value": 7, "label": "젖은 껍질" }
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "불붙은 가지 후리기"
+      },
+      {
+        "action": "charge",
+        "value": 15,
+        "label": "몸통에 불을 지핀다"
+      },
+      {
+        "action": "defend",
+        "value": 7,
+        "label": "젖은 껍질"
+      }
     ],
     "phase2_hp_threshold": 45,
     "phase2_pattern": [
-      { "action": "attack", "value": 10, "label": "불기둥 가지 후리기" },
-      { "action": "charge", "value": 18, "label": "몸통을 통째로 태운다" },
-      { "action": "defend", "value": 8, "label": "타다 남은 껍질" }
+      {
+        "action": "attack",
+        "value": 10,
+        "label": "불기둥 가지 후리기"
+      },
+      {
+        "action": "charge",
+        "value": 18,
+        "label": "몸통을 통째로 태운다"
+      },
+      {
+        "action": "defend",
+        "value": 8,
+        "label": "타다 남은 껍질"
+      }
     ]
   },
   {
@@ -432,17 +870,49 @@
     "is_boss": true,
     "region": 5,
     "pattern": [
-      { "action": "attack", "value": 9, "label": "쇳덩이 주먹" },
-      { "action": "defend", "value": 8, "label": "철판을 두른다" },
-      { "action": "charge", "value": 17, "label": "양팔을 치켜든다" },
-      { "action": "attack", "value": 9, "label": "내리찍기" }
+      {
+        "action": "attack",
+        "value": 9,
+        "label": "쇳덩이 주먹"
+      },
+      {
+        "action": "defend",
+        "value": 8,
+        "label": "철판을 두른다"
+      },
+      {
+        "action": "charge",
+        "value": 17,
+        "label": "양팔을 치켜든다"
+      },
+      {
+        "action": "attack",
+        "value": 9,
+        "label": "내리찍기"
+      }
     ],
     "phase2_hp_threshold": 57,
     "phase2_pattern": [
-      { "action": "attack", "value": 11, "label": "쇳덩이 연타" },
-      { "action": "defend", "value": 10, "label": "철판을 겹쳐 두른다" },
-      { "action": "charge", "value": 20, "label": "두 팔을 하늘로 치켜든다" },
-      { "action": "attack", "value": 10, "label": "온 힘으로 내리찍기" }
+      {
+        "action": "attack",
+        "value": 11,
+        "label": "쇳덩이 연타"
+      },
+      {
+        "action": "defend",
+        "value": 10,
+        "label": "철판을 겹쳐 두른다"
+      },
+      {
+        "action": "charge",
+        "value": 20,
+        "label": "두 팔을 하늘로 치켜든다"
+      },
+      {
+        "action": "attack",
+        "value": 10,
+        "label": "온 힘으로 내리찍기"
+      }
     ]
   },
   {
@@ -454,17 +924,49 @@
     "is_boss": true,
     "region": 6,
     "pattern": [
-      { "action": "attack", "value": 10, "label": "앞발 후리기" },
-      { "action": "charge", "value": 19, "label": "태양광 집속" },
-      { "action": "heal", "value": 10, "label": "햇빛을 삼킨다" },
-      { "action": "attack", "value": 10, "label": "수수께끼의 일격" }
+      {
+        "action": "attack",
+        "value": 10,
+        "label": "앞발 후리기"
+      },
+      {
+        "action": "charge",
+        "value": 19,
+        "label": "태양광 집속"
+      },
+      {
+        "action": "heal",
+        "value": 10,
+        "label": "햇빛을 삼킨다"
+      },
+      {
+        "action": "attack",
+        "value": 10,
+        "label": "수수께끼의 일격"
+      }
     ],
     "phase2_hp_threshold": 72,
     "phase2_pattern": [
-      { "action": "attack", "value": 12, "label": "앞발 연속 후리기" },
-      { "action": "charge", "value": 23, "label": "태양을 통째로 집속" },
-      { "action": "heal", "value": 12, "label": "햇빛을 들이마신다" },
-      { "action": "attack", "value": 11, "label": "답 없는 수수께끼의 일격" }
+      {
+        "action": "attack",
+        "value": 12,
+        "label": "앞발 연속 후리기"
+      },
+      {
+        "action": "charge",
+        "value": 23,
+        "label": "태양을 통째로 집속"
+      },
+      {
+        "action": "heal",
+        "value": 12,
+        "label": "햇빛을 들이마신다"
+      },
+      {
+        "action": "attack",
+        "value": 11,
+        "label": "답 없는 수수께끼의 일격"
+      }
     ]
   },
   {
@@ -476,15 +978,39 @@
     "is_boss": true,
     "region": 7,
     "pattern": [
-      { "action": "attack", "value": 11, "label": "목덜미 물기" },
-      { "action": "attack", "value": 11, "label": "발톱 할퀴기" },
-      { "action": "charge", "value": 21, "label": "눈보라를 부른다" }
+      {
+        "action": "attack",
+        "value": 11,
+        "label": "목덜미 물기"
+      },
+      {
+        "action": "attack",
+        "value": 11,
+        "label": "발톱 할퀴기"
+      },
+      {
+        "action": "charge",
+        "value": 21,
+        "label": "눈보라를 부른다"
+      }
     ],
     "phase2_hp_threshold": 90,
     "phase2_pattern": [
-      { "action": "attack", "value": 13, "label": "목덜미를 물어뜯는다" },
-      { "action": "attack", "value": 12, "label": "발톱 난격" },
-      { "action": "charge", "value": 25, "label": "눈보라를 몰아친다" }
+      {
+        "action": "attack",
+        "value": 13,
+        "label": "목덜미를 물어뜯는다"
+      },
+      {
+        "action": "attack",
+        "value": 12,
+        "label": "발톱 난격"
+      },
+      {
+        "action": "charge",
+        "value": 25,
+        "label": "눈보라를 몰아친다"
+      }
     ]
   },
   {
@@ -496,15 +1022,39 @@
     "is_boss": true,
     "region": 8,
     "pattern": [
-      { "action": "defend", "value": 10, "label": "돌로 돌아간다" },
-      { "action": "attack", "value": 12, "label": "석주 내리치기" },
-      { "action": "charge", "value": 24, "label": "눈에 빛이 모인다" }
+      {
+        "action": "defend",
+        "value": 10,
+        "label": "돌로 돌아간다"
+      },
+      {
+        "action": "attack",
+        "value": 12,
+        "label": "석주 내리치기"
+      },
+      {
+        "action": "charge",
+        "value": 24,
+        "label": "눈에 빛이 모인다"
+      }
     ],
     "phase2_hp_threshold": 110,
     "phase2_pattern": [
-      { "action": "defend", "value": 12, "label": "온몸이 바위가 된다" },
-      { "action": "attack", "value": 14, "label": "석주 내리꽂기" },
-      { "action": "charge", "value": 29, "label": "두 눈이 빛으로 타오른다" }
+      {
+        "action": "defend",
+        "value": 12,
+        "label": "온몸이 바위가 된다"
+      },
+      {
+        "action": "attack",
+        "value": 14,
+        "label": "석주 내리꽂기"
+      },
+      {
+        "action": "charge",
+        "value": 29,
+        "label": "두 눈이 빛으로 타오른다"
+      }
     ]
   },
   {
@@ -516,17 +1066,49 @@
     "is_boss": true,
     "region": 9,
     "pattern": [
-      { "action": "attack", "value": 13, "label": "대검 횡베기" },
-      { "action": "defend", "value": 10, "label": "방패를 세운다" },
-      { "action": "charge", "value": 27, "label": "검을 치켜든다" },
-      { "action": "attack", "value": 13, "label": "처형" }
+      {
+        "action": "attack",
+        "value": 13,
+        "label": "대검 횡베기"
+      },
+      {
+        "action": "defend",
+        "value": 10,
+        "label": "방패를 세운다"
+      },
+      {
+        "action": "charge",
+        "value": 27,
+        "label": "검을 치켜든다"
+      },
+      {
+        "action": "attack",
+        "value": 13,
+        "label": "처형"
+      }
     ],
     "phase2_hp_threshold": 135,
     "phase2_pattern": [
-      { "action": "attack", "value": 16, "label": "분노한 횡베기" },
-      { "action": "defend", "value": 12, "label": "방패를 앞세워 밀어붙인다" },
-      { "action": "charge", "value": 32, "label": "검을 하늘 높이 치켜든다" },
-      { "action": "attack", "value": 15, "label": "가차 없는 처형" }
+      {
+        "action": "attack",
+        "value": 16,
+        "label": "분노한 횡베기"
+      },
+      {
+        "action": "defend",
+        "value": 12,
+        "label": "방패를 앞세워 밀어붙인다"
+      },
+      {
+        "action": "charge",
+        "value": 32,
+        "label": "검을 하늘 높이 치켜든다"
+      },
+      {
+        "action": "attack",
+        "value": 15,
+        "label": "가차 없는 처형"
+      }
     ]
   },
   {
@@ -538,15 +1120,39 @@
     "is_boss": true,
     "region": 10,
     "pattern": [
-      { "action": "attack", "value": 14, "label": "죽음의 손가락" },
-      { "action": "charge", "value": 30, "label": "영혼 착취 준비" },
-      { "action": "defend", "value": 11, "label": "해골 장벽" }
+      {
+        "action": "attack",
+        "value": 14,
+        "label": "죽음의 손가락"
+      },
+      {
+        "action": "charge",
+        "value": 30,
+        "label": "영혼 착취 준비"
+      },
+      {
+        "action": "defend",
+        "value": 11,
+        "label": "해골 장벽"
+      }
     ],
     "phase2_hp_threshold": 155,
     "phase2_pattern": [
-      { "action": "attack", "value": 17, "label": "사령 폭풍" },
-      { "action": "attack", "value": 16, "label": "죽음의 손가락" },
-      { "action": "charge", "value": 36, "label": "파멸의 주문 영창" }
+      {
+        "action": "attack",
+        "value": 17,
+        "label": "사령 폭풍"
+      },
+      {
+        "action": "attack",
+        "value": 16,
+        "label": "죽음의 손가락"
+      },
+      {
+        "action": "charge",
+        "value": 36,
+        "label": "파멸의 주문 영창"
+      }
     ]
   },
   {
@@ -558,15 +1164,39 @@
     "is_boss": true,
     "region": 11,
     "pattern": [
-      { "action": "attack", "value": 16, "label": "공허 주먹" },
-      { "action": "defend", "value": 12, "label": "무(無)의 장막" },
-      { "action": "charge", "value": 34, "label": "붕괴 준비" }
+      {
+        "action": "attack",
+        "value": 16,
+        "label": "공허 주먹"
+      },
+      {
+        "action": "defend",
+        "value": 12,
+        "label": "무(無)의 장막"
+      },
+      {
+        "action": "charge",
+        "value": 34,
+        "label": "붕괴 준비"
+      }
     ],
     "phase2_hp_threshold": 177,
     "phase2_pattern": [
-      { "action": "attack", "value": 19, "label": "붕괴하는 손아귀" },
-      { "action": "charge", "value": 41, "label": "심연 개방" },
-      { "action": "attack", "value": 18, "label": "공허 주먹" }
+      {
+        "action": "attack",
+        "value": 19,
+        "label": "붕괴하는 손아귀"
+      },
+      {
+        "action": "charge",
+        "value": 41,
+        "label": "심연 개방"
+      },
+      {
+        "action": "attack",
+        "value": 18,
+        "label": "공허 주먹"
+      }
     ]
   },
   {
@@ -578,15 +1208,39 @@
     "is_boss": true,
     "region": 12,
     "pattern": [
-      { "action": "attack", "value": 18, "label": "발톱 후리기" },
-      { "action": "charge", "value": 38, "label": "브레스 충전" },
-      { "action": "defend", "value": 13, "label": "비늘 세우기" }
+      {
+        "action": "attack",
+        "value": 18,
+        "label": "발톱 후리기"
+      },
+      {
+        "action": "charge",
+        "value": 38,
+        "label": "브레스 충전"
+      },
+      {
+        "action": "defend",
+        "value": 13,
+        "label": "비늘 세우기"
+      }
     ],
     "phase2_hp_threshold": 202,
     "phase2_pattern": [
-      { "action": "attack", "value": 22, "label": "격노의 발톱" },
-      { "action": "charge", "value": 46, "label": "화염 폭풍 충전" },
-      { "action": "attack", "value": 21, "label": "꼬리 강타" }
+      {
+        "action": "attack",
+        "value": 22,
+        "label": "격노의 발톱"
+      },
+      {
+        "action": "charge",
+        "value": 46,
+        "label": "화염 폭풍 충전"
+      },
+      {
+        "action": "attack",
+        "value": 21,
+        "label": "꼬리 강타"
+      }
     ]
   },
   {
@@ -597,15 +1251,39 @@
     "tier": 5,
     "is_boss": true,
     "pattern": [
-      { "action": "attack", "value": 8, "label": "확률 물어뜯기" },
-      { "action": "charge", "value": 13, "label": "운명 삼키기" },
-      { "action": "heal", "value": 6, "label": "행운 되새김질" }
+      {
+        "action": "attack",
+        "value": 8,
+        "label": "확률 물어뜯기"
+      },
+      {
+        "action": "charge",
+        "value": 13,
+        "label": "운명 삼키기"
+      },
+      {
+        "action": "heal",
+        "value": 6,
+        "label": "행운 되새김질"
+      }
     ],
     "phase2_hp_threshold": 44,
     "phase2_pattern": [
-      { "action": "attack", "value": 10, "label": "눈금 토해내기" },
-      { "action": "attack", "value": 10, "label": "확률 물어뜯기" },
-      { "action": "charge", "value": 16, "label": "불운 응축" }
+      {
+        "action": "attack",
+        "value": 10,
+        "label": "눈금 토해내기"
+      },
+      {
+        "action": "attack",
+        "value": 10,
+        "label": "확률 물어뜯기"
+      },
+      {
+        "action": "charge",
+        "value": 16,
+        "label": "불운 응축"
+      }
     ]
   }
 ]
