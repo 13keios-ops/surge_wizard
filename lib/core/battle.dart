@@ -5,6 +5,7 @@ import '../models/spell.dart';
 import '../models/surge_event.dart';
 import 'cast_intensity.dart';
 import 'check.dart';
+import 'boss_modes.dart';
 import 'constants.dart';
 import 'enemy_turn.dart';
 import 'hand_deck.dart';
@@ -23,6 +24,8 @@ class Battle {
     required this.enemy,
     required this.hand,
     required this.surgePool,
+    this.nextWave,
+    int escort = 0,
     this.deck,
     int? playerHp,
     int? playerMaxHp,
@@ -38,10 +41,16 @@ class Battle {
         enemyHp = enemy.hp {
     shield = relics.startShield;
     freeRerollsLeft = relics.freeRerolls;
+    seedEscort(escort); // 호위(하드) — boss_modes.dart
   }
 
   final Random _random;
-  final Enemy enemy;
+
+  /// 지금 서 있는 적. 연전에서 갈아 끼워진다 (`boss_modes.dart`)
+  Enemy enemy;
+
+  /// 연전(데스)의 2체째. `null` 이면 평범한 1체 전투다.
+  Enemy? nextWave;
 
   /// 이번 턴의 손패. [deck]이 있으면 턴마다 새로 뽑혀 갈린다.
   List<Spell> hand;
@@ -107,8 +116,8 @@ class Battle {
   /// 실제로 회복된 체력 총량 — 최대 체력에 막혀 버려진 분은 빼고 센다
   int healedTotal = 0;
 
-  bool get isOver => playerHp <= 0 || enemyHp <= 0;
-  bool get playerWon => enemyHp <= 0;
+  bool get isOver => playerHp <= 0 || (enemyHp <= 0 && nextWave == null);
+  bool get playerWon => enemyHp <= 0 && nextWave == null;
 
   /// 다음 적 행동 예고 (화면 표시용)
   EnemyAction get telegraph => enemyRunner.telegraph;
@@ -262,11 +271,12 @@ class Battle {
     enemyRunner.run();
   }
 
-  /// 적에게 대미지 (방어막 먼저 깎임)
+  /// 적에게 대미지 (방어막 먼저 깎임). 쓰러뜨려도 [nextWave]가 있으면 이어진다
   void dealToEnemy(int dmg) {
     final absorbed = min(enemyShield, dmg);
     enemyShield -= absorbed;
     enemyHp -= dmg - absorbed;
+    advanceWave();
   }
 
   /// 플레이어에게 대미지 (방어막 먼저 깎임)

@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 
 import '../core/battle.dart';
+import '../core/boss_modes.dart';
 import '../core/constants.dart';
 import '../core/relic_powers.dart';
 import '../core/stage_runner.dart';
@@ -145,6 +146,13 @@ class RunController extends ChangeNotifier {
         maxMana: maxMana,
         relics: powers,
         charge: state.charge,
+        // 연전(데스)·호위(하드) — boss_modes.dart
+        nextWave: hasSecondWave(currentEnemy, state.difficulty)
+            ? secondWaveOf(currentEnemy)
+            : null,
+        escort: hasEscort(currentEnemy, state.difficulty)
+            ? escortPower(currentEnemy)
+            : 0,
       );
   }
 

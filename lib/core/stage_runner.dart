@@ -10,6 +10,7 @@ import '../models/enemy.dart';
 import '../models/enemy_variant.dart';
 import '../models/region.dart';
 import '../models/stage.dart';
+import 'boss_modes.dart';
 import 'constants.dart';
 import 'enemy_builder.dart';
 
@@ -27,8 +28,8 @@ String weightedPick(Map<String, int> weights, Random random) {
 
 /// [floor]층에 설 적을 조립해 돌려준다.
 ///
-/// ⚠ 「호위」(소환수 동반)와 「연전」(2체째)은 아직 만들지 않았다.
-/// 난이도로 달라지는 것은 **보스 변종과 배율**뿐이다.
+/// 지역 8~12는 **1층에서 전조(약화판 보스)**를 만난다 (`boss_modes.dart`).
+/// 「호위」와 「연전」은 전투 쪽이라 여기서 뽑지 않는다 — `run_controller` 가 붙인다.
 Enemy pickEnemy(
   GameData data,
   Region region,
@@ -37,13 +38,17 @@ Enemy pickEnemy(
   Difficulty difficulty,
   Random random,
 ) {
-  if (floor >= stage.floors) {
-    final boss = data.enemies.firstWhere((e) => e.id == region.bossId);
-    // 보스 변종은 추첨하지 않고 난이도로 고정한다 (ENEMIES.md 4절)
-    final variant = _variantOf(data, kBossVariantIds[difficulty]!);
-    return buildEnemy(
-        boss, variant, region.hpScale, region.atkScale, difficulty);
-  }
+  // 보스 변종은 추첨하지 않고 난이도로 고정한다 (ENEMIES.md 4절)
+  Enemy boss() => buildEnemy(
+      data.enemies.firstWhere((e) => e.id == region.bossId),
+      _variantOf(data, kBossVariantIds[difficulty]!),
+      region.hpScale,
+      region.atkScale,
+      difficulty);
+
+  // 전조: 지역 8~12의 1층에서 약화판을 한 번 만난다 (ENEMIES.md 4절)
+  if (isOmenFloor(region.id, floor)) return omenOf(boss());
+  if (floor >= stage.floors) return boss();
   final tier = int.parse(weightedPick(region.tierPool, random));
   final pool = data.enemies.where((e) => !e.isBoss && e.tier == tier).toList();
   // 해당 tier에 적이 하나도 없으면 일반 적 전체에서 뽑는다 (데이터 사고 대비)

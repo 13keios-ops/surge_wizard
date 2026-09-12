@@ -76,11 +76,15 @@ class BattleController extends ChangeNotifier {
     int? maxMana,
     RelicPowers relics = const RelicPowers(),
     int charge = 0,
+    Enemy? nextWave,
+    int escort = 0,
   }) {
     battle = Battle(
       enemy: enemy,
       hand: List.of(hand),
       surgePool: data.surges,
+      nextWave: nextWave,
+      escort: escort,
       playerHp: hp,
       playerMaxHp: maxHp,
       maxMana: maxMana,

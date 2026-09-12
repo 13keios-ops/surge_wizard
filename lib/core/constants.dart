@@ -130,6 +130,29 @@ const double kSurgeSelfDamageMaxRatio = 0.4;
 /// 난이도 3단계. 지역·스테이지와 함께 한 판을 시작할 때 고른다.
 enum Difficulty { normal, hard, death }
 
+// ── 보스 등장 방식 3종 (GAME_DESIGN 4.4절 · ENEMIES 4절) ───────────────
+//
+// 이것이 없으면 하드와 데스가 수치 배율만 다른 똑같은 전투다.
+
+/// **전조**를 넣는 첫 지역. 8~12에만 넣는다 — 층이 10층을 넘어 길어지는 구간이다.
+const int kOmenFirstRegion = 8;
+
+/// 전조 약화판의 체력 배율
+const double kOmenHpMul = 0.4;
+
+/// 전조 약화판의 공격 배율
+const double kOmenAtkMul = 0.7;
+
+/// 연전(데스) 2체째의 체력 배율. 공격은 본체와 같다.
+const double kSecondWaveHpMul = 0.6;
+
+/// 호위(하드) 소환수의 위력 배율. 보스 **일반 공격**에 곱한다.
+const double kEscortPowerMul = 0.4;
+
+/// 호위 소환수가 버티는 턴 수. **보스를 쓰러뜨릴 때까지** 함께 있어야 하므로
+/// 폭주 소환수와 달리 사실상 무한이다.
+const int kEscortTurns = 999;
+
 /// 난이도 배율 한 벌.
 /// HP를 공격보다 크게 올린다 — 공격을 올리면 즉사가 늘어 좌절이 되고,
 /// HP를 올리면 「불가능이 아니라 오래 걸림」이 된다 (GAME_DESIGN v2 6.2절).
