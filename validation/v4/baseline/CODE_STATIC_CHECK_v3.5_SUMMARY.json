@@ -1,0 +1,13 @@
+{
+  "source_file": "Surge_Wizard_v4_CODE_STATIC_CHECK_v3.5.json",
+  "dart_sdk_available_here": false,
+  "delimiter_issues": [],
+  "files_over_300_lines": [],
+  "missing_relative_dependencies": [],
+  "json_validated": [
+    "assets/data/v4_vertical_slice_encounters.json"
+  ],
+  "dart_file_count": 65,
+  "stale_attackUsesBurst7_references": 0,
+  "note": "The full per-file static-check JSON is preserved in the complete handoff archive."
+}
