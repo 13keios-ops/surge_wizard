@@ -1,0 +1,1 @@
+import 'package:flutter_test/flutter_test.dart';import 'package:surge_wizard/core/seeded_rng_v4.dart';void main(){test('same seed reproduces the same sequence',(){final a=SeededRngV4(23092026),b=SeededRngV4(23092026);expect(List.generate(20,(_)=>a.nextUint32()),List.generate(20,(_)=>b.nextUint32()));});}

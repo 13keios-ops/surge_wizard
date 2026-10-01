@@ -1,0 +1,357 @@
+{
+  "version": "3.2",
+  "qaSeed": 23092026,
+  "encounters": [
+    {
+      "id": "VS_B01_GOBLIN_AMBUSH",
+      "name": "Goblin Ambush",
+      "map": {
+        "columns": 9,
+        "rows": 7
+      },
+      "party": [
+        "wizard",
+        "kael"
+      ],
+      "enemies": [
+        {
+          "instanceId": "goblin_1",
+          "templateId": "enemy_goblin_scout",
+          "position": [
+            6,
+            1
+          ]
+        },
+        {
+          "instanceId": "goblin_2",
+          "templateId": "enemy_goblin_scout",
+          "position": [
+            7,
+            2
+          ]
+        },
+        {
+          "instanceId": "goblin_3",
+          "templateId": "enemy_goblin_scout",
+          "position": [
+            7,
+            4
+          ]
+        },
+        {
+          "instanceId": "goblin_4",
+          "templateId": "enemy_goblin_scout",
+          "position": [
+            6,
+            5
+          ]
+        }
+      ],
+      "terrain": {
+        "cover": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            4
+          ]
+        ],
+        "block": [
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "rewards": {
+        "gold": 48,
+        "essence": 3
+      },
+      "optional": false,
+      "boss": false
+    },
+    {
+      "id": "VS_B02_RUIN_COURTYARD",
+      "name": "Ruin Courtyard",
+      "map": {
+        "columns": 9,
+        "rows": 7
+      },
+      "party": [
+        "wizard",
+        "kael",
+        "nera"
+      ],
+      "enemies": [
+        {
+          "instanceId": "skeleton_1",
+          "templateId": "enemy_skeleton_apprentice",
+          "position": [
+            7,
+            1
+          ]
+        },
+        {
+          "instanceId": "skeleton_2",
+          "templateId": "enemy_skeleton_apprentice",
+          "position": [
+            7,
+            3
+          ]
+        },
+        {
+          "instanceId": "skeleton_3",
+          "templateId": "enemy_skeleton_apprentice",
+          "position": [
+            7,
+            5
+          ]
+        },
+        {
+          "instanceId": "gargoyle_1",
+          "templateId": "enemy_stone_gargoyle",
+          "position": [
+            6,
+            3
+          ]
+        }
+      ],
+      "terrain": {
+        "cover": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "block": [
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "rewards": {
+        "gold": 72,
+        "essence": 4
+      },
+      "optional": false,
+      "boss": false
+    },
+    {
+      "id": "VS_B03_ARCHIVE_HALL",
+      "name": "Archive Hall",
+      "map": {
+        "columns": 9,
+        "rows": 7
+      },
+      "party": [
+        "wizard",
+        "kael",
+        "nera"
+      ],
+      "enemies": [
+        {
+          "instanceId": "armor_1",
+          "templateId": "enemy_cursed_armor",
+          "position": [
+            6,
+            2
+          ]
+        },
+        {
+          "instanceId": "armor_2",
+          "templateId": "enemy_cursed_armor",
+          "position": [
+            6,
+            4
+          ]
+        },
+        {
+          "instanceId": "skeleton_1",
+          "templateId": "enemy_skeleton_apprentice",
+          "position": [
+            7,
+            1
+          ]
+        },
+        {
+          "instanceId": "skeleton_2",
+          "templateId": "enemy_skeleton_apprentice",
+          "position": [
+            7,
+            5
+          ]
+        },
+        {
+          "instanceId": "gargoyle_1",
+          "templateId": "enemy_stone_gargoyle",
+          "position": [
+            7,
+            3
+          ]
+        }
+      ],
+      "terrain": {
+        "cover": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "block": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ]
+      },
+      "rewards": {
+        "gold": 94,
+        "essence": 5
+      },
+      "optional": false,
+      "boss": false
+    },
+    {
+      "id": "VS_B04_OPTIONAL_SEAL_ROOM",
+      "name": "Optional Seal Room",
+      "map": {
+        "columns": 8,
+        "rows": 6
+      },
+      "party": [
+        "wizard",
+        "kael",
+        "nera"
+      ],
+      "enemies": [
+        {
+          "instanceId": "armor_1",
+          "templateId": "enemy_cursed_armor",
+          "position": [
+            6,
+            3
+          ]
+        },
+        {
+          "instanceId": "skeleton_1",
+          "templateId": "enemy_skeleton_apprentice",
+          "position": [
+            6,
+            1
+          ]
+        },
+        {
+          "instanceId": "skeleton_2",
+          "templateId": "enemy_skeleton_apprentice",
+          "position": [
+            6,
+            4
+          ]
+        }
+      ],
+      "terrain": {
+        "block": [
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      },
+      "rewards": {
+        "gold": 55,
+        "essence": 5
+      },
+      "optional": true,
+      "boss": false
+    },
+    {
+      "id": "VS_B05_BONE_HEAP",
+      "name": "Bone Heap",
+      "map": {
+        "columns": 10,
+        "rows": 7
+      },
+      "party": [
+        "wizard",
+        "kael",
+        "nera"
+      ],
+      "enemies": [
+        {
+          "instanceId": "bone_heap",
+          "templateId": "boss_bone_heap",
+          "position": [
+            7,
+            3
+          ]
+        },
+        {
+          "instanceId": "skeleton_1",
+          "templateId": "enemy_skeleton_apprentice",
+          "position": [
+            8,
+            1
+          ]
+        },
+        {
+          "instanceId": "skeleton_2",
+          "templateId": "enemy_skeleton_apprentice",
+          "position": [
+            8,
+            5
+          ]
+        }
+      ],
+      "terrain": {},
+      "rewards": {
+        "gold": 180,
+        "essence": 12
+      },
+      "optional": false,
+      "boss": true
+    }
+  ]
+}

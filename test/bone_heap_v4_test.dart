@@ -1,0 +1,7 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:surge_wizard/core/boss_bone_heap_v4.dart';
+import 'package:surge_wizard/core/combat_engine_v4.dart';
+import 'package:surge_wizard/core/combat_state_v4.dart';
+import 'package:surge_wizard/core/hex_coord_v4.dart';
+import 'package:surge_wizard/core/vertical_slice_catalog_v4.dart';
+void main(){test('Bone Heap reassembles once at 60% HP',(){final boss=VerticalSliceCatalogV4.enemy('boss_bone_heap','bone_heap',const HexCoord(6,3));boss.hp=108;final engine=CombatEngineV4(seed:11,units:[VerticalSliceCatalogV4.wizard(),VerticalSliceCatalogV4.kael(),VerticalSliceCatalogV4.nera(),boss]);for(final unit in engine.units){unit.nextActionTime=unit.id=='bone_heap'?0:100;}expect(engine.beginNextActivation()?.id,'bone_heap');BoneHeapBehaviorV4.takeActivation(engine,boss);expect(boss.barrierTotal,25);expect(engine.units.where((u)=>u.id.startsWith('bone_heap_add_')).length,1);expect((engine.runtime[BoneHeapBehaviorV4.runtimeKey] as BoneHeapRuntimeV4).reassembled,isTrue);});test('Fractured Core gives incoming accuracy +1',(){final boss=VerticalSliceCatalogV4.enemy('boss_bone_heap','bone_heap',const HexCoord(6,3));boss.hp=54;final engine=CombatEngineV4(seed:12,units:[VerticalSliceCatalogV4.wizard(),boss]);for(final u in engine.units){u.nextActionTime=u.id=='bone_heap'?0:100;}engine.beginNextActivation();BoneHeapBehaviorV4.takeActivation(engine,boss);expect(boss.incomingAccuracyBonus,1);});}
