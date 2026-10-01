@@ -1,0 +1,3 @@
+CURRENT_HANDOFF_VALIDATION_OK
+equipment=34 spells=30 encounters=24 hubs=11 regions=14 dungeons=9
+core_xp {'act1': 355, 'mine': 295, 'swamp': 285, 'ruin': 303}
