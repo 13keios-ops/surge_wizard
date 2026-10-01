@@ -1,12 +1,21 @@
 # Surge Wizard v4 — Current Authority / Agent Handoff (2026-10-01)
 
-This file is the first authority index for the current handoff.
+## Single handoff entry point
+
+The complete design/specification history from the v4 direction change onward is now exposed through:
+
+```text
+artifacts/v4/FINAL_COMPLETE_HANDOFF/00_START_HERE.md
+artifacts/v4/FINAL_COMPLETE_HANDOFF/build_final_complete_handoff.sh
+```
+
+The build script merges the two provenance archives into one workspace/package. The old archive split is no longer something an implementation agent needs to reason about manually.
 
 ## Priority
 
 1. Newest explicit user instruction.
-2. This authority/resolution document and `FINAL_AUDIT_2026-10-01.md`.
-3. The reconciled ACT I–II v4.0 content spec/data inside the post-v3.6 handoff archive for ACT I–II encounter/reward numbers.
+2. This authority document and `FINAL_AUDIT_2026-10-01.md`.
+3. The reconciled ACT I–II v4.0 content for ACT I–II encounter/reward numbers.
 4. v5.0–v5.9 architecture contracts for schema/loader/repository/interpreter/navigation/testing/work-package structure.
 5. v3.9 for level/XP framework, world topology, quick items, companion progression, tutorial, journal.
 6. v3.8 for early equipment, C0–C3 spell catalog, Hub/Shop/Party UX and Vertical Slice noncombat flow.
@@ -23,47 +32,21 @@ For ACT I–II encounter count / XP / reward numbers, **the integrated reconcile
 
 The staged ten-file batch remains valuable for detailed prose and decision history when it does not conflict.
 
-## Post-v3.6 complete source
+## Provenance components
 
-Exact archive:
-
-```text
-artifacts/v4/complete_handoff/Surge_Wizard_v4_POST_V3_6_COMPLETE_HANDOFF_2026-10-01.tar.xz
-```
-
-SHA-256:
+The unified handoff builder verifies these existing repository archives:
 
 ```text
-c518cb389d95d0111cbb1d1c4520aed5d6665f4de19b6c5d21b06670c55b5601
+Surge_Wizard_v4_COMPLETE_HANDOFF_CONTENT_2026-10-01.tar.xz
+SHA-256 1e3a7b89640377869b9598a92970bfd884a22aa08980d07067a9a76703101792
+extracted files 1681
+
+Surge_Wizard_v4_POST_V3_6_COMPLETE_HANDOFF_2026-10-01.tar.xz
+SHA-256 c518cb389d95d0111cbb1d1c4520aed5d6665f4de19b6c5d21b06670c55b5601
+extracted files 85
 ```
 
-After extraction, use:
-
-```text
-Surge_Wizard_v4_FINAL_HANDOFF_2026-10-01/current/
-Surge_Wizard_v4_FINAL_HANDOFF_2026-10-01/validation/
-```
-
-The archive also preserves all staged v4.0–v4.9 and generated v5.0–v5.9 source artifacts.
-
-## Implementation contracts
-
-Use the v5 documents for architecture:
-
-```text
-v5.0 schemas/stable IDs
-v5.1 validator/CI target
-v5.2 migration dependency order
-v5.3 content loader/repositories
-v5.4 quest/event interpreter
-v5.5 Flutter state/navigation
-v5.6 encounter/map contract
-v5.7 verification pipeline
-v5.8 work packages
-v5.9 milestones
-```
-
-Use the archive's `current/contract_examples_reconciled/` rather than historical v5 ACT I example values when seeding current content.
+Together they preserve the v4 direction-change baseline through v5.9.
 
 ## Validation status
 
@@ -75,6 +58,7 @@ content counts / ID uniqueness
 reconciled encounter XP/count invariants
 historical v5 example validator
 current handoff validator
+archive SHA/component inclusion checks
 ```
 
 Still required in a real Flutter/Dart environment:
