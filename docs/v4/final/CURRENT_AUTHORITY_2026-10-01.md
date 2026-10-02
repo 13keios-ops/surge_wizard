@@ -1,3 +1,7 @@
+> ⛔ **SUPERSEDED CURRENT-AUTHORITY SNAPSHOT (2026-10-01).**  
+> Do not use this file as current implementation authority. Use `docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md`.  
+> Preserved for provenance only.
+
 # Surge Wizard v4 — Current Authority / Agent Handoff (2026-10-01)
 
 ## Single handoff entry point

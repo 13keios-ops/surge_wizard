@@ -1,3 +1,7 @@
+> ⛔ **SUPERSEDED AUTHORITY SNAPSHOT (2026-10-02).**  
+> Replaced after the fresh-clone v8.1 recheck. Use `docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md`.  
+> Preserved for provenance only.
+
 # Surge Wizard v4 — Current Authority / Agent Handoff (2026-10-02)
 
 ## Current status

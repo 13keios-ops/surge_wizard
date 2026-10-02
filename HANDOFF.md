@@ -1,6 +1,6 @@
 > ⛔ **LEGACY PRE-v4 DOCUMENT — DO NOT USE AS CURRENT IMPLEMENTATION AUTHORITY.**  
-> Current v4 starts at `CLAUDE.md` → `docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md` → `docs/v4/final/CURRENT_AUTHORITY_2026-10-02.md`.  
-> This file is preserved only for historical context.
+> Current v4 starts at `CLAUDE.md` → `docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md` → `docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md`.  
+> Preserved for historical context only.
 
 # 인수인계 — 기획 창
 
