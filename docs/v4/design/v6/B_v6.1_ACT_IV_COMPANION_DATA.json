@@ -1,0 +1,548 @@
+{
+  "version": "6.1",
+  "act": "IV",
+  "level_band": [
+    15,
+    20
+  ],
+  "target_playtime_hours": [
+    6,
+    7
+  ],
+  "encounters": [
+    {
+      "id": "A4_R11_E01_SNOW_PASS",
+      "name": "눈 협곡 입구",
+      "region": "R11",
+      "level": 15,
+      "mandatory": true,
+      "enemies": [
+        "enemy_wolf_pack",
+        "enemy_ice_witch",
+        "enemy_storm_harpy"
+      ],
+      "xp": 130,
+      "gold": 330,
+      "essence": 12,
+      "map": "map.a4.r11.snow_pass",
+      "purpose": "기상/긴 이동 / White Wolf 단서"
+    },
+    {
+      "id": "A4_R11_E02_PACK_LINE",
+      "name": "늑대 이동선",
+      "region": "R11",
+      "level": 16,
+      "mandatory": true,
+      "enemies": [
+        "enemy_wolf_pack",
+        "enemy_wolf_pack",
+        "enemy_wraith"
+      ],
+      "xp": 140,
+      "gold": 350,
+      "essence": 14,
+      "map": "map.a4.r11.pack_line",
+      "purpose": "Pack Mark / 비적대 개체 구분"
+    },
+    {
+      "id": "A4_R11_B01_WHITE_WOLF",
+      "name": "백설 알파늑대",
+      "region": "R11",
+      "level": 17,
+      "mandatory": true,
+      "enemies": [
+        "boss_white_wolf"
+      ],
+      "xp": 220,
+      "gold": 520,
+      "essence": 24,
+      "map": "map.a4.r11.white_wolf",
+      "purpose": "M05 분기형 제압/토벌 보스"
+    },
+    {
+      "id": "D07_E01_FROZEN_VESTIBULE",
+      "name": "D07 얼어붙은 전실",
+      "region": "R12",
+      "level": 17,
+      "mandatory": true,
+      "enemies": [
+        "enemy_skeleton_apprentice",
+        "enemy_wraith",
+        "enemy_ice_witch"
+      ],
+      "xp": 150,
+      "gold": 390,
+      "essence": 15,
+      "map": "map.d07.frozen_vestibule",
+      "purpose": "언데드/해제 / 고위 주문 압박"
+    },
+    {
+      "id": "D07_E02_BROKEN_LIBRARY",
+      "name": "D07 파손 서고",
+      "region": "R12",
+      "level": 18,
+      "mandatory": true,
+      "enemies": [
+        "enemy_skeleton_apprentice",
+        "enemy_skeleton_apprentice",
+        "enemy_vampire_knight"
+      ],
+      "xp": 160,
+      "gold": 420,
+      "essence": 16,
+      "map": "map.d07.broken_library",
+      "purpose": "기록 접근 / LOS"
+    },
+    {
+      "id": "D07_E03_FOCUS_CHAMBER",
+      "name": "D07 초점실",
+      "region": "R12",
+      "level": 18,
+      "mandatory": true,
+      "enemies": [
+        "enemy_wraith",
+        "enemy_vampire_knight",
+        "enemy_bone_dragon_whelp"
+      ],
+      "xp": 170,
+      "gold": 450,
+      "essence": 18,
+      "map": "map.d07.focus_chamber",
+      "purpose": "Focus 개념 사전학습"
+    },
+    {
+      "id": "D07_B01_ARCHLICH",
+      "name": "대리치",
+      "region": "R12",
+      "level": 18,
+      "mandatory": true,
+      "enemies": [
+        "boss_archlich"
+      ],
+      "xp": 260,
+      "gold": 720,
+      "essence": 34,
+      "map": "map.d07.archlich",
+      "purpose": "Focus 2개 / 공명체질 진실 / C6 Gate"
+    },
+    {
+      "id": "A4_R13_E01_PILGRIM_BREAK",
+      "name": "성맥 순례길 붕괴",
+      "region": "R13",
+      "level": 18,
+      "mandatory": true,
+      "enemies": [
+        "enemy_cursed_armor",
+        "enemy_stone_gargoyle",
+        "enemy_vampire_knight"
+      ],
+      "xp": 150,
+      "gold": 410,
+      "essence": 16,
+      "map": "map.a4.r13.pilgrim_break",
+      "purpose": "성지 접근 / M07 공개갈등 준비"
+    },
+    {
+      "id": "D08_E01_UNDERCROFT_SEAL",
+      "name": "D08 지하성소 봉인",
+      "region": "R13",
+      "level": 19,
+      "mandatory": true,
+      "enemies": [
+        "enemy_cursed_armor",
+        "enemy_crystal_colossus",
+        "enemy_stone_gargoyle"
+      ],
+      "xp": 170,
+      "gold": 460,
+      "essence": 20,
+      "map": "map.d08.undercroft_seal",
+      "purpose": "장치와 종교기록의 기능 연결"
+    },
+    {
+      "id": "D08_E02_CORE_APPROACH",
+      "name": "D08 성맥핵 접근",
+      "region": "R13",
+      "level": 19,
+      "mandatory": true,
+      "enemies": [
+        "enemy_crystal_colossus",
+        "enemy_vampire_knight",
+        "enemy_wraith"
+      ],
+      "xp": 180,
+      "gold": 500,
+      "essence": 22,
+      "map": "map.d08.core_approach",
+      "purpose": "마력핵 전초 / Huge footprint 공간"
+    },
+    {
+      "id": "D08_B01_AWAKENED_IDOL",
+      "name": "각성한 성맥 우상",
+      "region": "R13",
+      "level": 20,
+      "mandatory": true,
+      "enemies": [
+        "boss_awakened_idol"
+      ],
+      "xp": 300,
+      "gold": 850,
+      "essence": 42,
+      "map": "map.d08.awakened_idol",
+      "purpose": "팔 채널 파괴 / M06 직전 최종 증거"
+    },
+    {
+      "id": "S01_B01_HEADLESS_KNIGHT",
+      "name": "목 없는 기사",
+      "region": "R05",
+      "level": 15,
+      "mandatory": false,
+      "enemies": [
+        "boss_headless_knight"
+      ],
+      "xp": 210,
+      "gold": 650,
+      "essence": 26,
+      "map": "map.s01.headless_knight",
+      "purpose": "ACT III~IV 선택 보스 / Holy 대응"
+    }
+  ],
+  "story_xp": [
+    {
+      "id": "A4_Q_FROSTHOLD",
+      "xp": 90,
+      "reason": "T10 북부 조사대 합류"
+    },
+    {
+      "id": "A4_Q_M05",
+      "xp": 120,
+      "reason": "White Wolf 처리 선택 Commit"
+    },
+    {
+      "id": "A4_Q_D07_RESONANCE",
+      "xp": 180,
+      "reason": "주인공 공명체질 확인"
+    },
+    {
+      "id": "A4_Q_SAINTS_REACH",
+      "xp": 90,
+      "reason": "T11 교단 기록 교차검증"
+    },
+    {
+      "id": "A4_Q_D08_TRUTH",
+      "xp": 160,
+      "reason": "성맥 안정장치 진실 확인"
+    },
+    {
+      "id": "A4_Q_M06",
+      "xp": 100,
+      "reason": "마력핵 성장 선택 Commit"
+    },
+    {
+      "id": "A4_Q_M07",
+      "xp": 100,
+      "reason": "성맥성지 공개정책 Commit"
+    }
+  ],
+  "quest_nodes": [
+    {
+      "id": "A4_001_NORTH_ROUTE",
+      "type": "TRAVEL",
+      "location": "R11",
+      "next": [
+        "A4_010_M05_WOLF"
+      ]
+    },
+    {
+      "id": "A4_010_M05_WOLF",
+      "type": "MAJOR_CHOICE",
+      "location": "R11",
+      "choice_id": "M05_WHITE_WOLF",
+      "next": [
+        "A4_020_T10"
+      ]
+    },
+    {
+      "id": "A4_020_T10",
+      "type": "HUB_STORY",
+      "location": "T10",
+      "next": [
+        "A4_030_D07"
+      ]
+    },
+    {
+      "id": "A4_030_D07",
+      "type": "DUNGEON_BOSS",
+      "location": "D07",
+      "next": [
+        "A4_040_RESONANCE_REVEAL"
+      ],
+      "flags_set": [
+        "d07_complete",
+        "protagonist_resonance_identified",
+        "circle6_story_gate"
+      ]
+    },
+    {
+      "id": "A4_040_RESONANCE_REVEAL",
+      "type": "STORY_UNLOCK",
+      "location": "D07",
+      "next": [
+        "A4_050_T11"
+      ]
+    },
+    {
+      "id": "A4_050_T11",
+      "type": "HUB_STORY",
+      "location": "T11",
+      "next": [
+        "A4_060_D08"
+      ],
+      "flags_set": [
+        "saints_reach_open"
+      ]
+    },
+    {
+      "id": "A4_060_D08",
+      "type": "DUNGEON_BOSS",
+      "location": "D08",
+      "next": [
+        "A4_070_M06_CORE"
+      ],
+      "flags_set": [
+        "d08_idol_defeated"
+      ]
+    },
+    {
+      "id": "A4_070_M06_CORE",
+      "type": "MAJOR_CHOICE",
+      "location": "D08",
+      "choice_id": "M06_LEY_CORE",
+      "next": [
+        "A4_080_M07_TRUTH"
+      ]
+    },
+    {
+      "id": "A4_080_M07_TRUTH",
+      "type": "MAJOR_CHOICE",
+      "location": "T11",
+      "choice_id": "M07_TEMPLE_TRUTH",
+      "next": [
+        "A4_090_ACT_END"
+      ]
+    },
+    {
+      "id": "A4_090_ACT_END",
+      "type": "ACT_TRANSITION",
+      "location": "T11",
+      "next": [],
+      "flags_set": [
+        "act4_complete",
+        "act5_unlocked"
+      ]
+    }
+  ],
+  "choices": {
+    "M05_WHITE_WOLF": {
+      "provisional": true,
+      "options": {
+        "EXTERMINATE": {
+          "label": "무리 전체를 토벌",
+          "flags": [
+            "white_wolf_pack_killed"
+          ],
+          "boss_result": "KILL"
+        },
+        "SUBDUE_REDIRECT": {
+          "label": "Alpha를 제압해 이동로 변경",
+          "flags": [
+            "white_wolf_redirected"
+          ],
+          "boss_result": "SUBDUE_AT_10_PERCENT"
+        },
+        "FORTIFY_WAIT": {
+          "label": "마을 방어선을 세우고 이동을 기다림",
+          "flags": [
+            "white_wolf_repelled"
+          ],
+          "boss_result": "REPEL_AT_25_PERCENT"
+        }
+      },
+      "exclusive": [
+        "white_wolf_pack_killed",
+        "white_wolf_redirected",
+        "white_wolf_repelled"
+      ],
+      "notes": "에린 Red Line은 비적대 개체+대체수단 확인 후 편의상 EXTERMINATE를 고수할 때만 가능."
+    },
+    "M06_LEY_CORE": {
+      "provisional": true,
+      "options": {
+        "ABSORB": {
+          "label": "마력핵을 흡수",
+          "flags": [
+            "protagonist_trait_resonant_core"
+          ],
+          "trait": {
+            "id": "base.trait.protagonist.resonant_core",
+            "max_mp": 10,
+            "c5plus_cast_dc": 1,
+            "surge_positive_component_multiplier": 1.2,
+            "note": "Surge 부정효과는 그대로"
+          }
+        },
+        "STABILIZE": {
+          "label": "마력핵을 안정화",
+          "flags": [
+            "protagonist_trait_harmonizer"
+          ],
+          "trait": {
+            "id": "base.trait.protagonist.harmonizer",
+            "resolve": 1,
+            "c4plus_stability": 1,
+            "first_surge_per_battle": "DOWNGRADE_TO_UNSTABLE"
+          }
+        }
+      },
+      "exclusive": [
+        "protagonist_trait_resonant_core",
+        "protagonist_trait_harmonizer"
+      ],
+      "ending_lock": false
+    },
+    "M07_TEMPLE_TRUTH": {
+      "provisional": true,
+      "options": {
+        "IMMEDIATE_PUBLIC": {
+          "label": "즉시 공개",
+          "flags": [
+            "temple_truth_public_immediate"
+          ]
+        },
+        "JOINT_VERIFY": {
+          "label": "마도원·교단·자유연구회 공동검증 후 공개",
+          "flags": [
+            "temple_truth_joint_verify"
+          ]
+        },
+        "SEAL": {
+          "label": "혼란을 막기 위해 봉인",
+          "flags": [
+            "temple_truth_sealed"
+          ]
+        }
+      },
+      "exclusive": [
+        "temple_truth_public_immediate",
+        "temple_truth_joint_verify",
+        "temple_truth_sealed"
+      ],
+      "ending_lock": false
+    }
+  },
+  "companion_quests": {
+    "kael": {
+      "id": "base.cquest.kael_left_names",
+      "title": "남겨진 명단",
+      "min_act": 3,
+      "level": [
+        13,
+        18
+      ],
+      "start": "T08",
+      "nodes": [
+        "K01_LIST",
+        "K02_BURNT_ROUTE",
+        "K03_SURVIVOR",
+        "K04_DEFENSE",
+        "K05_RECORD_CHOICE",
+        "K06_COMPLETE"
+      ],
+      "trait": "base.trait.kael.hold_the_line",
+      "act5_callback": "evacuation_line_option"
+    },
+    "erin": {
+      "id": "base.cquest.erin_second_season",
+      "title": "두 번째 계절",
+      "min_act": 3,
+      "level": [
+        12,
+        18
+      ],
+      "start": "T02",
+      "nodes": [
+        "E01_DEER",
+        "E02_TRACK",
+        "E03_LOGGING_ROAD",
+        "E04_ROUTE_CHOICE",
+        "E05_CHANGED_HERD",
+        "E06_COMPLETE"
+      ],
+      "trait": "base.trait.erin.read_the_trail",
+      "act5_callback": "safe_route_preview"
+    },
+    "nera": {
+      "id": "base.cquest.nera_sealed_name",
+      "title": "봉인된 이름",
+      "min_act": 3,
+      "level": [
+        12,
+        16
+      ],
+      "start": "T05/T06",
+      "nodes": [
+        "N01_LEDGER",
+        "N02_ARCHIVE_ACCESS",
+        "N03_SEALED_CASE",
+        "N04_ARCHIVIST",
+        "N05_DISCLOSURE_CHOICE",
+        "N06_COMPLETE"
+      ],
+      "trait": "base.trait.nera.see_the_gap",
+      "act5_callback": "seal_bypass"
+    },
+    "seon": {
+      "id": "base.cquest.seon_empty_prayer",
+      "title": "빈 기도문",
+      "min_act": 4,
+      "level": [
+        17,
+        21
+      ],
+      "start": "T11",
+      "nodes": [
+        "S01_MISSING_LINE",
+        "S02_ABANDONED_SHRINE",
+        "S03_FAILED_RITE",
+        "S04_MEANING",
+        "S05_TEMPLE_POLICY",
+        "S06_COMPLETE"
+      ],
+      "trait": "base.trait.seon.two_hands_prayer",
+      "act5_callback": "hazard_reduction"
+    },
+    "luka": {
+      "id": "base.cquest.luka_weight_of_command",
+      "title": "명령의 무게",
+      "min_act": 3,
+      "level": [
+        14,
+        19
+      ],
+      "start": "T08",
+      "nodes": [
+        "L01_SURVIVOR",
+        "L02_ORDER_RECORD",
+        "L03_ABANDONED_SETTLEMENT",
+        "L04_REPEAT_CRISIS",
+        "L05_COMMAND_CHOICE",
+        "L06_COMPLETE"
+      ],
+      "trait": "base.trait.luka.oath_of_guarding",
+      "act5_callback": "reinforcement_delay"
+    }
+  },
+  "unlock_rules": {
+    "circle6": "D07 complete + protagonist_resonance_identified + level>=17"
+  }
+}
