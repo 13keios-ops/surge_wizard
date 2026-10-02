@@ -5,17 +5,18 @@ This directory contains the correction overlay and final fresh-clone handoff che
 ## Read order
 
 1. `FINAL_HANDOFF_RECHECK_v8.1.md`
-2. `LOCAL_AGENT_BOOTSTRAP_v8.0.md` (compatibility filename; content is v8.1)
-3. `CANONICAL_FLAG_MAP_v8.0.json`
-4. `M08_WEST_ANCHOR_RESTORATION_v8.0.md`
-5. `XP_TRANSITION_FLOOR_v8.0.json`
-6. `ENCOUNTER_RUNTIME_EXTENSION_v8.0.json`
-7. `NARRATIVE_RUNTIME_NORMALIZATION_v8.0.json`
-8. `RESOURCE_ID_NORMALIZATION_v8.0.json`
-9. `POI_EVENT_AUTHORITY_v8.0.json`
-10. `LATE_GEAR_ACQUISITION_GAPS_v8.0.json`
-11. `ACTII_BOSS_NARRATIVE_PATCH_v8.0.md`
-12. `validate_repo_handoff_v8_1.py`
+2. `../final/CURRENT_AUTHORITY_2026-10-03.md`
+3. `LOCAL_AGENT_BOOTSTRAP_v8.0.md` (compatibility filename; content is v8.1)
+4. `CANONICAL_FLAG_MAP_v8.0.json`
+5. `M08_WEST_ANCHOR_RESTORATION_v8.0.md`
+6. `XP_TRANSITION_FLOOR_v8.0.json`
+7. `ENCOUNTER_RUNTIME_EXTENSION_v8.0.json`
+8. `NARRATIVE_RUNTIME_NORMALIZATION_v8.0.json`
+9. `RESOURCE_ID_NORMALIZATION_v8.0.json`
+10. `POI_EVENT_AUTHORITY_v8.0.json`
+11. `LATE_GEAR_ACQUISITION_GAPS_v8.0.json`
+12. `ACTII_BOSS_NARRATIVE_PATCH_v8.0.md`
+13. `validate_repo_handoff_v8_1.py`
 
 ## Status
 
