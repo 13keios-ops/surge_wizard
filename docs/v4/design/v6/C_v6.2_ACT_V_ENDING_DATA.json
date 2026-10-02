@@ -1,0 +1,550 @@
+{
+  "version": "6.2",
+  "act": "V",
+  "level_band": [
+    20,
+    25
+  ],
+  "target_playtime_hours": [
+    7,
+    8
+  ],
+  "anchors": {
+    "WEST": {
+      "location": "R03/T03",
+      "prior_flags": {
+        "ironvale_mine_sealed": "evacuation simpler; preserved mine tunnel unavailable",
+        "ironvale_mine_stabilized": "underground maintenance route available; faster manual stabilization"
+      },
+      "personal_quest_bonus": {
+        "kael_trait_hold_the_line": "civilian defense line starts Guarded; one reinforcement wave delayed"
+      },
+      "fallback": "standard surface route always exists",
+      "resolution_flag": "anchor_west_resolved"
+    },
+    "CENTRAL": {
+      "location": "T06/R06",
+      "prior_flags": {
+        "ancient_records_academy": "official archive key available",
+        "ancient_records_shared": "Freehold duplicate map available",
+        "ancient_records_resealed": "physical seal route required but still solvable",
+        "researcher_handed_to_academy": "official calibration note available if records released",
+        "researcher_exiled": "field notes recovered from seized data",
+        "researcher_secret_coop": "researcher sends live correction code",
+        "temple_truth_public_immediate": "crowd unrest increases surface delay but volunteers help evacuation",
+        "temple_truth_joint_verify": "institutions coordinate but mobilization is slower",
+        "temple_truth_sealed": "surface calm; fewer civilian warnings and less public help"
+      },
+      "personal_quest_bonus": {
+        "nera_trait_see_the_gap": "one seal device disabled before combat",
+        "seon_trait_two_hands_prayer": "one ley hazard suppressed at encounter start"
+      },
+      "fallback": "academy/freehold/physical route converge",
+      "resolution_flag": "anchor_central_resolved"
+    },
+    "EAST": {
+      "location": "T08/R09",
+      "prior_flags": {
+        "researcher_secret_coop": "extra relay frequency prediction",
+        "white_wolf_redirected": "north courier route remains open",
+        "white_wolf_pack_killed": "no wolf-route support; no main penalty"
+      },
+      "personal_quest_bonus": {
+        "erin_trait_read_the_trail": "favorable party spawn / telegraph preview for first hazard",
+        "luka_trait_oath_of_guarding": "enemy reinforcement entry delayed by +25 time"
+      },
+      "fallback": "Redgate military route always exists",
+      "resolution_flag": "anchor_east_resolved"
+    }
+  },
+  "encounters": [
+    {
+      "id": "A5_W_E01_IRONVALE_EVAC",
+      "anchor": "WEST",
+      "region": "R03",
+      "level": 21,
+      "mandatory": true,
+      "enemies": [
+        "enemy_lava_golem",
+        "enemy_orc_warrior",
+        "enemy_crystal_colossus"
+      ],
+      "xp": 140,
+      "gold": 520,
+      "essence": 16,
+      "map": "map.a5.west.evac",
+      "purpose": "M01 결과 회수 / 민간인·광산 접근"
+    },
+    {
+      "id": "A5_W_E02_DEEP_FAULT",
+      "anchor": "WEST",
+      "region": "R03",
+      "level": 21,
+      "mandatory": true,
+      "enemies": [
+        "enemy_lava_golem",
+        "enemy_crystal_colossus",
+        "enemy_demon_gatekeeper"
+      ],
+      "xp": 150,
+      "gold": 560,
+      "essence": 18,
+      "map": "map.a5.west.deep_fault",
+      "purpose": "광산 구조 선택의 실제 지형 차이"
+    },
+    {
+      "id": "A5_W_E03_ANCHOR_CORE",
+      "anchor": "WEST",
+      "region": "R03",
+      "level": 22,
+      "mandatory": true,
+      "enemies": [
+        "enemy_crystal_colossus",
+        "enemy_demon_gatekeeper",
+        "enemy_lava_golem"
+      ],
+      "xp": 180,
+      "gold": 700,
+      "essence": 26,
+      "map": "map.a5.west.anchor_core",
+      "purpose": "서부 Anchor 안정화/차단"
+    },
+    {
+      "id": "A5_C_E01_ARKEN_UNDERWAY",
+      "anchor": "CENTRAL",
+      "region": "R06",
+      "level": 21,
+      "mandatory": true,
+      "enemies": [
+        "human_liberation_vanguard",
+        "human_liberation_mage",
+        "enemy_cursed_armor"
+      ],
+      "xp": 145,
+      "gold": 540,
+      "essence": 17,
+      "map": "map.a5.central.underway",
+      "purpose": "M03/M04/M07 정보상태 회수"
+    },
+    {
+      "id": "A5_C_E02_ARCHIVE_LOCK",
+      "anchor": "CENTRAL",
+      "region": "R06",
+      "level": 22,
+      "mandatory": true,
+      "enemies": [
+        "human_research_elite",
+        "enemy_vampire_knight",
+        "enemy_crystal_colossus"
+      ],
+      "xp": 155,
+      "gold": 590,
+      "essence": 19,
+      "map": "map.a5.central.archive_lock",
+      "purpose": "Nera/Seon 우회 Option"
+    },
+    {
+      "id": "A5_C_E03_ANCHOR_CHAMBER",
+      "anchor": "CENTRAL",
+      "region": "R06",
+      "level": 22,
+      "mandatory": true,
+      "enemies": [
+        "enemy_crystal_colossus",
+        "enemy_vampire_knight",
+        "human_liberation_mage"
+      ],
+      "xp": 185,
+      "gold": 720,
+      "essence": 27,
+      "map": "map.a5.central.anchor_chamber",
+      "purpose": "중앙 Anchor / 공공질서 상태 반영"
+    },
+    {
+      "id": "A5_E_E01_REDGATE_LINE",
+      "anchor": "EAST",
+      "region": "R08",
+      "level": 22,
+      "mandatory": true,
+      "enemies": [
+        "human_liberation_vanguard",
+        "enemy_demon_gatekeeper",
+        "enemy_storm_harpy"
+      ],
+      "xp": 150,
+      "gold": 570,
+      "essence": 18,
+      "map": "map.a5.east.redgate_line",
+      "purpose": "Luka 방어선 / Erin 사전경고"
+    },
+    {
+      "id": "A5_E_E02_SUNSCAR_RELAY",
+      "anchor": "EAST",
+      "region": "R09",
+      "level": 23,
+      "mandatory": true,
+      "enemies": [
+        "enemy_storm_harpy",
+        "enemy_lava_golem",
+        "human_liberation_mage"
+      ],
+      "xp": 160,
+      "gold": 620,
+      "essence": 20,
+      "map": "map.a5.east.sunscar_relay",
+      "purpose": "D06 기록 기반 장치 역산"
+    },
+    {
+      "id": "A5_E_E03_ANCHOR_MIRROR",
+      "anchor": "EAST",
+      "region": "R09",
+      "level": 23,
+      "mandatory": true,
+      "enemies": [
+        "enemy_demon_gatekeeper",
+        "enemy_crystal_colossus",
+        "enemy_storm_harpy"
+      ],
+      "xp": 190,
+      "gold": 760,
+      "essence": 28,
+      "map": "map.a5.east.anchor_mirror",
+      "purpose": "동부 Anchor / 반사경+장치"
+    },
+    {
+      "id": "D09_E01_OUTER_FISSURE",
+      "anchor": "FINAL",
+      "region": "R14",
+      "level": 23,
+      "mandatory": true,
+      "enemies": [
+        "enemy_demon_gatekeeper",
+        "enemy_lava_golem",
+        "enemy_shadow_assassin"
+      ],
+      "xp": 170,
+      "gold": 650,
+      "essence": 20,
+      "map": "map.d09.outer_fissure",
+      "purpose": "최종지역 진입"
+    },
+    {
+      "id": "D09_E02_LIBERATION_LINE",
+      "anchor": "FINAL",
+      "region": "R14",
+      "level": 24,
+      "mandatory": true,
+      "enemies": [
+        "human_liberation_vanguard",
+        "human_liberation_mage",
+        "enemy_demon_gatekeeper",
+        "enemy_shadow_assassin"
+      ],
+      "xp": 180,
+      "gold": 700,
+      "essence": 22,
+      "map": "map.d09.liberation_line",
+      "purpose": "인간 갈등 최종 압박"
+    },
+    {
+      "id": "D09_E03_LEY_SCAR",
+      "anchor": "FINAL",
+      "region": "R14",
+      "level": 24,
+      "mandatory": true,
+      "enemies": [
+        "enemy_crystal_colossus",
+        "enemy_lava_golem",
+        "enemy_bone_dragon_whelp"
+      ],
+      "xp": 190,
+      "gold": 760,
+      "essence": 24,
+      "map": "map.d09.ley_scar",
+      "purpose": "Huge/elite 혼합"
+    },
+    {
+      "id": "D09_E04_CORE_GATE",
+      "anchor": "FINAL",
+      "region": "R14",
+      "level": 24,
+      "mandatory": true,
+      "enemies": [
+        "enemy_demon_gatekeeper",
+        "enemy_vampire_knight",
+        "human_research_elite"
+      ],
+      "xp": 200,
+      "gold": 820,
+      "essence": 26,
+      "map": "map.d09.core_gate",
+      "purpose": "최종 준비 전투"
+    },
+    {
+      "id": "D09_B01_LIBERATION_LEADER",
+      "anchor": "FINAL",
+      "region": "R14",
+      "level": 25,
+      "mandatory": true,
+      "enemies": [
+        "story_boss_liberation_leader"
+      ],
+      "xp": 320,
+      "gold": 950,
+      "essence": 32,
+      "map": "map.d09.liberation_leader",
+      "purpose": "인간 최종갈등 / 3 공명 Pylon"
+    },
+    {
+      "id": "D09_B02_VOID_TITAN",
+      "anchor": "FINAL",
+      "region": "R14",
+      "level": 25,
+      "mandatory": true,
+      "enemies": [
+        "boss_void_titan"
+      ],
+      "xp": 450,
+      "gold": 1350,
+      "essence": 48,
+      "map": "map.d09.void_titan",
+      "purpose": "최종 판타지 보스 / Ending 전"
+    },
+    {
+      "id": "S02_B01_INFERNO_DRAGON",
+      "anchor": "OPTIONAL",
+      "region": "R14",
+      "level": 24,
+      "mandatory": false,
+      "enemies": [
+        "boss_inferno_dragon"
+      ],
+      "xp": 360,
+      "gold": 1600,
+      "essence": 60,
+      "map": "map.s02.inferno_dragon",
+      "purpose": "최고 선택전 / optional C7 knowledge"
+    }
+  ],
+  "story_xp": [
+    {
+      "id": "A5_Q_CRISIS",
+      "xp": 80,
+      "reason": "ACT V 대륙 위기 발생"
+    },
+    {
+      "id": "A5_Q_WEST",
+      "xp": 110,
+      "reason": "서부 Anchor 해결"
+    },
+    {
+      "id": "A5_Q_CENTRAL",
+      "xp": 110,
+      "reason": "중앙 Anchor 해결"
+    },
+    {
+      "id": "A5_Q_EAST",
+      "xp": 110,
+      "reason": "동부 Anchor 해결"
+    },
+    {
+      "id": "A5_Q_THREE_ANCHORS",
+      "xp": 95,
+      "reason": "세 Anchor 동기화 차단 / 첫 C7"
+    },
+    {
+      "id": "A5_Q_LEADER",
+      "xp": 80,
+      "reason": "해방파 수장 전투 후 핵심대화"
+    },
+    {
+      "id": "A5_Q_FINAL",
+      "xp": 100,
+      "reason": "Void Titan 이후 최종선택"
+    }
+  ],
+  "c7_spells": [
+    {
+      "id": "base.spell.resonance_overdrive",
+      "name": "공명 폭주",
+      "circle": 7,
+      "category": "ATTACK",
+      "unlock": "M06 ABSORB + all 3 anchors + story free",
+      "learn_cost": 0,
+      "mp": 52,
+      "delay": 185,
+      "range": 6,
+      "area": "BURST7",
+      "difficulty": "VERY_HARD",
+      "defense": "EVASION_PER_TARGET",
+      "power": 42,
+      "damage_type": "ARCANE",
+      "stable": "Full damage; Huge target core/channel receives +15% damage.",
+      "unstable": "Damage ×0.75; no Huge bonus.",
+      "surge": "Damage ×1.10; same Burst7 only; caster Stagger+20 and current MP -8 after resolution.",
+      "mastery": "C7 is story-tier; no Lv2–5 mastery in base campaign."
+    },
+    {
+      "id": "base.spell.world_anchor",
+      "name": "세계의 닻",
+      "circle": 7,
+      "category": "DEFENSE",
+      "unlock": "M06 STABILIZE + all 3 anchors + story free",
+      "learn_cost": 0,
+      "mp": 48,
+      "delay": 175,
+      "range": 0,
+      "area": "ALL_ALLIES",
+      "difficulty": "HARD",
+      "defense": "NONE",
+      "power": 0,
+      "damage_type": null,
+      "stable": "All allies Barrier 28+MNDmod; Stability +2 and forced-move resist +2 for 2 activations; suppress one active Ley Rift hazard for 1 activation.",
+      "unstable": "Barrier 70%; Stability +1; no hazard suppression.",
+      "surge": "Normal effect but caster nextActionTime +20.",
+      "mastery": "C7 is story-tier; no Lv2–5 mastery in base campaign."
+    },
+    {
+      "id": "base.spell.leyline_dominion",
+      "name": "마력맥 지배",
+      "circle": 7,
+      "category": "CONTROL",
+      "unlock": "S02 Inferno Dragon + all 3 anchor records",
+      "learn_cost": 120,
+      "mp": 50,
+      "delay": 190,
+      "range": 6,
+      "area": "BURST7",
+      "difficulty": "VERY_HARD",
+      "defense": "RESOLVE_PER_TARGET",
+      "power": 0,
+      "damage_type": null,
+      "stable": "Normal/Elite: Slow30%/2 + Stagger30. Boss/Huge: Slow15%/1 + Stagger25. Suppress hazards inside Burst7 for 1 activation.",
+      "unstable": "Slow15%/1; no Stagger/hazard suppression.",
+      "surge": "Effect normal; one random empty cell in Burst7 becomes unstable Ley Rift for 1 activation.",
+      "mastery": "Optional second C7; no mastery in base campaign."
+    }
+  ],
+  "liberation_leader": {
+    "id": "story_boss_liberation_leader",
+    "art_rule": "human story character art / NOT one of the 12 monster boss asset IDs",
+    "level": 25,
+    "hp": 240,
+    "speed": 112,
+    "move": 2,
+    "evasion": 14,
+    "fortitude": 14,
+    "resolve": 20,
+    "brace": 12,
+    "armor": 2,
+    "magic_resist": 5,
+    "channels": [
+      "LEADER",
+      "PYLON_A",
+      "PYLON_B",
+      "PYLON_C"
+    ],
+    "phase1": "3 pylons active; each grants Barrier10 to leader at own activation and modifies one lane.",
+    "phase2": "at 60% HP leader overloads remaining pylons; destroying/disable lowers MR and stops lane effects.",
+    "phase3": "at 25% HP pylons shut down; leader gains Delay-10 but MR-2.",
+    "skills": [
+      "Vector Shift — R6 line reposition + arcane damage",
+      "Forced Resonance — Burst7 stability pressure",
+      "Command Pylon — advances selected pylon action",
+      "Unbound Cast — high damage single target, telegraphed"
+    ],
+    "result": "DEFEATED_STORY; final ideological dialogue; no extra execution choice"
+  },
+  "endings": {
+    "A_RESTORE": {
+      "flag": "ending_restore",
+      "choice_label": "기존 안정 상태에 가깝게 복원",
+      "world": "변이 감소, 주문 안정, 기존 기관 유지 가능; 일부 새로운 마법 가능성 닫힘",
+      "not_implied": "왕립 마도원의 모든 과거 행동이 옳았다는 뜻이 아님"
+    },
+    "B_CHANGE": {
+      "flag": "ending_change",
+      "choice_label": "새로운 흐름을 통제 가능한 상태로 안정화",
+      "world": "변화 일부 잔존, 마법 질서 변화, 기관·생태계가 적응해야 함",
+      "not_implied": "해방파의 강제적 실험이 옳았다는 뜻이 아님"
+    }
+  },
+  "epilogue_rules": {
+    "T01": [
+      "ending",
+      "kael_state",
+      "act1_local_recovery"
+    ],
+    "T02": [
+      "ending",
+      "erin_pq_complete",
+      "swamp_purified_or_burned"
+    ],
+    "T03": [
+      "ending",
+      "ironvale_mine_sealed_or_stabilized",
+      "anchor_west_resolution"
+    ],
+    "T04": [
+      "ending",
+      "swamp_burned_or_purified"
+    ],
+    "T05": [
+      "ending",
+      "ancient_records_choice",
+      "nera_records_choice"
+    ],
+    "T06": [
+      "ending",
+      "researcher_choice",
+      "temple_truth_choice",
+      "anchor_central_resolution"
+    ],
+    "T07": [
+      "ending",
+      "researcher_choice",
+      "temple_truth_choice"
+    ],
+    "T08": [
+      "ending",
+      "luka_pq_complete",
+      "anchor_east_resolution"
+    ],
+    "T09": [
+      "ending",
+      "d06_complete",
+      "anchor_east_resolution"
+    ],
+    "T10": [
+      "ending",
+      "white_wolf_choice"
+    ],
+    "T11": [
+      "ending",
+      "temple_truth_choice",
+      "seon_pq_complete",
+      "protagonist_trait"
+    ]
+  },
+  "flow": [
+    "A5_001_CRISIS",
+    "A5_010_THREE_ANCHORS_FREE_ORDER",
+    "A5_020_FINAL_PREP_AND_FREE_C7",
+    "A5_030_R14_D09",
+    "D09_B01_LIBERATION_LEADER",
+    "D09_B02_VOID_TITAN",
+    "C01_FINAL_LEYLINE_CHOICE",
+    "EPILOGUE"
+  ],
+  "flags": {
+    "anchor_group": [
+      "anchor_west_resolved",
+      "anchor_central_resolved",
+      "anchor_east_resolved"
+    ],
+    "ending_group": [
+      "ending_restore",
+      "ending_change"
+    ]
+  }
+}
