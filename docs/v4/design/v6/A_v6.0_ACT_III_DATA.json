@@ -1,0 +1,507 @@
+{
+  "version": "6.0",
+  "act": "III",
+  "level_band": [
+    9,
+    15
+  ],
+  "target_playtime_hours": [
+    6,
+    7
+  ],
+  "encounters": [
+    {
+      "id": "A3_E01_RIVER_CHECKPOINT",
+      "name": "강유역 검문로",
+      "region": "R06",
+      "level": 9,
+      "mandatory": true,
+      "enemies": [
+        "human_mercenary_guard",
+        "human_mercenary_archer",
+        "human_mercenary_archer"
+      ],
+      "xp": 90,
+      "gold": 150,
+      "essence": 6,
+      "map": "map.a3.r06.river_checkpoint",
+      "purpose": "인간형 적 첫 도입 / Cover / 비살상 분위기"
+    },
+    {
+      "id": "A3_R07_E01_CHARRED_VERGE",
+      "name": "불탄 숲 가장자리",
+      "region": "R07",
+      "level": 10,
+      "mandatory": true,
+      "enemies": [
+        "enemy_fire_elemental",
+        "enemy_dark_cultist",
+        "enemy_orc_warrior"
+      ],
+      "xp": 110,
+      "gold": 170,
+      "essence": 8,
+      "map": "map.a3.r07.charred_verge",
+      "purpose": "인공 증폭 흔적 / Fire hazard"
+    },
+    {
+      "id": "A3_R07_E02_ROOT_RELAY",
+      "name": "뿌리 증폭기",
+      "region": "R07",
+      "level": 11,
+      "mandatory": true,
+      "enemies": [
+        "enemy_fire_elemental",
+        "enemy_dark_cultist",
+        "enemy_troll_bruiser"
+      ],
+      "xp": 120,
+      "gold": 190,
+      "essence": 9,
+      "map": "map.a3.r07.root_relay",
+      "purpose": "장치 상호작용 / 제어 우선순위"
+    },
+    {
+      "id": "A3_R07_B01_BURNING_TREANT",
+      "name": "불타는 고목정령",
+      "region": "R07",
+      "level": 12,
+      "mandatory": true,
+      "enemies": [
+        "boss_burning_treant"
+      ],
+      "xp": 180,
+      "gold": 310,
+      "essence": 16,
+      "map": "map.a3.r07.burning_treant",
+      "purpose": "채널형 보스 / 가지 파괴 / C5 Inferno Orb 지식원"
+    },
+    {
+      "id": "A3_R08_E01_REDGATE_ASSAULT",
+      "name": "붉은관문 습격",
+      "region": "R08",
+      "level": 11,
+      "mandatory": true,
+      "enemies": [
+        "human_liberation_vanguard",
+        "human_liberation_mage",
+        "enemy_hobgoblin"
+      ],
+      "xp": 110,
+      "gold": 185,
+      "essence": 7,
+      "map": "map.a3.r08.redgate_assault",
+      "purpose": "Luka 영입 전투 / 인간+몬스터 혼합"
+    },
+    {
+      "id": "A3_R08_E02_RELAY_CONVOY",
+      "name": "증폭기 호송대",
+      "region": "R08",
+      "level": 12,
+      "mandatory": false,
+      "enemies": [
+        "human_mercenary_guard",
+        "human_mercenary_archer",
+        "human_liberation_mage"
+      ],
+      "xp": 100,
+      "gold": 210,
+      "essence": 8,
+      "map": "map.a3.r08.relay_convoy",
+      "purpose": "Optional 정보/장치 회수"
+    },
+    {
+      "id": "D05_E01_OUTER_FENCE",
+      "name": "D05 외곽 방어선",
+      "region": "R08",
+      "level": 12,
+      "mandatory": true,
+      "enemies": [
+        "human_liberation_vanguard",
+        "human_mercenary_archer",
+        "human_mercenary_guard"
+      ],
+      "xp": 120,
+      "gold": 190,
+      "essence": 8,
+      "map": "map.d05.outer_fence",
+      "purpose": "해방파 시설 침투"
+    },
+    {
+      "id": "D05_E02_CONTAINMENT",
+      "name": "D05 격리실",
+      "region": "R08",
+      "level": 12,
+      "mandatory": true,
+      "enemies": [
+        "enemy_dark_cultist",
+        "enemy_fire_elemental",
+        "human_liberation_mage"
+      ],
+      "xp": 125,
+      "gold": 180,
+      "essence": 10,
+      "map": "map.d05.containment",
+      "purpose": "실험체/인간 책임 테마"
+    },
+    {
+      "id": "D05_E03_RESONANCE_HALL",
+      "name": "D05 공명실",
+      "region": "R08",
+      "level": 13,
+      "mandatory": true,
+      "enemies": [
+        "human_liberation_mage",
+        "human_liberation_vanguard",
+        "human_research_elite"
+      ],
+      "xp": 135,
+      "gold": 205,
+      "essence": 11,
+      "map": "map.d05.resonance_hall",
+      "purpose": "장치 끄기 / Suppression Field 지식"
+    },
+    {
+      "id": "D05_E04_TRANSFER_BRIDGE",
+      "name": "D05 이동교",
+      "region": "R08",
+      "level": 13,
+      "mandatory": true,
+      "enemies": [
+        "human_mercenary_guard",
+        "human_liberation_vanguard",
+        "human_mercenary_archer",
+        "human_liberation_mage"
+      ],
+      "xp": 140,
+      "gold": 225,
+      "essence": 10,
+      "map": "map.d05.transfer_bridge",
+      "purpose": "좁은 통로 / 후열 보호"
+    },
+    {
+      "id": "D05_B01_RESEARCHER_CAPTURE",
+      "name": "해방파 정예 연구자 생포",
+      "region": "R08",
+      "level": 14,
+      "mandatory": true,
+      "enemies": [
+        "human_research_elite",
+        "human_liberation_vanguard",
+        "human_liberation_mage"
+      ],
+      "xp": 200,
+      "gold": 360,
+      "essence": 20,
+      "map": "map.d05.researcher_core",
+      "purpose": "CAPTURED 결과 / M04 연구자 처리"
+    },
+    {
+      "id": "A3_R09_E01_DESERT_APPROACH",
+      "name": "태양흉터 진입로",
+      "region": "R09",
+      "level": 14,
+      "mandatory": true,
+      "enemies": [
+        "enemy_storm_harpy",
+        "enemy_dark_cultist",
+        "enemy_fire_elemental"
+      ],
+      "xp": 115,
+      "gold": 210,
+      "essence": 8,
+      "map": "map.a3.r09.desert_approach",
+      "purpose": "사막/긴 사거리"
+    },
+    {
+      "id": "D06_E01_REFLECTION_HALL",
+      "name": "D06 반사 회랑",
+      "region": "R09",
+      "level": 14,
+      "mandatory": true,
+      "enemies": [
+        "enemy_stone_gargoyle",
+        "enemy_storm_harpy",
+        "enemy_dark_cultist"
+      ],
+      "xp": 130,
+      "gold": 235,
+      "essence": 10,
+      "map": "map.d06.reflection_hall",
+      "purpose": "반사판/LOS 예고"
+    },
+    {
+      "id": "D06_B01_SUN_SPHINX",
+      "name": "태양 스핑크스",
+      "region": "R09",
+      "level": 15,
+      "mandatory": true,
+      "enemies": [
+        "boss_sun_sphinx"
+      ],
+      "xp": 220,
+      "gold": 420,
+      "essence": 24,
+      "map": "map.d06.sun_sphinx",
+      "purpose": "반사판 조작 / 북부 관측 기록 확보"
+    }
+  ],
+  "story_xp": [
+    {
+      "id": "A3_Q_REPORT",
+      "xp": 80,
+      "reason": "왕립 마도원 합동보고 / C4 Gate"
+    },
+    {
+      "id": "A3_Q_SEON_JOIN",
+      "xp": 60,
+      "reason": "세온 합류 / 신전 기록 교차검증"
+    },
+    {
+      "id": "A3_Q_FREEHOLD",
+      "xp": 80,
+      "reason": "자유연구회 비교 분석"
+    },
+    {
+      "id": "A3_Q_LUKA_JOIN",
+      "xp": 70,
+      "reason": "루카 합류 / Redgate 방어 정리"
+    },
+    {
+      "id": "A3_Q_M04_RESOLVE",
+      "xp": 120,
+      "reason": "연구자 처리 Major Choice Commit"
+    },
+    {
+      "id": "A3_Q_D06_RECORD",
+      "xp": 90,
+      "reason": "고대 관측 기록 해석 / 북부 Gate"
+    }
+  ],
+  "quest_nodes": [
+    {
+      "id": "A3_001_ARKEN_ENTRY",
+      "type": "HUB_STORY",
+      "location": "T06",
+      "next": [
+        "A3_002_ACADEMY_REPORT"
+      ],
+      "flags_set": [
+        "act3_started"
+      ]
+    },
+    {
+      "id": "A3_002_ACADEMY_REPORT",
+      "type": "DIALOGUE",
+      "location": "T06",
+      "next": [
+        "A3_003_TEMPLE_CROSSCHECK"
+      ],
+      "flags_set": [
+        "circle4_story_gate"
+      ]
+    },
+    {
+      "id": "A3_003_TEMPLE_CROSSCHECK",
+      "type": "COMPANION_RECRUIT",
+      "location": "T06",
+      "next": [
+        "A3_010_INVESTIGATIONS"
+      ],
+      "flags_set": [
+        "seon_recruited"
+      ]
+    },
+    {
+      "id": "A3_010_INVESTIGATIONS",
+      "type": "RESOLVER",
+      "location": "WORLD",
+      "next": [
+        "A3_020_R07",
+        "A3_030_T07",
+        "A3_040_T08"
+      ],
+      "notes": "R07/T07/T08 세 조사축은 순서 유연. evidence_count>=2면 D05."
+    },
+    {
+      "id": "A3_020_R07",
+      "type": "QUEST_CHAIN",
+      "location": "R07",
+      "next": [
+        "A3_050_D05_GATE"
+      ],
+      "flags_set": [
+        "act3_burnt_forest_evidence"
+      ]
+    },
+    {
+      "id": "A3_030_T07",
+      "type": "HUB_STORY",
+      "location": "T07",
+      "next": [
+        "A3_050_D05_GATE"
+      ],
+      "flags_set": [
+        "act3_freehold_evidence"
+      ]
+    },
+    {
+      "id": "A3_040_T08",
+      "type": "COMPANION_RECRUIT",
+      "location": "T08",
+      "next": [
+        "A3_050_D05_GATE"
+      ],
+      "flags_set": [
+        "luka_recruited",
+        "act3_redgate_evidence"
+      ]
+    },
+    {
+      "id": "A3_050_D05_GATE",
+      "type": "RESOLVER",
+      "location": "WORLD",
+      "next": [
+        "A3_060_D05"
+      ],
+      "condition": "count(act3_burnt_forest_evidence,act3_freehold_evidence,act3_redgate_evidence)>=2"
+    },
+    {
+      "id": "A3_060_D05",
+      "type": "DUNGEON",
+      "location": "D05",
+      "next": [
+        "A3_070_M04"
+      ],
+      "flags_set": [
+        "d05_researcher_captured",
+        "circle5_story_gate"
+      ]
+    },
+    {
+      "id": "A3_070_M04",
+      "type": "MAJOR_CHOICE",
+      "location": "D05",
+      "next": [
+        "A3_080_SUNMARKET"
+      ],
+      "choice_id": "M04_RESEARCHER"
+    },
+    {
+      "id": "A3_080_SUNMARKET",
+      "type": "HUB_STORY",
+      "location": "T09",
+      "next": [
+        "A3_090_D06"
+      ]
+    },
+    {
+      "id": "A3_090_D06",
+      "type": "DUNGEON_BOSS",
+      "location": "D06",
+      "next": [
+        "A3_100_NORTH_SIGNAL"
+      ],
+      "flags_set": [
+        "d06_complete",
+        "north_ley_point_identified"
+      ]
+    },
+    {
+      "id": "A3_100_NORTH_SIGNAL",
+      "type": "ACT_TRANSITION",
+      "location": "T09",
+      "next": [],
+      "flags_set": [
+        "act3_complete",
+        "act4_unlocked"
+      ]
+    }
+  ],
+  "major_choice": {
+    "id": "M04_RESEARCHER",
+    "options": {
+      "ACADEMY": {
+        "label": "왕립 마도원에 인계",
+        "flags": [
+          "researcher_handed_to_academy"
+        ],
+        "academy_relation": 2,
+        "freehold_relation": -1
+      },
+      "EXILE": {
+        "label": "자료 압수 후 추방",
+        "flags": [
+          "researcher_exiled"
+        ],
+        "academy_relation": 0,
+        "freehold_relation": 0
+      },
+      "SECRET_COOP": {
+        "label": "감시 조건 비밀 협력",
+        "flags": [
+          "researcher_secret_coop"
+        ],
+        "academy_relation": -1,
+        "freehold_relation": 1
+      }
+    },
+    "exclusive": [
+      "researcher_handed_to_academy",
+      "researcher_exiled",
+      "researcher_secret_coop"
+    ],
+    "provisional": true,
+    "interjections": {
+      "nera": {
+        "ACADEMY": "STRONG_OBJECTION",
+        "EXILE": "COMMENT",
+        "SECRET_COOP": "COMMENT"
+      },
+      "seon": {
+        "ACADEMY": "COMMENT",
+        "EXILE": "STRONG_IF_SERIOUS_CRIME",
+        "SECRET_COOP": "RED_LINE_IF_HUMAN_EXPERIMENT_CONFIRMED"
+      },
+      "luka": {
+        "ACADEMY": "COMMENT",
+        "EXILE": "STRONG_IF_SERIOUS_CRIME",
+        "SECRET_COOP": "RED_LINE_UNLESS_ACCOUNTABILITY_FORMALIZED"
+      },
+      "kael": {
+        "SECRET_COOP": "STRONG_IF_CIVILIAN_EXPERIMENT"
+      },
+      "erin": {
+        "ACADEMY": "COMMENT",
+        "EXILE": "COMMENT",
+        "SECRET_COOP": "COMMENT"
+      }
+    }
+  },
+  "unlock_rules": {
+    "circle4": "act3 academy joint report + level>=9",
+    "circle5": "D05 resolved + level>=13",
+    "attack_prepared_slot4": "first C4 Attack knowledge",
+    "control_prepared_slot4": "around D05 entry",
+    "defense_prepared_slot4": "D05 complete"
+  },
+  "companion_recruitment": {
+    "seon": {
+      "node": "A3_003_TEMPLE_CROSSCHECK",
+      "missable": false,
+      "active_party_optional": true
+    },
+    "luka": {
+      "node": "A3_040_T08",
+      "missable": false,
+      "active_party_optional": true
+    }
+  },
+  "personal_quest_windows": {
+    "kael": "available after T08 first visit",
+    "erin": "available after ACT III begins + T02 revisit",
+    "nera": "available after T06 archives open",
+    "seon": "not before ACT IV T11",
+    "luka": "available after D05 or equivalent Redgate stabilization"
+  }
+}
