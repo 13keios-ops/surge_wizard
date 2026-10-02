@@ -1,5 +1,5 @@
 {
-  "version": "8.0",
+  "version": "8.1",
   "auditedFromMainHead": "60e1625ea21f2e8d76550ebcb67529ae76f91ff4",
   "findings": [
     "old CLAUDE.md directed agents to pre-v4 GAME_DESIGN/HANDOFF",
@@ -7,5 +7,13 @@
     "pubspec carried rewarded-ad dependency/comments",
     "plain flutter run launches protected legacy main.dart"
   ],
-  "remediationStatus": "CLAUDE.md/README/AGENT_START_HERE/current authority were replaced in commit 50901cb08fcf7a126b4822a8fc4b330af195ffb9; legacy GAME_DESIGN/HANDOFF receive explicit banners in the follow-up commit."
+  "remediationStatus": {
+    "currentEntryDocs": "CLAUDE.md / README.md / AGENT_START_HERE.md point to v8.1 and 2026-10-03 authority",
+    "legacyRootDocs": "HANDOFF.md and GAME_DESIGN.md carry LEGACY PRE-v4 banners",
+    "oldAuthorities": "2026-10-01 authority/audit and 2026-10-02 authority carry SUPERSEDED banners",
+    "monetization": "google_mobile_ads removed; old gems/deck-slot monetization is not current",
+    "fullHistoryBuilder": "must point to 2026-10-03 authority and include live v6/v7/v8 overlays",
+    "structuredPackages": "v6/v7 JSON, audits, manifests and validators committed"
+  },
+  "currentAuthority": "docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md"
 }
