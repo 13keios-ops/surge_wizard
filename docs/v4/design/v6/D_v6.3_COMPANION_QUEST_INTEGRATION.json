@@ -1,0 +1,55 @@
+{
+  "version": "6.3",
+  "companions": [
+    {
+      "companion": "kael",
+      "quest": "base.cquest.kael_left_names",
+      "available": "ACT III T08",
+      "required_owner": true,
+      "trait": "base.trait.kael.hold_the_line",
+      "main_gate": false,
+      "act5": "WEST civilian line bonus",
+      "ending_lock": false
+    },
+    {
+      "companion": "erin",
+      "quest": "base.cquest.erin_second_season",
+      "available": "ACT III T02 revisit",
+      "required_owner": true,
+      "trait": "base.trait.erin.read_the_trail",
+      "main_gate": false,
+      "act5": "EAST safe route / first hazard preview",
+      "ending_lock": false
+    },
+    {
+      "companion": "nera",
+      "quest": "base.cquest.nera_sealed_name",
+      "available": "ACT III T05/T06 archive",
+      "required_owner": true,
+      "trait": "base.trait.nera.see_the_gap",
+      "main_gate": false,
+      "act5": "CENTRAL seal bypass",
+      "ending_lock": false
+    },
+    {
+      "companion": "seon",
+      "quest": "base.cquest.seon_empty_prayer",
+      "available": "ACT IV T11",
+      "required_owner": true,
+      "trait": "base.trait.seon.two_hands_prayer",
+      "main_gate": false,
+      "act5": "CENTRAL/final hazard suppression",
+      "ending_lock": false
+    },
+    {
+      "companion": "luka",
+      "quest": "base.cquest.luka_weight_of_command",
+      "available": "ACT III late T08",
+      "required_owner": true,
+      "trait": "base.trait.luka.oath_of_guarding",
+      "main_gate": false,
+      "act5": "EAST reinforcement delay",
+      "ending_lock": false
+    }
+  ]
+}
