@@ -1,0 +1,84 @@
+{
+  "version": "6.3",
+  "choice_groups": {
+    "M01": [
+      "ironvale_mine_sealed",
+      "ironvale_mine_stabilized"
+    ],
+    "M02": [
+      "swamp_burned",
+      "swamp_purified"
+    ],
+    "M03": [
+      "ancient_records_academy",
+      "ancient_records_shared",
+      "ancient_records_resealed"
+    ],
+    "M04": [
+      "researcher_handed_to_academy",
+      "researcher_exiled",
+      "researcher_secret_coop"
+    ],
+    "M05": [
+      "white_wolf_pack_killed",
+      "white_wolf_redirected",
+      "white_wolf_repelled"
+    ],
+    "M06": [
+      "protagonist_trait_resonant_core",
+      "protagonist_trait_harmonizer"
+    ],
+    "M07": [
+      "temple_truth_public_immediate",
+      "temple_truth_joint_verify",
+      "temple_truth_sealed"
+    ],
+    "C01": [
+      "ending_restore",
+      "ending_change"
+    ]
+  },
+  "durable_flags": {
+    "recruitment": [
+      "kael_recruited",
+      "erin_recruited",
+      "nera_recruited",
+      "seon_recruited",
+      "luka_recruited"
+    ],
+    "act_gates": [
+      "act1_complete",
+      "act2_invitation_received",
+      "act3_complete",
+      "act4_complete",
+      "act5_unlocked"
+    ],
+    "spell_gates": [
+      "circle4_story_gate",
+      "circle5_story_gate",
+      "circle6_story_gate",
+      "story_c7_granted"
+    ],
+    "anchors": [
+      "anchor_west_resolved",
+      "anchor_central_resolved",
+      "anchor_east_resolved"
+    ],
+    "personal_quests": [
+      "kael_pq_complete",
+      "erin_pq_complete",
+      "nera_pq_complete",
+      "seon_pq_complete",
+      "luka_pq_complete"
+    ],
+    "easter": [
+      "easter_orb_found",
+      "accessory_slot_unlocked",
+      "easter_starlight_guide_found",
+      "spell_starlight_guide_learned",
+      "title_three_times_lost_found",
+      "title_untouched_found",
+      "title_absent_tower_found"
+    ]
+  }
+}
