@@ -9,7 +9,7 @@
 CLAUDE.md
 README.md
 AGENT_START_HERE.md
-docs/v4/final/CURRENT_AUTHORITY_2026-10-02.md
+docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md
 docs/v4/final/MASTER_SPEC.md
 docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md
 ```
@@ -28,7 +28,7 @@ The current game is the **landscape 3-character tactical RPG**, not the old port
 ## Authority order
 
 1. New explicit user instruction.
-2. `CURRENT_AUTHORITY_2026-10-02.md` + `FINAL_HANDOFF_RECHECK_v8.1.md`.
+2. `CURRENT_AUTHORITY_2026-10-03.md` + `FINAL_HANDOFF_RECHECK_v8.1.md`.
 3. All v8 correction files in this directory.
 4. v7.0–v7.8 Full Narrative package.
 5. v6.0–v6.3 Remaining Design Complete package.
