@@ -7,7 +7,7 @@
 ## v8.1에서 바로잡는 실제 문제
 
 1. `LOCAL_AGENT_BOOTSTRAP_v8.0.md`가 수정된 `CLAUDE.md`/`README.md`까지 legacy로 부르던 자기모순.
-2. bootstrap이 최신 `CURRENT_AUTHORITY_2026-10-02.md`가 아니라 10월 1일 권위를 다시 가리키던 역류.
+2. bootstrap이 최신 `CURRENT_AUTHORITY_2026-10-03.md`가 아니라 10월 1일 권위를 다시 가리키던 역류.
 3. `HANDOFF.md` / `GAME_DESIGN.md` legacy 배너 반영이 실제 커밋되지 않았는데 완료로 기록된 문제.
 4. v6 인덱스가 15개 구조화 데이터/validator 파일을 가리키지만 저장소에는 없던 문제.
 5. v7 인덱스가 구조화 Narrative JSON/validator를 가리키지만 저장소에는 없던 문제.
@@ -69,3 +69,7 @@ GitHub 반영 후 `validate_repo_handoff_v8_1.py`와 원래 v6/v7 validator가 �
 current entry docs의 참조 경로 검사에서 broken reference가 0이면 **fresh-clone handoff GO**로 판정한다.
 
 Flutter/Dart SDK 실제 실행은 별도 구현환경 gate다. 이 문서의 PASS는 Flutter compile/test PASS를 뜻하지 않는다.
+
+## Current authority
+
+Use `docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md` as the current implementation authority.
