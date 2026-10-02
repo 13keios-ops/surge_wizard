@@ -1,22 +1,28 @@
-# Surge Wizard v4 — Pre-Implementation Audit v8.0
+# Surge Wizard v4 — Pre-Implementation Handoff v8.1
 
-이 패키지는 로컬 코딩 에이전트를 시작하기 직전의 **최종 오염/충돌/누락 교정 오버레이**다.
+This directory contains the correction overlay and final fresh-clone handoff checks.
 
-먼저 읽기:
+## Read order
 
-1. `PREIMPLEMENTATION_FULL_AUDIT_v8.0.md`
-2. `LOCAL_AGENT_BOOTSTRAP_v8.0.md`
+1. `FINAL_HANDOFF_RECHECK_v8.1.md`
+2. `LOCAL_AGENT_BOOTSTRAP_v8.0.md` (compatibility filename; content is v8.1)
 3. `CANONICAL_FLAG_MAP_v8.0.json`
 4. `M08_WEST_ANCHOR_RESTORATION_v8.0.md`
 5. `XP_TRANSITION_FLOOR_v8.0.json`
 6. `ENCOUNTER_RUNTIME_EXTENSION_v8.0.json`
-7. 나머지 normalization/gap 파일
+7. `NARRATIVE_RUNTIME_NORMALIZATION_v8.0.json`
+8. `RESOURCE_ID_NORMALIZATION_v8.0.json`
+9. `POI_EVENT_AUTHORITY_v8.0.json`
+10. `LATE_GEAR_ACQUISITION_GAPS_v8.0.json`
+11. `ACTII_BOSS_NARRATIVE_PATCH_v8.0.md`
+12. `validate_repo_handoff_v8_1.py`
 
-핵심 결론:
+## Status
 
-- 원본 repo 그대로는 **NO-GO** (root CLAUDE/HANDOFF/GAME_DESIGN 오염).
-- v8 오버레이를 로컬 repo에 두고 bootstrap을 최우선으로 읽히면 **GO**.
-- 광범위한 게임 재설계는 더 필요하지 않다.
-- 구현 중 가장 먼저 해결할 것은 문서 권위, flag migration, runtime schema extension, 실제 Flutter validation이다.
+The earlier v8.0 audit was a pre-repair snapshot. Its discovered issues are retained for provenance.
+The current status is determined by `FINAL_HANDOFF_RECHECK_v8.1.md` and the fresh-clone validator.
 
-이 패키지는 GitHub에 자동 커밋하지 않았다.
+The validated v6/v7 structured packages and their original validators are committed in the repository.
+No external local-only package is required to discover the current design.
+
+Flutter/Dart build/test is still a separate implementation-environment gate.
