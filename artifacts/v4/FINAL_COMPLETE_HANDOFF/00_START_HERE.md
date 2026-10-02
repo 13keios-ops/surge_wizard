@@ -1,79 +1,62 @@
 # Surge Wizard v4 — FINAL COMPLETE HANDOFF
 
-This directory is the **single handoff entry point** for the project after the game-design direction changed to the v4 landscape party RPG.
+This directory is the single full-history handoff entry point for the **v4 landscape party RPG**.
 
-A future implementation agent should not need to know that the historical material was originally archived in two different batches.
+## Current authority
 
-## One logical handoff, full history
-
-The repository already contains every archived source component:
+Read first:
 
 ```text
-artifacts/v4/complete_handoff/Surge_Wizard_v4_COMPLETE_HANDOFF_CONTENT_2026-10-01.tar.xz
-  → v4 direction-change baseline (2026-09-29) through the v3.6-era handoff
-
-artifacts/v4/complete_handoff/Surge_Wizard_v4_POST_V3_6_COMPLETE_HANDOFF_2026-10-01.tar.xz
-  → v3.7 through v5.9, reconciled current content, schemas, validator scaffolds and final audit
-```
-
-Use `build_final_complete_handoff.sh` to extract both into **one merged workspace** and optionally produce one physical `FINAL_COMPLETE_HANDOFF.tar.xz`.
-
-The split source archives are provenance/storage components only. They are **not separate implementation authorities**.
-
-## Read first
-
-After cloning the repository:
-
-```text
-AGENT_START_HERE.md
-docs/v4/final/CURRENT_AUTHORITY_2026-10-01.md
-docs/v4/final/FINAL_AUDIT_2026-10-01.md
+CLAUDE.md
+docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md
+docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md
 docs/v4/final/MASTER_SPEC.md
 ```
 
-Then use this directory as the full-history entry point.
+The 2026-10-01 / 2026-10-02 authority documents and the root pre-v4 `GAME_DESIGN.md` / `HANDOFF.md`
+are preserved history, not current implementation authority.
 
-## Authority
+## Full history layout
 
-When historical files disagree:
-
-1. newest explicit user instruction
-2. `docs/v4/final/CURRENT_AUTHORITY_2026-10-01.md`
-3. `docs/v4/final/FINAL_AUDIT_2026-10-01.md`
-4. reconciled current documents
-5. v5 architecture contracts for the topics they cover
-6. v3.9 / v3.8 / v3.7 / v3.6 refinements
-7. integrated v3.5 master
-8. historical staged artifacts
-
-Preserved history is context, not automatic authority.
-
-## Current known ACT I–II content resolution
+Two immutable provenance archives preserve the v4 direction-change history through v5.9:
 
 ```text
-Encounter counts
-ACT I 9
-Mine  5
-Swamp 5
-Ruin  5
-Total 24
-
-Core combat XP
-ACT I 355
-Mine  295
-Swamp 285
-Ruin  303
+artifacts/v4/complete_handoff/Surge_Wizard_v4_COMPLETE_HANDOFF_CONTENT_2026-10-01.tar.xz
+artifacts/v4/complete_handoff/Surge_Wizard_v4_POST_V3_6_COMPLETE_HANDOFF_2026-10-01.tar.xz
 ```
 
-The later reconciled ACT I–II v4.0 data wins over the staged v4.0–v4.9 batch for those numbers.
+Current authoring and correction layers are committed live:
+
+```text
+docs/v4/design/v6/
+docs/v4/narrative/v7/
+docs/v4/preimplementation/
+```
+
+`build_final_complete_handoff.sh` verifies the provenance archives, runs the fresh-clone handoff validator,
+extracts the historical layers, and copies the live v6/v7/v8.1 layers into one merged workspace.
+
+## Authority order
+
+1. newest explicit user instruction
+2. `docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md`
+3. `docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md` and v8 corrections
+4. v7 narrative package
+5. v6 campaign package
+6. reconciled ACT I–II v4.0 values
+7. v5 runtime architecture/contracts with v8 extensions
+8. v3.9 / v3.8 / v3.7 / v3.6
+9. v3.5 and older historical material
 
 ## Validation truth
 
-The archive contains the actual planning-time Python/static/balance outputs that were run, plus final handoff integrity checks.
+The handoff/package validators verify specification integrity, file presence, JSON parsing and key invariants.
+They do **not** prove Flutter/Dart runtime correctness.
 
-It does **not** establish that the current Flutter/Dart source has passed:
+Still required locally:
 
 ```bash
+python docs/v4/preimplementation/validate_repo_handoff_v8_1.py
 flutter pub get
 flutter analyze
 flutter test
@@ -81,13 +64,3 @@ dart run tool/v4_headless_sim.dart 5000
 dart run tool/v4_dungeon_run_sim.dart 5000
 flutter run -t lib/main_v4_preview.dart
 ```
-
-Those remain implementation-environment gates.
-
-## Why this exists
-
-The user's handoff requirement is:
-
-> Preserve everything from the v4 direction change onward so the implementation agent receives the complete reasoning/specification history and decides what to retain or discard.
-
-Accordingly, old versions are intentionally not deleted.
