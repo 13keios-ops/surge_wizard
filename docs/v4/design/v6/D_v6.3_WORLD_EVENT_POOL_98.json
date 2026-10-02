@@ -1,0 +1,2168 @@
+{
+  "version": "6.3",
+  "events": [
+    {
+      "id": "event.r01.combat1",
+      "region": "R01",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "들쥐 떼",
+      "prompt": "버들 평야의 길목에서 들쥐 떼 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_cave_rat",
+              "enemy_cave_rat",
+              "enemy_cave_rat"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r01.combat2",
+      "region": "R01",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "고블린 정찰",
+      "prompt": "버들 평야의 길목에서 고블린 정찰 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_goblin_scout",
+              "enemy_cave_rat"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r01.discovery1",
+      "region": "R01",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "넘어진 이정표",
+      "prompt": "오래된 왕도 표식 아래 새 긁힘이 겹쳐 있다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r01.discovery2",
+      "region": "R01",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "마른 수로",
+      "prompt": "물이 끊긴 수로 바닥에 약한 마력 잔광이 남아 있다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r01.resource1",
+      "region": "R01",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "약초 둔덕",
+      "prompt": "약초 둔덕을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "healing_herb",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r01.resource2",
+      "region": "R01",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "버려진 수레",
+      "prompt": "버려진 수레을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "basic_supplies",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r01.rare1",
+      "region": "R01",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "별 없는 밤의 여행자",
+      "prompt": "별이 없던 밤에도 북쪽에 빛을 봤다는 노인의 이야기.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "rumor.ee01.o1"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r02.combat1",
+      "region": "R02",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "빛나는 슬라임 군집",
+      "prompt": "녹음 마력숲의 길목에서 빛나는 슬라임 군집 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_green_slime",
+              "enemy_green_slime",
+              "enemy_mushroom_sprite"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r02.combat2",
+      "region": "R02",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "박쥐 숲틈",
+      "prompt": "녹음 마력숲의 길목에서 박쥐 숲틈 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_bat_swarm",
+              "enemy_bat_swarm",
+              "enemy_goblin_scout"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r02.discovery1",
+      "region": "R02",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "공명 잎맥",
+      "prompt": "나뭇잎의 빛이 같은 방향으로 흐른다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r02.discovery2",
+      "region": "R02",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "빈 사냥꾼 막사",
+      "prompt": "사냥 기록이 갑자기 방향을 바꾼 날이 있다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r02.resource1",
+      "region": "R02",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "약초 샘",
+      "prompt": "약초 샘을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "healing_herb",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r02.resource2",
+      "region": "R02",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "푸른 포자터",
+      "prompt": "푸른 포자터을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "mana_herb",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r02.rare1",
+      "region": "R02",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "여섯 점의 반딧불",
+      "prompt": "여섯 빛이 원을 이루지만 가운데는 비어 있다.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "rumor.ee01.mid"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r03.combat1",
+      "region": "R03",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "오크 채굴대",
+      "prompt": "회철 고원의 길목에서 오크 채굴대 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_orc_warrior",
+              "enemy_orc_warrior",
+              "enemy_goblin_scout"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r03.combat2",
+      "region": "R03",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "결정 수호체",
+      "prompt": "회철 고원의 길목에서 결정 수호체 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_stone_gargoyle",
+              "enemy_cave_rat",
+              "enemy_cave_rat"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r03.discovery1",
+      "region": "R03",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "갈라진 광맥표",
+      "prompt": "폭발 전부터 누군가 광맥에 표식을 남겼다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r03.discovery2",
+      "region": "R03",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "닫힌 환기갱",
+      "prompt": "안쪽에서 규칙적인 열기가 올라온다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r03.resource1",
+      "region": "R03",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "결정 노두",
+      "prompt": "결정 노두을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r03.resource2",
+      "region": "R03",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "폐광 상자",
+      "prompt": "폐광 상자을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "ore_supplies",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r03.rare1",
+      "region": "R03",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "첫 증폭기 파편",
+      "prompt": "현재 해방파 장치와 닮았지만 훨씬 오래된 부품.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "lore.prototype_amplifier"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r04.combat1",
+      "region": "R04",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "왕두꺼비 무리",
+      "prompt": "안개늪의 길목에서 왕두꺼비 무리 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_swamp_toad",
+              "enemy_swamp_toad",
+              "enemy_mushroom_sprite"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r04.combat2",
+      "region": "R04",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "안개 주술",
+      "prompt": "안개늪의 길목에서 안개 주술 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_plague_shaman",
+              "enemy_bat_swarm",
+              "enemy_swamp_toad"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r04.discovery1",
+      "region": "R04",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "거꾸로 자란 갈대",
+      "prompt": "마력 흐름 반대 방향으로 갈대가 누웠다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r04.discovery2",
+      "region": "R04",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "사냥꾼의 빈 장화",
+      "prompt": "끌려간 흔적 없이 장비만 남았다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r04.resource1",
+      "region": "R04",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "해독초 군락",
+      "prompt": "해독초 군락을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "detox_herb",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r04.resource2",
+      "region": "R04",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "침수 약초밭",
+      "prompt": "침수 약초밭을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "rare_herb",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r04.rare1",
+      "region": "R04",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "공격하지 않는 변이개체",
+      "prompt": "변했지만 사람을 피하는 생물이 관찰된다.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "lore.nonhostile_mutation"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r05.combat1",
+      "region": "R05",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "해골 견습대",
+      "prompt": "고대 폐허대의 길목에서 해골 견습대 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_skeleton_apprentice",
+              "enemy_skeleton_apprentice",
+              "enemy_stone_gargoyle"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r05.combat2",
+      "region": "R05",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "저주갑옷 행렬",
+      "prompt": "고대 폐허대의 길목에서 저주갑옷 행렬 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_cursed_armor",
+              "enemy_cursed_armor",
+              "enemy_wraith"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r05.discovery1",
+      "region": "R05",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "봉인된 이름표",
+      "prompt": "한 인물의 이름만 의도적으로 긁혀 있다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r05.discovery2",
+      "region": "R05",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "무너진 천문표",
+      "prompt": "북쪽 한 구획만 비어 있다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r05.resource1",
+      "region": "R05",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "유물 파편",
+      "prompt": "유물 파편을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r05.resource2",
+      "region": "R05",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "봉인 상자",
+      "prompt": "봉인 상자을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "scroll_material",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r05.rare1",
+      "region": "R05",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "왼쪽을 고집한 낙서",
+      "prompt": "폐허 벽에 '왼쪽, 또 왼쪽, 한 번 더'가 적혀 있다.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "rumor.ee03.t2"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r06.combat1",
+      "region": "R06",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "용병 검문",
+      "prompt": "왕도 강유역의 길목에서 용병 검문 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "human_mercenary_guard",
+              "human_mercenary_archer"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r06.combat2",
+      "region": "R06",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "해방파 운반대",
+      "prompt": "왕도 강유역의 길목에서 해방파 운반대 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "human_liberation_vanguard",
+              "human_liberation_mage"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r06.discovery1",
+      "region": "R06",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "마도원 측정봉",
+      "prompt": "공식 측정치와 손글씨 수정치가 다르다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r06.discovery2",
+      "region": "R06",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "강변 피난표식",
+      "prompt": "대피용 표식이 최근 다시 칠해졌다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r06.resource1",
+      "region": "R06",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "상단 잔여품",
+      "prompt": "상단 잔여품을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "basic_supplies",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r06.resource2",
+      "region": "R06",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "마도원 촉매함",
+      "prompt": "마도원 촉매함을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r06.rare1",
+      "region": "R06",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "삭제된 조사번호",
+      "prompt": "기록번호 하나가 연속 목록에서 비어 있다.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "lore.academy_missing_record"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r07.combat1",
+      "region": "R07",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "화염 정령대",
+      "prompt": "불탄 숲의 길목에서 화염 정령대 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_fire_elemental",
+              "enemy_fire_elemental",
+              "enemy_dark_cultist"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r07.combat2",
+      "region": "R07",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "트롤 방화선",
+      "prompt": "불탄 숲의 길목에서 트롤 방화선 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_troll_bruiser",
+              "enemy_orc_warrior",
+              "enemy_fire_elemental"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r07.discovery1",
+      "region": "R07",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "검게 굳은 뿌리",
+      "prompt": "불이 아니라 내부 마력폭발로 탄 흔적.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }      ]
+    },
+    {
+      "id": "event.r07.discovery2",
+      "region": "R07",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "옛 상단 방벽",
+      "prompt": "Kael이 기억하는 표식과 같은 호송 표식.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r07.resource1",
+      "region": "R07",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "화염 결정",
+      "prompt": "화염 결정을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "special_catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r07.resource2",
+      "region": "R07",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "살아남은 약초섬",
+      "prompt": "살아남은 약초섬을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "rare_herb",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r07.rare1",
+      "region": "R07",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "초기형 증폭핀",
+      "prompt": "수년 전부터 사용된 인공 증폭기 부품.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "lore.kael_old_experiment"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r08.combat1",
+      "region": "R08",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "해방파 선봉대",
+      "prompt": "변경 황무지의 길목에서 해방파 선봉대 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "human_liberation_vanguard",
+              "human_liberation_mage",
+              "enemy_hobgoblin"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r08.combat2",
+      "region": "R08",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "용병 방패선",
+      "prompt": "변경 황무지의 길목에서 용병 방패선 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "human_mercenary_guard",
+              "human_mercenary_archer",
+              "human_mercenary_archer"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r08.discovery1",
+      "region": "R08",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "버려진 명령서",
+      "prompt": "철수 명령 시각과 실제 전달시각이 어긋난다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r08.discovery2",
+      "region": "R08",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "밀수 표식",
+      "prompt": "공식 길이 아닌 장치 운반로가 표시돼 있다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r08.resource1",
+      "region": "R08",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "전장 보급함",
+      "prompt": "전장 보급함을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "battle_supplies",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r08.resource2",
+      "region": "R08",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "고철 촉매",
+      "prompt": "고철 촉매을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r08.rare1",
+      "region": "R08",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "유료가 아닌 안내",
+      "prompt": "정보상이 돈 대신 '다음 사람에게도 길을 알려 달라'고 요구한다.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "rumor.frontier_mutual_aid"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r09.combat1",
+      "region": "R09",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "폭풍 하피",
+      "prompt": "태양흉터 사막의 길목에서 폭풍 하피 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_storm_harpy",
+              "enemy_storm_harpy",
+              "enemy_dark_cultist"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r09.combat2",
+      "region": "R09",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "사막 화염체",
+      "prompt": "태양흉터 사막의 길목에서 사막 화염체 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_fire_elemental",
+              "enemy_storm_harpy",
+              "enemy_ogre_champion"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r09.discovery1",
+      "region": "R09",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "묻힌 해시계",
+      "prompt": "그림자 방향이 현재 태양과 맞지 않는다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r09.discovery2",
+      "region": "R09",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "별자리 벽돌",
+      "prompt": "여섯 칸 중 하나가 의도적으로 비어 있다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r09.resource1",
+      "region": "R09",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "사막 약초",
+      "prompt": "사막 약초을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "rare_herb",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r09.resource2",
+      "region": "R09",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "태양 결정",
+      "prompt": "태양 결정을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "special_catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r09.rare1",
+      "region": "R09",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "없는 탑의 그림자",
+      "prompt": "해진 뒤에만 수평선 위로 탑 모양 그림자가 생긴다.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "rumor.ee05.n2"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r10.combat1",
+      "region": "R10",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "수정 거상 경계",
+      "prompt": "수정 황무지의 길목에서 수정 거상 경계 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_crystal_colossus",
+              "enemy_stone_gargoyle"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r10.combat2",
+      "region": "R10",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "그림자 채굴자",
+      "prompt": "수정 황무지의 길목에서 그림자 채굴자 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_shadow_assassin",
+              "human_liberation_mage",
+              "enemy_stone_gargoyle"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r10.discovery1",
+      "region": "R10",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "둘째 공명",
+      "prompt": "두 번째 울림만 되돌아오지 않는다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r10.discovery2",
+      "region": "R10",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "결정 결함선",
+      "prompt": "마력 흐름이 지질이 아니라 인공 배치에 맞춰 꺾인다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r10.resource1",
+      "region": "R10",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "공명 결정",
+      "prompt": "공명 결정을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "special_catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r10.resource2",
+      "region": "R10",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "미세 수정가루",
+      "prompt": "미세 수정가루을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r10.rare1",
+      "region": "R10",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "그대로 둔 씨앗",
+      "prompt": "작은 결정 씨앗이 손대지 않을 때만 안정된 소리를 낸다.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "rumor.ee04.u1"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r11.combat1",
+      "region": "R11",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "설원 늑대선",
+      "prompt": "눈 협곡의 길목에서 설원 늑대선 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_wolf_pack",
+              "enemy_wolf_pack",
+              "enemy_ice_witch"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r11.combat2",
+      "region": "R11",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "하피 급강하",
+      "prompt": "눈 협곡의 길목에서 하피 급강하 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_storm_harpy",
+              "enemy_storm_harpy",
+              "enemy_wraith"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r11.discovery1",
+      "region": "R11",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "돌아선 발자국",
+      "prompt": "늑대 발자국이 사람 냄새를 피해 우회한다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r11.discovery2",
+      "region": "R11",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "얼음 속 맥동",
+      "prompt": "협곡 얼음이 일정한 주기로 진동한다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r11.resource1",
+      "region": "R11",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "설원 약초",
+      "prompt": "설원 약초을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "rare_herb",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r11.resource2",
+      "region": "R11",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "냉각 결정",
+      "prompt": "냉각 결정을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "special_catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r11.rare1",
+      "region": "R11",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "흰 늑대의 경고",
+      "prompt": "Alpha가 공격 대신 길을 막고 북쪽을 바라본다.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "lore.white_wolf_warning"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r12.combat1",
+      "region": "R12",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "빙결 마녀대",
+      "prompt": "북부 설원의 길목에서 빙결 마녀대 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_ice_witch",
+              "enemy_wraith",
+              "enemy_wolf_pack"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r12.combat2",
+      "region": "R12",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "어린 골룡",
+      "prompt": "북부 설원의 길목에서 어린 골룡 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_bone_dragon_whelp",
+              "enemy_skeleton_apprentice",
+              "enemy_wraith"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r12.discovery1",
+      "region": "R12",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "얼어붙은 편지",
+      "prompt": "마도탑 연구자가 '흡수하는 사람'을 가정한 메모.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r12.discovery2",
+      "region": "R12",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "회전 나침반",
+      "prompt": "탑 방향에서만 침이 원을 그린다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r12.resource1",
+      "region": "R12",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "빙결 핵",
+      "prompt": "빙결 핵을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "special_catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r12.resource2",
+      "region": "R12",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "탑 잔해",
+      "prompt": "탑 잔해을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "scroll_material",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r12.rare1",
+      "region": "R12",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "미완성 공명식",
+      "prompt": "주인공과 유사한 반응을 이론으로만 기록한 문서.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "lore.resonance_precursor"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r13.combat1",
+      "region": "R13",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "성맥 수호갑옷",
+      "prompt": "성맥 계곡의 길목에서 성맥 수호갑옷 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_cursed_armor",
+              "enemy_stone_gargoyle",
+              "enemy_vampire_knight"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r13.combat2",
+      "region": "R13",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "수정 성소 방어",
+      "prompt": "성맥 계곡의 길목에서 수정 성소 방어 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_crystal_colossus",
+              "enemy_cursed_armor"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r13.discovery1",
+      "region": "R13",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "기도와 밸브",
+      "prompt": "기도문 행이 실제 밸브 순서와 일치한다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r13.discovery2",
+      "region": "R13",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "여섯 돌",
+      "prompt": "여섯 돌 중앙에 비어 있는 자리가 있다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r13.resource1",
+      "region": "R13",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "성맥 촉매",
+      "prompt": "성맥 촉매을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "special_catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r13.resource2",
+      "region": "R13",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "정화약초",
+      "prompt": "정화약초을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "detox_herb",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r13.rare1",
+      "region": "R13",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "빈 중앙의 밤",
+      "prompt": "밤에 돌을 켜지 않아도 중앙이 희미하게 빛난다.",
+      "options": [        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "rumor.ee01.o4"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": false
+    },
+    {
+      "id": "event.r14.combat1",
+      "region": "R14",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "균열 수문장",
+      "prompt": "마력맥 왕관의 길목에서 균열 수문장 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_demon_gatekeeper",
+              "enemy_lava_golem",
+              "enemy_shadow_assassin"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r14.combat2",
+      "region": "R14",
+      "family": "COMBAT",
+      "repeat": "REPEATABLE",
+      "title": "최종 정예혼성",
+      "prompt": "마력맥 왕관의 길목에서 최종 정예혼성 징후가 보인다.",
+      "options": [
+        {
+          "id": "ENGAGE",
+          "result": {
+            "combat_enemies": [
+              "enemy_crystal_colossus",
+              "enemy_vampire_knight",
+              "enemy_bone_dragon_whelp"
+            ]
+          }
+        },
+        {
+          "id": "DETOUR",
+          "check": "SURVIVAL",
+          "success": "avoid combat",
+          "failure": "combat with enemy first-position bonus"
+        }
+      ]
+    },
+    {
+      "id": "event.r14.discovery1",
+      "region": "R14",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "고정 흔적",
+      "prompt": "현재 질서가 자연발생만은 아니라는 마지막 물증.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r14.discovery2",
+      "region": "R14",
+      "family": "DISCOVERY",
+      "repeat": "LIMITED",
+      "title": "해방파 마지막 기록",
+      "prompt": "변화에 대한 관찰과 강제실험 기록이 한 문서에 공존한다.",
+      "options": [
+        {
+          "id": "INVESTIGATE",
+          "check": "OBSERVATION",
+          "success": "discovery log + minor XP",
+          "failure": "discovery log only"
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r14.resource1",
+      "region": "R14",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "고농축 정수",
+      "prompt": "고농축 정수을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "essence_cache",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r14.resource2",
+      "region": "R14",
+      "family": "RESOURCE",
+      "repeat": "REPEATABLE",
+      "title": "중심핵 파편",
+      "prompt": "중심핵 파편을 발견했다. 오래 머물면 이동이 늦어진다.",
+      "options": [
+        {
+          "id": "GATHER",
+          "result": {
+            "resource": "special_catalyst",
+            "quantity": "authored 1-3"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "no mutation"
+        }
+      ]
+    },
+    {
+      "id": "event.r14.rare1",
+      "region": "R14",
+      "family": "RARE",
+      "repeat": "ONE_SHOT",
+      "title": "무음의 수평선",
+      "prompt": "마력 소리가 사라지는 방향이 한 곳뿐이다.",
+      "options": [
+        {
+          "id": "INSPECT",
+          "result": {
+            "unlock": "lore.final_optional"
+          }
+        },
+        {
+          "id": "LEAVE",
+          "result": "event remains eligible unless authored miss"
+        }
+      ],
+      "disabled_during_final_route": true
+    }
+  ]
+}
