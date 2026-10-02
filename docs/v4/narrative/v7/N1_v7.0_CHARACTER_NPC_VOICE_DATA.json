@@ -1,0 +1,559 @@
+{
+  "version": "7.0",
+  "player_dialogue": {
+    "name_token": "{playerName}",
+    "rule": "주인공은 완전 무성 캐릭터가 아니라 짧은 선택문으로 태도를 정한다. 일반 선택은 tone만 바꾸고 Major Choice만 세계 Flag를 바꾼다.",
+    "default_tones": [
+      "PRACTICAL",
+      "CURIOUS",
+      "EMPATHETIC",
+      "ASSERTIVE"
+    ],
+    "max_options_normal": 3,
+    "max_options_major": 4
+  },
+  "companions": {
+    "kael": {
+      "display": "카일",
+      "role": "전사 / 현실적 기준점",
+      "voice": [
+        "짧고 직접적",
+        "현장 용어",
+        "친해질수록 건조한 농담"
+      ],
+      "avoid": [
+        "장황한 철학 강연",
+        "무조건적인 영웅 숭배"
+      ],
+      "core": "사람을 수단으로 희생시키지 않는다."
+    },
+    "erin": {
+      "display": "에린",
+      "role": "궁수 / 생태 관찰자",
+      "voice": [
+        "관찰한 사실부터 말함",
+        "짧은 문장",
+        "감정이 커질수록 오히려 단정함"
+      ],
+      "avoid": [
+        "자연은 무조건 선하다는 낭만론"
+      ],
+      "core": "변화와 오염을 같은 말로 취급하지 않는다."
+    },
+    "nera": {
+      "display": "네라",
+      "role": "도적 / 정보와 선택권",
+      "voice": [
+        "빠른 말",
+        "빈정거림",
+        "심각할수록 농담 감소"
+      ],
+      "avoid": [
+        "권력은 모두 악이라는 단순화"
+      ],
+      "core": "정보를 숨기거나 넘길 때도 책임이 필요하다."
+    },
+    "seon": {
+      "display": "세온",
+      "role": "사제 / 신앙과 책임",
+      "voice": [
+        "부드럽고 정확함",
+        "상대 말을 끝까지 들음",
+        "단호할 때 짧아짐"
+      ],
+      "avoid": [
+        "설교조 남발",
+        "Ending A의 대변인화"
+      ],
+      "core": "모른다는 것과 모른 척하는 것은 다르다."
+    },
+    "luka": {
+      "display": "루카",
+      "role": "성기사 / 질서와 책임",
+      "voice": [
+        "정돈된 문장",
+        "명령형은 전투 때만",
+        "분노할수록 더 딱딱해짐"
+      ],
+      "avoid": [
+        "권위주의 카리카처"
+      ],
+      "core": "규칙을 어길 수는 있어도 결과의 책임을 넘길 수는 없다."
+    }
+  },
+  "factions": [
+    {
+      "id": "faction.academy",
+      "name": "왕립 마도원",
+      "voice": "증거·안전·공식 절차",
+      "blind_spot": "정보 통제와 기관 자기보호"
+    },
+    {
+      "id": "faction.church",
+      "name": "성맥교단",
+      "voice": "보호·전승·책임",
+      "blind_spot": "기능을 잊은 의례와 내부 보수성"
+    },
+    {
+      "id": "faction.freehold",
+      "name": "자유 마법 연구회",
+      "voice": "검증·공유·변화 가능성",
+      "blind_spot": "느슨한 책임 구조"
+    },
+    {
+      "id": "faction.liberation",
+      "name": "해방파",
+      "voice": "억제된 변화·자율·기존 질서 비판",
+      "blind_spot": "강제 실험과 타인 위험의 정당화"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "npc.maren",
+      "name": "마렌",
+      "hub": "T01",
+      "role": "마을 책임자",
+      "voice": "실무적·과장 없음",
+      "story_function": "첫 의뢰 / ACT V 고향 상태",
+      "guardrail": "큰일을 영웅담으로 만들지 않는다."
+    },
+    {
+      "id": "npc.dona",
+      "name": "도나",
+      "hub": "T01",
+      "role": "잡화상",
+      "voice": "생활형·눈치 빠름",
+      "story_function": "기본 상점 / 주민 반응",
+      "guardrail": "소문을 확정사실처럼 말하지 않는다."
+    },
+    {
+      "id": "npc.alo",
+      "name": "알로",
+      "hub": "T01",
+      "role": "지방 신전 관리인",
+      "voice": "조심스럽고 소박함",
+      "story_function": "D01 옛 기록 암시",
+      "guardrail": "성맥교단 비밀을 초반부터 다 알지 못한다."
+    },
+    {
+      "id": "npc.bram",
+      "name": "브람",
+      "hub": "T01",
+      "role": "카일의 지인",
+      "voice": "투박한 친근함",
+      "story_function": "카일의 생활면",
+      "guardrail": "카일 과거를 일방적으로 폭로하지 않는다."
+    },
+    {
+      "id": "npc.hess",
+      "name": "헤스",
+      "hub": "T02",
+      "role": "사냥꾼 대표",
+      "voice": "현장 판단·경계",
+      "story_function": "숲/짐승 행동",
+      "guardrail": "변이를 전부 몬스터라 부르지 않는다."
+    },
+    {
+      "id": "npc.riona",
+      "name": "리오나",
+      "hub": "T02",
+      "role": "약초상",
+      "voice": "빠르고 실용적",
+      "story_function": "Alchemy / 약초 상태",
+      "guardrail": "치료효과를 과장하지 않는다."
+    },
+    {
+      "id": "npc.peron",
+      "name": "페론",
+      "hub": "T02",
+      "role": "여관주인",
+      "voice": "이야기 좋아함·구분은 함",
+      "story_function": "Rumor 허브",
+      "guardrail": "소문과 사실을 구분하는 말버릇."
+    },
+    {
+      "id": "npc.orban",
+      "name": "오르반",
+      "hub": "T03",
+      "role": "광산조합 대표",
+      "voice": "압박감 있지만 주민 우선",
+      "story_function": "M01 지역 경제",
+      "guardrail": "악덕 자본가로 만들지 않는다."
+    },
+    {
+      "id": "npc.seria",
+      "name": "세리아",
+      "hub": "T03",
+      "role": "왕립 파견관",
+      "voice": "원칙적·기록 중심",
+      "story_function": "광산 봉쇄안",
+      "guardrail": "마도원=악으로 보이지 않게."
+    },
+    {
+      "id": "npc.barek",
+      "name": "바렉",
+      "hub": "T03",
+      "role": "대장장이",
+      "voice": "짧고 기술적",
+      "story_function": "장비 / 광산 변화",
+      "guardrail": "철학대사 없음."
+    },
+    {
+      "id": "npc.tom",
+      "name": "톰",
+      "hub": "T03",
+      "role": "광부",
+      "voice": "생활형·직설",
+      "story_function": "현장 증언",
+      "guardrail": "대표성 과잉 금지."
+    },
+    {
+      "id": "npc.miel",
+      "name": "미엘",
+      "hub": "T04",
+      "role": "치료사",
+      "voice": "침착·구체적",
+      "story_function": "실종자/오염 증상",
+      "guardrail": "과학적 불확실성을 인정."
+    },
+    {
+      "id": "npc.bru",
+      "name": "브루",
+      "hub": "T04",
+      "role": "채집꾼",
+      "voice": "수다스럽지만 겁이 많음",
+      "story_function": "약초/늪 생활",
+      "guardrail": "코믹만 담당하지 않음."
+    },
+    {
+      "id": "npc.sava",
+      "name": "사바",
+      "hub": "T04",
+      "role": "늪 안내인",
+      "voice": "느린 말·신중",
+      "story_function": "수로/위험",
+      "guardrail": "늪을 신비화하지 않는다."
+    },
+    {
+      "id": "npc.mile",
+      "name": "마일",
+      "hub": "T05",
+      "role": "여관주인",
+      "voice": "사람을 오래 본 듯한 말투",
+      "story_function": "Oldcross 정보허브",
+      "guardrail": "정답을 모두 알지 못함."
+    },
+    {
+      "id": "npc.pell",
+      "name": "펠",
+      "hub": "T05",
+      "role": "지도상",
+      "voice": "정확·상업적",
+      "story_function": "유적 길/지도",
+      "guardrail": "지도=모든 비밀 해답 아님."
+    },
+    {
+      "id": "npc.roen",
+      "name": "로엔",
+      "hub": "T05",
+      "role": "골동품상",
+      "voice": "능청·세심",
+      "story_function": "Nera PQ / 유물 감별",
+      "guardrail": "도둑장물상 클리셰 지양."
+    },
+    {
+      "id": "npc.levian",
+      "name": "레비안",
+      "hub": "T06",
+      "role": "왕립 조사관",
+      "voice": "공식적이지만 실용적",
+      "story_function": "ACT III 의뢰/보고",
+      "guardrail": "마도원 대변인으로만 쓰지 않음."
+    },
+    {
+      "id": "npc.edra",
+      "name": "에드라",
+      "hub": "T06",
+      "role": "마력학자",
+      "voice": "호기심·분석적",
+      "story_function": "주인공 공명/주문 연구",
+      "guardrail": "주인공 정체를 ACT IV 전 확정하지 않음."
+    },
+    {
+      "id": "npc.sorel",
+      "name": "소렐",
+      "hub": "T06",
+      "role": "대마법 상인",
+      "voice": "자신감·상업적",
+      "story_function": "고급 마법/장비",
+      "guardrail": "만능 학자 역할 금지."
+    },
+    {
+      "id": "npc.prea",
+      "name": "프레아",
+      "hub": "T06",
+      "role": "왕도 신전 담당자",
+      "voice": "절제·행정적",
+      "story_function": "세온/교단 연결",
+      "guardrail": "세온보다 더 많이 알게 하지 않음."
+    },
+    {
+      "id": "npc.tarin",
+      "name": "타린",
+      "hub": "T07",
+      "role": "자유연구회 대표",
+      "voice": "회의적·개방적",
+      "story_function": "Freehold 입장",
+      "guardrail": "해방파를 낭만화하지 않음."
+    },
+    {
+      "id": "npc.esha",
+      "name": "에샤",
+      "hub": "T07",
+      "role": "수정공",
+      "voice": "기술자 말투",
+      "story_function": "수정 장비/공명",
+      "guardrail": "철학보다 제작."
+    },
+    {
+      "id": "npc.bol",
+      "name": "볼",
+      "hub": "T07",
+      "role": "젊은 연구자",
+      "voice": "호기심·약간 성급",
+      "story_function": "연구/이스터 힌트",
+      "guardrail": "모든 이론이 맞지는 않음."
+    },
+    {
+      "id": "npc.herman",
+      "name": "헤르만",
+      "hub": "T08",
+      "role": "수비대장",
+      "voice": "피곤한 실무자",
+      "story_function": "Redgate 방어/루카",
+      "guardrail": "군을 영웅화하지 않는다."
+    },
+    {
+      "id": "npc.besa",
+      "name": "베사",
+      "hub": "T08",
+      "role": "군수상",
+      "voice": "계산 빠름",
+      "story_function": "장비/보급",
+      "guardrail": "돈만 밝히는 캐릭터 금지."
+    },
+    {
+      "id": "npc.jin",
+      "name": "진",
+      "hub": "T08",
+      "role": "의무관",
+      "voice": "건조한 배려",
+      "story_function": "부상/민간인 비용",
+      "guardrail": "전쟁의 비용을 숫자로만 말하지 않음."
+    },
+    {
+      "id": "npc.nahim",
+      "name": "나힘",
+      "hub": "T09",
+      "role": "대상주",
+      "voice": "여유·협상적",
+      "story_function": "Sunmarket 연결",
+      "guardrail": "이국성 과장 금지."
+    },
+    {
+      "id": "npc.sara",
+      "name": "사라",
+      "hub": "T09",
+      "role": "희귀약재상",
+      "voice": "정확·호기심",
+      "story_function": "희귀 소비품",
+      "guardrail": "신비한 약장수화 금지."
+    },
+    {
+      "id": "npc.ibel",
+      "name": "이벨",
+      "hub": "T09",
+      "role": "천문학자",
+      "voice": "집중하면 주변 잊음",
+      "story_function": "D06 해석",
+      "guardrail": "예언자가 아님."
+    },
+    {
+      "id": "npc.kern",
+      "name": "케른",
+      "hub": "T09",
+      "role": "정보상",
+      "voice": "짧고 가격 계산",
+      "story_function": "소문/비공식 정보",
+      "guardrail": "진실 독점자 아님."
+    },
+    {
+      "id": "npc.osren",
+      "name": "오스렌",
+      "hub": "T10",
+      "role": "탐험대장",
+      "voice": "절제된 낙관",
+      "story_function": "북부 준비",
+      "guardrail": "무모한 탐험가 아님."
+    },
+    {
+      "id": "npc.hena",
+      "name": "헤나",
+      "hub": "T10",
+      "role": "북부 사냥꾼",
+      "voice": "무뚝뚝·관찰형",
+      "story_function": "White Wolf/설원",
+      "guardrail": "에린과 다른 지역전문가."
+    },
+    {
+      "id": "npc.yul",
+      "name": "율",
+      "hub": "T10",
+      "role": "약제사",
+      "voice": "신중·작업 중심",
+      "story_function": "북부 소비품",
+      "guardrail": "만병통치 표현 금지."
+    },
+    {
+      "id": "npc.def",
+      "name": "데프",
+      "hub": "T10",
+      "role": "기록관리인",
+      "voice": "마른 유머·기억 좋음",
+      "story_function": "D07 기록",
+      "guardrail": "모든 봉인자료 권한 없음."
+    },
+    {
+      "id": "npc.oren",
+      "name": "오렌",
+      "hub": "T11",
+      "role": "대사제",
+      "voice": "무게감·회피하지 않음",
+      "story_function": "M07 / 교단 책임",
+      "guardrail": "교단을 자동 방어하지 않음."
+    },
+    {
+      "id": "npc.mel",
+      "name": "멜",
+      "hub": "T11",
+      "role": "기록사제",
+      "voice": "꼼꼼·의문 많음",
+      "story_function": "Seon PQ / 기록비교",
+      "guardrail": "진실을 두려워하지 않지만 신중."
+    },
+    {
+      "id": "npc.lian",
+      "name": "리안",
+      "hub": "T11",
+      "role": "축복관리 사제",
+      "voice": "따뜻하고 실무적",
+      "story_function": "축복/순례자",
+      "guardrail": "신학 설명용 NPC 아님."
+    },
+    {
+      "id": "npc.mira",
+      "name": "미라",
+      "hub": null,
+      "role": "카일 PQ 생존자",
+      "voice": "담담함·카일을 쉽게 용서/비난하지 않음",
+      "story_function": "K03/K05",
+      "guardrail": ""
+    },
+    {
+      "id": "npc.rean",
+      "name": "레안",
+      "hub": null,
+      "role": "네라 과거 지인/내부고발자",
+      "voice": "기록/회상 중심; 직접 등장 최소",
+      "story_function": "Nera PQ",
+      "guardrail": ""
+    },
+    {
+      "id": "npc.daren",
+      "name": "다렌",
+      "hub": null,
+      "role": "루카 과거 정착지 생존자",
+      "voice": "분노가 정당하지만 일관됨",
+      "story_function": "Luka PQ",
+      "guardrail": ""
+    },
+    {
+      "id": "npc.emon",
+      "name": "에몬",
+      "hub": null,
+      "role": "버려진 성소의 노사제",
+      "voice": "선의·혼란",
+      "story_function": "Seon PQ",
+      "guardrail": ""
+    },
+    {
+      "id": "npc.velin",
+      "name": "벨린",
+      "hub": null,
+      "role": "왕립 기록관리 마도사",
+      "voice": "책임있는 비공개 논리",
+      "story_function": "Nera PQ",
+      "guardrail": ""
+    },
+    {
+      "id": "npc.karden",
+      "name": "카르덴",
+      "hub": null,
+      "role": "해방파 정예 연구자",
+      "voice": "논리적·자기합리화 가능·비겁하지 않음",
+      "story_function": "D05/M04/ACT V callback",
+      "guardrail": ""
+    },
+    {
+      "id": "npc.serkan",
+      "name": "세르칸",
+      "hub": null,
+      "role": "해방파 수장",
+      "voice": "냉정·확신·강제수단을 정당화",
+      "story_function": "D09 Human Story Boss",
+      "guardrail": ""
+    }
+  ],
+  "knowledge_reveal_guardrails": [
+    {
+      "before": "ACT I D01",
+      "forbid": [
+        "마력맥 전체 구조",
+        "해방파",
+        "주인공 공명체질"
+      ]
+    },
+    {
+      "before": "ACT II two arcs",
+      "forbid": [
+        "사건이 인간이 만든 것이라는 확정",
+        "기관 음모 확정"
+      ]
+    },
+    {
+      "before": "ACT III D05",
+      "forbid": [
+        "해방파의 전체 계획",
+        "주인공 정체 확정"
+      ]
+    },
+    {
+      "before": "ACT IV D07",
+      "forbid": [
+        "주인공이 불안정 마력을 흡수·변환하는 공명체라는 확정"
+      ]
+    },
+    {
+      "before": "ACT IV D08/M06",
+      "forbid": [
+        "주인공 최종 성장 Trait"
+      ]
+    },
+    {
+      "before": "ACT V final choice",
+      "forbid": [
+        "복원/변화 중 하나가 정답이라는 서술"
+      ]
+    }
+  ]
+}
