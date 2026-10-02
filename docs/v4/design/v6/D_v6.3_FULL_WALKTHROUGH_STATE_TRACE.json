@@ -1,0 +1,263 @@
+{
+  "version": "6.3",
+  "trace": [
+    {
+      "step": 1,
+      "act": "I",
+      "state": "T01 New Game",
+      "commit": "run seed / Wizard Lv1 / starting inventory"
+    },
+    {
+      "step": 2,
+      "act": "I",
+      "state": "First road combat",
+      "commit": "tutorial progress"
+    },
+    {
+      "step": 3,
+      "act": "I",
+      "state": "Kael joins",
+      "commit": "kael_recruited"
+    },
+    {
+      "step": 4,
+      "act": "I",
+      "state": "T02 Mossbridge",
+      "commit": "hub restore / rumor"
+    },
+    {
+      "step": 5,
+      "act": "I",
+      "state": "Elder Slime",
+      "commit": "boss reward / Essence system"
+    },
+    {
+      "step": 6,
+      "act": "I",
+      "state": "D01 fissure",
+      "commit": "act1_complete"
+    },
+    {
+      "step": 7,
+      "act": "II",
+      "state": "Erin joins / three arcs open",
+      "commit": "erin_recruited"
+    },
+    {
+      "step": 8,
+      "act": "II",
+      "state": "Mine/Swamp/Ruin arc 1",
+      "commit": "first arc flag + M01/M02/M03 as applicable"
+    },
+    {
+      "step": 9,
+      "act": "II",
+      "state": "Arc 2",
+      "commit": "second arc flag"
+    },
+    {
+      "step": 10,
+      "act": "II",
+      "state": "ACT II common synthesis",
+      "commit": "act2_invitation_received / transition XP"
+    },
+    {
+      "step": 11,
+      "act": "II",
+      "state": "Optional third arc remains",
+      "commit": "no forced completion"
+    },
+    {
+      "step": 12,
+      "act": "III",
+      "state": "T06 Arken",
+      "commit": "act3_started / circle4_story_gate"
+    },
+    {
+      "step": 13,
+      "act": "III",
+      "state": "Seon joins",
+      "commit": "seon_recruited"
+    },
+    {
+      "step": 14,
+      "act": "III",
+      "state": "R07/T07/T08 evidence",
+      "commit": "evidence flags"
+    },
+    {
+      "step": 15,
+      "act": "III",
+      "state": "Redgate defense",
+      "commit": "luka_recruited"
+    },
+    {
+      "step": 16,
+      "act": "III",
+      "state": "D05 entry",
+      "commit": "checkpoint"
+    },
+    {
+      "step": 17,
+      "act": "III",
+      "state": "Researcher captured",
+      "commit": "d05_researcher_captured / circle5_story_gate"
+    },
+    {
+      "step": 18,
+      "act": "III",
+      "state": "M04 provisional",
+      "commit": "none until confirm"
+    },
+    {
+      "step": 19,
+      "act": "III",
+      "state": "M04 committed",
+      "commit": "exactly one researcher flag"
+    },
+    {
+      "step": 20,
+      "act": "III",
+      "state": "D06 Sun Sphinx",
+      "commit": "d06_complete / north_ley_point_identified"
+    },
+    {
+      "step": 21,
+      "act": "III",
+      "state": "ACT III end",
+      "commit": "act3_complete / act4_unlocked"
+    },
+    {
+      "step": 22,
+      "act": "IV",
+      "state": "R11 White Wolf investigation",
+      "commit": "M05 evidence"
+    },
+    {
+      "step": 23,
+      "act": "IV",
+      "state": "M05 committed",
+      "commit": "exactly one wolf flag"
+    },
+    {
+      "step": 24,
+      "act": "IV",
+      "state": "T10 Frosthold",
+      "commit": "hub state"
+    },
+    {
+      "step": 25,
+      "act": "IV",
+      "state": "D07 Archlich",
+      "commit": "protagonist_resonance_identified / circle6_story_gate"
+    },
+    {
+      "step": 26,
+      "act": "IV",
+      "state": "T11 Saint's Reach",
+      "commit": "saints_reach_open"
+    },
+    {
+      "step": 27,
+      "act": "IV",
+      "state": "D08 Awakened Idol",
+      "commit": "d08_idol_defeated"
+    },
+    {
+      "step": 28,
+      "act": "IV",
+      "state": "M06 committed",
+      "commit": "exactly one protagonist Trait"
+    },
+    {
+      "step": 29,
+      "act": "IV",
+      "state": "M07 committed",
+      "commit": "exactly one truth-policy flag"
+    },
+    {
+      "step": 30,
+      "act": "IV",
+      "state": "ACT IV end",
+      "commit": "act4_complete / act5_unlocked"
+    },
+    {
+      "step": 31,
+      "act": "V",
+      "state": "Crisis begins",
+      "commit": "act5_crisis_started"
+    },
+    {
+      "step": 32,
+      "act": "V",
+      "state": "West/Central/East anchor choose",
+      "commit": "route choice"
+    },
+    {
+      "step": 33,
+      "act": "V",
+      "state": "Anchor 1 resolved",
+      "commit": "anchor flag + reward"
+    },
+    {
+      "step": 34,
+      "act": "V",
+      "state": "Anchor 2 resolved",
+      "commit": "anchor flag + reward"
+    },
+    {
+      "step": 35,
+      "act": "V",
+      "state": "Anchor 3 resolved",
+      "commit": "anchor flag + reward"
+    },
+    {
+      "step": 36,
+      "act": "V",
+      "state": "Final preparation",
+      "commit": "story_c7_granted"
+    },
+    {
+      "step": 37,
+      "act": "V",
+      "state": "Optional S02",
+      "commit": "optional only / no ending gate"
+    },
+    {
+      "step": 38,
+      "act": "V",
+      "state": "D09 outer fissure",
+      "commit": "d09_entered"
+    },
+    {
+      "step": 39,
+      "act": "V",
+      "state": "Liberation Leader defeated",
+      "commit": "liberation_leader_defeated"
+    },
+    {
+      "step": 40,
+      "act": "V",
+      "state": "Void Titan defeated",
+      "commit": "final_boss_defeated"
+    },
+    {
+      "step": 41,
+      "act": "V",
+      "state": "C01 provisional",
+      "commit": "none until confirm"
+    },
+    {
+      "step": 42,
+      "act": "V",
+      "state": "C01 committed",
+      "commit": "exactly one ending flag"
+    },
+    {
+      "step": 43,
+      "act": "Epilogue",
+      "state": "11 Hub + companions resolved",
+      "commit": "completed_game=true"
+    }
+  ]
+}
