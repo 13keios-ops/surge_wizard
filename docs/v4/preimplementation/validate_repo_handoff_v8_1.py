@@ -17,7 +17,7 @@ def load(rel):
 # 1. current entry / authority
 required=[
     'CLAUDE.md','README.md','AGENT_START_HERE.md',
-    'docs/v4/final/CURRENT_AUTHORITY_2026-10-02.md',
+    'docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md',
     'docs/v4/final/MASTER_SPEC.md',
     'docs/v4/preimplementation/LOCAL_AGENT_BOOTSTRAP_v8.0.md',
     'docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md',
@@ -30,7 +30,7 @@ for p in required:
 
 for p in ['CLAUDE.md','README.md','AGENT_START_HERE.md','docs/v4/final/MASTER_SPEC.md']:
     t=read(p)
-    if 'CURRENT_AUTHORITY_2026-10-02.md' not in t: fail(f'{p}: missing 2026-10-02 authority')
+    if 'CURRENT_AUTHORITY_2026-10-03.md' not in t: fail(f'{p}: missing 2026-10-03 authority')
 
 bootstrap=read('docs/v4/preimplementation/LOCAL_AGENT_BOOTSTRAP_v8.0.md')
 if 'CURRENT_AUTHORITY_2026-10-01.md' in bootstrap: fail('bootstrap points to old 10-01 authority')
@@ -40,7 +40,7 @@ if 'CLAUDE.md\nHANDOFF.md\nGAME_DESIGN.md\nREADME.md' in bootstrap: fail('bootst
 for p in ['HANDOFF.md','GAME_DESIGN.md']:
     first='\n'.join(read(p).splitlines()[:6])
     if 'LEGACY PRE-v4' not in first: fail(f'{p}: legacy banner missing')
-for p in ['docs/v4/final/CURRENT_AUTHORITY_2026-10-01.md','docs/v4/final/FINAL_AUDIT_2026-10-01.md']:
+for p in ['docs/v4/final/CURRENT_AUTHORITY_2026-10-01.md','docs/v4/final/FINAL_AUDIT_2026-10-01.md','docs/v4/final/CURRENT_AUTHORITY_2026-10-02.md']:
     first='\n'.join(read(p).splitlines()[:6])
     if 'SUPERSEDED' not in first: fail(f'{p}: superseded banner missing')
 
@@ -102,7 +102,7 @@ if 'google_mobile_ads' in pub: fail('google_mobile_ads still present')
 hs=read('artifacts/v4/FINAL_COMPLETE_HANDOFF/00_START_HERE.md')
 bs=read('artifacts/v4/FINAL_COMPLETE_HANDOFF/build_final_complete_handoff.sh')
 for t in [hs,bs]:
-    if 'CURRENT_AUTHORITY_2026-10-02.md' not in t: fail('final handoff still points to old authority')
+    if 'CURRENT_AUTHORITY_2026-10-03.md' not in t: fail('final handoff still points to old authority')
 for token in ['docs/v4/design/v6','docs/v4/narrative/v7','docs/v4/preimplementation']:
     if token not in bs: fail(f'final handoff builder does not include {token}')
 
