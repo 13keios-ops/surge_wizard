@@ -1,5 +1,5 @@
 from pathlib import Path
-import json, re, subprocess, sys
+import json, re, subprocess, sys, hashlib
 
 ROOT=Path(__file__).resolve().parents[3]
 
@@ -33,7 +33,11 @@ if "CURRENT_AUTHORITY_2026-10-03.md" not in bootstrap or "Historical / legacy on
 
 # Legacy quarantine.
 for p in ["HANDOFF.md","GAME_DESIGN.md"]:
-    if "LEGACY PRE-v4" not in "\n".join(read(p).splitlines()[:6]): fail(f"{p}: legacy banner missing")
+    top="\n".join(read(p).splitlines()[:6])
+    if "LEGACY PRE-v4" not in top: fail(f"{p}: legacy banner missing")
+    if "FINAL_HANDOFF_RECHECK_v8.2.md" not in top: fail(f"{p}: legacy banner points to stale recheck")
+preaudit_top="\n".join(read("docs/v4/preimplementation/PREIMPLEMENTATION_FULL_AUDIT_v8.0.md").splitlines()[:6])
+if "FINAL_HANDOFF_RECHECK_v8.2.md" not in preaudit_top: fail("pre-repair audit points to stale current recheck")
 for p in ["docs/v4/final/CURRENT_AUTHORITY_2026-10-01.md","docs/v4/final/FINAL_AUDIT_2026-10-01.md","docs/v4/final/CURRENT_AUTHORITY_2026-10-02.md"]:
     if "SUPERSEDED" not in "\n".join(read(p).splitlines()[:6]): fail(f"{p}: superseded banner missing")
 
@@ -75,7 +79,27 @@ if len(poi["canonicalPOIs"])!=20 or len(poi["canonicalSideEventIds"])!=24: fail(
 cat=load("docs/v4/narrative/v7/N9_v7.8_FULL_DIALOGUE_CATALOG.json")["dialogue"]
 ids=[x["id"] for x in cat]
 if len(cat)!=1152 or len(ids)!=len(set(ids)) or any(not x["text_ko"].strip() for x in cat): fail("dialogue catalog invariant failed")
-if "google_mobile_ads" in read("pubspec.yaml"): fail("google_mobile_ads still present")
+pubspec=read("pubspec.yaml")
+if "google_mobile_ads" in pubspec: fail("google_mobile_ads still present")
+if "GAME_DESIGN 8절" in pubspec: fail("pubspec still cites legacy GAME_DESIGN as current authority")
+
+# Package manifests must describe the exact committed/copied bytes.
+def verify_manifest(rel_dir):
+    manifest=load(f"{rel_dir}/MANIFEST.json")
+    entries=manifest["files"] if isinstance(manifest,dict) else manifest
+    base=ROOT/rel_dir
+    for e in entries:
+        p=base/e["file"]
+        if not p.exists(): fail(f"manifest missing file: {rel_dir}/{e['file']}")
+        b=p.read_bytes()
+        if len(b)!=e["bytes"]: fail(f"manifest byte mismatch: {rel_dir}/{e['file']}")
+        expected=e.get("git_blob_sha")
+        if expected:
+            actual=hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
+            if actual!=expected: fail(f"manifest git blob mismatch: {rel_dir}/{e['file']}")
+    return len(entries)
+v6_manifest_entries=verify_manifest("docs/v4/design/v6")
+v7_manifest_entries=verify_manifest("docs/v4/narrative/v7")
 
 # Current reference integrity. Bare filenames resolve relative to the document.
 def check_refs(rel):
@@ -114,3 +138,4 @@ for script in [v6/"validate_v6_campaign.py",v7/"validate_v7_narrative.py",v8/"va
 print("V8_2_FRESH_CLONE_HANDOFF_VALIDATION_OK")
 print("v6_json",len(list(v6.glob("*.json"))),"v7_json",len(list(v7.glob("*.json"))),"v8_json",len(list(v8.glob("*.json"))))
 print("dialogue_entries",len(cat),"broken_refs",0)
+print("manifest_entries",v6_manifest_entries+v7_manifest_entries)

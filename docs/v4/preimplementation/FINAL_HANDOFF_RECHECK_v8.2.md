@@ -83,3 +83,15 @@ dart run tool/v4_headless_sim.dart 5000
 dart run tool/v4_dungeon_run_sim.dart 5000
 flutter run -t lib/main_v4_preview.dart
 ```
+
+
+## Final package-integrity addendum
+
+A deeper manifest-vs-Git-tree check after the v8.2 repair found one substantive recovery defect and several harmless byte-normalization differences:
+
+- `B_v6.1_CHECKPOINT_AUDIT.md` had been committed as a 155-byte truncated placeholder while its preserved Library source is 1,060 bytes. The full 22-line audit has been restored.
+- The original v6/v7 SHA-256 manifests described pre-connector source bytes; many committed text files differ only by omitted trailing/chunk-boundary whitespace. The package manifests are therefore regenerated from the actual committed Git blobs using exact byte size + Git blob SHA-1.
+- Legacy root banners and the v8.0 pre-repair snapshot now point to v8.2, not the superseded v8.1 recheck.
+- `pubspec.yaml` comments no longer cite the legacy `GAME_DESIGN.md` as a current technical authority.
+
+The fresh-clone validator now verifies package-manifest byte/blob integrity in addition to the existing semantic checks.

@@ -1,5 +1,5 @@
 {
-  "version": "8.2",
+  "version": "8.2-final",
   "auditedFromMainHead": "3ee7d31e00269d5afb1894a1fa3a45af39148eaa",
   "findings": [
     "pre-v4 root authority could steer agents to the wrong game",
@@ -16,5 +16,12 @@
     "fullHistoryBuilder": "current implementation handoff builder uses validated live repository layers and does not depend on old binary provenance archives"
   },
   "currentAuthority": "docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md",
-  "currentRecheck": "docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.2.md"
+  "currentRecheck": "docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.2.md",
+  "finalIntegrityPass": {
+    "baseHead": "0d082b455d4b0027bbaf38d235b94ac434745733",
+    "restored": "full B_v6.1 checkpoint audit",
+    "manifests": "regenerated from committed Git blob size/SHA",
+    "stalePointers": "legacy banners and pre-repair snapshot updated from v8.1 to v8.2",
+    "pubspec": "legacy GAME_DESIGN authority comment removed"
+  }
 }

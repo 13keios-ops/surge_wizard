@@ -1,155 +1,158 @@
 {
-  "package": "Surge_Wizard_v4_FULL_NARRATIVE_SCRIPT_v7.0-v7.8_2026-10-01",
+  "package": "Surge_Wizard_v4_FULL_NARRATIVE_SCRIPT_v7.0-v7.8",
+  "manifest_version": "8.2-final-git",
+  "generated_from_parent_head": "0d082b455d4b0027bbaf38d235b94ac434745733",
+  "integrity": "Exact byte size + Git blob SHA-1 for the committed package files. Portable handoff builder generates a separate SHA-256 manifest.",
   "files": [
     {
       "file": "00_INDEX.md",
-      "bytes": 2522,
-      "sha256": "26e5e3cc4a92cf424e5c742bfc6c347188e68442d2fce9e12ef9aaec89db361d"
+      "bytes": 2521,
+      "git_blob_sha": "51dfa1900596d3386f7039b94119ab0f89f07654"
     },
     {
       "file": "N1_v7.0_CHARACTER_NPC_VOICE_BIBLE.md",
       "bytes": 10317,
-      "sha256": "47d4f9fe7b4e6ce819db92556f7cdcd856abe60d4b6eeaae55eab055055e6f53"
+      "git_blob_sha": "fbca8f13802adfc07b8bf216a6f5606861fb10da"
     },
     {
       "file": "N1_v7.0_CHARACTER_NPC_VOICE_DATA.json",
       "bytes": 15555,
-      "sha256": "70ddfd713821f5044f2e747ea7dfde5d19fec0a7ee3fa1c367a891e57660a388"
+      "git_blob_sha": "4c4ed3a98e17b47f171c00d03b4eebe8fcaea3e1"
     },
     {
       "file": "N1_v7.0_CHECKPOINT_AUDIT.md",
-      "bytes": 526,
-      "sha256": "2b9ea56e14ce3eba8407b56ad43739dd9afda043b8376a94abb33ba266da9da0"
+      "bytes": 525,
+      "git_blob_sha": "65af2ed4da1dcbd6a7ec41aa770b0d0471ffdc62"
     },
     {
       "file": "N2_v7.1_ACT_I_II_MAIN_SCRIPT.md",
-      "bytes": 18374,
-      "sha256": "fcdaf7d7a606a900cd570ca9a31de4713d4b7cde24ed6f1754634d400cdd85a1"
+      "bytes": 18373,
+      "git_blob_sha": "212733c9374a45adf9ecfb09f3d85361aeb12970"
     },
     {
       "file": "N2_v7.1_ACT_I_II_SCRIPT_DATA.json",
-      "bytes": 32878,
-      "sha256": "d1e8c8a064777a1c80bc3d44b0c651ccf7802661d46d8fe1ab6fd46b741370b4"
+      "bytes": 32877,
+      "git_blob_sha": "8f1167d09e5445889d12e2206cbd8493978d9b64"
     },
     {
       "file": "N2_v7.1_CHECKPOINT_AUDIT.md",
-      "bytes": 622,
-      "sha256": "cd6c5f93f6ddf387d4cab45d0d194eb2854c0c958014974dfa557ea3b4af5bf1"
+      "bytes": 621,
+      "git_blob_sha": "da04ec5adb02716e89c13abd9e757a7eefaf6375"
     },
     {
       "file": "N3_v7.2_ACT_III_MAIN_SCRIPT.md",
-      "bytes": 13475,
-      "sha256": "58d99512de045315c6f516dcab3f3c3de1746a072810bfe312227a57b6b28040"
+      "bytes": 13474,
+      "git_blob_sha": "6fc56146fd2296770ccf3123eca311139251c525"
     },
     {
       "file": "N3_v7.2_ACT_III_SCRIPT_DATA.json",
       "bytes": 24000,
-      "sha256": "4c24c0c496b0dafbf515fedf49d645f391c7f64a78c91031697f254c334aff49"
+      "git_blob_sha": "738e8ab7adcf07fed6969627225c3628acbd48fc"
     },
     {
       "file": "N3_v7.2_CHECKPOINT_AUDIT.md",
-      "bytes": 755,
-      "sha256": "1a5a7ae79297705f3e7c6632f0ac801e4433406c5e1d2326eeca1f7fdd0db92d"
+      "bytes": 754,
+      "git_blob_sha": "f922e2950618f4171c08d4de6f9eee3477e797b6"
     },
     {
       "file": "N4_v7.3_ACT_IV_MAIN_SCRIPT.md",
-      "bytes": 9431,
-      "sha256": "158ef3566bd270d8de2996acc60c4eb69a98404c7793226d403f70d098985ae0"
+      "bytes": 9430,
+      "git_blob_sha": "611000af977463c4c99c58f789ec8989368f3c9b"
     },
     {
       "file": "N4_v7.3_ACT_IV_SCRIPT_DATA.json",
       "bytes": 16902,
-      "sha256": "b58d79e61077a555ee7364b93d52bed5325cb1b4b2fefb32c7663fe4c0d4d5c3"
+      "git_blob_sha": "7f7dae8ea0c50c065538f48d4f76e6548ff9b551"
     },
     {
       "file": "N4_v7.3_CHECKPOINT_AUDIT.md",
-      "bytes": 743,
-      "sha256": "ab9da85ea300eb71a79ff5a70c9c27675e829b3fff41a17941510d085fe3d380"
+      "bytes": 742,
+      "git_blob_sha": "9ff2ae684ad65a50805f70fb925e4cb65fe5142c"
     },
     {
       "file": "N5_v7.4_ACT_V_ENDING_EPILOGUE_SCRIPT.md",
-      "bytes": 18900,
-      "sha256": "399e8f5d0d55a3626f77ac381fbae122b7aafbf879722cecc4d860290be0b3e5"
+      "bytes": 18899,
+      "git_blob_sha": "b8e200e4f4120ac7ad1c717e11c7e71d6cc37070"
     },
     {
       "file": "N5_v7.4_ACT_V_SCRIPT_DATA.json",
-      "bytes": 33193,
-      "sha256": "93572470542a01c25994576593ae126b54b96c65a4a336114815d7956da29167"
+      "bytes": 33192,
+      "git_blob_sha": "5b3e56dfa8ae143db0ddbc4fcde8fa29f97c907d"
     },
     {
       "file": "N5_v7.4_CHECKPOINT_AUDIT.md",
-      "bytes": 871,
-      "sha256": "f03b140d009b555824683ea6ab3f71d11ce5f8bf4765f939e6fb9ade75685089"
+      "bytes": 870,
+      "git_blob_sha": "5a7decb58232d16ae62b10fc10d6e6a9ff146a6c"
     },
     {
       "file": "N6_v7.5_CHECKPOINT_AUDIT.md",
-      "bytes": 717,
-      "sha256": "12212821ba1f0ac50bbc3e0e6571490dfb37dfb2c2f5493e265c4237daa9a540"
+      "bytes": 716,
+      "git_blob_sha": "2acaf35665da804d2f84548cba3e366d07084611"
     },
     {
       "file": "N6_v7.5_COMPANION_PERSONAL_QUEST_FULL_SCRIPT.md",
-      "bytes": 19946,
-      "sha256": "7fee5746fa0616b1e0cefd790497b090ea2ad49aa94ca26c5ba8f3f6e36cb4af"
+      "bytes": 19945,
+      "git_blob_sha": "bc4e661c136cb541b4f306bb69f64e459791b670"
     },
     {
       "file": "N6_v7.5_COMPANION_PQ_SCRIPT_DATA.json",
-      "bytes": 36481,
-      "sha256": "705d7d71c86fd374fa00a4474e908e575b397f92a958b39553cb7e37310cff78"
+      "bytes": 36480,
+      "git_blob_sha": "0272cd4c88f0980b8f0745aafac67ceb80f2d5bf"
     },
     {
       "file": "N7_v7.6_CHECKPOINT_AUDIT.md",
-      "bytes": 521,
-      "sha256": "e3ce7ec18766aa6f7dd5f4d5d0b07c59d348010a5242e74bbab82a12b5268e60"
+      "bytes": 520,
+      "git_blob_sha": "5581e043bbd8724ff39be452cc14ed158b905b67"
     },
     {
       "file": "N7_v7.6_HUB_NPC_DIALOGUE_DATA.json",
       "bytes": 28833,
-      "sha256": "add65a5cc33343a0d8a36dc75c1ae25aed8d3ab8e0d456347bb46ed36c1d17a0"
+      "git_blob_sha": "6879a29eb497e6c53303defcb45f911b09ca26d5"
     },
     {
       "file": "N7_v7.6_HUB_NPC_RUMOR_AMBIENT_SCRIPT.md",
-      "bytes": 23858,
-      "sha256": "c242ee37dfccde916892292452a7eefec94f2a2d7c01bc44b9884ddae3553586"
+      "bytes": 23857,
+      "git_blob_sha": "4ab2fd6f65b2426665324613447b4de62bbf2744"
     },
     {
       "file": "N8_v7.7_CHECKPOINT_AUDIT.md",
-      "bytes": 547,
-      "sha256": "3dd31002b5bca21045823fd1053087f62cb3d853b921b660ce2d97f11c1fcec2"
-    },
-    {
-      "file": "N8_v7.7_COMPANION_REACTIONS_BANTER_BARKS.md",
-      "bytes": 18694,
-      "sha256": "2a5bbdc937469906f4926feede256dfb74fb140c9e62a911c3611ace2f09f721"
+      "bytes": 546,
+      "git_blob_sha": "87a5f9df06dd423ca03d4b333818d93dc8454260"
     },
     {
       "file": "N8_v7.7_COMPANION_REACTIONS_BANTER_BARK_DATA.json",
       "bytes": 26022,
-      "sha256": "68f5420c5a27cde1849065fbf5ba89154810e2fc2a212e34eeeb94ae8ee8be09"
+      "git_blob_sha": "c3a8d571b4d29eb479532f46be918cd7f87976e7"
+    },
+    {
+      "file": "N8_v7.7_COMPANION_REACTIONS_BANTER_BARKS.md",
+      "bytes": 18694,
+      "git_blob_sha": "52edce06d3869a70c72518dccffa2b7e1c59df29"
     },
     {
       "file": "N9_v7.8_FINAL_NARRATIVE_CONTINUITY_AUDIT.md",
-      "bytes": 10041,
-      "sha256": "9af3910d6be3a3f81847d0e8da8fbacf3e568738a7458f46c4bcb3f9195ac7d7"
+      "bytes": 10040,
+      "git_blob_sha": "6c682766c1a4f161da5e4a0f9af405b3928a5587"
     },
     {
       "file": "N9_v7.8_FULL_DIALOGUE_CATALOG.json",
-      "bytes": 304312,
-      "sha256": "74d1bd30e460eb63b6f7d7d758317f31c2c26496a938fdf48b1cd05beca77252"
+      "bytes": 304302,
+      "git_blob_sha": "83bd8ec997619127d6088ffc2a08d5a823cf4cd2"
     },
     {
       "file": "N9_v7.8_NARRATIVE_AUDIT_DATA.json",
       "bytes": 9755,
-      "sha256": "9195480bb2ed8107656d62c3652affbc99b819b70fe7233d51df4138fee6d3ef"
-    },
-    {
-      "file": "VALIDATION_RUN.txt",
-      "bytes": 1253,
-      "sha256": "c5282d6d01922c4dcc3d6edb8ea68f6b6951ae8b46446d3cc50d1df717513bbc"
+      "git_blob_sha": "bbaadc47e58921c900da583d780230b2b8dc9941"
     },
     {
       "file": "validate_v7_narrative.py",
-      "bytes": 2968,
-      "sha256": "f1a24e51cb759f2e869360e8c39131150da95d0add968aa4c7ba487e0d65ccfe"
+      "bytes": 2967,
+      "git_blob_sha": "d5434df69cd06cf27ed65fca4b77f2d7be423015"
+    },
+    {
+      "file": "VALIDATION_RUN.txt",
+      "bytes": 1252,
+      "git_blob_sha": "83680130d4021f265ce6f6c403cd9cdeca695c04"
     }
   ]
 }
