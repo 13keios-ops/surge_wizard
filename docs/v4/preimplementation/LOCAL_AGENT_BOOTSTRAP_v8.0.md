@@ -1,56 +1,68 @@
-# Surge Wizard v4 — LOCAL AGENT BOOTSTRAP v8.0
+# Surge Wizard v4 — LOCAL AGENT BOOTSTRAP v8.1
 
-## STOP: do not trust the repo root legacy entry docs
+> Filename retained as `LOCAL_AGENT_BOOTSTRAP_v8.0.md` for compatibility with earlier links.
+> Content reflects the final fresh-clone recheck.
 
-Before implementing, treat these as **legacy pre-pivot historical files** unless v8 explicitly cites them:
+## Trusted current entry documents
 
 ```text
 CLAUDE.md
+README.md
+AGENT_START_HERE.md
+docs/v4/final/CURRENT_AUTHORITY_2026-10-02.md
+docs/v4/final/MASTER_SPEC.md
+docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md
+```
+
+## Historical / legacy only
+
+```text
 HANDOFF.md
 GAME_DESIGN.md
-README.md (product description / entry instructions)
+docs/v4/final/CURRENT_AUTHORITY_2026-10-01.md
+docs/v4/final/FINAL_AUDIT_2026-10-01.md
 ```
 
 The current game is the **landscape 3-character tactical RPG**, not the old portrait manual-reroll/deck roguelite.
 
-## Authority order for local implementation
+## Authority order
 
 1. New explicit user instruction.
-2. `PREIMPLEMENTATION_FULL_AUDIT_v8.0.md` and all v8 correction files.
-3. v7.0–v7.8 Full Narrative package.
-4. v6.0–v6.3 Remaining Design Complete package.
-5. repo `docs/v4/final/CURRENT_AUTHORITY_2026-10-01.md`.
-6. reconciled ACT I–II v4.0 content for ACT I–II numbers.
-7. v5 schema/loader/interpreter/work-package contracts, with the v8 schema extensions.
+2. `CURRENT_AUTHORITY_2026-10-02.md` + `FINAL_HANDOFF_RECHECK_v8.1.md`.
+3. All v8 correction files in this directory.
+4. v7.0–v7.8 Full Narrative package.
+5. v6.0–v6.3 Remaining Design Complete package.
+6. reconciled ACT I–II v4.0 numbers.
+7. v5 runtime architecture/schema/loader/interpreter contracts, with v8 extensions.
 8. v3.9 / v3.8 / v3.7 / v3.6.
 9. v3.5 and older historical sources.
 
-Exception: persistent Story Flag names are stabilized by `STORY_FLAG_STATE_SPEC_v1.5` and `CANONICAL_FLAG_MAP_v8.0.json`.
+Persisted story flags are normalized by `CANONICAL_FLAG_MAP_v8.0.json`.
 
 ## Mandatory corrections before content migration
 
 ```text
 M08 West Anchor restored.
 Circle5 gate commits after M04/D05 resolution.
-Act transition XP floor:
-  II→III min cumulative XP 1640
-  III→IV min cumulative XP 4130
-  IV→V min cumulative XP 7030
+II→III min cumulative XP 1640.
+III→IV min cumulative XP 4130.
+IV→V min cumulative XP 7030.
 Canonical persistent flags only.
 P01-P20 / E01-E24 preserved.
 ```
 
-## Runtime data rule
+## Authoring vs runtime
 
-v6/v7 JSON = AUTHORING SOURCE.
+The complete validated v6/v7 JSON packages are now committed in the repository.
+They remain **AUTHORING SOURCE**, not ad-hoc runtime models.
 
-Do not deserialize those files directly as shipping runtime data.
+Normalize/compile them into the canonical repositories after extending encounter/narrative contracts.
+Do not create parallel rules inside widgets/screens.
 
-Compile/migrate them into the v5 repositories after extending the encounter/narrative contracts described by v8.
-
-## First commands in a real local repo
+## First commands in a fresh clone
 
 ```bash
+python docs/v4/preimplementation/validate_repo_handoff_v8_1.py
 flutter pub get
 flutter analyze
 flutter test
@@ -59,18 +71,13 @@ dart run tool/v4_dungeon_run_sim.dart 5000
 flutter run -t lib/main_v4_preview.dart
 ```
 
-Record actual failures; do not alter rules simply to make old tests pass.
-
-## Legacy entry point
-
-`lib/main.dart` remains legacy portrait mode.
-Use `lib/main_v4_preview.dart` until a deliberate entry-point migration work package.
+Record actual SDK failures. Do not change game rules merely to satisfy legacy tests.
 
 ## Do not do
 
-- do not implement rewarded ads from old pubspec comments.
-- do not resurrect gems/deck-slot monetization from old docs.
-- do not persist v6/v7 renamed flag aliases as new parallel flags.
-- do not delete historical docs; quarantine them by authority.
+- do not implement rewarded ads or old gem/deck-slot monetization.
+- do not persist v6/v7 flag aliases as parallel story flags.
+- do not use `HANDOFF.md` or `GAME_DESIGN.md` as current authority.
 - do not replace P01-P20 with v4.3 `poi.side.*`.
 - do not drop M08.
+- do not claim Flutter/Dart validation passed until it actually runs locally.
