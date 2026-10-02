@@ -1,0 +1,404 @@
+{
+  "version": "7.8",
+  "counts": {
+    "named_npcs": 45,
+    "hub_core_npcs": 38,
+    "main_scenes": 65,
+    "personal_quest_scenes": 30,
+    "main_plus_pq_scenes": 95,
+    "dialogue_catalog_entries": 1152,
+    "rumors": 33,
+    "ambient_lines": 33,
+    "major_choice_reactions": 100,
+    "travel_banter_variants": 20,
+    "combat_barks": 75,
+    "hub_epilogue_variants": 22
+  },
+  "knowledge_reveal_matrix": [
+    {
+      "id": "K_LOCAL_ANOMALY",
+      "earliest": "ACT I S01_004",
+      "fact": "여러 생물의 행동이 평소와 다르고 특정 방향을 피한다.",
+      "before": "New Game",
+      "forbidden": "원인 확정"
+    },
+    {
+      "id": "K_FIRST_ABSORPTION",
+      "earliest": "ACT I S01_008",
+      "fact": "주인공이 잔류 마력을 흡수하고 살아남는다.",
+      "before": "S01_008",
+      "forbidden": "공명체질/특별한 혈통 확정"
+    },
+    {
+      "id": "K_OLD_REPEAT",
+      "earliest": "ACT I D01",
+      "fact": "과거에도 비슷한 땅속 맥동 기록이 있었다.",
+      "before": "D01",
+      "forbidden": "마력맥 전체 지도"
+    },
+    {
+      "id": "K_SHARED_PATTERN",
+      "earliest": "ACT II after 2 arcs",
+      "fact": "광산/늪/폐허 현상이 공통 주기·좌표로 연결된다.",
+      "before": "ACT II evidence",
+      "forbidden": "인간이 만들었다는 확정"
+    },
+    {
+      "id": "K_LEY_NETWORK",
+      "earliest": "ACT III joint report",
+      "fact": "현상을 마력 순환망/마력맥 문제로 공식 비교한다.",
+      "before": "ACT III",
+      "forbidden": "기존 상태가 자연 상태라는 단정"
+    },
+    {
+      "id": "K_ARTIFICIAL_AMPLIFICATION",
+      "earliest": "ACT III R07",
+      "fact": "일부 폭주는 인공 증폭장치로 악화됐다.",
+      "before": "R07",
+      "forbidden": "모든 폭주가 인간 원인이라는 단정"
+    },
+    {
+      "id": "K_LIBERATION_FACTION",
+      "earliest": "ACT III D05 assignment",
+      "fact": "강제 증폭을 수행한 해방파가 존재한다.",
+      "before": "D05 assignment",
+      "forbidden": "해방파가 모든 사건의 최초 원인이라는 단정"
+    },
+    {
+      "id": "K_ANCIENT_PERIODICITY",
+      "earliest": "ACT III D06",
+      "fact": "대규모 맥동은 해방파보다 훨씬 오래 전에도 반복됐다.",
+      "before": "D06",
+      "forbidden": "최종 복원/변화 선택 예고를 정답처럼 제시"
+    },
+    {
+      "id": "K_PROTAGONIST_RESONANCE",
+      "earliest": "ACT IV D07",
+      "fact": "주인공은 불안정 마력을 흡수→내부 공명→재방출한다.",
+      "before": "D07 reveal",
+      "forbidden": "공명체질 확정"
+    },
+    {
+      "id": "K_STABILIZATION_NETWORK",
+      "earliest": "ACT IV D08",
+      "fact": "마도탑/성맥신전은 오래된 안정화망 일부다.",
+      "before": "D08",
+      "forbidden": "신앙이 거짓이었다는 단정"
+    },
+    {
+      "id": "K_CORE_GROWTH_CHOICE",
+      "earliest": "ACT IV M06",
+      "fact": "주인공이 흡수형/안정화형 성장방식을 선택할 수 있다.",
+      "before": "M06",
+      "forbidden": "M06가 Ending을 결정한다는 표현"
+    },
+    {
+      "id": "K_FINAL_TWO_PATHS",
+      "earliest": "ACT V after Void Titan",
+      "fact": "기존 안정 위상 복원 vs 새로운 흐름 안정화 두 경로가 가능하다.",
+      "before": "Void Titan victory",
+      "forbidden": "A/B 중 개발자 정답"
+    }
+  ],
+  "main_beat_crosswalk": [
+    {
+      "old": "S01_001",
+      "new": "N2:S01_001_WILLOWMERE_MORNING",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_002",
+      "new": "N2:S01_002_FIRST_COMBAT",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_003",
+      "new": "N2:S01_003_KAEL_MEET",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_004",
+      "new": "N2:S01_004_TRAIL",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_005",
+      "new": "N2:S01_005_MOSSBRIDGE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_006",
+      "new": "N2:S01_006_FOREST_DEEP",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_007",
+      "new": "N2:S01_007_ELDER_SLIME_PRE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_008",
+      "new": "N2:S01_008_FIRST_ABSORPTION",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_009",
+      "new": "N2:S01_009_D01_ENTRY",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_010",
+      "new": "N2:S01_010_FIRST_FISSURE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S01_011",
+      "new": "N2:S01_011_ACT1_RETURN",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_M01",
+      "new": "N2:S02_M01_IRONVALE_ARRIVAL",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_M02",
+      "new": "N2:S02_M02_MINE_EVIDENCE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_M03",
+      "new": "N2:M01_MINE_CHOICE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_S01",
+      "new": "N2:S02_S01_FENWATCH",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_S02",
+      "new": "N2:S02_S02_NONHOSTILE_MUTATION",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_S03",
+      "new": "N2:S02_S03_SWAMP_TEMPLE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_S04",
+      "new": "N2:M02_SWAMP_CHOICE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_R01",
+      "new": "N2:S02_R01_OLDCROSS",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_R02",
+      "new": "N2:S02_R02_ARCHIVE_ENTRY",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_R03",
+      "new": "N2:S02_R03_ARCHIVE_DISCOVERY + S02_R03_BONE_HEAP_AFTER",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_R04",
+      "new": "N2:M03_ARCHIVE_CHOICE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S02_R05",
+      "new": "N2:S02_R05_NERA_RECRUIT",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_001",
+      "new": "N3:S03_001_ARKEN_ENTRY",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_002",
+      "new": "N3:S03_002_JOINT_REPORT",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_003",
+      "new": "N3:S03_003_SEON_RECRUIT",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_010A",
+      "new": "N3:S03_010_FREEHOLD",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_010B/S03_011",
+      "new": "N3:S03_011_REDGATE_DEFENSE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_020",
+      "new": "N3:S03_020_BURNT_FOREST",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_021",
+      "new": "N3:S03_021_BURNING_TREANT_AFTER",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_030",
+      "new": "N3:S03_030_D05_ASSIGNMENT",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_031",
+      "new": "N3:S03_031_D05_ENTRY",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_032/S03_033",
+      "new": "N3:S03_032_KARDEN_MEET + S03_040_INTERROGATION",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_040",
+      "new": "N3:S03_040_INTERROGATION",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_041",
+      "new": "N3:M04_RESEARCHER_CHOICE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_042",
+      "new": "N3:S03_042_M04_AFTER",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_050",
+      "new": "N3:S03_050_SUNMARKET",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_051",
+      "new": "N3:S03_051_SPHINX_PRE + S03_051_D06_SPHINX",
+      "status": "COVERED"
+    },
+    {
+      "old": "S03_052",
+      "new": "N3:S03_051_D06_SPHINX commit",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_001",
+      "new": "N4:S04_001_NORTH_ROUTE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_010",
+      "new": "N4:S04_010_WHITE_WOLF_EVIDENCE + M05",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_020",
+      "new": "N4:S04_020_FROSTHOLD",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_021",
+      "new": "N4:S04_021_D07_ENTRY",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_022",
+      "new": "N4:S04_022_RESONANCE_REVEAL",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_030/S04_031",
+      "new": "N4:S04_030_SAINTS_REACH",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_040/S04_041",
+      "new": "N4:S04_040_D08_FUNCTION + S04_041_IDOL_AFTER",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_050",
+      "new": "N4:M06_LEY_CORE",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_051",
+      "new": "N4:M07_TEMPLE_TRUTH",
+      "status": "COVERED"
+    },
+    {
+      "old": "S04_052",
+      "new": "N4:S04_052_ACT_END",
+      "status": "COVERED"
+    },
+    {
+      "old": "S05_001",
+      "new": "N5:S05_001_CRISIS",
+      "status": "COVERED"
+    },
+    {
+      "old": "S05_W01/W02",
+      "new": "N5:S05_WEST_ANCHOR",
+      "status": "COVERED"
+    },
+    {
+      "old": "Q42 Central Anchor",
+      "new": "N5:S05_CENTRAL_ANCHOR",
+      "status": "COVERED"
+    },
+    {
+      "old": "Q43 East Anchor",
+      "new": "N5:S05_EAST_ANCHOR",
+      "status": "COVERED"
+    },
+    {
+      "old": "Q44",
+      "new": "N5:S05_020_FINAL_PREP",
+      "status": "COVERED"
+    },
+    {
+      "old": "Q45/D09",
+      "new": "N5:D09_ENTRY",
+      "status": "COVERED"
+    },
+    {
+      "old": "Q46",
+      "new": "N5:D09_SERKAN_MEET + D09_SERKAN_DEFEAT",
+      "status": "COVERED"
+    },
+    {
+      "old": "Q47",
+      "new": "N5:D09_VOID_TITAN_PRE + AFTER",
+      "status": "COVERED"
+    },
+    {
+      "old": "Q48",
+      "new": "N5:C01_FINAL_CHOICE",
+      "status": "COVERED"
+    },
+    {
+      "old": "Q49",
+      "new": "N5:EPILOGUE_WORLD",
+      "status": "COVERED"
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "unknown_speakers": [],
+  "duplicate_exact_lines": []
+}
