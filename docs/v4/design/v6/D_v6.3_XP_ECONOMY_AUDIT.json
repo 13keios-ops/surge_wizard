@@ -1,0 +1,163 @@
+{
+  "version": "6.3",
+  "xp": {
+    "curve": "XP_to_next=100+30*(level-1)",
+    "thresholds": {
+      "1": 0,
+      "2": 100,
+      "3": 230,
+      "4": 390,
+      "5": 580,
+      "6": 800,
+      "7": 1050,
+      "8": 1330,
+      "9": 1640,
+      "10": 1980,
+      "11": 2350,
+      "12": 2750,
+      "13": 3180,
+      "14": 3640,
+      "15": 4130,
+      "16": 4650,
+      "17": 5200,
+      "18": 5780,
+      "19": 6390,
+      "20": 7030,
+      "21": 7700,
+      "22": 8400,
+      "23": 9130,
+      "24": 9890,
+      "25": 10680
+    },
+    "act1": {
+      "start": 0,
+      "reconciled_core_combat": 355,
+      "noncombat_target": 35,
+      "target_end": 390,
+      "target_level": 4
+    },
+    "act2": {
+      "start_target": 390,
+      "common_before_invitation": 120,
+      "two_arc_total": 860,
+      "invitation_synthesis": 270,
+      "two_arc_end": 1640,
+      "two_arc_level": 9,
+      "third_arc_optional": 430,
+      "three_arc_end": 2070
+    },
+    "act3": {
+      "start_reference": 1640,
+      "mandatory_combat": 1795,
+      "story": 500,
+      "end_reference": 3935,
+      "note": "Optional convoy/PQ/POI naturally crosses Lv15 threshold 4130."
+    },
+    "act4": {
+      "start_reference": 4130,
+      "mandatory_combat": 2030,
+      "story": 840,
+      "end_reference": 7000,
+      "note": "30 XP below Lv20 threshold; any normal Discovery/PQ crosses it."
+    },
+    "act5": {
+      "start_reference": 7030,
+      "mandatory_combat": 2965,
+      "story": 685,
+      "end_reference": 10680,
+      "target_level": 25
+    }
+  },
+  "economy": {
+    "income_targets": {
+      "I": {
+        "main": 599,
+        "typical": 730,
+        "explorer": 861,
+        "ess_main": 46,
+        "ess_typical": 52,
+        "ess_explorer": 59
+      },
+      "II": {
+        "main": 2005,
+        "typical": 2570,
+        "explorer": 3187,
+        "ess_main": 122,
+        "ess_typical": 145,
+        "ess_explorer": 177
+      },
+      "III": {
+        "main": 4184,
+        "typical": 5230,
+        "explorer": 6694,
+        "ess_main": 189,
+        "ess_typical": 225,
+        "ess_explorer": 281
+      },
+      "IV": {
+        "main": 7495,
+        "typical": 9140,
+        "explorer": 11608,
+        "ess_main": 310,
+        "ess_typical": 360,
+        "ess_explorer": 446
+      },
+      "V": {
+        "main": 12886,
+        "typical": 15160,
+        "explorer": 18495,
+        "ess_main": 458,
+        "ess_typical": 520,
+        "ess_explorer": 614
+      }
+    },
+    "spending_targets": {
+      "I": {
+        "gear": 260,
+        "service": 180
+      },
+      "II": {
+        "gear": 1100,
+        "service": 550
+      },
+      "III": {
+        "gear": 2600,
+        "service": 950
+      },
+      "IV": {
+        "gear": 4800,
+        "service": 1500
+      },
+      "V": {
+        "gear": 8000,
+        "service": 2100
+      }
+    },
+    "gear_price_base": {
+      "3": {
+        "HEAD": 520,
+        "SHOES": 560,
+        "CLOTHING": 760,
+        "WEAPON": 980
+      },
+      "4": {
+        "HEAD": 1100,
+        "SHOES": 1200,
+        "CLOTHING": 1600,
+        "WEAPON": 2100
+      },
+      "5": {
+        "HEAD": 2200,
+        "SHOES": 2400,
+        "CLOTHING": 3200,
+        "WEAPON": 4200
+      }
+    },
+    "notes": [
+      "Main-focused Gold always exceeds typical target spend in existing reference.",
+      "C7 first spell is free; optional C7 costs 120 Essence.",
+      "Late gear is curated sidegrade/upgrade content, not random affix loot.",
+      "Explorer reward advantage must not exceed roughly two gear tiers."
+    ]
+  }
+}
