@@ -1,0 +1,11 @@
+{
+  "version": "8.0",
+  "authoringSource": "v7 Markdown/dialogue data is authoring content, not a shipping runtime schema.",
+  "stableDialogueIdIssue": "Array-position/path IDs are unstable when scenes or lines are inserted.",
+  "requiredFix": "Freeze explicit scene-based semantic text keys before localization/runtime import.",
+  "partyStateRule": "*_active and *_bench are PartyState queries/actions, not durable story flags.",
+  "conditionRename": {
+    "freehold_evidence": "act3_freehold_evidence"
+  },
+  "interpreterGap": "v5 quest nodes need presentationId, choice payloads, conditional variants, interjections, and typed condition expressions before v7 import."
+}

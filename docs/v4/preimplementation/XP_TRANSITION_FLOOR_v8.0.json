@@ -1,0 +1,17 @@
+{
+  "version": "8.0",
+  "principle": "Main story must not require grind or optional content merely to satisfy the next Act's authored level gate.",
+  "transitionMinimumXp": {
+    "ACT_I_TO_II": 390,
+    "ACT_II_TO_III": 1640,
+    "ACT_III_TO_IV": 4130,
+    "ACT_IV_TO_V": 7030
+  },
+  "rule": "At an Act transition, once all required story gates are committed, grant max(0, minimumXp-currentXp) as one-time transitionCatchupXp. Never reduce XP and never pay twice.",
+  "reason": {
+    "ACT_II": "Two authored 430-XP arcs plus actual common progression do not reliably reach Lv9 from ACT I end 390.",
+    "ACT_III": "v6 main baseline ends 3935, 195 below Lv15=4130.",
+    "ACT_IV": "v6 main baseline ends 7000, 30 below Lv20=7030.",
+    "ACT_V": "Starting 7030, mandatory ACT V 3650 reaches Lv25=10680 exactly."
+  }
+}

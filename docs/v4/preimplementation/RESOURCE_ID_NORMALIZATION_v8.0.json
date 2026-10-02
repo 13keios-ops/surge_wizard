@@ -1,0 +1,18 @@
+{
+  "version": "8.0",
+  "aliases": {
+    "healing_herb": "mat.healing_herb",
+    "mana_herb": "mat.mana_herb",
+    "detox_herb": "mat.detox_herb",
+    "rare_herb": "mat.rare_herb",
+    "catalyst": "mat.catalyst",
+    "special_catalyst": "mat.special_catalyst"
+  },
+  "placeholdersRequiringDefinition": {
+    "basic_supplies": "reward bundle, not item id",
+    "ore_supplies": "reward bundle, not item id",
+    "battle_supplies": "reward bundle, not item id",
+    "scroll_material": "define material or replace with catalyst/special catalyst",
+    "essence_cache": "Essence reward amount, not item id"
+  }
+}

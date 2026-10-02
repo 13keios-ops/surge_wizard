@@ -1,0 +1,16 @@
+{
+  "version": "8.0",
+  "lateGearCount": 40,
+  "policy": "Late gear definitions are valid, but reward/shop acquisition must be wired explicitly before runtime import.",
+  "rewardOrMilestoneSourcesNeedingRewardDefinitions": [
+    "D05_REWARD",
+    "D07_REWARD",
+    "D08_REWARD",
+    "D08_SIDE",
+    "THREE_ANCHORS",
+    "ANCHOR_CENTRAL_REWARD",
+    "ANCHOR_EAST_REWARD",
+    "D09_PREP"
+  ],
+  "hubStockPlaceholderRule": "Do not interpret stock group tokens as item IDs. Expand to concrete item/reward groups before repository load."
+}

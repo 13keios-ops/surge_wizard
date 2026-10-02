@@ -1,0 +1,2 @@
+V8_PREIMPLEMENTATION_AUDIT_VALIDATION_OK
+choice_groups=9 poi=20 side_events=24 regional_events=98 late_gear=40

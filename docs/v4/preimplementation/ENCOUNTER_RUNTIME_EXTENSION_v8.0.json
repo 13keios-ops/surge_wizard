@@ -1,0 +1,20 @@
+{
+  "version": "8.0",
+  "reason": "Late authored encounters require objectives not expressible in the original v5 encounter schema.",
+  "requiredFieldsOrEquivalent": [
+    "presentation.introId",
+    "presentation.outroId",
+    "specialInteractables[]",
+    "victoryCondition",
+    "failureCondition",
+    "scriptHooks[]"
+  ],
+  "victoryModes": [
+    "ALL_HOSTILES_DEFEATED",
+    "BOSS_HP_BELOW_PERCENT",
+    "TARGET_CAPTURED_OR_INCAPACITATED",
+    "PROTECT_UNTIL_OR_CIVILIANS",
+    "INTERACTABLES_RESOLVED"
+  ],
+  "humanDefeatSemantics": "Regular human enemies default to DEFEATED/INCAPACITATED/RETREATED unless story explicitly declares lethal outcome."
+}
