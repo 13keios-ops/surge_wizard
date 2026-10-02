@@ -7,7 +7,7 @@
 
 1. `docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md`
 2. `docs/v4/preimplementation/LOCAL_AGENT_BOOTSTRAP_v8.0.md`
-3. `docs/v4/final/CURRENT_AUTHORITY_2026-10-02.md`
+3. `docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md`
 4. `docs/v4/preimplementation/00_INDEX.md`
 5. `docs/v4/narrative/v7/00_INDEX.md`
 6. `docs/v4/design/v6/00_INDEX.md`
