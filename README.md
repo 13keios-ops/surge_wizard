@@ -9,7 +9,7 @@
 CLAUDE.md
 docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md
 docs/v4/preimplementation/LOCAL_AGENT_BOOTSTRAP_v8.0.md
-docs/v4/final/CURRENT_AUTHORITY_2026-10-02.md
+docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md
 AGENT_START_HERE.md
 ```
 
