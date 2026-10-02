@@ -1,0 +1,155 @@
+{
+  "package": "Surge_Wizard_v4_FULL_NARRATIVE_SCRIPT_v7.0-v7.8_2026-10-01",
+  "files": [
+    {
+      "file": "00_INDEX.md",
+      "bytes": 2522,
+      "sha256": "26e5e3cc4a92cf424e5c742bfc6c347188e68442d2fce9e12ef9aaec89db361d"
+    },
+    {
+      "file": "N1_v7.0_CHARACTER_NPC_VOICE_BIBLE.md",
+      "bytes": 10317,
+      "sha256": "47d4f9fe7b4e6ce819db92556f7cdcd856abe60d4b6eeaae55eab055055e6f53"
+    },
+    {
+      "file": "N1_v7.0_CHARACTER_NPC_VOICE_DATA.json",
+      "bytes": 15555,
+      "sha256": "70ddfd713821f5044f2e747ea7dfde5d19fec0a7ee3fa1c367a891e57660a388"
+    },
+    {
+      "file": "N1_v7.0_CHECKPOINT_AUDIT.md",
+      "bytes": 526,
+      "sha256": "2b9ea56e14ce3eba8407b56ad43739dd9afda043b8376a94abb33ba266da9da0"
+    },
+    {
+      "file": "N2_v7.1_ACT_I_II_MAIN_SCRIPT.md",
+      "bytes": 18374,
+      "sha256": "fcdaf7d7a606a900cd570ca9a31de4713d4b7cde24ed6f1754634d400cdd85a1"
+    },
+    {
+      "file": "N2_v7.1_ACT_I_II_SCRIPT_DATA.json",
+      "bytes": 32878,
+      "sha256": "d1e8c8a064777a1c80bc3d44b0c651ccf7802661d46d8fe1ab6fd46b741370b4"
+    },
+    {
+      "file": "N2_v7.1_CHECKPOINT_AUDIT.md",
+      "bytes": 622,
+      "sha256": "cd6c5f93f6ddf387d4cab45d0d194eb2854c0c958014974dfa557ea3b4af5bf1"
+    },
+    {
+      "file": "N3_v7.2_ACT_III_MAIN_SCRIPT.md",
+      "bytes": 13475,
+      "sha256": "58d99512de045315c6f516dcab3f3c3de1746a072810bfe312227a57b6b28040"
+    },
+    {
+      "file": "N3_v7.2_ACT_III_SCRIPT_DATA.json",
+      "bytes": 24000,
+      "sha256": "4c24c0c496b0dafbf515fedf49d645f391c7f64a78c91031697f254c334aff49"
+    },
+    {
+      "file": "N3_v7.2_CHECKPOINT_AUDIT.md",
+      "bytes": 755,
+      "sha256": "1a5a7ae79297705f3e7c6632f0ac801e4433406c5e1d2326eeca1f7fdd0db92d"
+    },
+    {
+      "file": "N4_v7.3_ACT_IV_MAIN_SCRIPT.md",
+      "bytes": 9431,
+      "sha256": "158ef3566bd270d8de2996acc60c4eb69a98404c7793226d403f70d098985ae0"
+    },
+    {
+      "file": "N4_v7.3_ACT_IV_SCRIPT_DATA.json",
+      "bytes": 16902,
+      "sha256": "b58d79e61077a555ee7364b93d52bed5325cb1b4b2fefb32c7663fe4c0d4d5c3"
+    },
+    {
+      "file": "N4_v7.3_CHECKPOINT_AUDIT.md",
+      "bytes": 743,
+      "sha256": "ab9da85ea300eb71a79ff5a70c9c27675e829b3fff41a17941510d085fe3d380"
+    },
+    {
+      "file": "N5_v7.4_ACT_V_ENDING_EPILOGUE_SCRIPT.md",
+      "bytes": 18900,
+      "sha256": "399e8f5d0d55a3626f77ac381fbae122b7aafbf879722cecc4d860290be0b3e5"
+    },
+    {
+      "file": "N5_v7.4_ACT_V_SCRIPT_DATA.json",
+      "bytes": 33193,
+      "sha256": "93572470542a01c25994576593ae126b54b96c65a4a336114815d7956da29167"
+    },
+    {
+      "file": "N5_v7.4_CHECKPOINT_AUDIT.md",
+      "bytes": 871,
+      "sha256": "f03b140d009b555824683ea6ab3f71d11ce5f8bf4765f939e6fb9ade75685089"
+    },
+    {
+      "file": "N6_v7.5_CHECKPOINT_AUDIT.md",
+      "bytes": 717,
+      "sha256": "12212821ba1f0ac50bbc3e0e6571490dfb37dfb2c2f5493e265c4237daa9a540"
+    },
+    {
+      "file": "N6_v7.5_COMPANION_PERSONAL_QUEST_FULL_SCRIPT.md",
+      "bytes": 19946,
+      "sha256": "7fee5746fa0616b1e0cefd790497b090ea2ad49aa94ca26c5ba8f3f6e36cb4af"
+    },
+    {
+      "file": "N6_v7.5_COMPANION_PQ_SCRIPT_DATA.json",
+      "bytes": 36481,
+      "sha256": "705d7d71c86fd374fa00a4474e908e575b397f92a958b39553cb7e37310cff78"
+    },
+    {
+      "file": "N7_v7.6_CHECKPOINT_AUDIT.md",
+      "bytes": 521,
+      "sha256": "e3ce7ec18766aa6f7dd5f4d5d0b07c59d348010a5242e74bbab82a12b5268e60"
+    },
+    {
+      "file": "N7_v7.6_HUB_NPC_DIALOGUE_DATA.json",
+      "bytes": 28833,
+      "sha256": "add65a5cc33343a0d8a36dc75c1ae25aed8d3ab8e0d456347bb46ed36c1d17a0"
+    },
+    {
+      "file": "N7_v7.6_HUB_NPC_RUMOR_AMBIENT_SCRIPT.md",
+      "bytes": 23858,
+      "sha256": "c242ee37dfccde916892292452a7eefec94f2a2d7c01bc44b9884ddae3553586"
+    },
+    {
+      "file": "N8_v7.7_CHECKPOINT_AUDIT.md",
+      "bytes": 547,
+      "sha256": "3dd31002b5bca21045823fd1053087f62cb3d853b921b660ce2d97f11c1fcec2"
+    },
+    {
+      "file": "N8_v7.7_COMPANION_REACTIONS_BANTER_BARKS.md",
+      "bytes": 18694,
+      "sha256": "2a5bbdc937469906f4926feede256dfb74fb140c9e62a911c3611ace2f09f721"
+    },
+    {
+      "file": "N8_v7.7_COMPANION_REACTIONS_BANTER_BARK_DATA.json",
+      "bytes": 26022,
+      "sha256": "68f5420c5a27cde1849065fbf5ba89154810e2fc2a212e34eeeb94ae8ee8be09"
+    },
+    {
+      "file": "N9_v7.8_FINAL_NARRATIVE_CONTINUITY_AUDIT.md",
+      "bytes": 10041,
+      "sha256": "9af3910d6be3a3f81847d0e8da8fbacf3e568738a7458f46c4bcb3f9195ac7d7"
+    },
+    {
+      "file": "N9_v7.8_FULL_DIALOGUE_CATALOG.json",
+      "bytes": 304312,
+      "sha256": "74d1bd30e460eb63b6f7d7d758317f31c2c26496a938fdf48b1cd05beca77252"
+    },
+    {
+      "file": "N9_v7.8_NARRATIVE_AUDIT_DATA.json",
+      "bytes": 9755,
+      "sha256": "9195480bb2ed8107656d62c3652affbc99b819b70fe7233d51df4138fee6d3ef"
+    },
+    {
+      "file": "VALIDATION_RUN.txt",
+      "bytes": 1253,
+      "sha256": "c5282d6d01922c4dcc3d6edb8ea68f6b6951ae8b46446d3cc50d1df717513bbc"
+    },
+    {
+      "file": "validate_v7_narrative.py",
+      "bytes": 2968,
+      "sha256": "f1a24e51cb759f2e869360e8c39131150da95d0add968aa4c7ba487e0d65ccfe"
+    }
+  ]
+}
