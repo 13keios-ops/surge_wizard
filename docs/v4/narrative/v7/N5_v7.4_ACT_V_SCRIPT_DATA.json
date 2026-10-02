@@ -1,0 +1,1012 @@
+{
+  "version": "7.4",
+  "scenes": [
+    {
+      "id": "S05_001_CRISIS",
+      "act": 5,
+      "location": "T11/T06",
+      "title": "대륙의 균열",
+      "purpose": "세 Anchor 자유순서 개방",
+      "lines": [
+        {
+          "speaker": "에드라",
+          "text": "서부 철맥, 왕도 아래, 동부 사막. 세 지점이 서로 같은 위상으로 뛰고 있습니다."
+        },
+        {
+          "speaker": "타린",
+          "text": "한 곳만 끄면 다른 두 곳으로 압력이 몰릴 겁니다."
+        },
+        {
+          "speaker": "오렌",
+          "text": "예전 신전 기록에는 세 곳을 동시에 '눌러 둔다'는 표현이 있습니다."
+        },
+        {
+          "speaker": "네라",
+          "text": "'동시에'라면서 우리가 몸이 세 개는 아니잖아."
+        },
+        {
+          "speaker": "에드라",
+          "text": "완전히 동시에일 필요는 없습니다. 각 Anchor가 안정 상태를 잠시 유지할 수 있습니다."
+        },
+        {
+          "speaker": "카일",
+          "text": "그럼 세 군데를 하나씩 잡고, 버티는 동안 마지막 중심을 치는 거군."
+        },
+        {
+          "speaker": "루카",
+          "text": "순서는 현장상태를 보고 정합시다."
+        },
+        {
+          "speaker": "에린",
+          "text": "어디부터 가도 길은 이어져요. 대신 피해 양상이 달라질 겁니다."
+        }
+      ],
+      "options": [
+        {
+          "id": "WEST",
+          "text": "서부 Ironvale부터 간다."
+        },
+        {
+          "id": "CENTRAL",
+          "text": "왕도 Arken 아래부터 간다."
+        },
+        {
+          "id": "EAST",
+          "text": "동부 Redgate/Sunscar부터 간다."
+        }
+      ],
+      "commit": [
+        "act5_crisis_started"
+      ]
+    },
+    {
+      "id": "S05_WEST_ANCHOR",
+      "act": 5,
+      "location": "R03/T03",
+      "title": "서부 Anchor",
+      "purpose": "M01 + Kael PQ 회수",
+      "variants": {
+        "ironvale_mine_sealed": [
+          {
+            "speaker": "오르반",
+            "text": "심층갱도는 완전히 닫힌 상태입니다. 덕분에 사람은 대부분 지상에 있습니다."
+          },
+          {
+            "speaker": "카일",
+            "text": "대피는 쉽겠군. 대신 안쪽 길은 못 쓰고."
+          },
+          {
+            "speaker": "세리아",
+            "text": "표면 보강로로 접근해야 합니다. 전투는 더 노출될 겁니다."
+          }
+        ],
+        "ironvale_mine_stabilized": [
+          {
+            "speaker": "오르반",
+            "text": "유지보수 갱도는 살아 있습니다. 그때 남겨 둔 안정화 통로입니다."
+          },
+          {
+            "speaker": "세리아",
+            "text": "짧지만 내부 결정 폭주를 통과해야 합니다."
+          },
+          {
+            "speaker": "카일",
+            "text": "사람을 안쪽에서 다 뺐다면 그 길로 간다."
+          }
+        ]
+      },
+      "pq_bonus": [
+        {
+          "speaker": "카일",
+          "text": "명단에 있던 사람들이 지금 구조선을 맡고 있어.",
+          "condition": "kael_trait_hold_the_line"
+        },
+        {
+          "speaker": "미라",
+          "text": "이번엔 빠지는 길을 먼저 만들었습니다.",
+          "condition": "kael_trait_hold_the_line"
+        },
+        {
+          "speaker": "카일",
+          "text": "좋아. 그럼 우린 남아 있을 이유가 생겼군.",
+          "condition": "kael_trait_hold_the_line"
+        }
+      ],
+      "after": [
+        {
+          "speaker": "SYSTEM",
+          "text": "서부 Anchor의 맥동이 일정한 간격으로 낮아진다."
+        },
+        {
+          "speaker": "에드라",
+          "text": "첫 번째가 고정됐습니다. 아직 버틸 수 있어요."
+        }
+      ],
+      "commit": [
+        "anchor_west_resolved"
+      ]
+    },
+    {
+      "id": "S05_CENTRAL_ANCHOR",
+      "act": 5,
+      "location": "T06/R06",
+      "title": "중앙 Anchor",
+      "purpose": "M03/M04/M07 + Nera/Seon PQ 회수",
+      "variants": {
+        "ancient_records_academy": [
+          {
+            "speaker": "레비안",
+            "text": "D04 원본에서 Anchor 도면을 찾아냈습니다. 공식 봉인을 열겠습니다."
+          },
+          {
+            "speaker": "네라",
+            "text": "원본 맡긴 값은 하네. 복사본도 남겼지?"
+          },
+          {
+            "speaker": "레비안",
+            "text": "이번엔 먼저 만들었습니다."
+          }
+        ],
+        "ancient_records_shared": [
+          {
+            "speaker": "타린",
+            "text": "Freehold 사본과 마도원 원본이 같은 결손부를 가지고 있습니다."
+          },
+          {
+            "speaker": "네라",
+            "text": "양쪽이 서로 숨겼다는 핑계는 못 대겠네."
+          }
+        ],
+        "ancient_records_resealed": [
+          {
+            "speaker": "벨린",
+            "text": "기록을 다시 열 권한은 없습니다."
+          },
+          {
+            "speaker": "네라",
+            "text": "지금 도시 바닥이 갈라지는데도?"
+          },
+          {
+            "speaker": "벨린",
+            "text": "그래서 기록이 아니라 물리 봉인 구조로 접근하겠습니다. 규정을 어기는 대신, 기록을 파기하진 않겠습니다."
+          }
+        ]
+      },
+      "researcher_variants": {
+        "researcher_handed_to_academy": [
+          {
+            "speaker": "카르덴",
+            "text": "구금실에서 계산한 값이다. 믿지 않아도 돼. 대신 틀린 부분은 직접 확인해.",
+            "condition": "researcher_handed_to_academy"
+          },
+          {
+            "speaker": "루카",
+            "text": "자료는 씁니다. 책임절차도 그대로 진행됩니다.",
+            "condition": "researcher_handed_to_academy"
+          }
+        ],
+        "researcher_exiled": [
+          {
+            "speaker": "레비안",
+            "text": "압수한 현장 노트에 보정식이 남아 있습니다.",
+            "condition": "researcher_exiled"
+          },
+          {
+            "speaker": "네라",
+            "text": "사람은 없어도 질문은 남았네.",
+            "condition": "researcher_exiled"
+          }
+        ],
+        "researcher_secret_coop": [
+          {
+            "speaker": "카르덴",
+            "text": "세 번째 진동 직전에 북쪽 봉인을 반 박자 늦춰. 그게 과부하를 줄인다.",
+            "condition": "researcher_secret_coop"
+          },
+          {
+            "speaker": "세온",
+            "text": "협력 기록은 남기고 있습니다.",
+            "condition": "researcher_secret_coop"
+          },
+          {
+            "speaker": "카르덴",
+            "text": "알아. 이번엔 숨기는 쪽이 내가 아니니까.",
+            "condition": "researcher_secret_coop"
+          }
+        ]
+      },
+      "truth_variants": {
+        "temple_truth_public_immediate": [
+          {
+            "speaker": "프레아",
+            "text": "광장에 사람이 많습니다. 사실을 안 만큼 도망치는 사람도, 남아 돕는 사람도 늘었습니다."
+          },
+          {
+            "speaker": "루카",
+            "text": "혼란은 있지만 경로 안내는 빨라졌군요."
+          }
+        ],
+        "temple_truth_joint_verify": [
+          {
+            "speaker": "레비안",
+            "text": "공동 발표 준비가 덜 끝났습니다. 기관끼리 연락은 빠르지만 시민 안내는 늦습니다."
+          },
+          {
+            "speaker": "네라",
+            "text": "검증 비용이 지금 보이네."
+          }
+        ],
+        "temple_truth_sealed": [
+          {
+            "speaker": "프레아",
+            "text": "도시는 조용합니다. 대신 대피 이유를 설명하기 어렵습니다."
+          },
+          {
+            "speaker": "세온",
+            "text": "숨긴 정보는 위기 때도 비용을 냅니다."
+          }
+        ]
+      },
+      "pq_bonus": [
+        {
+          "speaker": "네라",
+          "text": "봉인 하나는 이미 열었어. 내 쪽 빚은 여기까지.",
+          "condition": "nera_trait_see_the_gap"
+        },
+        {
+          "speaker": "세온",
+          "text": "첫 맥동은 제가 억제하겠습니다. 다음부터는 장치가 받아야 합니다.",
+          "condition": "seon_trait_two_hands_prayer"
+        }
+      ],
+      "after": [
+        {
+          "speaker": "SYSTEM",
+          "text": "왕도 아래의 Anchor가 고정된다."
+        },
+        {
+          "speaker": "에드라",
+          "text": "두 번째도 유지됩니다."
+        }
+      ],
+      "commit": [
+        "anchor_central_resolved"
+      ]
+    },
+    {
+      "id": "S05_EAST_ANCHOR",
+      "act": 5,
+      "location": "T08/R09",
+      "title": "동부 Anchor",
+      "purpose": "Erin/Luka PQ + D06 회수",
+      "lines": [
+        {
+          "speaker": "이벨",
+          "text": "D06 관측판의 수치를 지금 위상에 맞췄습니다. 동부 Anchor는 빛이 아니라 '빈 간격'을 따라야 합니다."
+        },
+        {
+          "speaker": "헤르만",
+          "text": "Redgate 방어선은 세 시간 정도 더 버팁니다."
+        },
+        {
+          "speaker": "루카",
+          "text": "그보다 오래 걸리면 병력을 뒤로 뺍니다. 관문 자체를 지키는 게 목적은 아닙니다."
+        },
+        {
+          "speaker": "에린",
+          "text": "첫 Hazard는 오른쪽 능선에서 옵니다.",
+          "condition": "erin_trait_read_the_trail"
+        },
+        {
+          "speaker": "에린",
+          "text": "발자국이 이미 피해 가고 있어요. 우리도 같은 길을 쓰면 됩니다.",
+          "condition": "erin_trait_read_the_trail"
+        },
+        {
+          "speaker": "루카",
+          "text": "증원 진입은 제가 늦춰 두겠습니다.",
+          "condition": "luka_trait_oath_of_guarding"
+        }
+      ],
+      "after": [
+        {
+          "speaker": "SYSTEM",
+          "text": "동부 Anchor의 반사판이 멈추고 균열광이 낮아진다."
+        },
+        {
+          "speaker": "이벨",
+          "text": "세 점이 맞았습니다."
+        },
+        {
+          "speaker": "에드라",
+          "text": "이제 중심핵으로 가는 길이 열릴 겁니다."
+        }
+      ],
+      "commit": [
+        "anchor_east_resolved"
+      ]
+    },
+    {
+      "id": "S05_020_FINAL_PREP",
+      "act": 5,
+      "location": "T06/T11",
+      "title": "마지막 조율",
+      "purpose": "3 Anchor 완료 / 첫 C7 지급",
+      "lines": [
+        {
+          "speaker": "에드라",
+          "text": "세 Anchor는 고정됐습니다. 오래 가진 못합니다."
+        },
+        {
+          "speaker": "세온",
+          "text": "이제 중심핵에서 흐름 자체를 정해야겠군요."
+        },
+        {
+          "speaker": "네라",
+          "text": "정한다는 말이 참 쉽게 들리네."
+        },
+        {
+          "speaker": "카일",
+          "text": "쉬운 일이라고 한 사람은 없었어."
+        },
+        {
+          "speaker": "에드라",
+          "text": "당신의 공명체질이 세 지점과 연결됐습니다. 한 번은 고서클을 넘어선 형태를 만들 수 있어요."
+        }
+      ],
+      "trait_variants": {
+        "protagonist_trait_resonant_core": [
+          {
+            "speaker": "에드라",
+            "text": "당신이 선택한 흡수 방식이면 힘을 모아 한 번에 밀어낼 수 있습니다."
+          },
+          {
+            "speaker": "SYSTEM",
+            "text": "Circle 7 — 공명 폭주 획득."
+          }
+        ],
+        "protagonist_trait_harmonizer": [
+          {
+            "speaker": "에드라",
+            "text": "안정화 방식이면 여러 흐름을 한 박자에 묶을 수 있습니다."
+          },
+          {
+            "speaker": "SYSTEM",
+            "text": "Circle 7 — 세계의 닻 획득."
+          }
+        ]
+      },
+      "commit": [
+        "story_c7_granted"
+      ]
+    },
+    {
+      "id": "D09_ENTRY",
+      "act": 5,
+      "location": "R14/D09",
+      "title": "마력맥 왕관",
+      "purpose": "최종 지역 진입",
+      "lines": [
+        {
+          "speaker": "에린",
+          "text": "여긴 발자국이 남지 않아요. 땅이 계속 조금씩 바뀌고 있어요."
+        },
+        {
+          "speaker": "세온",
+          "text": "신전 기록의 '왕관'이 장소 이름이 아니었을 수도 있겠습니다."
+        },
+        {
+          "speaker": "네라",
+          "text": "이 지형 자체가 흐름 꼭대기라는 뜻?"
+        },
+        {
+          "speaker": "에드라",
+          "text": "가능성이 큽니다."
+        },
+        {
+          "speaker": "카일",
+          "text": "설명은 걸으면서 듣지. 뒤쪽 균열이 다시 열리고 있어."
+        },
+        {
+          "speaker": "루카",
+          "text": "퇴로 표식 남깁니다. 누구도 영웅답게 고립되지 마세요."
+        }
+      ]
+    },
+    {
+      "id": "D09_SERKAN_MEET",
+      "act": 5,
+      "location": "D09",
+      "title": "세르칸",
+      "purpose": "최종 인간갈등 / 변화와 강제수단 분리",
+      "lines": [
+        {
+          "speaker": "세르칸",
+          "text": "결국 세 Anchor를 다시 묶었군. 오래된 질서를 복원할 셈인가?"
+        },
+        {
+          "speaker": "네라",
+          "text": "아직 아무도 결말 얘기 안 했는데, 혼자 급하네."
+        },
+        {
+          "speaker": "세르칸",
+          "text": "선택하지 않는 것도 선택이다. 마도원은 수백 년 그렇게 유지했지."
+        },
+        {
+          "speaker": "세온",
+          "text": "그 비판이 사람을 실험에 넣은 이유가 되진 않습니다."
+        },
+        {
+          "speaker": "세르칸",
+          "text": "아니. 그건 우리의 죄다."
+        },
+        {
+          "speaker": "루카",
+          "text": "인정한다고 책임이 사라지진 않습니다."
+        },
+        {
+          "speaker": "세르칸",
+          "text": "알아. 하지만 그 죄 때문에 질문까지 묻을 생각은 없어."
+        },
+        {
+          "speaker": "에린",
+          "text": "변화가 가능한지 묻는 것과, 변화를 강요하는 건 다른 일입니다."
+        },
+        {
+          "speaker": "세르칸",
+          "text": "그래서 여기까지 왔겠지. 너희가 우리보다 더 나은 답을 낼 수 있는지 보러."
+        }
+      ],
+      "options": [
+        {
+          "id": "REJECT_METHOD",
+          "text": "당신들의 방법은 틀렸습니다."
+        },
+        {
+          "id": "ACK_QUESTION",
+          "text": "질문은 남습니다. 방법은 끝내야 합니다."
+        },
+        {
+          "id": "NO_SPEECH",
+          "text": "답은 전투 뒤에 하겠습니다."
+        }
+      ]
+    },
+    {
+      "id": "D09_SERKAN_DEFEAT",
+      "act": 5,
+      "location": "D09",
+      "title": "세르칸 패배",
+      "purpose": "추가 처형 선택 금지 / 마지막 주장",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "세 개 Pylon이 꺼지고 세르칸이 무릎을 꿇는다."
+        },
+        {
+          "speaker": "루카",
+          "text": "무기를 내려놓으십시오."
+        },
+        {
+          "speaker": "세르칸",
+          "text": "이미 졌어."
+        },
+        {
+          "speaker": "카일",
+          "text": "그럼 끝이다."
+        },
+        {
+          "speaker": "세르칸",
+          "text": "아니. 우리만 끝난 거지."
+        },
+        {
+          "speaker": "세르칸",
+          "text": "우리가 만든 게 아니야. 멈춰 있던 걸 다시 움직였을 뿐이야."
+        },
+        {
+          "speaker": "세온",
+          "text": "당신들이 움직임을 키운 건 사실입니다."
+        },
+        {
+          "speaker": "세르칸",
+          "text": "그래. 그 대가는 우리 이름으로 남겨."
+        },
+        {
+          "speaker": "세르칸",
+          "text": "하지만 중심핵 앞에서 '원래대로'라는 말이 정말 무엇을 뜻하는지는 스스로 봐."
+        }
+      ],
+      "commit": [
+        "liberation_leader_defeated"
+      ]
+    },
+    {
+      "id": "D09_VOID_TITAN_PRE",
+      "act": 5,
+      "location": "D09",
+      "title": "Void Titan",
+      "purpose": "세계 시스템의 붕괴가 마지막 적",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "중심핵의 양쪽 구조가 갈라지며 거대한 실루엣이 일어난다."
+        },
+        {
+          "speaker": "에드라",
+          "text": "생물 반응이 아닙니다. 흐름이 형체를 만든 겁니다."
+        },
+        {
+          "speaker": "에린",
+          "text": "그럼 죽이는 게 아니라 흩뜨리는 건가요?"
+        },
+        {
+          "speaker": "에드라",
+          "text": "Core를 노출시켜야 합니다. 양쪽 팔 채널부터."
+        },
+        {
+          "speaker": "카일",
+          "text": "좋아. 마지막까지 결국 순서는 같군. 막고, 열고, 끝낸다."
+        },
+        {
+          "speaker": "네라",
+          "text": "대단한 철학이네."
+        },
+        {
+          "speaker": "카일",
+          "text": "살아남는 철학이지."
+        }
+      ]
+    },
+    {
+      "id": "D09_VOID_TITAN_AFTER",
+      "act": 5,
+      "location": "D09",
+      "title": "중심핵 앞",
+      "purpose": "최종 선택을 플레이어에게 돌려줌",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "Void Titan의 형체가 무너지고 중심핵이 두 가지 안정 경로를 만든다."
+        },
+        {
+          "speaker": "에드라",
+          "text": "하나는 기존 안정 위상에 가깝게 되돌리는 경로."
+        },
+        {
+          "speaker": "타린",
+          "text": "다른 하나는 변화한 흐름을 남기되, 폭주하지 않도록 새 균형을 만드는 경로."
+        },
+        {
+          "speaker": "세온",
+          "text": "어느 쪽도 지금까지의 죄와 책임을 지우지는 않습니다."
+        },
+        {
+          "speaker": "루카",
+          "text": "그리고 어느 쪽도 위험이 0은 아닙니다."
+        },
+        {
+          "speaker": "에린",
+          "text": "복원하면 돌아오는 것과 돌아오지 않는 게 있을 거예요."
+        },
+        {
+          "speaker": "네라",
+          "text": "변화를 남기면 새로 얻는 것과 새로 잃는 게 생기겠지."
+        },
+        {
+          "speaker": "카일",
+          "text": "이번엔 누구 핑계도 못 대겠군."
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "결정은 주인공에게 돌아온다."
+        }
+      ],
+      "commit": [
+        "final_boss_defeated"
+      ]
+    },
+    {
+      "id": "C01_FINAL_CHOICE",
+      "act": 5,
+      "location": "D09",
+      "title": "최종 선택",
+      "purpose": "Ending A/B",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "마력맥 전체의 방향을 선택한다."
+        }
+      ],
+      "options": [
+        {
+          "id": "RESTORE",
+          "text": "A. 기존 안정 상태에 가깝게 복원한다.",
+          "effects": [
+            "ending_restore"
+          ]
+        },
+        {
+          "id": "CHANGE",
+          "text": "B. 새로운 흐름을 통제 가능한 상태로 안정화한다.",
+          "effects": [
+            "ending_change"
+          ]
+        }
+      ],
+      "interjections": {
+        "RESTORE": [
+          {
+            "speaker": "에린",
+            "text": "예전과 같아지는 게 전부는 아닐 거예요. 그래도 회복할 시간은 벌 수 있겠죠."
+          },
+          {
+            "speaker": "네라",
+            "text": "복원한다고 기관까지 예전 방식으로 돌리진 마."
+          },
+          {
+            "speaker": "세온",
+            "text": "안정을 선택하더라도 우리가 알게 된 진실은 남겨야 합니다."
+          },
+          {
+            "speaker": "루카",
+            "text": "사람들이 다시 준비할 시간을 얻는 선택입니다."
+          },
+          {
+            "speaker": "카일",
+            "text": "살아 있는 사람부터 지킬 수 있다면, 난 그걸로 시작해도 돼."
+          }
+        ],
+        "CHANGE": [
+          {
+            "speaker": "에린",
+            "text": "변화를 남긴다면 오래 관찰해야 해요. '새롭다'는 이유로 좋은 건 아니니까."
+          },
+          {
+            "speaker": "네라",
+            "text": "새 질서가 생기면 새로 독점하려는 사람도 바로 생길 거야."
+          },
+          {
+            "speaker": "세온",
+            "text": "통제 가능한 변화인지 계속 증명해야 합니다."
+          },
+          {
+            "speaker": "루카",
+            "text": "책임 구조를 먼저 세웁시다. 실험이 아니라 선택이 되려면."
+          },
+          {
+            "speaker": "카일",
+            "text": "사람이 적응할 시간을 빼앗지만 마. 그럼 나도 따라가."
+          }
+        ]
+      },
+      "commit_rule": "PROVISIONAL→active companions full comment max2→others short line→CONFIRM→exactly-one ending flag"
+    },
+    {
+      "id": "EPILOGUE_WORLD",
+      "act": "Epilogue",
+      "location": "WORLD",
+      "title": "세계 후일담",
+      "purpose": "A/B 2 Ending + World-state 변형",
+      "hub_epilogues": {
+        "T01": {
+          "RESTORE": [
+            {
+              "speaker": "마렌",
+              "text": "숲길은 다시 조용해졌습니다. 예전과 똑같진 않지만, 길은 다시 길답군요."
+            },
+            {
+              "speaker": "도나",
+              "text": "파란 불 얘긴 줄었어요. 대신 당신 얘기가 너무 늘었고."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "마렌",
+              "text": "밤마다 우물 위에 작은 빛이 뜹니다. 사람들은 처음엔 겁냈고, 지금은 덮개부터 제대로 닫습니다."
+            },
+            {
+              "speaker": "도나",
+              "text": "변화가 일상이 되면 장사는 늘 바빠지죠."
+            }
+          ]
+        },
+        "T02": {
+          "RESTORE": [
+            {
+              "speaker": "헤스",
+              "text": "사슴 이동로가 많이 돌아왔소. 에린은 '많이'와 '전부'를 구분하라고 하더군."
+            },
+            {
+              "speaker": "리오나",
+              "text": "약초 향이 예전 같아졌는데, 몇 종은 끝내 안 돌아왔어요."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "헤스",
+              "text": "새 길이 생겼소. 사냥꾼들이 다시 지도를 그리고 있지."
+            },
+            {
+              "speaker": "리오나",
+              "text": "약초도 새로 변했어요. 효과부터 다시 확인하고 팝니다."
+            }
+          ]
+        },
+        "T03": {
+          "RESTORE": [
+            {
+              "speaker": "오르반",
+              "text": "광산은 천천히 엽니다. 예전처럼 깊이 내려가진 않을 겁니다."
+            },
+            {
+              "speaker": "세리아",
+              "text": "안정화 기록은 공개 자료로 남겼습니다."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "오르반",
+              "text": "결정맥이 달라졌습니다. 채굴량보다 안전 기준을 먼저 다시 짜는 중입니다."
+            },
+            {
+              "speaker": "세리아",
+              "text": "새 표준을 만드는 일이 복원보다 어렵군요."
+            }
+          ]
+        },
+        "T04": {
+          "RESTORE": [
+            {
+              "speaker": "미엘",
+              "text": "변이 증상은 줄었습니다. 소각한 구역은 그대로이고, 정화한 구역은 회복이 빠릅니다."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "미엘",
+              "text": "새로운 변이는 남았습니다. 공격성보다 생활권 충돌 여부로 분류하고 있습니다."
+            }
+          ]
+        },
+        "T05": {
+          "RESTORE": [
+            {
+              "speaker": "마일",
+              "text": "폐허 문은 다시 조용해졌습니다. 사람 호기심은 전혀 안 조용해졌고요."
+            },
+            {
+              "speaker": "로엔",
+              "text": "기록은 결국 누가 읽느냐가 문제라니까."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "마일",
+              "text": "새로 열린 길 때문에 손님이 늘었습니다."
+            },
+            {
+              "speaker": "로엔",
+              "text": "유물값도 올랐고, 가짜도 늘었지. 세상은 균형을 참 빨리 찾는다니까."
+            }
+          ]
+        },
+        "T06": {
+          "RESTORE": [
+            {
+              "speaker": "레비안",
+              "text": "마도원은 외부감사 기록을 정례화했습니다."
+            },
+            {
+              "speaker": "에드라",
+              "text": "복원된 흐름도 완전히 과거와 같진 않습니다. 그 차이를 연구하고 있습니다."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "레비안",
+              "text": "새 마력 기준은 마도원 단독으로 정하지 않습니다."
+            },
+            {
+              "speaker": "에드라",
+              "text": "새 규칙을 발견하는 재미는 있지만, 안전위원회가 늘 따라붙는군요."
+            }
+          ]
+        },
+        "T07": {
+          "RESTORE": [
+            {
+              "speaker": "타린",
+              "text": "복원을 선택했다고 변화 연구가 끝난 건 아닙니다. 왜 복원이 가능했는지도 질문이니까요."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "타린",
+              "text": "우리가 원하던 건 '변화 허용'이었지 '무규칙'은 아닙니다. 이제 그 차이를 증명해야죠."
+            }
+          ]
+        },
+        "T08": {
+          "RESTORE": [
+            {
+              "speaker": "헤르만",
+              "text": "관문은 다시 세웠습니다. 이번엔 대피로를 성벽보다 먼저 만들었습니다."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "헤르만",
+              "text": "새 마력환경용 방벽 규칙을 배우는 중입니다. 늙어서 공부가 늘었군."
+            }
+          ]
+        },
+        "T09": {
+          "RESTORE": [
+            {
+              "speaker": "이벨",
+              "text": "별자리 기록과 지상 맥동이 다시 맞아갑니다. 완벽히 같지는 않아요."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "이벨",
+              "text": "새 별표를 만들고 있습니다. 하늘은 그대로인데 땅의 기준점이 바뀌었거든요."
+            }
+          ]
+        },
+        "T10": {
+          "RESTORE": [
+            {
+              "speaker": "오스렌",
+              "text": "협곡 날씨가 안정됐습니다. 늑대 길은 선택 결과대로 남았습니다."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "헤나",
+              "text": "설원 짐승들이 새 길을 잡는 중이오. 사람도 똑같이 해야겠지."
+            }
+          ]
+        },
+        "T11": {
+          "RESTORE": [
+            {
+              "speaker": "오렌",
+              "text": "우리는 옛 의식을 지키되, 이제 그 기능도 함께 가르칩니다."
+            },
+            {
+              "speaker": "멜",
+              "text": "공개정책의 기록도 보존했습니다. 다음 세대가 같은 논쟁을 다시 처음부터 하지 않게."
+            }
+          ],
+          "CHANGE": [
+            {
+              "speaker": "오렌",
+              "text": "성지는 더 이상 '변하지 않는 곳'을 약속하지 않습니다."
+            },
+            {
+              "speaker": "멜",
+              "text": "대신 무엇이 왜 바뀌는지 기록하는 일을 약속합니다."
+            }
+          ]
+        }
+      },
+      "companion_epilogues": {
+        "kael": {
+          "complete": [
+            {
+              "speaker": "카일",
+              "text": "명단은 아직 가지고 있어. 예전처럼 벌 주려고 보는 건 아니고."
+            },
+            {
+              "speaker": "카일",
+              "text": "다음엔 누굴 먼저 빼야 하는지 잊지 않으려고."
+            }
+          ],
+          "incomplete": [
+            {
+              "speaker": "카일",
+              "text": "끝난 건 많지만, 내 쪽에서 아직 확인할 이름이 남았어."
+            },
+            {
+              "speaker": "카일",
+              "text": "이번엔 미루지 않을 생각이야."
+            }
+          ]
+        },
+        "erin": {
+          "complete": [
+            {
+              "speaker": "에린",
+              "text": "지도를 다시 그릴 거예요. 복원된 곳도, 변한 곳도 같은 색으로 칠하진 않을 겁니다."
+            }
+          ],
+          "incomplete": [
+            {
+              "speaker": "에린",
+              "text": "아직 확인 못 한 이동로가 있어요. 끝났다고 부르기엔 이르죠."
+            }
+          ]
+        },
+        "nera": {
+          "complete": [
+            {
+              "speaker": "네라",
+              "text": "정보를 공개하는 법보다 가리는 법이 더 어려울 줄은 몰랐네."
+            },
+            {
+              "speaker": "네라",
+              "text": "그래도 이번엔 누가 가렸는지 정도는 기록에 남길 거야."
+            }
+          ],
+          "incomplete": [
+            {
+              "speaker": "네라",
+              "text": "끝나고 나니까 더 궁금한 문서가 생겼어. 정말 귀찮은 결말이지."
+            }
+          ]
+        },
+        "seon": {
+          "complete": [
+            {
+              "speaker": "세온",
+              "text": "기도문 옆에 장치 원리도 함께 적었습니다."
+            },
+            {
+              "speaker": "세온",
+              "text": "둘 중 하나만 남기면 또 같은 실수를 할 테니까요."
+            }
+          ],
+          "incomplete": [
+            {
+              "speaker": "세온",
+              "text": "성지에 돌아가 확인할 일이 남았습니다. 믿는 것과 확인하는 일을 따로 두지 않으려고 합니다."
+            }
+          ]
+        },
+        "luka": {
+          "complete": [
+            {
+              "speaker": "루카",
+              "text": "명령 기록에 결과 보고를 의무로 붙였습니다."
+            },
+            {
+              "speaker": "루카",
+              "text": "옳은 판단이었다는 문장만으로 끝내지 않기 위해서요."
+            }
+          ],
+          "incomplete": [
+            {
+              "speaker": "루카",
+              "text": "정리할 보고가 하나 남았습니다. 예전엔 미뤘던 종류의 보고입니다."
+            }
+          ]
+        }
+      },
+      "closing": {
+        "RESTORE": [
+          {
+            "speaker": "SYSTEM",
+            "text": "마력의 흐름은 잦아들었다. 오래된 질서는 완전히 같은 모습으로 돌아오지 않았지만, 사람들은 다시 예측 가능한 내일을 만들기 시작했다."
+          },
+          {
+            "speaker": "SYSTEM",
+            "text": "주인공이 남긴 것은 '과거로 돌아간 세계'가 아니라, 무엇을 복원하고 무엇을 바꿀지 기록한 선택이었다."
+          }
+        ],
+        "CHANGE": [
+          {
+            "speaker": "SYSTEM",
+            "text": "마력의 흐름은 이전과 다른 주기로 안정됐다. 변화는 남았고, 세계는 그것을 일상으로 만드는 법을 배우기 시작했다."          },
+          {
+            "speaker": "SYSTEM",
+            "text": "주인공이 남긴 것은 '해방된 세계'가 아니라, 변화를 누구도 강요하지 못하게 만드는 새로운 책임의 시작이었다."
+          }
+        ]
+      },
+      "commit": [
+        "completed_game"
+      ]
+    }
+  ]
+}
