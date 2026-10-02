@@ -1,0 +1,1108 @@
+{
+  "version": "7.1",
+  "scenes": [
+    {
+      "id": "S01_001_WILLOWMERE_MORNING",
+      "act": 1,
+      "location": "T01",
+      "title": "버들마을의 아침",
+      "purpose": "첫 의뢰 / 세계의 정상 상태 / 주인공은 아직 무명",
+      "lines": [
+        {
+          "speaker": "마렌",
+          "text": "녹교촌으로 가는 숲길에서 짐꾼 둘이 다쳤습니다. 큰 일은 아닐 겁니다."
+        },
+        {
+          "speaker": "마렌",
+          "text": "그래도 같은 길에서 세 번이면 우연이라고 넘기긴 어렵지요."
+        },
+        {
+          "speaker": "도나",
+          "text": "짐승이면 짐승답게 배가 고파서 덤벼야 하는데, 물건도 안 건드렸다더군요."
+        },
+        {
+          "speaker": "마렌",
+          "text": "길을 확인해 주시겠습니까? 첫 외부 일로는 지나치게 멀지도 않습니다."
+        }
+      ],
+      "options": [
+        {
+          "id": "PRACTICAL",
+          "text": "다친 사람은 지금 괜찮습니까?",
+          "tone": "PRACTICAL"
+        },
+        {
+          "id": "CURIOUS",
+          "text": "평소와 다르다는 건 구체적으로 뭡니까?",
+          "tone": "CURIOUS"
+        },
+        {
+          "id": "ASSERTIVE",
+          "text": "확인하고 돌아오겠습니다.",
+          "tone": "ASSERTIVE"
+        }
+      ],
+      "after": [
+        {
+          "speaker": "마렌",
+          "text": "무리하지 마십시오. 이유를 알아내는 것과 영웅이 되는 건 다른 일입니다."
+        }
+      ],
+      "commit": [
+        "main_q01_started",
+        "world_map_unlocked"
+      ]
+    },
+    {
+      "id": "S01_002_FIRST_COMBAT",
+      "act": 1,
+      "location": "R01",
+      "title": "평야의 첫 전투",
+      "purpose": "Manual tutorial에도 캐릭터 톤 부여",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "길 옆 풀숲에서 들쥐 두 마리가 튀어나온다."
+        },
+        {
+          "speaker": "{playerName}",
+          "text": "…"
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "첫 전투는 Manual로 진행한다."
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "전투 종료 후 멀리서 깨진 수레바퀴 소리가 들린다."
+        }
+      ],
+      "commit": [
+        "first_manual_battle_complete"
+      ]
+    },
+    {
+      "id": "S01_003_KAEL_MEET",
+      "act": 1,
+      "location": "R01",
+      "title": "카일과의 조우",
+      "purpose": "카일의 첫인상 / 동등한 현장 동행자",
+      "lines": [
+        {
+          "speaker": "카일",
+          "text": "마법사인가? 설명은 나중에 하지. 왼쪽 둘, 네가 맡을 수 있겠어?"
+        },
+        {
+          "speaker": "{playerName}",
+          "text": "…"
+        },
+        {
+          "speaker": "카일",
+          "text": "좋아. 그럼 내가 가운데를 막지."
+        }
+      ],
+      "options": [
+        {
+          "id": "CONFIDENT",
+          "text": "맡겠습니다.",
+          "tone": "ASSERTIVE"
+        },
+        {
+          "id": "DRY",
+          "text": "둘이면 충분하네요.",
+          "tone": "PRACTICAL"
+        },
+        {
+          "id": "CAREFUL",
+          "text": "다친 사람부터 뒤로 보내죠.",
+          "tone": "EMPATHETIC"
+        }
+      ],
+      "after_combat": [
+        {
+          "speaker": "카일",
+          "text": "처음 나온 사람치고는 침착하네."
+        },
+        {
+          "speaker": "카일",
+          "text": "저 상인은 물건을 두고 달아났는데도 놈들이 따라붙었다더군."
+        },
+        {
+          "speaker": "카일",
+          "text": "나도 녹교촌 쪽을 보고 있었어. 같이 가면 서로 덜 번거롭겠지."
+        }
+      ],
+      "commit": [
+        "kael_temporary_party"
+      ]
+    },
+    {
+      "id": "S01_004_TRAIL",
+      "act": 1,
+      "location": "R02",
+      "title": "숲길의 흔적",
+      "purpose": "관찰/Skill Check / 이상행동",
+      "lines": [
+        {
+          "speaker": "카일",
+          "text": "발자국이 여기서 꺾였군. 마을 쪽이 아니라 숲 안으로."
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "Observation 성공 시: 같은 흔적이 작은 원을 그리며 반복된다."
+        },
+        {
+          "speaker": "카일",
+          "text": "먹이를 쫓은 흔적은 아니야. 뭔가에 묶여 도는 것 같군."
+        }
+      ],
+      "options": [
+        {
+          "id": "CURIOUS",
+          "text": "숲 안쪽에 뭐가 있죠?",
+          "tone": "CURIOUS"
+        },
+        {
+          "id": "PRACTICAL",
+          "text": "길부터 안전하게 만들고 확인하죠.",
+          "tone": "PRACTICAL"
+        }
+      ]
+    },
+    {
+      "id": "S01_005_MOSSBRIDGE",
+      "act": 1,
+      "location": "T02",
+      "title": "녹교촌",
+      "purpose": "Hub / 에린 첫 관찰 / 지역 분위기",
+      "lines": [
+        {
+          "speaker": "헤스",
+          "text": "버들마을에서 왔다고? 잘 왔소. 요 며칠 사냥감을 좇는 게 아니라 쫓겨 다니는 기분이었지."
+        },
+        {
+          "speaker": "에린",
+          "text": "쫓는 쪽도 길을 잃었어요."
+        },
+        {
+          "speaker": "카일",
+          "text": "짐승이 길을 잃었다고?"
+        },
+        {
+          "speaker": "에린",
+          "text": "사슴도, 늑대도, 슬라임도 같은 방향을 피합니다. 서로를 피하는 게 아니라요."
+        },
+        {
+          "speaker": "헤스",
+          "text": "숲 안쪽을 말하는 거라면, 거긴 어제부터 사람을 안 보냈소."
+        }
+      ],
+      "options": [
+        {
+          "id": "ASK_ERIN",
+          "text": "피하는 방향을 보여줄 수 있습니까?",
+          "tone": "CURIOUS"
+        },
+        {
+          "id": "ASK_HESS",
+          "text": "사람 피해부터 정리해 주세요.",
+          "tone": "PRACTICAL"
+        }
+      ],
+      "after": [
+        {
+          "speaker": "에린",
+          "text": "따라올 거면 발밑을 보세요. 큰 흔적보다 작은 게 더 오래 남아요.",
+          "condition": "ASK_ERIN"
+        }
+      ]
+    },
+    {
+      "id": "S01_006_FOREST_DEEP",
+      "act": 1,
+      "location": "R02",
+      "title": "숲 깊은 곳",
+      "purpose": "AUTO 해금 전 이상행동 강화",
+      "lines": [
+        {
+          "speaker": "에린",
+          "text": "여기부터 흔적이 겹칩니다. 서로 다른 종이 같은 길을 돌았어요."
+        },
+        {
+          "speaker": "카일",
+          "text": "서로 먹고 먹히는 놈들까지?"
+        },
+        {
+          "speaker": "에린",
+          "text": "네. 그래서 이상해요."
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "전투 전 멀리서 푸른 빛이 세 번 맥동한다."
+        },
+        {
+          "speaker": "카일",
+          "text": "세 번. 기억해 두지."
+        }
+      ],
+      "commit": [
+        "forest_deep_reached"
+      ]
+    },
+    {
+      "id": "S01_007_ELDER_SLIME_PRE",
+      "act": 1,
+      "location": "R02",
+      "title": "숲의 중심",
+      "purpose": "첫 보스 / 폭주 전조",
+      "lines": [
+        {
+          "speaker": "에린",
+          "text": "저 웅덩이 주변만 식물이 바깥쪽으로 눕습니다."
+        },
+        {
+          "speaker": "카일",
+          "text": "저게 원인인가?"
+        },
+        {
+          "speaker": "에린",
+          "text": "원인인지, 모인 결과인지는 아직."
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "Elder Slime의 눈과 내부 핵이 강하게 빛난다."
+        },
+        {
+          "speaker": "카일",
+          "text": "어느 쪽이든 지금 우리를 보고 있군."
+        }
+      ]
+    },
+    {
+      "id": "S01_008_FIRST_ABSORPTION",
+      "act": 1,
+      "location": "R02",
+      "title": "첫 흡수",
+      "purpose": "주인공 이상성 최초 노출 / 정답 금지",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "보스가 무너지며 푸른 정수가 터져 나온다. 잔류 마력이 주인공의 주문 회로로 역류한다."
+        },
+        {
+          "speaker": "카일",
+          "text": "{playerName}! 손 떼!"
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "마력이 폭발하지 않고 주인공 안으로 가라앉는다."
+        },
+        {
+          "speaker": "에린",
+          "text": "…사라진 게 아니에요."
+        },
+        {
+          "speaker": "카일",
+          "text": "괜찮아? 어디가 타는 느낌은?"
+        }
+      ],
+      "options": [
+        {
+          "id": "CONFUSED",
+          "text": "안 아픕니다. 오히려… 조용해졌어요.",
+          "tone": "CURIOUS"
+        },
+        {
+          "id": "HIDE",
+          "text": "괜찮습니다. 그냥 반동이었어요.",
+          "tone": "PRACTICAL"
+        },
+        {
+          "id": "ADMIT",
+          "text": "제가 흡수한 것 같습니다.",
+          "tone": "ASSERTIVE"
+        }
+      ],
+      "after": [
+        {
+          "speaker": "에린",
+          "text": "그건 '그냥' 반동은 아니었어요."
+        },
+        {
+          "speaker": "카일",
+          "text": "일단 살아 있는 걸 확인했으면 됐어. 설명은 안전한 데서 하자."
+        }
+      ],
+      "commit": [
+        "essence_system_unlocked"
+      ]
+    },
+    {
+      "id": "S01_009_D01_ENTRY",
+      "act": 1,
+      "location": "D01",
+      "title": "뿌리신전 입구",
+      "purpose": "옛 구조 / 알로의 제한된 지식",
+      "lines": [
+        {
+          "speaker": "알로",
+          "text": "이 문양은 성맥교단에서도 오래된 형식입니다. 지금 쓰는 기도문과는 순서가 조금 다르지요."
+        },
+        {
+          "speaker": "카일",
+          "text": "안쪽이 무너지면?"
+        },
+        {
+          "speaker": "알로",
+          "text": "그래서 저는 여기까지입니다. 문을 열 수는 있어도, 싸움은 못 합니다."
+        },
+        {
+          "speaker": "에린",
+          "text": "뿌리가 돌을 피해 자란 게 아니네요. 돌을 따라 자랐어요."
+        }
+      ],
+      "options": [
+        {
+          "id": "ASK_PATTERN",
+          "text": "문양 순서를 적어 주십시오.",
+          "tone": "CURIOUS"
+        },
+        {
+          "id": "GO",
+          "text": "확인하고 나오겠습니다.",
+          "tone": "ASSERTIVE"
+        }
+      ]
+    },
+    {
+      "id": "S01_010_FIRST_FISSURE",
+      "act": 1,
+      "location": "D01",
+      "title": "뿌리 아래의 균열",
+      "purpose": "마력맥 단어는 암시 수준 / 국지적 이상",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "바닥 틈에서 일정한 간격으로 빛이 맥동한다."
+        },
+        {
+          "speaker": "알로",
+          "text": "…기록에서 본 표현이 있습니다. '땅 아래 흐르는 빛이 숨을 고르지 못했다.'"
+        },
+        {
+          "speaker": "카일",
+          "text": "옛날 사람도 비슷한 걸 봤다는 얘기군."
+        },
+        {
+          "speaker": "알로",
+          "text": "비슷하다고만 말할 수 있습니다. 같은 것인지는 모르겠습니다."
+        },
+        {
+          "speaker": "에린",
+          "text": "숲에서 피하던 방향이 여기였어요."
+        }
+      ],
+      "options": [
+        {
+          "id": "CURIOUS",
+          "text": "기록을 더 볼 수 있습니까?",
+          "tone": "CURIOUS"
+        },
+        {
+          "id": "PRACTICAL",
+          "text": "먼저 이 균열부터 안정시키죠.",
+          "tone": "PRACTICAL"
+        }
+      ],
+      "commit": [
+        "d01_fissure_resolved"
+      ]
+    },
+    {
+      "id": "S01_011_ACT1_RETURN",
+      "act": 1,
+      "location": "T02",
+      "title": "세 방향의 보고",
+      "purpose": "ACT II 세 Arc 개방 / Erin 영입",
+      "lines": [
+        {
+          "speaker": "페론",
+          "text": "돌아오자마자 일거리가 셋 더 늘었네요. 축하해야 하나?"
+        },
+        {
+          "speaker": "헤스",
+          "text": "철맥도시에서 결정이 터졌고, 안개늪에서는 사람이 셋 사라졌소."
+        },
+        {
+          "speaker": "Oldcross 전령",
+          "text": "Oldcross의 마일 씨가 전갈을 보냈습니다. 오래 잠긴 기록소 문이 열렸답니다.",
+          "condition": "messenger_oldcross"
+        },
+        {
+          "speaker": "에린",
+          "text": "서로 멀리 떨어진 곳인데, 시기가 너무 비슷해요."
+        },
+        {
+          "speaker": "카일",
+          "text": "한 곳 더 보면 우연인지 아닌지 알겠지."
+        },
+        {
+          "speaker": "에린",
+          "text": "저도 가겠습니다. 숲만 보고 있으면 더 늦게 알게 될 것 같아요."
+        }
+      ],
+      "options": [
+        {
+          "id": "WELCOME_ERIN",
+          "text": "같이 봅시다.",
+          "tone": "EMPATHETIC"
+        },
+        {
+          "id": "ASK_REASON",
+          "text": "왜 지금 함께 가려는 겁니까?",
+          "tone": "CURIOUS"
+        }
+      ],
+      "after": [
+        {
+          "speaker": "에린",
+          "text": "변한 걸 없애기 전에, 왜 변했는지는 알아야 하니까요.",
+          "condition": "ASK_REASON"
+        }
+      ],
+      "commit": [
+        "act1_complete",
+        "erin_recruited",
+        "act2_three_arcs_open"
+      ]
+    },
+    {
+      "id": "S02_M01_IRONVALE_ARRIVAL",
+      "act": 2,
+      "location": "T03",
+      "title": "철맥도시",
+      "purpose": "M01 갈등 소개",
+      "lines": [
+        {
+          "speaker": "오르반",
+          "text": "심층갱도를 닫으면 이 도시는 절반이 멈춥니다."
+        },
+        {
+          "speaker": "세리아",
+          "text": "안 닫으면 다음 폭발 때 절반이 죽을 수 있습니다."
+        },
+        {
+          "speaker": "톰",
+          "text": "우리도 위험한 건 압니다. 그래도 안에 갇힌 장비와 기록을 그냥 버릴 순 없어요."
+        },
+        {
+          "speaker": "카일",
+          "text": "사람부터 빼고 말해."
+        },
+        {
+          "speaker": "세리아",
+          "text": "그래서 1차 봉쇄는 이미 했습니다. 문제는 영구 봉쇄인지, 안정화 작업인지입니다."
+        }
+      ],
+      "options": [
+        {
+          "id": "ASK_CAUSE",
+          "text": "폭발 원인은 확인됐습니까?",
+          "tone": "CURIOUS"
+        },
+        {
+          "id": "ASK_PEOPLE",
+          "text": "안에 남은 사람은 없습니까?",
+          "tone": "PRACTICAL"
+        }
+      ]
+    },
+    {
+      "id": "S02_M02_MINE_EVIDENCE",
+      "act": 2,
+      "location": "D02",
+      "title": "심층광산 조사",
+      "purpose": "결정폭발과 동일 맥동",
+      "lines": [
+        {
+          "speaker": "에린",
+          "text": "결정이 안에서 밖으로 터진 흔적이에요."
+        },
+        {
+          "speaker": "카일",
+          "text": "폭약이면 반대겠지."
+        },
+        {
+          "speaker": "세리아",
+          "text": "측정치는 폭발 직전까지 정상 범위였습니다."
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "벽면 결정이 D01과 비슷한 간격으로 약하게 맥동한다."
+        },
+        {
+          "speaker": "에린",
+          "text": "같은 리듬이에요. 숲에서 들었던 것과."
+        }
+      ]
+    },
+    {
+      "id": "M01_MINE_CHOICE",
+      "act": 2,
+      "location": "T03",
+      "title": "M01 — 광산 처리",
+      "purpose": "첫 Major Choice / Branch & Converge",
+      "lines": [
+        {
+          "speaker": "세리아",
+          "text": "지금 봉쇄하면 추가 붕괴 가능성은 크게 줄어듭니다."
+        },
+        {
+          "speaker": "오르반",
+          "text": "안정화하면 위험은 남습니다. 대신 사람도 도시도 버리지 않아도 됩니다."
+        },
+        {
+          "speaker": "카일",
+          "text": "어느 쪽이든 계획을 모른 척하고 사람을 넣는 건 안 돼."
+        }
+      ],
+      "options": [
+        {
+          "id": "SEAL",
+          "text": "A. 심층광산을 즉시 봉쇄한다.",
+          "effects": [
+            "ironvale_mine_sealed"
+          ]
+        },
+        {
+          "id": "STABILIZE",
+          "text": "B. 구조대를 제한해 안정화 작업을 계속한다.",
+          "effects": [
+            "ironvale_mine_stabilized"
+          ]
+        }
+      ],
+      "interjections": {
+        "SEAL": [
+          {
+            "speaker": "에린",
+            "text": "길을 닫는 게 안전한 건 맞아요. 다만 안에서 무슨 일이 있었는지는 오래 못 보게 될 겁니다."
+          },
+          {
+            "speaker": "네라",
+            "text": "지금 네라 미영입이면 없음",
+            "condition": "nera_active"
+          }
+        ],
+        "STABILIZE": [
+          {
+            "speaker": "카일",
+            "text": "구조 인원과 철수선을 먼저 정해. 그게 있으면 나도 반대 안 해."
+          },
+          {
+            "speaker": "에린",
+            "text": "원인을 볼 수 있다면 다음 지역에서 같은 일을 막을 수도 있어요."
+          }
+        ]
+      },
+      "commit_rule": "PROVISIONAL→interjection→CONFIRM"
+    },
+    {
+      "id": "S02_S01_FENWATCH",
+      "act": 2,
+      "location": "T04",
+      "title": "Fenwatch의 실종자",
+      "purpose": "M02 갈등 기반",
+      "lines": [
+        {
+          "speaker": "미엘",
+          "text": "실종자는 셋입니다. 피나 끌린 흔적은 없습니다."
+        },
+        {
+          "speaker": "사바",
+          "text": "발자국은 늪 안으로 들어갔고, 다시 나오지 않았지."
+        },
+        {
+          "speaker": "브루",
+          "text": "큰 두꺼비가 사람만 보면 덤빈다는 말도 있고… 안 덤빈다는 말도 있습니다."
+        },
+        {
+          "speaker": "에린",
+          "text": "둘 다 맞을 수 있어요."
+        },
+        {
+          "speaker": "카일",
+          "text": "그 말이 제일 불편하군."
+        }
+      ]
+    },
+    {
+      "id": "S02_S02_NONHOSTILE_MUTATION",
+      "act": 2,
+      "location": "R04",
+      "title": "정상이 아닌 변화",
+      "purpose": "변이=악 단순화 방지",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "커진 늪생물이 파티를 보고도 물러난다."
+        },
+        {
+          "speaker": "에린",
+          "text": "보세요. 몸은 변했는데 행동은 달라지지 않았어요."
+        },
+        {
+          "speaker": "카일",
+          "text": "그럼 공격한 놈들과 다른 이유가 있다는 건가?"
+        },
+        {
+          "speaker": "에린",
+          "text": "적어도 '커졌으니 흉포하다'는 설명은 틀렸어요."
+        },
+        {
+          "speaker": "미엘",
+          "text": "실종자 중 한 명도 이런 개체를 기록해 놨습니다."
+        }
+      ]
+    },
+    {
+      "id": "S02_S03_SWAMP_TEMPLE",
+      "act": 2,
+      "location": "D03",
+      "title": "가라앉은 늪신전",
+      "purpose": "오염 집중점 / 정화 가능 증거",
+      "lines": [
+        {
+          "speaker": "사바",
+          "text": "물길이 여기서 전부 모인다."
+        },
+        {
+          "speaker": "에린",
+          "text": "그리고 변이가 심한 곳도 이 수로 아래쪽이에요."
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "오래된 조절석이 막혀 마력이 한 구간에 정체돼 있다."
+        },
+        {
+          "speaker": "미엘",
+          "text": "이걸 되돌릴 수 있다면, 늪 전체를 태울 이유는 없겠군요."
+        },
+        {
+          "speaker": "카일",
+          "text": "'되돌릴 수 있다'와 '안전하게 되돌릴 수 있다'는 다른 말이야."
+        }
+      ]
+    },
+    {
+      "id": "M02_SWAMP_CHOICE",
+      "act": 2,
+      "location": "T04",
+      "title": "M02 — 늪 처리",
+      "purpose": "생태/안전 Tradeoff",
+      "lines": [
+        {
+          "speaker": "미엘",
+          "text": "소각하면 빠릅니다. 지금 마을로 번지는 위험도 낮아집니다."
+        },
+        {
+          "speaker": "에린",
+          "text": "정화도 가능합니다. 대신 안쪽 수로를 다시 열어야 해요. 시간이 더 걸립니다."
+        },
+        {
+          "speaker": "사바",
+          "text": "둘 다 늪을 바꾸는 선택이오. 아무것도 안 하는 선택은 없지."
+        }
+      ],
+      "options": [
+        {
+          "id": "BURN",
+          "text": "A. 오염 구역을 소각해 즉시 차단한다.",
+          "effects": [
+            "swamp_burned"
+          ]
+        },
+        {
+          "id": "PURIFY",
+          "text": "B. 위험을 감수하고 수로를 정화한다.",
+          "effects": [
+            "swamp_purified"
+          ]
+        }
+      ],
+      "interjections": {
+        "BURN": [
+          {
+            "speaker": "에린",
+            "text": "정화가 가능하다는 증거까지 봤어요. 지금 당장 마을이 무너지는 상황도 아니고요.",
+            "condition": "purification_viable"
+          },
+          {
+            "speaker": "에린",
+            "text": "편해서 태우는 거라면, 저는 동의 못 해요.",
+            "condition": "purification_viable"
+          }
+        ],
+        "PURIFY": [
+          {
+            "speaker": "카일",
+            "text": "정화대가 빠질 길부터 확보하자. 늪을 살리겠다고 사람을 안에 묶어 둘 순 없어."
+          }
+        ]
+      },
+      "commit_rule": "PROVISIONAL→conditional Erin objection→CONFIRM"
+    },
+    {
+      "id": "S02_R01_OLDCROSS",
+      "act": 2,
+      "location": "T05",
+      "title": "Oldcross",
+      "purpose": "Nera first meeting",
+      "lines": [
+        {
+          "speaker": "마일",
+          "text": "기록소 문이 열린 건 좋은 소식이 아닙니다. 거긴 닫혀 있어서 사람들이 안 들어간 곳이거든요."
+        },
+        {
+          "speaker": "로엔",
+          "text": "그래도 벌써 세 팀은 들어갔지."
+        },
+        {
+          "speaker": "네라",
+          "text": "두 팀은 입구에서 돌아왔고, 한 팀은 안 돌아왔어."
+        },
+        {
+          "speaker": "카일",
+          "text": "넌 갔다 왔나?"
+        },
+        {
+          "speaker": "네라",
+          "text": "입구까진. 잠긴 문이 나보다 고집이 세더라고."
+        },
+        {
+          "speaker": "네라",
+          "text": "당신들이 안쪽 이유를 알고 싶고, 나는 문 뒤가 궁금해. 꽤 그럴듯한 협력이잖아?"
+        }
+      ],
+      "options": [
+        {
+          "id": "ACCEPT",
+          "text": "길을 안내해 주세요.",
+          "tone": "PRACTICAL"
+        },
+        {
+          "id": "ASK_PRICE",
+          "text": "대가는 뭡니까?",
+          "tone": "CURIOUS"
+        },
+        {
+          "id": "TEASE",
+          "text": "문이 당신보다 고집이 세다는 건 믿기 어렵네요.",
+          "tone": "ASSERTIVE"
+        }
+      ],
+      "after": [
+        {
+          "speaker": "네라",
+          "text": "좋네. 말은 할 줄 아는 마법사군.",
+          "condition": "TEASE"
+        },
+        {
+          "speaker": "네라",
+          "text": "처음엔 돈. 안쪽이 정말 이상하면 그다음은 나도 보고 정하지.",
+          "condition": "ASK_PRICE"
+        }
+      ],
+      "commit": [
+        "nera_temporary_party"
+      ]
+    },
+    {
+      "id": "S02_R02_ARCHIVE_ENTRY",
+      "act": 2,
+      "location": "D04",
+      "title": "기록소 진입",
+      "purpose": "Nera temporary party를 실제 던전 진입대사로 고정",
+      "lines": [
+        {
+          "speaker": "네라",
+          "text": "여기서부터는 내가 앞에 설게. 함정은 갑옷보다 조용하거든."
+        },
+        {
+          "speaker": "카일",
+          "text": "앞은 내가 선다."
+        },
+        {
+          "speaker": "네라",
+          "text": "그럼 바닥만 보지 마. 앞도 봐."
+        },
+        {
+          "speaker": "에린",
+          "text": "둘 다 맞아요."
+        },
+        {
+          "speaker": "네라",
+          "text": "좋아. 이 파티, 생각보다 피곤하겠네."
+        }
+      ],
+      "commit": [
+        "d04_entered_with_nera"
+      ]
+    },
+    {
+      "id": "S02_R03_ARCHIVE_DISCOVERY",
+      "act": 2,
+      "location": "D04",
+      "title": "고대 기록소",
+      "purpose": "M03 자료의 성격 / Academy 정보통제 질문",
+      "lines": [
+        {
+          "speaker": "네라",
+          "text": "여기. 왕립 봉인표식이 옛 문 위에 덧칠돼 있어."
+        },
+        {
+          "speaker": "카일",
+          "text": "왕립 쪽이 이곳을 알고 있었다는 건가."
+        },
+        {
+          "speaker": "네라",
+          "text": "'알았다'와 '다 알았다'는 구분해야지. 그래도 우리한테 말 안 한 건 맞고."
+        },
+        {
+          "speaker": "SYSTEM",
+          "text": "기록에는 마력 흐름의 주기와 여러 지역 좌표가 반복된다."
+        },
+        {
+          "speaker": "에린",
+          "text": "숲, 늪, 광산… 점들이 따로가 아니에요."
+        },
+        {
+          "speaker": "네라",
+          "text": "이 정도면 누가 보관하느냐도 꽤 중요한 문제가 되겠네."
+        }
+      ]
+    },
+    {
+      "id": "S02_R03_BONE_HEAP_AFTER",
+      "act": 2,
+      "location": "D04",
+      "title": "Bone Heap 이후",
+      "purpose": "Boss 이후 기록 발견과 M03 사이의 감정 호흡",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "뼈더미가 무너지며 아래에 봉인된 기록함이 드러난다."
+        },
+        {
+          "speaker": "카일",
+          "text": "보스가 지키던 건 이건가."
+        },
+        {
+          "speaker": "네라",
+          "text": "아니면 이게 있어서 저게 깨어난 걸 수도 있고."
+        },
+        {
+          "speaker": "에린",
+          "text": "기록함 주변만 맥동이 약해요."
+        },
+        {
+          "speaker": "네라",
+          "text": "열기 전부터 선택지가 늘어나는 기분인데."
+        },
+        {
+          "speaker": "카일",
+          "text": "일단 열고 나서 골라."
+        }
+      ],
+      "commit": [
+        "bone_heap_defeated"
+      ]
+    },
+    {
+      "id": "M03_ARCHIVE_CHOICE",
+      "act": 2,
+      "location": "D04",
+      "title": "M03 — 고대 기록",
+      "purpose": "정보통제 Choice / Nera identity",
+      "lines": [
+        {
+          "speaker": "네라",
+          "text": "원본은 하나야. 넘기면 우린 사본만 보게 될 수도 있고, 봉인하면 누구도 못 보게 되지."
+        },
+        {
+          "speaker": "카일",
+          "text": "사람을 당장 죽이는 물건은 아니지?"
+        },
+        {
+          "speaker": "네라",
+          "text": "아니. 적어도 지금 확인한 건 역사와 위치 기록이야."
+        }
+      ],
+      "options": [
+        {
+          "id": "ACADEMY",
+          "text": "A. 원본 전체를 왕립 마도원에 넘긴다.",
+          "effects": [
+            "ancient_records_academy"
+          ]
+        },
+        {
+          "id": "SHARE",
+          "text": "B. 사본을 만들어 마도원과 자유연구회 양측에 공유한다.",
+          "effects": [
+            "ancient_records_shared"
+          ]
+        },
+        {
+          "id": "RESEAL",
+          "text": "C. 위험정보라는 이유로 다시 봉인한다.",
+          "effects": [
+            "ancient_records_resealed"
+          ]
+        }
+      ],
+      "interjections": {
+        "ACADEMY": [
+          {
+            "speaker": "네라",
+            "text": "저 사람들이 악당이라는 말은 안 할게. 그래도 원본 하나를 통째로 맡기면, 다음에 우리가 볼 수 있다는 보장은 없어."
+          },
+          {
+            "speaker": "네라",
+            "text": "그래도 넘길 거야?"
+          }
+        ],
+        "SHARE": [
+          {
+            "speaker": "에린",
+            "text": "서로 다른 사람이 같은 기록을 보면, 적어도 같은 실수를 두 번 확인할 수는 있겠네요."
+          }
+        ],
+        "RESEAL": [
+          {
+            "speaker": "네라",
+            "text": "이건 사람을 죽이는 주문서가 아니야. 왜 이런 일이 반복됐는지 적힌 기록이야."
+          },
+          {
+            "speaker": "네라",
+            "text": "그걸 다시 묻는 건… 난 정말 반대야."
+          }
+        ]
+      },
+      "commit_rule": "PROVISIONAL→Nera priority→CONFIRM"
+    },
+    {
+      "id": "S02_R05_NERA_RECRUIT",
+      "act": 2,
+      "location": "T05",
+      "title": "네라의 합류",
+      "purpose": "temporary→formal roster",
+      "lines": [        {
+          "speaker": "네라",
+          "text": "처음엔 문 하나 열고 돈 받을 생각이었는데."
+        },
+        {
+          "speaker": "카일",
+          "text": "생각보다 일이 커졌지."
+        },
+        {
+          "speaker": "네라",
+          "text": "아니. 돈 받을 사람이 너무 많아졌어."
+        },
+        {
+          "speaker": "에린",
+          "text": "그럼 그만둘 건가요?"
+        },
+        {
+          "speaker": "네라",
+          "text": "반대. 누가 뭘 숨기는지 끝까지 봐야 돈을 제대로 매기지."
+        },
+        {
+          "speaker": "네라",
+          "text": "자리가 있다면 같이 가지, {playerName}."
+        }
+      ],
+      "options": [
+        {
+          "id": "ACTIVE",
+          "text": "같이 갑시다. 지금부터 전열에 들어오세요.",
+          "effects": [
+            "nera_recruited",
+            "nera_active"
+          ]
+        },
+        {
+          "id": "BENCH",
+          "text": "같이 갑시다. Oldcross에서 대기해 주세요.",
+          "effects": [
+            "nera_recruited",
+            "nera_bench"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ACT2_INVITATION",
+      "act": 2,
+      "location": "T02/T05/T03/T04",
+      "title": "왕립 마도원의 초청",
+      "purpose": "두 Arc 완료→Lv9 synthesis→ACT III",
+      "lines": [
+        {
+          "speaker": "SYSTEM",
+          "text": "두 지역 이상의 기록을 비교할 수 있게 된다."
+        },
+        {
+          "speaker": "에린",
+          "text": "광산 결정과 늪의 조절석, 기록소 좌표가 같은 간격으로 움직였어요.",
+          "condition": "erin_recruited"
+        },
+        {
+          "speaker": "네라",
+          "text": "그리고 왕립 쪽은 최소한 기록소 일부를 예전부터 알고 있었고.",
+          "condition": "nera_recruited"
+        },
+        {
+          "speaker": "카일",
+          "text": "이제 지방 사건이라고 부르긴 어렵겠군."
+        },
+        {
+          "speaker": "레비안",
+          "text": "왕립 마도원 조사국의 레비안입니다. 세 지역 보고서를 공식적으로 비교하고 싶습니다."
+        },
+        {
+          "speaker": "레비안",
+          "text": "왕도 아르켄으로 와 주십시오. 조사 대상이 아니라, 현장을 본 증인으로 초청하는 겁니다."
+        }
+      ],
+      "options": [
+        {
+          "id": "ACCEPT",
+          "text": "가겠습니다.",
+          "tone": "PRACTICAL"
+        },
+        {
+          "id": "ASK",
+          "text": "왜 지금에서야 부르는 겁니까?",
+          "tone": "CURIOUS"
+        }
+      ],
+      "after": [
+        {
+          "speaker": "레비안",
+          "text": "지금에서야 세 사건이 같은 문제라는 증거가 생겼기 때문입니다.",
+          "condition": "ASK"
+        },
+        {
+          "speaker": "레비안",
+          "text": "늦었다는 지적은 받아들이겠습니다. 그래서 직접 들으려는 겁니다.",
+          "condition": "ASK"
+        }
+      ],
+      "commit": [
+        "act2_invitation_received",
+        "act3_unlocked"
+      ]
+    }
+  ]
+}
