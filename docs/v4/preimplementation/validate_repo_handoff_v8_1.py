@@ -33,8 +33,8 @@ for p in ['CLAUDE.md','README.md','AGENT_START_HERE.md','docs/v4/final/MASTER_SP
     if 'CURRENT_AUTHORITY_2026-10-03.md' not in t: fail(f'{p}: missing 2026-10-03 authority')
 
 bootstrap=read('docs/v4/preimplementation/LOCAL_AGENT_BOOTSTRAP_v8.0.md')
-if 'CURRENT_AUTHORITY_2026-10-01.md' in bootstrap: fail('bootstrap points to old 10-01 authority')
-if 'CLAUDE.md\nHANDOFF.md\nGAME_DESIGN.md\nREADME.md' in bootstrap: fail('bootstrap still marks current CLAUDE/README as legacy')
+if 'CURRENT_AUTHORITY_2026-10-03.md' not in bootstrap: fail('bootstrap missing current 10-03 authority')
+if 'Historical / legacy only' not in bootstrap: fail('bootstrap missing explicit historical section')
 
 # 2. legacy quarantine
 for p in ['HANDOFF.md','GAME_DESIGN.md']:
@@ -122,7 +122,7 @@ def check_refs(rel):
         else:
             continue
         if not target.exists(): fail(f'broken reference in {rel}: {token}')
-for rel in ['docs/v4/design/v6/00_INDEX.md','docs/v4/narrative/v7/00_INDEX.md','docs/v4/preimplementation/00_INDEX.md']:
+for rel in ['CLAUDE.md','README.md','AGENT_START_HERE.md','docs/v4/final/MASTER_SPEC.md','docs/v4/design/v6/00_INDEX.md','docs/v4/narrative/v7/00_INDEX.md','docs/v4/preimplementation/00_INDEX.md','artifacts/v4/FINAL_COMPLETE_HANDOFF/00_START_HERE.md']:
     check_refs(rel)
 
 # 9. run original package validators and v8 validator
