@@ -1,0 +1,102 @@
+[
+  {
+    "file": "00_INDEX.md",
+    "bytes": 2036,
+    "sha256": "a53776c9fcb03736cad0ea3c91f3b68b7767023d72dfdc6676a232ac4b33dc4e"
+  },
+  {
+    "file": "A_v6.0_ACT_III_COMPLETE_SPEC.md",
+    "bytes": 9200,
+    "sha256": "8343f612609278fc196d34ef379a7623ba26705e3b4f7e19f2b8d384dd9cdeac"
+  },
+  {
+    "file": "A_v6.0_ACT_III_DATA.json",
+    "bytes": 12007,
+    "sha256": "804cedd2b48d8a6ee2876ae3d0d917d082466c83209167278e6d121617837cff"
+  },
+  {
+    "file": "A_v6.0_CHECKPOINT_AUDIT.md",
+    "bytes": 1091,
+    "sha256": "055fe38a5a3f79ce7c36fdf7d402491f157aadf72e1b7f61d23f936755d86c7e"
+  },
+  {
+    "file": "B_v6.1_ACT_IV_COMPANION_COMPLETE_SPEC.md",
+    "bytes": 8751,
+    "sha256": "3cf14111ea19be42e8d8fe9a63c98cbf3a7f4eab70d196d8826a6959f1bd9850"
+  },
+  {
+    "file": "B_v6.1_ACT_IV_COMPANION_DATA.json",
+    "bytes": 12825,
+    "sha256": "b02b7447226e20449417966c02333cfff4c1039367b3634ce74314125ef094d6"
+  },
+  {
+    "file": "B_v6.1_CHECKPOINT_AUDIT.md",
+    "bytes": 1060,
+    "sha256": "a661e7830657d8e495ec0d6284e17ed4beb1fecd35e109e62d70631814f71d3e"
+  },
+  {
+    "file": "C_v6.2_ACT_V_ENDING_COMPLETE_SPEC.md",
+    "bytes": 9663,
+    "sha256": "ada37776658327187631d210b7a21f1ef82409c562856760d832e16997506fe7"
+  },
+  {
+    "file": "C_v6.2_ACT_V_ENDING_DATA.json",
+    "bytes": 15281,
+    "sha256": "8fb8d20758c33866ca8df7f40990fc0b276bf00881ee48b136cb0df82b518458"
+  },
+  {
+    "file": "C_v6.2_CHECKPOINT_AUDIT.md",
+    "bytes": 1197,
+    "sha256": "e38b0e00c7430db9bd4df95b8d644e179bc358b5e1ad41a3cc2b16fff4146480"
+  },
+  {
+    "file": "D_v6.3_COMPANION_QUEST_INTEGRATION.json",
+    "bytes": 1568,
+    "sha256": "ec508cf598ccec4ff4c332fbeadd646eccecd6a4ad8829857de14e6d028daee9"
+  },
+  {
+    "file": "D_v6.3_FULL_CAMPAIGN_INTEGRATION_AUDIT.md",
+    "bytes": 9118,
+    "sha256": "d11f83969fe732ead93f4fa529905172050c9118c9997f033733567d66d02fb0"
+  },
+  {
+    "file": "D_v6.3_FULL_WALKTHROUGH_STATE_TRACE.json",
+    "bytes": 5480,
+    "sha256": "8850199dbeaf9a67d36fff3090ad2a6166240ae2fbb3592323c9bf875833e94f"
+  },
+  {
+    "file": "D_v6.3_LATE_GEAR_SPELL_HUB_DATA.json",
+    "bytes": 21462,
+    "sha256": "a26c97ab5c13e1fbcbec4ce79e930c2c0d5eb006e6850c0be8ccaeeefbfbaed3"
+  },
+  {
+    "file": "D_v6.3_STATE_FLAG_MATRIX.json",
+    "bytes": 1824,
+    "sha256": "166ceb43b28ed47653b706450d54c5df25828777e4cd9582af64d25f5ce6230e"
+  },
+  {
+    "file": "D_v6.3_TACTICAL_MAP_LAYOUTS.json",
+    "bytes": 39224,
+    "sha256": "108a3339f3beaca70b4639d4c6177a3b4b6eeb16270e565e9d5414c56b2b27c7"
+  },
+  {
+    "file": "D_v6.3_WORLD_EVENT_POOL_98.json",
+    "bytes": 56052,
+    "sha256": "67181a6b690465c47f176fde1f30c86518dacd97dd568f1aebabd9b66ac06d1d"
+  },
+  {
+    "file": "D_v6.3_XP_ECONOMY_AUDIT.json",
+    "bytes": 3546,
+    "sha256": "047f0cc278eb155f31d762fa0962444781be730d112291e7b4a74d9c428aa1b4"
+  },
+  {
+    "file": "VALIDATION_RUN.txt",
+    "bytes": 1274,
+    "sha256": "9028363aa567986f3818f7c4d0e7c700e73efff282a97578bef97d390da04ade"
+  },
+  {
+    "file": "validate_v6_campaign.py",
+    "bytes": 3671,
+    "sha256": "2f864c4449d92479e2f10f2c1e92e98a7a04afa981103bd7a746f6e52ad9e65f"
+  }
+]
