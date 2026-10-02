@@ -1,0 +1,2457 @@
+{
+  "version": "6.3",
+  "maps": [
+    {
+      "id": "map.d01.root_approach",
+      "dungeonId": "D01",
+      "columns": 9,
+      "rows": 7,
+      "style": "cover",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 2,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 4,
+          "type": "COVER"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "두 갈래 진입"
+    },
+    {
+      "id": "map.d01.sealed_root",
+      "dungeonId": "D01",
+      "columns": 9,
+      "rows": 7,
+      "style": "corridor",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 4,
+          "r": 1,
+          "type": "BLOCK"
+        },
+        {
+          "q": 4,
+          "r": 5,
+          "type": "BLOCK"
+        },
+        {
+          "q": 3,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "준비주문 검증"
+    },
+    {
+      "id": "map.d01.fissure_guard",
+      "dungeonId": "D01",
+      "columns": 10,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "첫 균열 Hazard"
+    },
+    {
+      "id": "map.d02.mine_gate",
+      "dungeonId": "D02",
+      "columns": 9,
+      "rows": 7,
+      "style": "corridor",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 4,
+          "r": 1,
+          "type": "BLOCK"
+        },
+        {
+          "q": 4,
+          "r": 5,
+          "type": "BLOCK"
+        },
+        {
+          "q": 3,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "광산 좁은길"
+    },
+    {
+      "id": "map.d02.collapsed_gallery",
+      "dungeonId": "D02",
+      "columns": 9,
+      "rows": 7,
+      "style": "cover",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 2,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 4,
+          "type": "COVER"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "구조물/붕괴"
+    },
+    {
+      "id": "map.d02.deep_shaft",
+      "dungeonId": "D02",
+      "columns": 10,
+      "rows": 7,
+      "style": "hazard",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 2,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 4,
+          "type": "HAZARD"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "열기분출"
+    },
+    {
+      "id": "map.d02.iron_troll",
+      "dungeonId": "D02",
+      "columns": 10,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 7,
+        "r": 3
+      },
+      "special": "Plate Break"
+    },
+    {
+      "id": "map.d03.missing_trail",
+      "dungeonId": "D03",
+      "columns": 9,
+      "rows": 7,
+      "style": "water",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 3,
+          "type": "WATER"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "WATER"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "WATER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "물 이동비용"
+    },
+    {
+      "id": "map.d03.poison_mist",
+      "dungeonId": "D03",
+      "columns": 9,
+      "rows": 7,
+      "style": "hazard",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 4,
+          "r": 2,
+          "type": "HAZARD"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "HAZARD"
+        },
+        {
+          "q": 4,
+          "r": 4,
+          "type": "HAZARD"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "독안개"
+    },
+    {
+      "id": "map.d03.sunken_steps",
+      "dungeonId": "D03",
+      "columns": 10,
+      "rows": 7,
+      "style": "water",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 3,
+          "type": "WATER"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "WATER"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "WATER"
+        },
+        {
+          "q": 6,
+          "r": 3,
+          "type": "WATER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "침수 회랑"
+    },
+    {
+      "id": "map.d03.bog_toad",
+      "dungeonId": "D03",
+      "columns": 10,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 7,
+        "r": 3
+      },
+      "special": "Leap landing"
+    },
+    {
+      "id": "map.d04.ruin_courtyard",
+      "dungeonId": "D04",
+      "columns": 9,
+      "rows": 7,
+      "style": "cover",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 2,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 4,
+          "type": "COVER"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "Gargoyle dive"
+    },
+    {
+      "id": "map.d04.archive_hall",
+      "dungeonId": "D04",
+      "columns": 10,
+      "rows": 7,
+      "style": "corridor",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 1,
+          "type": "BLOCK"
+        },
+        {
+          "q": 5,
+          "r": 5,
+          "type": "BLOCK"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "Cursed Armor lane"
+    },
+    {
+      "id": "map.d04.optional_seal",
+      "dungeonId": "D04",
+      "columns": 9,
+      "rows": 7,
+      "style": "cover",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 2,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 4,
+          "type": "COVER"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "Ancient Focus"
+    },
+    {
+      "id": "map.d04.bone_heap",
+      "dungeonId": "D04",
+      "columns": 10,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 7,
+        "r": 3
+      },
+      "special": "Bone Sweep telegraph"
+    },
+    {
+      "id": "map.d05.outer_fence",
+      "dungeonId": "D05",
+      "columns": 10,
+      "rows": 7,
+      "style": "cover",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 2,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 4,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "인간 원거리"
+    },
+    {
+      "id": "map.d05.containment",
+      "dungeonId": "D05",
+      "columns": 9,
+      "rows": 7,
+      "style": "hazard",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 4,
+          "r": 2,
+          "type": "HAZARD"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "HAZARD"
+        },
+        {
+          "q": 4,
+          "r": 4,
+          "type": "HAZARD"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "실험 격리"
+    },
+    {
+      "id": "map.d05.resonance_hall",
+      "dungeonId": "D05",
+      "columns": 10,
+      "rows": 7,
+      "style": "corridor",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 1,
+          "type": "BLOCK"
+        },
+        {
+          "q": 5,
+          "r": 5,
+          "type": "BLOCK"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "공명장치"
+    },
+    {
+      "id": "map.d05.transfer_bridge",
+      "dungeonId": "D05",
+      "columns": 10,
+      "rows": 6,
+      "style": "corridor",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 4
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 1,
+          "type": "BLOCK"
+        },
+        {
+          "q": 5,
+          "r": 4,
+          "type": "BLOCK"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "좁은 이동교"
+    },
+    {
+      "id": "map.d05.researcher_core",
+      "dungeonId": "D05",
+      "columns": 10,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 7,
+        "r": 3
+      },
+      "special": "3 장치 상호작용"
+    },
+    {
+      "id": "map.d06.reflection_hall",
+      "dungeonId": "D06",
+      "columns": 10,
+      "rows": 7,
+      "style": "cover",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 2,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 4,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "반사판 LOS"
+    },
+    {
+      "id": "map.d06.star_chamber",
+      "dungeonId": "D06",
+      "columns": 9,
+      "rows": 7,
+      "style": "hazard",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 4,
+          "r": 2,
+          "type": "HAZARD"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "HAZARD"
+        },
+        {
+          "q": 4,
+          "r": 4,
+          "type": "HAZARD"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "별문양 장치"
+    },
+    {
+      "id": "map.d06.sun_sphinx",
+      "dungeonId": "D06",
+      "columns": 11,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 9,
+          "r": 2
+        },
+        {
+          "q": 9,
+          "r": 3
+        },
+        {
+          "q": 9,
+          "r": 4
+        },
+        {
+          "q": 8,
+          "r": 1
+        },
+        {
+          "q": 8,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 8,
+        "r": 3
+      },
+      "special": "반사판 2개"
+    },
+    {
+      "id": "map.d07.frozen_vestibule",
+      "dungeonId": "D07",
+      "columns": 9,
+      "rows": 7,
+      "style": "corridor",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 7,
+          "r": 2
+        },
+        {
+          "q": 7,
+          "r": 3
+        },
+        {
+          "q": 7,
+          "r": 4
+        },
+        {
+          "q": 6,
+          "r": 1
+        },
+        {
+          "q": 6,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 4,
+          "r": 1,
+          "type": "BLOCK"
+        },
+        {
+          "q": 4,
+          "r": 5,
+          "type": "BLOCK"
+        },
+        {
+          "q": 3,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "빙결 진입"
+    },
+    {
+      "id": "map.d07.broken_library",
+      "dungeonId": "D07",
+      "columns": 10,
+      "rows": 7,
+      "style": "cover",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 2,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 4,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "서고 LOS"
+    },
+    {
+      "id": "map.d07.focus_chamber",
+      "dungeonId": "D07",
+      "columns": 10,
+      "rows": 7,
+      "style": "hazard",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 2,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 4,
+          "type": "HAZARD"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "Focus 사전학습"
+    },
+    {
+      "id": "map.d07.archlich",
+      "dungeonId": "D07",
+      "columns": 11,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 9,
+          "r": 2
+        },
+        {
+          "q": 9,
+          "r": 3
+        },
+        {
+          "q": 9,
+          "r": 4
+        },
+        {
+          "q": 8,
+          "r": 1
+        },
+        {
+          "q": 8,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 8,
+        "r": 3
+      },
+      "special": "Left/Right Focus"
+    },
+    {
+      "id": "map.d08.undercroft_seal",
+      "dungeonId": "D08",
+      "columns": 10,
+      "rows": 7,
+      "style": "corridor",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 1,
+          "type": "BLOCK"
+        },
+        {
+          "q": 5,
+          "r": 5,
+          "type": "BLOCK"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "성맥 봉인"
+    },
+    {
+      "id": "map.d08.core_approach",
+      "dungeonId": "D08",
+      "columns": 11,
+      "rows": 7,
+      "style": "hazard",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 9,
+          "r": 2
+        },
+        {
+          "q": 9,
+          "r": 3
+        },
+        {
+          "q": 9,
+          "r": 4
+        },
+        {
+          "q": 8,
+          "r": 1
+        },
+        {
+          "q": 8,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 2,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 4,
+          "type": "HAZARD"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "Core pulse"
+    },
+    {
+      "id": "map.d08.awakened_idol",
+      "dungeonId": "D08",
+      "columns": 11,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 9,
+          "r": 2
+        },
+        {
+          "q": 9,
+          "r": 3
+        },
+        {
+          "q": 9,
+          "r": 4
+        },
+        {
+          "q": 8,
+          "r": 1
+        },
+        {
+          "q": 8,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 8,
+        "r": 3
+      },
+      "special": "Left/Right Arm"
+    },
+    {
+      "id": "map.d09.outer_fissure",
+      "dungeonId": "D09",
+      "columns": 10,
+      "rows": 7,
+      "style": "hazard",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 2,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 4,
+          "type": "HAZARD"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "Ley Rift"
+    },
+    {
+      "id": "map.d09.liberation_line",
+      "dungeonId": "D09",
+      "columns": 10,
+      "rows": 7,
+      "style": "cover",
+      "partySpawn": [
+        {
+          "q": 1,          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 2,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 4,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "인간 정예"
+    },
+    {
+      "id": "map.d09.ley_scar",
+      "dungeonId": "D09",
+      "columns": 11,
+      "rows": 7,
+      "style": "hazard",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 9,
+          "r": 2
+        },
+        {
+          "q": 9,
+          "r": 3
+        },
+        {
+          "q": 9,
+          "r": 4
+        },
+        {
+          "q": 8,
+          "r": 1
+        },
+        {
+          "q": 8,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 2,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 3,
+          "type": "HAZARD"
+        },
+        {
+          "q": 5,
+          "r": 4,
+          "type": "HAZARD"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "Huge 혼합"
+    },
+    {
+      "id": "map.d09.core_gate",
+      "dungeonId": "D09",
+      "columns": 10,
+      "rows": 7,
+      "style": "corridor",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 5,
+          "r": 1,
+          "type": "BLOCK"
+        },
+        {
+          "q": 5,
+          "r": 5,
+          "type": "BLOCK"
+        },
+        {
+          "q": 4,
+          "r": 3,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": null,
+      "special": "최종 문"
+    },
+    {
+      "id": "map.d09.liberation_leader",
+      "dungeonId": "D09",
+      "columns": 11,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 9,
+          "r": 2
+        },
+        {
+          "q": 9,
+          "r": 3
+        },
+        {
+          "q": 9,
+          "r": 4
+        },
+        {
+          "q": 8,
+          "r": 1
+        },
+        {
+          "q": 8,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 8,
+        "r": 3
+      },
+      "special": "Pylon A/B/C"
+    },
+    {
+      "id": "map.d09.void_titan",
+      "dungeonId": "D09",
+      "columns": 11,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 9,
+          "r": 2
+        },
+        {
+          "q": 9,
+          "r": 3
+        },
+        {
+          "q": 9,
+          "r": 4
+        },
+        {
+          "q": 8,
+          "r": 1
+        },
+        {
+          "q": 8,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 8,
+        "r": 3
+      },
+      "special": "Core/2 Arms + Ley Rift"
+    },
+    {
+      "id": "map.s01.headless_knight",
+      "dungeonId": "S01",
+      "columns": 10,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 8,
+          "r": 2
+        },
+        {
+          "q": 8,
+          "r": 3
+        },
+        {
+          "q": 8,
+          "r": 4
+        },
+        {
+          "q": 7,
+          "r": 1
+        },
+        {
+          "q": 7,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 6,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 7,
+        "r": 3
+      },
+      "special": "Duel/Charge"
+    },
+    {
+      "id": "map.s02.inferno_dragon",
+      "dungeonId": "S02",
+      "columns": 11,
+      "rows": 7,
+      "style": "boss",
+      "partySpawn": [
+        {
+          "q": 1,
+          "r": 2
+        },
+        {
+          "q": 1,
+          "r": 3
+        },
+        {
+          "q": 1,
+          "r": 4
+        }
+      ],
+      "enemySpawnSlots": [
+        {
+          "q": 9,
+          "r": 2
+        },
+        {
+          "q": 9,
+          "r": 3
+        },
+        {
+          "q": 9,
+          "r": 4
+        },
+        {
+          "q": 8,
+          "r": 1
+        },
+        {
+          "q": 8,
+          "r": 5
+        }
+      ],
+      "terrain": [
+        {
+          "q": 3,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 3,
+          "r": 5,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 1,
+          "type": "COVER"
+        },
+        {
+          "q": 7,
+          "r": 5,
+          "type": "COVER"
+        }
+      ],
+      "bossSpawnAnchor": {
+        "q": 8,
+        "r": 3
+      },
+      "special": "Head/Wings/Tail"
+    }
+  ]
+}
