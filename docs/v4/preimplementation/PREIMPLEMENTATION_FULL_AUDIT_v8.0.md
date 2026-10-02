@@ -1,3 +1,6 @@
+> 📄 **PRE-REPAIR SNAPSHOT.** This v8.0 audit records problems before the v8.1 fresh-clone repair.  
+> Current status is defined by `FINAL_HANDOFF_RECHECK_v8.1.md` and `docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md`.
+
 # Surge Wizard v4 — 로컬 구현 직전 전수검수 v8.0 (2026-10-02)
 
 ## 최종 판정
