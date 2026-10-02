@@ -1,39 +1,59 @@
 {
   "package": "Surge_Wizard_v4_FINAL_COMPLETE_HANDOFF",
-  "purpose": "Single logical handoff from the v4 direction change through the v8.1 fresh-clone repair",
-  "provenance_components": [
+  "purpose": "Portable implementation handoff built from the validated live repository tree",
+  "current_authority": [
+    "docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md",
+    "docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.2.md",
+    "docs/v4/final/MASTER_SPEC.md"
+  ],
+  "live_components": [
     {
-      "path": "artifacts/v4/complete_handoff/Surge_Wizard_v4_COMPLETE_HANDOFF_CONTENT_2026-10-01.tar.xz",
-      "sha256": "1e3a7b89640377869b9598a92970bfd884a22aa08980d07067a9a76703101792",
-      "extracted_file_count": 1681,
-      "scope": "v4 direction-change baseline through v3.6-era handoff"
+      "path": "docs/v4/final",
+      "scope": "current authority and integrated master indexes"
     },
     {
-      "path": "artifacts/v4/complete_handoff/Surge_Wizard_v4_POST_V3_6_COMPLETE_HANDOFF_2026-10-01.tar.xz",
-      "sha256": "c518cb389d95d0111cbb1d1c4520aed5d6665f4de19b6c5d21b06670c55b5601",
-      "extracted_file_count": 85,
-      "scope": "v3.7 through v5.9 plus reconciled ACT I-II content and historical final audit"
-    }
-  ],
-  "live_current_layers": [
-    {
       "path": "docs/v4/design/v6",
-      "scope": "ACT III-V, late progression, maps/events/state, structured authoring data"
+      "scope": "ACT III-V campaign authoring, structured data, original validator"
     },
     {
       "path": "docs/v4/narrative/v7",
-      "scope": "full narrative, dialogue, companion/NPC content, structured authoring data"
+      "scope": "full narrative, structured dialogue, original validator"
     },
     {
       "path": "docs/v4/preimplementation",
-      "scope": "v8/v8.1 corrections, normalization contracts and handoff validators"
+      "scope": "v8/v8.2 correction contracts and fresh-clone validator"
+    },
+    {
+      "path": "lib",
+      "scope": "current source including protected legacy and v4 preview"
+    },
+    {
+      "path": "test",
+      "scope": "current tests"
+    },
+    {
+      "path": "tool",
+      "scope": "headless simulation and tooling"
+    },
+    {
+      "path": "assets/data",
+      "scope": "runtime/data fixtures"
     }
   ],
-  "current_authority": [
-    "docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md",
-    "docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.1.md",
-    "docs/v4/final/MASTER_SPEC.md"
+  "provenance_only": [
+    {
+      "path": "artifacts/v4/complete_handoff/Surge_Wizard_v4_COMPLETE_HANDOFF_CONTENT_2026-10-01.tar.xz",
+      "git_tree_size_bytes": 7527,
+      "build_required": false,
+      "note": "Historical binary provenance only; v8.2 does not depend on or reassert its historical checksum."
+    },
+    {
+      "path": "artifacts/v4/complete_handoff/Surge_Wizard_v4_POST_V3_6_COMPLETE_HANDOFF_2026-10-01.tar.xz",
+      "git_tree_size_bytes": 15008,
+      "build_required": false,
+      "note": "Historical binary provenance only; v8.2 does not depend on or reassert its historical checksum."
+    }
   ],
-  "build_script": "artifacts/v4/FINAL_COMPLETE_HANDOFF/build_final_complete_handoff.sh",
-  "note": "Historical archives remain immutable provenance components. The builder overlays current live v6/v7/v8.1 content and does not treat older authority snapshots as current."
+  "validator": "docs/v4/preimplementation/validate_repo_handoff_v8_2.py",
+  "builder": "artifacts/v4/FINAL_COMPLETE_HANDOFF/build_final_complete_handoff.sh"
 }

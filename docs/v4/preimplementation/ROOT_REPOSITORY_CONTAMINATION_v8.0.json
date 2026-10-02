@@ -1,19 +1,20 @@
 {
-  "version": "8.1",
-  "auditedFromMainHead": "60e1625ea21f2e8d76550ebcb67529ae76f91ff4",
+  "version": "8.2",
+  "auditedFromMainHead": "3ee7d31e00269d5afb1894a1fa3a45af39148eaa",
   "findings": [
-    "old CLAUDE.md directed agents to pre-v4 GAME_DESIGN/HANDOFF",
-    "old README advertised portrait dice roguelite",
-    "pubspec carried rewarded-ad dependency/comments",
-    "plain flutter run launches protected legacy main.dart"
+    "pre-v4 root authority could steer agents to the wrong game",
+    "older fresh-clone repair still contained two broken current-document references",
+    "older unified handoff builder depended on binary provenance archives that could not be independently revalidated in this audit"
   ],
   "remediationStatus": {
-    "currentEntryDocs": "CLAUDE.md / README.md / AGENT_START_HERE.md point to v8.1 and 2026-10-03 authority",
+    "currentEntryDocs": "CLAUDE.md / README.md / AGENT_START_HERE.md point to v8.2 and 2026-10-03 authority",
     "legacyRootDocs": "HANDOFF.md and GAME_DESIGN.md carry LEGACY PRE-v4 banners",
     "oldAuthorities": "2026-10-01 authority/audit and 2026-10-02 authority carry SUPERSEDED banners",
     "monetization": "google_mobile_ads removed; old gems/deck-slot monetization is not current",
-    "fullHistoryBuilder": "must point to 2026-10-03 authority and include live v6/v7/v8 overlays",
-    "structuredPackages": "v6/v7 JSON, audits, manifests and validators committed"
+    "structuredPackages": "v6/v7 JSON, audits, manifests and validators are committed",
+    "referenceIntegrity": "v8.2 validator checks current entry/index references",
+    "fullHistoryBuilder": "current implementation handoff builder uses validated live repository layers and does not depend on old binary provenance archives"
   },
-  "currentAuthority": "docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md"
+  "currentAuthority": "docs/v4/final/CURRENT_AUTHORITY_2026-10-03.md",
+  "currentRecheck": "docs/v4/preimplementation/FINAL_HANDOFF_RECHECK_v8.2.md"
 }

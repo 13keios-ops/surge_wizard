@@ -1,29 +1,32 @@
-# Surge Wizard v4 — Pre-Implementation Handoff v8.1
+# Surge Wizard v4 — Pre-Implementation Index
 
-This directory contains the correction overlay and final fresh-clone handoff checks.
+## Current gate
 
-## Read order
-
-1. `FINAL_HANDOFF_RECHECK_v8.1.md`
+1. `FINAL_HANDOFF_RECHECK_v8.2.md`
 2. `../final/CURRENT_AUTHORITY_2026-10-03.md`
-3. `LOCAL_AGENT_BOOTSTRAP_v8.0.md` (compatibility filename; content is v8.1)
-4. `CANONICAL_FLAG_MAP_v8.0.json`
-5. `M08_WEST_ANCHOR_RESTORATION_v8.0.md`
-6. `XP_TRANSITION_FLOOR_v8.0.json`
-7. `ENCOUNTER_RUNTIME_EXTENSION_v8.0.json`
-8. `NARRATIVE_RUNTIME_NORMALIZATION_v8.0.json`
-9. `RESOURCE_ID_NORMALIZATION_v8.0.json`
-10. `POI_EVENT_AUTHORITY_v8.0.json`
-11. `LATE_GEAR_ACQUISITION_GAPS_v8.0.json`
-12. `ACTII_BOSS_NARRATIVE_PATCH_v8.0.md`
-13. `validate_repo_handoff_v8_1.py`
+3. `LOCAL_AGENT_BOOTSTRAP_v8.0.md`
+4. `validate_repo_handoff_v8_2.py`
 
-## Status
+## v8 correction contracts
 
-The earlier v8.0 audit was a pre-repair snapshot. Its discovered issues are retained for provenance.
-The current status is determined by `FINAL_HANDOFF_RECHECK_v8.1.md` and the fresh-clone validator.
+- `CANONICAL_FLAG_MAP_v8.0.json`
+- `M08_WEST_ANCHOR_RESTORATION_v8.0.md`
+- `XP_TRANSITION_FLOOR_v8.0.json`
+- `ENCOUNTER_RUNTIME_EXTENSION_v8.0.json`
+- `NARRATIVE_RUNTIME_NORMALIZATION_v8.0.json`
+- `RESOURCE_ID_NORMALIZATION_v8.0.json`
+- `POI_EVENT_AUTHORITY_v8.0.json`
+- `LATE_GEAR_ACQUISITION_GAPS_v8.0.json`
+- `ACTII_BOSS_NARRATIVE_PATCH_v8.0.md`
 
-The validated v6/v7 structured packages and their original validators are committed in the repository.
-No external local-only package is required to discover the current design.
+## Historical audit snapshots
 
-Flutter/Dart build/test is still a separate implementation-environment gate.
+- `PREIMPLEMENTATION_FULL_AUDIT_v8.0.md` — pre-repair snapshot.
+- `FINAL_HANDOFF_RECHECK_v8.1.md` — first fresh-clone repair; superseded by v8.2 for current entry/reference/builder validation.
+- `validate_repo_handoff_v8_1.py` — retained for provenance; use v8.2 now.
+- `validate_v8_preimplementation.py` — v8 correction-contract validator, still called by v8.2.
+
+## Current rule
+
+Do not add another broad design layer before implementation.
+Run `validate_repo_handoff_v8_2.py`, then real Flutter/Dart validation, then WP00→WP12.
