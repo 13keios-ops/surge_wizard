@@ -1,40 +1,44 @@
-# 폭주 마법사 (Surge Wizard)
+# Surge Wizard (폭주 마법사) — v4
 
-주사위 3개(3d6)로 **주문의 시전 성공 여부를 판정**하는 세로 화면 캐주얼 로그라이트.
-Flutter로 만들며 안드로이드를 목표로 한다. 서버 통신이 없고 비행기 모드에서 완전히 동작한다.
+가로형 모바일 RPG. 플레이어는 마법사와 최대 2명의 동료로 파티를 구성하고,
+월드 탐험·짧은 선택 이벤트·헥스 전술전투를 거쳐 ACT I~V를 진행한다.
 
-> **주사위 눈금은 대미지가 아니다.** 판정에만 쓴다. 실패하면 마법이 **폭주**한다.
+## 현재 구현 기준
 
-## 지금 어디를 봐야 하나
+로컬 구현 에이전트는 다음 순서로 읽는다.
 
-| 알고 싶은 것 | 문서 |
-|---|---|
-| **지금 어디까지 왔나 · 다음에 뭘 하나** | `HANDOFF.md` |
-| 게임 설계 전체 (**v3가 기준**) | `GAME_DESIGN.md` — 맨 위 색인표에서 골라 읽는다 |
-| 그래픽 진행 상태 | `docs/HANDOFF_ART.md` |
-| 그래픽 작업 순서 | `GAME_ART_ROADMAP.md` |
-| 화면 규격 · 배치 | `UI_DESIGN.md` |
-| 원화를 뽑을 때 쓰는 GPT 지침 | `docs/GPT_PROJECT_INSTRUCTIONS.md` |
-| 끝난 작업의 목록과 판정 | `reports/INDEX.md` |
-
-## ⛔ 옛 문서를 집지 않으려면
-
-루트에 **끝났거나 폐기된 지시서·요청서가 30개 넘게** 남아 있다. `reports/` 가 이름으로
-가리키고 있어 지우지 않았다. **전부 머리말 두 번째 줄에 ⛔ 또는 📄 배너가 붙어 있다.**
-배너가 붙은 문서는 현재 기준이 아니다. 목록은 `docs/ARCHIVE.md`.
-
-지금 살아 있는 문서만 모은 표는 **`HANDOFF.md` 0절**에 있다.
-
-## 빌드
-
-```
-flutter test          # 판정 엔진 단위 테스트
-flutter run            # 실행
+```text
+CLAUDE.md
+docs/v4/preimplementation/LOCAL_AGENT_BOOTSTRAP_v8.0.md
+docs/v4/preimplementation/PREIMPLEMENTATION_FULL_AUDIT_v8.0.md
+docs/v4/final/CURRENT_AUTHORITY_2026-10-02.md
+AGENT_START_HERE.md
 ```
 
-Flutter 3.44.2. iOS 빌드는 맥이 필요해 이 저장소에서는 다루지 않는다.
+최신 본편 설계:
+- `docs/v4/design/v6/`
+- `docs/v4/narrative/v7/`
+- `docs/v4/preimplementation/`
 
-## 에셋 라이선스
+## Legacy 보호
 
-외부 에셋은 자유 라이선스(CC0 / CC BY / OFL)만 쓰고 출처를 `ATTRIBUTION.md`에 남긴다.
-`refs/` 의 참고 자료는 **설계를 배우는 용도**이며 게임에 넣지 않는다.
+`GAME_DESIGN.md`, `HANDOFF.md`, 그리고 `lib/main.dart`는 방향전환 전 세로형 로그라이트의
+역사/레거시 구현을 보존한다. 현재 v4의 기준으로 사용하지 않는다.
+
+Landscape v4 preview:
+
+```bash
+flutter run -t lib/main_v4_preview.dart
+```
+
+실제 로컬 구현 시작 전에는 반드시:
+
+```bash
+flutter pub get
+flutter analyze
+flutter test
+dart run tool/v4_headless_sim.dart 5000
+dart run tool/v4_dungeon_run_sim.dart 5000
+```
+
+을 실행하고 결과를 기록한다.

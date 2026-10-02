@@ -1,0 +1,82 @@
+{
+  "version": "8.0",
+  "policy": "Use STORY_FLAG_STATE_SPEC_v1.5 stable names as persisted canonical keys. v6/v7 renamed tokens are authoring aliases only.",
+  "aliases_to_canonical": {
+    "ironvale_mine_sealed": "mine_closed",
+    "ironvale_mine_stabilized": "mine_stabilized",
+    "swamp_purified": "swamp_cleansed",
+    "d05_researcher_captured": "researcher_captured",
+    "researcher_handed_to_academy": "researcher_handed_academy",
+    "researcher_secret_coop": "researcher_secret_ally",
+    "white_wolf_pack_killed": "white_wolf_killed",
+    "white_wolf_redirected": "white_wolf_relocated",
+    "white_wolf_repelled": "white_wolf_waited_out",
+    "protagonist_trait_resonant_core": "trait_resonant",
+    "protagonist_trait_harmonizer": "trait_harmonizer",
+    "temple_truth_public_immediate": "temple_truth_public",
+    "temple_truth_joint_verify": "temple_truth_joint_review",
+    "act5_crisis_started": "ley_crisis_started",
+    "anchor_west_resolved": "west_anchor_stable",
+    "anchor_central_resolved": "central_anchor_stable",
+    "anchor_east_resolved": "east_anchor_stable"
+  },
+  "derived_or_runtime_only": {
+    "act3_unlocked": "derive from act2_invitation_received/act2_complete",
+    "act4_unlocked": "derive from act3_complete",
+    "act5_unlocked": "derive from act4_complete",
+    "nera_active": "party assignment state, not story flag",
+    "nera_bench": "party assignment state, not story flag",
+    "erin_active": "party assignment predicate",
+    "seon_active": "party assignment predicate",
+    "edra_present": "scene cast/presence predicate"
+  },
+  "exclusive_choice_groups": {
+    "M01": [
+      "mine_closed",
+      "mine_stabilized"
+    ],
+    "M02": [
+      "swamp_burned",
+      "swamp_cleansed"
+    ],
+    "M03": [
+      "ancient_records_academy",
+      "ancient_records_shared",
+      "ancient_records_resealed"
+    ],
+    "M04": [
+      "researcher_handed_academy",
+      "researcher_exiled",
+      "researcher_secret_ally"
+    ],
+    "M05": [
+      "white_wolf_killed",
+      "white_wolf_relocated",
+      "white_wolf_waited_out"
+    ],
+    "M06": [
+      "trait_resonant",
+      "trait_harmonizer"
+    ],
+    "M07": [
+      "temple_truth_public",
+      "temple_truth_joint_review",
+      "temple_truth_sealed"
+    ],
+    "M08": [
+      "west_anchor_method_blast",
+      "west_anchor_method_manual",
+      "west_anchor_method_remote"
+    ],
+    "C01": [
+      "ending_restore",
+      "ending_change"
+    ]
+  },
+  "act5_anchor_completion": [
+    "west_anchor_stable",
+    "central_anchor_stable",
+    "east_anchor_stable"
+  ],
+  "final_route_rule": "west_anchor_stable && central_anchor_stable && east_anchor_stable -> final_route_unlocked"
+}
