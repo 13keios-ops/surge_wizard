@@ -1,0 +1,974 @@
+{
+  "version": "6.3",
+  "late_gear": [
+    {
+      "id": "eq.t3.wizard.arken_circlet",
+      "name": "아르켄 집중관",
+      "tier": 3,
+      "rarity": "COMMON",
+      "slot": "HEAD",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 520,
+      "stats": {
+        "mnd": 1,
+        "max_mp": 8
+      },
+      "passives": [],
+      "source": "T06"
+    },
+    {
+      "id": "eq.t3.wizard.leywoven_robe",
+      "name": "마력직조 로브",
+      "tier": 3,
+      "rarity": "FINE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 874,
+      "stats": {
+        "armor": 2,
+        "max_mp": 14,
+        "cast_stability": 1
+      },
+      "passives": [],
+      "source": "T06/T07"
+    },
+    {
+      "id": "eq.t3.wizard.phase_shoes",
+      "name": "위상 보행화",
+      "tier": 3,
+      "rarity": "FINE",
+      "slot": "SHOES",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 644,
+      "stats": {
+        "evasion": 1,
+        "speed": 3
+      },
+      "passives": [
+        "passive.blink_step_delay_minus_5"
+      ],
+      "source": "T07"
+    },
+    {
+      "id": "eq.t3.wizard.academy_staff",
+      "name": "왕립 초점 지팡이",
+      "tier": 3,
+      "rarity": "RARE",
+      "slot": "WEAPON",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 1274,
+      "stats": {
+        "weapon_power": 10,
+        "spell_attack_accuracy": 1,
+        "cast_stability": 1,
+        "max_mp": 8
+      },
+      "passives": [],
+      "source": "T06_FIXED"
+    },
+    {
+      "id": "eq.t3.heavy.redgate_helm",
+      "name": "붉은관문 투구",
+      "tier": 3,
+      "rarity": "COMMON",
+      "slot": "HEAD",
+      "allowed": [
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "price": 520,
+      "stats": {
+        "armor": 2,
+        "brace": 1
+      },
+      "passives": [],
+      "source": "T08"
+    },
+    {
+      "id": "eq.t3.heavy.bastion_plate",
+      "name": "전초성 흉갑",
+      "tier": 3,
+      "rarity": "FINE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "price": 874,
+      "stats": {
+        "armor": 5,
+        "fortitude": 1
+      },
+      "passives": [],
+      "source": "T08"
+    },
+    {
+      "id": "eq.t3.heavy.vanguard_greaves",
+      "name": "선봉 각반",
+      "tier": 3,
+      "rarity": "COMMON",
+      "slot": "SHOES",
+      "allowed": [
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "price": 560,
+      "stats": {
+        "brace": 1,
+        "speed": 2
+      },
+      "passives": [],
+      "source": "T08"
+    },
+    {
+      "id": "eq.t3.heavy.resonant_blade",
+      "name": "공명 장검",
+      "tier": 3,
+      "rarity": "RARE",
+      "slot": "WEAPON",
+      "allowed": [
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "price": 1274,
+      "stats": {
+        "weapon_power": 12,
+        "weapon_accuracy": 1
+      },
+      "passives": [],
+      "source": "D05_REWARD"
+    },
+    {
+      "id": "eq.t3.light.ghost_hood",
+      "name": "유령천 후드",
+      "tier": 3,
+      "rarity": "FINE",
+      "slot": "HEAD",
+      "allowed": [
+        "ROGUE",
+        "RANGER"
+      ],
+      "price": 598,
+      "stats": {
+        "evasion": 1,
+        "speed": 2
+      },
+      "passives": [],
+      "source": "T05/T08"
+    },
+    {
+      "id": "eq.t3.light.trailweave",
+      "name": "길잡이 직조복",
+      "tier": 3,
+      "rarity": "COMMON",
+      "slot": "CLOTHING",
+      "allowed": [
+        "ROGUE",
+        "RANGER"
+      ],
+      "price": 760,
+      "stats": {
+        "armor": 2,
+        "fortitude": 1,
+        "evasion": 1
+      },
+      "passives": [],
+      "source": "T07"
+    },
+    {
+      "id": "eq.t3.rogue.splitstep_boots",
+      "name": "갈림걸음 장화",
+      "tier": 3,
+      "rarity": "RARE",
+      "slot": "SHOES",
+      "allowed": [
+        "ROGUE"
+      ],
+      "price": 728,
+      "stats": {
+        "evasion": 1,
+        "speed": 4
+      },
+      "passives": [
+        "passive.first_disengage_delay_minus_10"
+      ],
+      "source": "T08"
+    },
+    {
+      "id": "eq.t3.ranger.sunstring_bow",
+      "name": "태양현 단궁",
+      "tier": 3,
+      "rarity": "RARE",
+      "slot": "WEAPON",
+      "allowed": [
+        "RANGER"
+      ],
+      "price": 1274,
+      "stats": {
+        "weapon_power": 11,
+        "weapon_accuracy": 2
+      },
+      "passives": [],
+      "source": "T09"
+    },
+    {
+      "id": "eq.t3.priest.pilgrim_robe",
+      "name": "순례 사제복",
+      "tier": 3,
+      "rarity": "FINE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "PRIEST"
+      ],
+      "price": 874,
+      "stats": {
+        "armor": 2,
+        "max_mp": 10,
+        "resolve": 1
+      },
+      "passives": [],
+      "source": "T06_TEMPLE"
+    },
+    {
+      "id": "eq.t3.priest.blessing_staff",
+      "name": "축복의 지팡이",
+      "tier": 3,
+      "rarity": "RARE",
+      "slot": "WEAPON",
+      "allowed": [
+        "PRIEST"
+      ],
+      "price": 1274,
+      "stats": {
+        "weapon_power": 8,
+        "cast_stability": 1,
+        "max_mp": 12
+      },
+      "passives": [],
+      "source": "T06_TEMPLE"
+    },
+    {
+      "id": "eq.t4.wizard.frost_circlet",
+      "name": "빙설 공명관",
+      "tier": 4,
+      "rarity": "FINE",
+      "slot": "HEAD",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 1265,
+      "stats": {
+        "mnd": 1,
+        "resolve": 1,
+        "max_mp": 10
+      },
+      "passives": [],
+      "source": "T10"
+    },
+    {
+      "id": "eq.t4.wizard.tower_robe",
+      "name": "최초탑 로브",
+      "tier": 4,
+      "rarity": "RARE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 2080,
+      "stats": {
+        "armor": 3,
+        "max_mp": 20,
+        "cast_stability": 1
+      },
+      "passives": [],
+      "source": "D07_REWARD"
+    },
+    {
+      "id": "eq.t4.wizard.voidstep_shoes",
+      "name": "공허걸음 신발",
+      "tier": 4,
+      "rarity": "FINE",
+      "slot": "SHOES",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 1380,
+      "stats": {
+        "evasion": 1,
+        "speed": 4
+      },
+      "passives": [
+        "passive.counterphase_barrier_plus_2"
+      ],
+      "source": "T10/T11"
+    },
+    {
+      "id": "eq.t4.wizard.archivist_staff",
+      "name": "고대 서고 지팡이",
+      "tier": 4,
+      "rarity": "RARE",
+      "slot": "WEAPON",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 2730,
+      "stats": {
+        "weapon_power": 12,
+        "spell_attack_accuracy": 2,
+        "cast_stability": 1,
+        "max_mp": 12
+      },
+      "passives": [],
+      "source": "D07"
+    },
+    {
+      "id": "eq.t4.heavy.snowguard_helm",
+      "name": "설벽 수호투구",
+      "tier": 4,
+      "rarity": "FINE",
+      "slot": "HEAD",
+      "allowed": [
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "price": 1265,
+      "stats": {
+        "armor": 2,
+        "fortitude": 1,
+        "resolve": 1
+      },
+      "passives": [],
+      "source": "T10"
+    },
+    {
+      "id": "eq.t4.heavy.sanctum_plate",
+      "name": "성맥 판갑",
+      "tier": 4,
+      "rarity": "RARE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "price": 2080,
+      "stats": {
+        "armor": 6,
+        "brace": 1,
+        "resolve": 1
+      },
+      "passives": [],
+      "source": "T11"
+    },
+    {
+      "id": "eq.t4.heavy.anchor_boots",
+      "name": "고정 장화",
+      "tier": 4,
+      "rarity": "FINE",
+      "slot": "SHOES",
+      "allowed": [
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "price": 1380,
+      "stats": {
+        "brace": 2,
+        "speed": 1
+      },
+      "passives": [],
+      "source": "T11"
+    },
+    {
+      "id": "eq.t4.heavy.saint_blade",
+      "name": "성맥 수호검",
+      "tier": 4,
+      "rarity": "RARE",
+      "slot": "WEAPON",
+      "allowed": [
+        "PALADIN",
+        "WARRIOR"
+      ],
+      "price": 2730,
+      "stats": {
+        "weapon_power": 14,
+        "weapon_accuracy": 1
+      },
+      "passives": [],
+      "source": "D08_REWARD"
+    },
+    {
+      "id": "eq.t4.light.whitewind_hood",
+      "name": "백풍 후드",
+      "tier": 4,
+      "rarity": "FINE",
+      "slot": "HEAD",
+      "allowed": [
+        "ROGUE",
+        "RANGER"
+      ],
+      "price": 1265,
+      "stats": {
+        "evasion": 2,
+        "speed": 2
+      },
+      "passives": [],
+      "source": "T10"
+    },
+    {
+      "id": "eq.t4.light.leyhide",
+      "name": "성맥 가죽옷",
+      "tier": 4,
+      "rarity": "RARE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "ROGUE",
+        "RANGER"
+      ],
+      "price": 2080,
+      "stats": {
+        "armor": 3,
+        "evasion": 1,
+        "resolve": 1
+      },
+      "passives": [],
+      "source": "T11"
+    },
+    {
+      "id": "eq.t4.rogue.phaseknife",
+      "name": "위상 단검",
+      "tier": 4,
+      "rarity": "RARE",
+      "slot": "WEAPON",
+      "allowed": [
+        "ROGUE"
+      ],
+      "price": 2730,
+      "stats": {
+        "weapon_power": 11,
+        "weapon_accuracy": 2,
+        "speed": 2
+      },
+      "passives": [],
+      "source": "D08_SIDE"
+    },
+    {
+      "id": "eq.t4.ranger.frostline_bow",
+      "name": "빙선 장궁",
+      "tier": 4,
+      "rarity": "RARE",
+      "slot": "WEAPON",
+      "allowed": [
+        "RANGER"
+      ],
+      "price": 2730,
+      "stats": {
+        "weapon_power": 13,
+        "weapon_accuracy": 2
+      },
+      "passives": [],
+      "source": "T10"
+    },
+    {
+      "id": "eq.t4.priest.sanctuary_robe",
+      "name": "성소 예복",
+      "tier": 4,
+      "rarity": "RARE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "PRIEST"
+      ],
+      "price": 2080,
+      "stats": {
+        "armor": 3,
+        "resolve": 2,
+        "max_mp": 16
+      },
+      "passives": [],
+      "source": "T11"
+    },
+    {
+      "id": "eq.t4.priest.hymn_staff",
+      "name": "조율 기도봉",
+      "tier": 4,
+      "rarity": "RARE",
+      "slot": "WEAPON",
+      "allowed": [
+        "PRIEST"
+      ],
+      "price": 2730,
+      "stats": {
+        "weapon_power": 9,
+        "cast_stability": 2,
+        "max_mp": 14
+      },
+      "passives": [],
+      "source": "T11"
+    },
+    {
+      "id": "eq.t5.wizard.crown_focus",
+      "name": "왕관 초점관",
+      "tier": 5,
+      "rarity": "RARE",
+      "slot": "HEAD",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 2860,
+      "stats": {
+        "mnd": 1,
+        "resolve": 1,
+        "max_mp": 16
+      },
+      "passives": [],
+      "source": "ACT5_T06"
+    },
+    {
+      "id": "eq.t5.wizard.convergence_robe",
+      "name": "수렴 로브",
+      "tier": 5,
+      "rarity": "RARE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 4160,
+      "stats": {
+        "armor": 4,
+        "max_mp": 26,
+        "cast_stability": 2
+      },
+      "passives": [],
+      "source": "THREE_ANCHORS"
+    },
+    {
+      "id": "eq.t5.wizard.leywalker",
+      "name": "마력맥 보행화",
+      "tier": 5,
+      "rarity": "RARE",
+      "slot": "SHOES",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 3120,
+      "stats": {
+        "evasion": 2,
+        "speed": 5
+      },
+      "passives": [],
+      "source": "ACT5_T11"
+    },
+    {
+      "id": "eq.t5.wizard.core_staff",
+      "name": "중심핵 지팡이",
+      "tier": 5,
+      "rarity": "RELIC",
+      "slot": "WEAPON",
+      "allowed": [
+        "WIZARD"
+      ],
+      "price": 5200,
+      "stats": {
+        "weapon_power": 14,
+        "spell_attack_accuracy": 2,
+        "cast_stability": 2,
+        "max_mp": 18
+      },
+      "passives": [
+        "passive.first_c6plus_cast_stability_plus_1"
+      ],
+      "source": "D09_PREP"
+    },
+    {
+      "id": "eq.t5.heavy.lastwall_plate",
+      "name": "마지막 방벽 갑주",
+      "tier": 5,
+      "rarity": "RARE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "price": 4160,
+      "stats": {
+        "armor": 7,
+        "brace": 2,
+        "fortitude": 1
+      },
+      "passives": [],
+      "source": "ACT5_T08"
+    },
+    {
+      "id": "eq.t5.heavy.oath_blade",
+      "name": "최후의 맹세검",
+      "tier": 5,
+      "rarity": "RELIC",
+      "slot": "WEAPON",
+      "allowed": [
+        "PALADIN",
+        "WARRIOR"
+      ],
+      "price": 5000,
+      "stats": {
+        "weapon_power": 16,
+        "weapon_accuracy": 2
+      },
+      "passives": [
+        "passive.first_intercept_guarded_15"
+      ],
+      "source": "D09_PREP"
+    },
+    {
+      "id": "eq.t5.light.rift_hood",
+      "name": "균열추적 후드",
+      "tier": 5,
+      "rarity": "RARE",
+      "slot": "HEAD",
+      "allowed": [
+        "ROGUE",
+        "RANGER"
+      ],
+      "price": 2860,
+      "stats": {
+        "evasion": 2,
+        "speed": 3
+      },
+      "passives": [],
+      "source": "ACT5_T06"
+    },
+    {
+      "id": "eq.t5.light.shadowweave",
+      "name": "그림자 직조복",
+      "tier": 5,
+      "rarity": "RARE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "ROGUE",
+        "RANGER"
+      ],
+      "price": 4160,
+      "stats": {
+        "armor": 4,
+        "evasion": 2,
+        "resolve": 1
+      },
+      "passives": [],
+      "source": "ACT5_T08"
+    },
+    {
+      "id": "eq.t5.rogue.last_gap",
+      "name": "마지막 틈의 단검",
+      "tier": 5,
+      "rarity": "RELIC",
+      "slot": "WEAPON",
+      "allowed": [
+        "ROGUE"
+      ],
+      "price": 4800,
+      "stats": {
+        "weapon_power": 13,
+        "weapon_accuracy": 3,
+        "speed": 2
+      },
+      "passives": [
+        "passive.exposed_penetration_plus_1"
+      ],
+      "source": "ANCHOR_CENTRAL_REWARD"
+    },
+    {
+      "id": "eq.t5.ranger.horizon_bow",
+      "name": "수평선 장궁",
+      "tier": 5,
+      "rarity": "RELIC",
+      "slot": "WEAPON",
+      "allowed": [
+        "RANGER"
+      ],
+      "price": 4900,
+      "stats": {
+        "weapon_power": 15,
+        "weapon_accuracy": 3
+      },
+      "passives": [
+        "passive.marked_target_delay_minus_5"
+      ],
+      "source": "ANCHOR_EAST_REWARD"
+    },
+    {
+      "id": "eq.t5.priest.twohands_robe",
+      "name": "두 손의 예복",
+      "tier": 5,
+      "rarity": "RARE",
+      "slot": "CLOTHING",
+      "allowed": [
+        "PRIEST"
+      ],
+      "price": 4160,
+      "stats": {
+        "armor": 4,
+        "resolve": 2,
+        "max_mp": 22
+      },
+      "passives": [],
+      "source": "ACT5_T11"
+    },
+    {
+      "id": "eq.t5.priest.worldstaff",
+      "name": "세계맥 기도봉",
+      "tier": 5,
+      "rarity": "RELIC",
+      "slot": "WEAPON",
+      "allowed": [
+        "PRIEST"
+      ],
+      "price": 5000,
+      "stats": {
+        "weapon_power": 10,
+        "cast_stability": 2,
+        "max_mp": 20
+      },
+      "passives": [
+        "passive.cleanse_barrier_plus_2"
+      ],
+      "source": "D09_PREP"
+    }
+  ],
+  "hub_stock": {
+    "T01": {
+      "act3plus": [
+        "consumables_basic"
+      ],
+      "act5": [
+        "greater_hp",
+        "greater_mp"
+      ]
+    },
+    "T02": {
+      "act3plus": [
+        "herbs",
+        "cleanse",
+        "eq.t3.light.trailweave"
+      ],
+      "act5": [
+        "greater_cleanse_if_swamp_purified"
+      ]
+    },
+    "T03": {
+      "act3plus": [
+        "eq.t3.heavy.redgate_helm",
+        "eq.t3.heavy.bastion_plate"
+      ],
+      "act5": [
+        "eq.t5.heavy.lastwall_plate_if_mine_stabilized"
+      ]
+    },
+    "T04": {
+      "act3plus": [
+        "cleanse",
+        "rare_herb"
+      ],
+      "act5": [
+        "final_cleanse_bundle_if_swamp_purified"
+      ]
+    },
+    "T05": {
+      "act3plus": [
+        "eq.t3.light.ghost_hood",
+        "rogue_tools"
+      ],
+      "act5": [
+        "archive_maps_if_not_resealed"
+      ]
+    },
+    "T06": {
+      "act3plus": [
+        "eq.t3.wizard.arken_circlet",
+        "eq.t3.wizard.leywoven_robe",
+        "eq.t3.wizard.academy_staff",
+        "eq.t3.priest.pilgrim_robe",
+        "eq.t3.priest.blessing_staff"
+      ],
+      "act4": [
+        "selected_t4_after_d07"
+      ],
+      "act5": [
+        "eq.t5.wizard.crown_focus",
+        "eq.t5.light.rift_hood",
+        "supreme_potions"
+      ]
+    },
+    "T07": {
+      "act3plus": [
+        "eq.t3.wizard.phase_shoes",
+        "eq.t3.light.trailweave",
+        "rare_catalyst"
+      ],
+      "act4": [
+        "control_spell_knowledge"
+      ],
+      "act5": [
+        "optional_c7_research_after_requirements"
+      ]
+    },
+    "T08": {
+      "act3plus": [
+        "eq.t3.heavy.redgate_helm",
+        "eq.t3.heavy.bastion_plate",
+        "eq.t3.rogue.splitstep_boots"
+      ],
+      "act4": [
+        "military_t4"
+      ],
+      "act5": [
+        "eq.t5.heavy.lastwall_plate",
+        "eq.t5.light.shadowweave"
+      ]
+    },
+    "T09": {
+      "act3plus": [
+        "eq.t3.ranger.sunstring_bow",
+        "desert_consumables"
+      ],
+      "act4": [
+        "astral_catalyst"
+      ],
+      "act5": [
+        "anchor_east_support"
+      ]
+    },
+    "T10": {
+      "act4": [
+        "eq.t4.wizard.frost_circlet",
+        "eq.t4.wizard.voidstep_shoes",
+        "eq.t4.heavy.snowguard_helm",
+        "eq.t4.light.whitewind_hood",
+        "eq.t4.ranger.frostline_bow"
+      ],
+      "act5": [
+        "supreme_hp",
+        "supreme_mp"
+      ]
+    },
+    "T11": {
+      "act4": [
+        "eq.t4.heavy.sanctum_plate",
+        "eq.t4.heavy.anchor_boots",
+        "eq.t4.light.leyhide",
+        "eq.t4.priest.sanctuary_robe",
+        "eq.t4.priest.hymn_staff"
+      ],
+      "act5": [
+        "eq.t5.wizard.leywalker",
+        "eq.t5.priest.twohands_robe",
+        "d09_prep_relics"
+      ]
+    }
+  },
+  "spell_integration": {
+    "C4_C6_source": "Surge_Wizard_v4_SPELL_CATALOG_C4_C6_v2.4.md / structured v2.4 JSON",
+    "C4_C6_count": 27,
+    "C4_C6_ids": [
+      "base.spell.rift_cleave",
+      "base.spell.thunder_lance",
+      "base.spell.arcane_volley",
+      "base.spell.temporal_anchor",
+      "base.spell.crystal_barricade",
+      "base.spell.suppression_field",
+      "base.spell.aegis_field",
+      "base.spell.purifying_circle",
+      "base.spell.counterphase",
+      "base.spell.inferno_orb",
+      "base.spell.glacial_rupture",
+      "base.spell.arcane_execution",
+      "base.spell.time_lock",
+      "base.spell.singularity",
+      "base.spell.spell_sever",
+      "base.spell.mirror_bastion",
+      "base.spell.phase_corridor",
+      "base.spell.null_mantle",
+      "base.spell.elemental_convergence",
+      "base.spell.rift_sever",
+      "base.spell.storm_pillar",
+      "base.spell.event_horizon",
+      "base.spell.crystal_seal",
+      "base.spell.mana_collapse",
+      "base.spell.grand_aegis",
+      "base.spell.spatial_sanctuary",
+      "base.spell.stabilization_matrix"
+    ],
+    "C7": [
+      {
+        "id": "base.spell.resonance_overdrive",
+        "name": "공명 폭주",
+        "circle": 7,
+        "category": "ATTACK",
+        "unlock": "M06 ABSORB + all 3 anchors + story free",
+        "learn_cost": 0,
+        "mp": 52,
+        "delay": 185,
+        "range": 6,
+        "area": "BURST7",
+        "difficulty": "VERY_HARD",
+        "defense": "EVASION_PER_TARGET",
+        "power": 42,
+        "damage_type": "ARCANE",
+        "stable": "Full damage; Huge target core/channel receives +15% damage.",
+        "unstable": "Damage ×0.75; no Huge bonus.",
+        "surge": "Damage ×1.10; same Burst7 only; caster Stagger+20 and current MP -8 after resolution.",
+        "mastery": "C7 is story-tier; no Lv2–5 mastery in base campaign."
+      },
+      {
+        "id": "base.spell.world_anchor",
+        "name": "세계의 닻",
+        "circle": 7,
+        "category": "DEFENSE",
+        "unlock": "M06 STABILIZE + all 3 anchors + story free",
+        "learn_cost": 0,
+        "mp": 48,
+        "delay": 175,
+        "range": 0,
+        "area": "ALL_ALLIES",
+        "difficulty": "HARD",
+        "defense": "NONE",
+        "power": 0,
+        "damage_type": null,
+        "stable": "All allies Barrier 28+MNDmod; Stability +2 and forced-move resist +2 for 2 activations; suppress one active Ley Rift hazard for 1 activation.",
+        "unstable": "Barrier 70%; Stability +1; no hazard suppression.",
+        "surge": "Normal effect but caster nextActionTime +20.",
+        "mastery": "C7 is story-tier; no Lv2–5 mastery in base campaign."
+      },
+      {
+        "id": "base.spell.leyline_dominion",
+        "name": "마력맥 지배",
+        "circle": 7,
+        "category": "CONTROL",
+        "unlock": "S02 Inferno Dragon + all 3 anchor records",
+        "learn_cost": 120,
+        "mp": 50,
+        "delay": 190,
+        "range": 6,
+        "area": "BURST7",
+        "difficulty": "VERY_HARD",
+        "defense": "RESOLVE_PER_TARGET",
+        "power": 0,
+        "damage_type": null,
+        "stable": "Normal/Elite: Slow30%/2 + Stagger30. Boss/Huge: Slow15%/1 + Stagger25. Suppress hazards inside Burst7 for 1 activation.",
+        "unstable": "Slow15%/1; no Stagger/hazard suppression.",
+        "surge": "Effect normal; one random empty cell in Burst7 becomes unstable Ley Rift for 1 activation.",
+        "mastery": "Optional second C7; no mastery in base campaign."
+      }
+    ],
+    "gates": {
+      "C4": "ACT III Arken joint report + Lv9",
+      "C5": "D05 resolved + Lv13",
+      "C6": "D07 resolved + protagonist_resonance_identified + Lv17",
+      "C7": "ACT V all 3 anchors + M06 branch; first free"
+    }
+  }
+}
